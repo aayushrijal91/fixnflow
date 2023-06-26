@@ -9,16 +9,23 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        'primary': '#C62026',
+        'primary': '#255398',
+        'secondary': '#0A1D39',
+        'tertiary': '#5AB2F8',
+        'main-blue': '#0067B9',
+        'dark-blue': '#1B427D',
+        'light-blue': '#5AB2F8',
+        'yellow': '#FFAE35',
         'dark': '#040505',
         'white': '#ffffff',
         'black': '#000000',
-        'grey': '#555656',
-        'light-grey': '#f5f5f5'
+        'grey': '#535456',
+        'light-grey': '#EEF1F6'
       },
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-        baukasten: ['Baukasten', 'sans-serif'],
+        friends: ["Friends", "sans-serif"],
+        articulat: ["articulat-cf", "sans-serif"],
+        'articulat-heavy': ["articulat-heavy-cf", "sans-serif"],
       }
     },
   },

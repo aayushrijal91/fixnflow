@@ -24,22 +24,14 @@ img {
 }
 
 body {
-    @apply font-baukasten p-0 m-0 overflow-x-hidden;
+    @apply font-friends p-0 m-0 overflow-x-hidden;
 }
 
 .container {
-    max-width: 1300px;
+    max-width: 1379px;
     padding-left: 8px;
     padding-right: 8px;
 }
-
-// a {
-//     text-decoration: none;
-
-//     &:hover {
-//         text-decoration: none;
-//     }
-// }
 
 #return-to-top {
     @apply bg-grey hover:bg-dark w-[50px] h-[50px] right-[55px] bottom-[95px] block rounded-full transition-all duration-100 ease-linear fixed hidden z-10 drop-shadow-2xl;

@@ -1,0 +1,8 @@
+.homeBanner {
+    background: imgUrl('homebanner.png'), linear-gradient(180deg, #255398 0%, #0A1D39 100%);
+    background-size: cover;
+
+    .homeBannerInner {
+        background: imgUrl('homeBanner_team.png') center bottom;
+    }
+}

@@ -17,7 +17,7 @@ const src = './src/';
 const build = '../wp-content/themes/aiims/';
 
 let sources = {
-    theme: `${src}theme-files/**/*`,
+    theme: `${src}theme-files/**/*.php`,
     images: `${src}assets/images/**/*`,
     styles: `${src}assets/styles/**/*.scss`,
     scripts: `${src}assets/scripts/**/*.js`,
@@ -35,7 +35,7 @@ let destinations = {
     images: `${build}images/`,
     styles: `${build}styles/`,
     scripts: `${build}scripts/`,
-    fonts: `${build}/styles/fonts/`,
+    fonts: `${build}/fonts/`,
     data_files: `${build}files/`,
 }
 
@@ -111,7 +111,7 @@ function watch() {
     gulp.watch(sources.scripts, custom_scripts).on('change', browserSync.reload);
     gulp.watch(sources.scripts, vendor_scripts).on('change', browserSync.reload);
     gulp.watch(sources.data_files, data_files).on('change', browserSync.reload);
-    gulp.watch(sources.styles, styles);
+    gulp.watch([sources.styles, sources.theme], styles);
 }
 
 exports.watch = gulp.series(
