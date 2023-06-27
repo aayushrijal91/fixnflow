@@ -25,8 +25,7 @@ let sources = {
     data_files: `${src}assets/files/**/*`,
     vendor_scripts: [].concat.apply([], [
         // './node_modules/lazyload/lazyload.min.js',
-        // './node_modules/magnific-popup/dist/jquery.magnific-popup.js',
-        './node_modules/jquery/dist/jquery.min.js',
+        './node_modules/aos/dist/aos.js',
         './node_modules/slick-carousel/slick/slick.min.js',
     ]),
 }

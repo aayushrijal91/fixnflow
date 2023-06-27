@@ -30,7 +30,7 @@ body {
 .btn-yellow-hover-main-blue {
     position: relative;
     overflow: hidden;
-    @apply bg-yellow rounded-[10px] h-14 text-white inline-flex items-center font-bold transition-all duration-75 hover:shadow-[4px_4px_#FFAE35];
+    @apply bg-yellow rounded-[10px] h-14 text-white inline-flex justify-center items-center font-bold transition-all duration-75 hover:shadow-[4px_4px_#FFAE35];
 
     &::before {
         content: "";
