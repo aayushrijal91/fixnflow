@@ -20,7 +20,8 @@ module.exports = {
         'white': '#ffffff',
         'black': '#000000',
         'grey': '#535456',
-        'light-grey': '#EEF1F6'
+        'light-grey': '#EEF1F6',
+        'light': '#D9D9D9',
       },
       fontFamily: {
         friends: ["Friends", "sans-serif"],
