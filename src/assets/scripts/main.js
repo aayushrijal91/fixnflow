@@ -1,3 +1,10 @@
+$('#homepage_service_slider').slick({
+    slidesToShow: 3,
+    arrows: false,
+    centerMode: true,
+    centerPadding: "200px",
+    slidesToScroll: 1,
+})
 
 $(window).on('scroll', () => {
     if ($(this).scrollTop() >= 600) {
