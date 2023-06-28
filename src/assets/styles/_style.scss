@@ -19,4 +19,24 @@
             display: flex;
         }
     }
+
+    .whyus-card {
+        &:hover {
+            .whyus-card-bg-1 {
+                @apply -top-7 -right-7;
+            }
+
+            .whyus-card-bg-component-1 {
+                transform: scale(1.1);
+            }
+
+            .whyus-card-bg-component-3 {
+                transform: scale(1.1)rotate(5deg);
+            }
+
+            .whyus-card-bg-component-5 {
+                transform: translateX(10%);
+            }
+        }
+    }
 }

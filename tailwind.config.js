@@ -14,6 +14,7 @@ module.exports = {
         'tertiary': '#5AB2F8',
         'quaternary': '#D3E2EF',
         'main-blue': '#0067B9',
+        'secondary-blue': '#227bc2',
         'dark-blue': '#1B427D',
         'light-blue': '#5AB2F8',
         'yellow': '#FFAE35',
@@ -22,7 +23,7 @@ module.exports = {
         'black': '#000000',
         'grey': '#535456',
         'light-grey': '#EEF1F6',
-        'light': '#D9D9D9',
+        'light': '#f6f7fa',
       },
       fontFamily: {
         friends: ["Friends", "sans-serif"],
