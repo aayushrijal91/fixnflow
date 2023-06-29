@@ -6,7 +6,7 @@
             <div class="flex justify-center">
                 <div class="w-full lg:w-2/3 text-white text-center">
                     <div class="font-articulat text-3xl">Your trusted plumbing partner in Sydney</div>
-                    <div class="text-[65px] font-semibold leading-none pt-3.5">Flow with the Pros, Choose<br /> <span class="text-light-blue">Fix N Flow</span></div>
+                    <div class="text-heading font-semibold leading-none pt-3.5">Flow with the Pros, Choose<br /> <span class="text-light-blue">Fix N Flow</span></div>
                 </div>
             </div>
             <div class="flex flex-wrap justify-between items-center pt-32">

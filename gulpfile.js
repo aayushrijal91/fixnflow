@@ -17,7 +17,7 @@ const src = './src/';
 const build = '../wp-content/themes/aiims/';
 
 let sources = {
-    theme: `${src}theme-files/**/*.php`,
+    theme: `${src}theme-files/**/*`,
     images: `${src}assets/images/**/*`,
     styles: `${src}assets/styles/**/*.scss`,
     scripts: `${src}assets/scripts/**/*.js`,

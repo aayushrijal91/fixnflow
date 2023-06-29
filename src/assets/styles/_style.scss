@@ -1,3 +1,48 @@
+.navigation_bar {
+    .link_section {
+        transition: 0.2s all;
+
+        .logo_img {
+            .white_logo {
+                display: block;
+            }
+
+            .color_logo {
+                display: none;
+            }
+        }
+    }
+
+    &.scrolled {
+        .link_section {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 8px 10px;
+    
+            .change_text_color_on_scroll {
+                color: #0067B9;
+            }
+    
+            .logo_img {
+                .white_logo {
+                    display: none;
+                }
+    
+                .color_logo {
+                    display: block;
+                }
+            }
+        }
+
+        .contact_section {
+            .contact_btn {
+                display: none;
+                transition: 0.2s all;
+            }
+        }
+    }
+}
+
 .homeBanner {
     background: imgUrl('homebanner.png'), linear-gradient(180deg, #255398 0%, #0A1D39 100%);
     background-size: cover;
@@ -37,6 +82,30 @@
             .whyus-card-bg-component-5 {
                 transform: translateX(10%);
             }
+        }
+    }
+
+    .testimonial_slider {
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-slide {
+            height: inherit;
+            margin: 0 7px;
+        }
+    }
+
+    .brand_slider {
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-slide {
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
