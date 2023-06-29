@@ -10,6 +10,7 @@ module.exports = {
         transparent: 'transparent',
         current: 'currentColor',
         'primary': '#255398',
+        'primary-light': '#C6E3FE',
         'secondary': '#0A1D39',
         'tertiary': '#5AB2F8',
         'quaternary': '#D3E2EF',

@@ -1,7 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    list-style: none;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -38,6 +37,40 @@ body {
         width: 0px;
         height: 0px;
         @apply bg-main-blue;
+        top: 0;
+        left: 0;
+        outline: none;
+        transition: all 0.6s ease;
+        z-index: 1;
+    }
+
+    &:hover {
+        &::before {
+            width: 30px;
+            @apply text-white;
+            border-radius: 50px;
+            height: 30px;
+            transform: scale(36.5);
+        }
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0;
+    }
+}
+
+.btn-tertiary-hover-white {
+    position: relative;
+    overflow: hidden;
+    @apply bg-tertiary rounded-[10px] h-14 text-dark-blue inline-flex justify-center items-center font-bold transition-all duration-75 hover:shadow-[4px_4px_#1B427D];
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        @apply bg-white;
         top: 0;
         left: 0;
         outline: none;
