@@ -65,6 +65,31 @@
         }
     }
 
+    .homepage-cta {
+        &:hover {
+            .homepage-cta-bg-1 {
+                @apply -left-7;
+            }
+
+            .homepage-cta-component-1 {
+                transform: scale(1.1);
+            }
+
+            .homepage-logo-2 {
+                transform: translateX(-5%);
+            }
+
+            .homepage-cta-component-2 {
+                transform: translateY(-7%);
+            }
+            
+            .whyus-card-bg-component-3 {
+                transform: scale(1.1)rotate(5deg);
+            }
+
+        }
+    }
+
     .whyus-card {
         &:hover {
             .whyus-card-bg-1 {
