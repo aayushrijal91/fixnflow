@@ -386,7 +386,8 @@ get_template_part('parts/section', 'homebanner');
                     <img src="<?= get_template_directory_uri() ?>/images/icons/homepage-getintouch.png" alt="">
                     <div class="text-heading text-white font-bold leading-none pt-10">Get in <span class="text-dark-blue">touch</span></div>
                     <div class="text-white font-articulat font-semibold py-8">One of our expert plumbers will get back to you as soon as possible.</div>
-
+                    <div class="hidden h-14 bg-transparent border-b border-white w-full mt-3 mt-5 outline-none font-semibold text-white gap-y-5"></div>
+                    <?= do_shortcode('[contact-form-7 id="22" title="Homepage Contact"]') ?>                        
                 </div>
                 <div class="w-full lg:w-5/12">
                     <img src="<?= get_template_directory_uri() ?>/images/icons/nearby.png" alt="">

@@ -90,6 +90,12 @@
         }
     }
 
+    .homepageContact {
+        input::placeholder, textarea::placeholder {
+            color: #ffffff;
+        }
+    }
+
     .whyus-card {
         &:hover {
             .whyus-card-bg-1 {
