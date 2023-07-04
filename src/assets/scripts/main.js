@@ -12,6 +12,15 @@ jQuery(function ($) {
                     centerMode: true,
                     centerPadding: "200px",
                     slidesToScroll: 1,
+                    responsive: [
+                        {
+                            breakpoint: 540,
+                            settings: {
+                                centerPadding: "20px",
+                                slidesToShow: 1,
+                            }
+                        }
+                    ]
                 });
 
                 $('#homepage_testimonial_slider_1').slick({
@@ -20,6 +29,16 @@ jQuery(function ($) {
                     arrows: false,
                     centerMode: true,
                     centerPadding: '220px',
+                    autoplay: true,
+                    responsive: [
+                        {
+                            breakpoint: 540,
+                            settings: {
+                                centerPadding: "20px",
+                                slidesToShow: 1,
+                            }
+                        }
+                    ]
                 });
 
                 $('#brand_slider').slick({
@@ -27,6 +46,14 @@ jQuery(function ($) {
                     slidesToScroll: 1,
                     arrows: false,
                     autoplay: true,
+                    responsive: [
+                        {
+                            breakpoint: 540,
+                            settings: {
+                                slidesToShow: 3,
+                            }
+                        }
+                    ]
                 })
 
                 $('#homepage_testimonial_slider_2').slick({
@@ -34,21 +61,37 @@ jQuery(function ($) {
                     slidesToScroll: 1,
                     arrows: false,
                     centerMode: true,
+                    autoplay: true,
                     centerPadding: '150px',
+                    responsive: [
+                        {
+                            breakpoint: 540,
+                            settings: {
+                                centerPadding: "40px",
+                                slidesToShow: 1,
+                            }
+                        }
+                    ]
                 })
 
+                scrollBehaviour();
+
                 $(window).on('scroll', () => {
-                    if ($(window).scrollTop() >= 50) {
-                        $('.navigation_bar').addClass('scrolled');
-                    } else {
-                        $('.navigation_bar').removeClass('scrolled');
-                    }
+                    scrollBehaviour();
                     // if ($(this).scrollTop() >= 600) {
                     //     $('#return-to-top').fadeIn(300);
                     // } else {
                     //     $('#return-to-top').fadeOut(300);
                     // }
                 });
+
+                function scrollBehaviour() {
+                    if ($(window).scrollTop() >= 50) {
+                        $('.navigation_bar').addClass('scrolled');
+                    } else {
+                        $('.navigation_bar').removeClass('scrolled');
+                    }
+                }
 
                 // $('#return-to-top').on('click', () => {
                 //     $('body,html').animate({

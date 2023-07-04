@@ -1,23 +1,23 @@
 <?= get_template_part('parts/section', 'nav') ?>
 
-<div class="homeBanner h-[820px]">
+<div class="homeBanner h-[680px] md:h-[820px]">
     <div class="homeBannerInner h-full">
-        <div class="container pt-[259px]">
+        <div class="container pt-32 md:pt-64">
             <div class="flex justify-center">
-                <div class="w-full lg:w-2/3 text-white text-center">
-                    <div class="font-articulat text-3xl">Your trusted plumbing partner in Sydney</div>
-                    <div class="text-heading font-semibold leading-none pt-3.5">Flow with the Pros, Choose<br /> <span class="text-light-blue">Fix N Flow</span></div>
+                <div class="w-8/12 lg:w-2/3 text-white text-center">
+                    <div class="font-articulat text-[22px] md:text-3xl">Your trusted plumbing partner in Sydney</div>
+                    <div class="text-4xl md:text-heading font-bold leading-none pt-3.5">Flow with the Pros, Choose<br /> <span class="text-light-blue">Fix N Flow</span></div>
                 </div>
             </div>
-            <div class="flex flex-wrap justify-between items-center pt-32">
-                <div class="w-full lg:w-7/12">
-                    <div class="bg-white rounded-[30px] px-8 py-6">
-                        <div class="text-dark-blue text-2xl font-extrabold pb-8">Check if we service your area</div>
+            <div class="flex flex-wrap justify-between items-center pt-24 md:pt-32 gap-y-16">
+                <div class="w-full lg:w-7/12 order-2 md:order-1">
+                    <div class="bg-white rounded-[30px] px-8 py-6 shadow-xl">
+                        <div class="text-dark-blue text-xl md:text-2xl font-extrabold pb-8">Check if we service your area</div>
                         <div class="hidden h-14 bg-light-grey rounded-md px-4 w-full mt-3 outline-none font-semibold gap-y-5"></div>
                         <?= do_shortcode('[contact-form-7 id="9" title="Check Service Area"]') ?>
                     </div>
                 </div>
-                <div class="w-full lg:w-4/12">
+                <div class="w-full lg:w-4/12 order-1 md:order-2">
                     <div class="flex flex-wrap -mx-1 items-center pb-3">
                         <div class="w-1/3 px-1">
                             <img src="<?= get_template_directory_uri() ?>/images/icons/google-reviews.png" alt="google">

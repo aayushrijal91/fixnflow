@@ -9,13 +9,13 @@
         </defs>
     </svg>
 
-    <div class="bg-dark-blue py-10">
+    <div class="bg-dark-blue pb-10 md:py-10">
         <div class="container">
             <div class="w-fit mx-auto">
                 <a href="./" class=""><img src="<?= get_template_directory_uri() ?>/images/logo/logo.png" alt=""></a>
             </div>
 
-            <div class="flex flex-wrap justify-center py-14">
+            <div class="flex flex-wrap justify-center py-12 md:py-14">
                 <a href="" target="_blank" class="px-1">
                     <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="26.1914" cy="26.4004" r="25" stroke="#5AB2F8" />
@@ -52,43 +52,43 @@
                 </a>
             </div>
 
-            <div class="flex flex-wrap -mx-3">
+            <div class="flex flex-wrap -mx-3 gap-y-5">
                 <div class="w-full lg:w-1/2 px-3">
-                    <div class="rounded-[29px] bg-main-blue p-9 h-full flex flex-col justify-between">
-                        <div class="flex justify-between -mx-2">
+                    <div class="rounded-[29px] bg-main-blue p-6 md:p-9 h-full flex flex-col justify-between">
+                        <div class="flex flex-wrap justify-between -mx-2 gap-y-7">
                             <div class="w-fit px-2">
                                 <div class="text-light-blue font-articulat font-bold">Call us today</div>
-                                <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-4xl font-bold text-white"><?= get_field('phone_number', 'options') ?></a>
+                                <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-2xl md:text-4xl font-bold text-white"><?= get_field('phone_number', 'options') ?></a>
                             </div>
                             <div class="w-fit px-2">
                                 <div class="text-light-blue font-articulat font-bold">Email us today</div>
-                                <a href="mailto:<?= get_field('admin_email', 'options') ?>" class="text-4xl font-bold text-white"><?= get_field('admin_email', 'options') ?></a>
+                                <a href="mailto:<?= get_field('admin_email', 'options') ?>" class="text-2xl md:text-4xl font-bold text-white"><?= get_field('admin_email', 'options') ?></a>
                             </div>
                         </div>
-                        <div class="flex flex-wrap -mx-2">
-                            <div class="w-fit px-2">
+                        <div class="flex flex-wrap -mx-2 gap-y-4 pt-10 md:pt-0">
+                            <div class="w-full md:w-fit px-2">
                                 <a href="./" class="btn-tertiary-hover-white w-full px-14"><span class="relative z-10">Button name here</span></a>
                             </div>
-                            <div class="w-fit px-2">
+                            <div class="w-full md:w-fit px-2">
                                 <a href="./" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Button name here</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 px-3">
-                    <div class="rounded-[29px] bg-main-blue py-9 px-11 h-full bg-no-repeat bg-cover" style="background-image: url(<?= get_template_directory_uri() ?>/images/background/footer_cta_2.jpg)">
-                        <div class="bg-tertiary rounded-[10px] py-4 px-7 text-[35px] font-bold text-white leading-none relative">
+                    <div class="rounded-[29px] bg-main-blue p-6 md:py-9 md:px-11 h-full bg-no-repeat bg-cover" style="background-image: url(<?= get_template_directory_uri() ?>/images/background/footer_cta_2.jpg)">
+                        <div class="bg-tertiary rounded-[10px] pt-4 md:py-4 px-7 text-2xl md:text-[35px] font-bold text-white leading-none relative text-center md:text-start">
                             Fix n Flow <br /> <span class="text-dark-blue">Membership</span>
-                            <img src="<?= get_template_directory_uri() ?>/images/lib/vip-membership.png" alt="Vip membership" class="absolute right-0 bottom-0">
+                            <img src="<?= get_template_directory_uri() ?>/images/lib/vip-membership.png" alt="Vip membership" class="md:absolute right-0 bottom-0">
                         </div>
-                        <div class="flex justify-between -mx-2 items-center pt-4">
-                            <div class="w-fit px-2">
-                                <ul class="list-disc pl-5 font-articulat text-white leading-relaxed">
+                        <div class="flex flex-wrap justify-between -mx-2 items-center pt-4 gap-y-5">
+                            <div class="w-full md:w-fit px-2">
+                                <ul class="list-disc pl-5 font-articulat text-white leading-relaxed text-sm md:text-base">
                                     <li>Guaranteed priority booking</li>
                                     <li>10% OFF for all membership holders for life</li>
                                 </ul>
                             </div>
-                            <div class="w-fit px-2">
+                            <div class="w-full md:w-fit px-2">
                                 <a href="./" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Button name here</span></a>
                             </div>
                         </div>
@@ -154,19 +154,27 @@
 
                     <div class="border-b border-main-blue my-12"></div>
 
-                    <div class="font-bold text-white text-base"><span class="text-light-blue text-sm">License no.</span> 356346C</div>
+                    <div class="font-bold text-white text-base text-center md:text-start"><span class="text-light-blue text-sm">License no.</span> 356346C</div>
+
                     <div class="flex flex-wrap items-center -mx-2 pt-6">
-                        <div class="w-1/3 px-2 flex items-center gap-x-5">
+                        <div class="w-1/3 px-2 flex flex-col md:flex-row items-center gap-x-5 gap-y-5 justify-center">
                             <img src="<?= get_template_directory_uri() ?>/images/logo/master-plumber-association.png" alt="">
-                            <div class="font-articulat text-white">Master Plumber<br />Association<br /> NSW</div>
+                            <div class="font-articulat text-white text-center md:text-start text-sm md:text-base">Master Plumber<br />Association<br /> NSW</div>
                         </div>
-                        <div class="w-1/3 px-2 flex items-center gap-x-5">
+                        <div class="w-1/3 px-2 flex flex-col md:flex-row items-center gap-x-5 gap-y-5 justify-center">
                             <img src="<?= get_template_directory_uri() ?>/images/logo/ebix.png" alt="">
-                            <div class="font-articulat text-white">EBiX Trades<br />Monitor</div>
+                            <div class="font-articulat text-white text-center md:text-start text-sm md:text-base">EBiX Trades<br />Monitor</div>
                         </div>
-                        <div class="w-1/3 px-2 flex items-center gap-x-5">
+                        <div class="w-1/3 px-2 flex flex-col md:flex-row items-center gap-x-5 gap-y-5 justify-center">
                             <img src="<?= get_template_directory_uri() ?>/images/logo/accredited.png" alt="">
-                            <div class="font-articulat text-white">Accredited<br />Plumber</div>
+                            <div class="font-articulat text-white text-center md:text-start text-sm md:text-base">Accredited<br />Plumber</div>
+                        </div>
+                    </div>
+
+                    <div class="md:hidden">
+                        <div class="border-b border-main-blue my-12"></div>
+                        <div class="flex justify-center">
+                            <a href="https://aiims.com.au/this-is-us/" target="_blank"><img src="<?= get_template_directory_uri() ?>/images/logo/aiims.png" alt="Aiims"></a>
                         </div>
                     </div>
                 </div>
@@ -176,12 +184,13 @@
 
     <div class="bg-main-blue">
         <div class="container">
-            <div class="flex flex-wrap justify-between items-center py-6">
-                <div class="w-fit text-sm font-semibold text-white">
-                    Copyright <?= date('Y') ?> <span class="px-10 opacity-50">/</span> Fix n Flow Plumbing <span class="px-10 opacity-50">/</span> All Rights Reserved
+            <div class="flex flex-wrap justify-center md:justify-between items-center py-6">
+                <div class="w-fit text-sm font-semibold text-white text-center">
+                    <div class="md:hidden">All Rights Reserved</div>
+                    Copyright <?= date('Y') ?> <span class="px-10 opacity-50">/</span> Fix n Flow Plumbing <span class="px-10 opacity-50 hidden md:inline">/</span> <span class="hidden md:inline">All Rights Reserved</span>
                 </div>
-                <div class="w-fit">
-                    <a href="" target="_blank"><img src="<?= get_template_directory_uri() ?>/images/logo/aiims.png" alt="Aiims"></a>
+                <div class="w-fit hidden md:block">
+                    <a href="https://aiims.com.au/this-is-us/" target="_blank"><img src="<?= get_template_directory_uri() ?>/images/logo/aiims.png" alt="Aiims"></a>
                 </div>
             </div>
         </div>

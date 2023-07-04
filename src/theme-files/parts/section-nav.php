@@ -1,6 +1,6 @@
 <div class="fixed w-full z-50 navigation_bar">
     <div class="container">
-        <div class="flex flex-wrap justify-between items-center py-12 text-white">
+        <div class="flex flex-wrap justify-between items-center py-3 md:py-12 text-white">
             <div class="w-1/2 link_section">
                 <div class="flex flex-wrap justify-between items-center">
                     <div class="w-fit">
@@ -9,7 +9,7 @@
                             <img src="<?= get_template_directory_uri() ?>/images/logo/color_logo.png" alt="Fix N Flow" class="color_logo">
                         </a>
                     </div>
-                    <div class="w-fit">
+                    <div class="w-fit hidden md:block">
                         <div class="flex flex-wrap items-center -mx-4">
                             <div class="w-fit px-4">
                                 <a href="/about-us" class="change_text_color_on_scroll font-articulat font-semibold text-base">About us</a>
@@ -29,19 +29,19 @@
                     </div>
                 </div>
             </div>
-            <div class="w-fit bg-yellow rounded-[10px] p-1.5 contact_section">
+            <div class="w-fit bg-transparent md:bg-yellow rounded-[10px] p-1.5 contact_section">
                 <div class="flex flex-wrap items-center -mx-4">
-                    <div class="w-fit pl-7 pr-4">
+                    <div class="w-fit pl-7 pr-4 hidden md:block">
                         <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2.12305 16.1162L8.54094 9.69832C8.93146 9.30779 8.93146 8.67463 8.54094 8.2841L2.12305 1.86621" stroke="#171818" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" />
                         </svg>
                     </div>
-                    <div class="w-fit px-3 contact_btn">
+                    <div class="w-fit px-3 contact_btn hidden md:block">
                         <a href="tel:<?= get_field('phone_number', 'options') ?>" class="font-articulat font-semibold text-base flex items-center justify-center gap-x-3 bg-dark-blue rounded-md h-[41px] h-[41px] min-w-[155px] px-3.5">
                             <?= get_field('phone_number', 'options') ?>
                         </a>
                     </div>
-                    <div class="w-fit px-3 contact_btn">
+                    <div class="w-fit px-3 contact_btn hidden md:block">
                         <a href="/contact-us" class="font-articulat font-semibold text-base flex items-center justify-center gap-x-3 bg-main-blue rounded-md h-[41px] min-w-[155px] px-3.5">
                             Book Now
                         </a>

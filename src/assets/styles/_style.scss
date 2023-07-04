@@ -49,6 +49,10 @@
 
     .homeBannerInner {
         background: imgUrl('homeBanner_team.png') center bottom;
+
+        @media screen and (max-width: 540px) {
+            background-position-x: left;
+        }
     }
 }
 
@@ -137,6 +141,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 0 10px;
         }
     }
 }

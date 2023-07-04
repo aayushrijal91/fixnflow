@@ -7,15 +7,16 @@
 get_header();
 get_template_part('parts/section', 'homebanner');
 ?>
-<div class="homePage">
-    <div class="container">
-        <div class="flex flex-wrap -mx-2 py-44">
-            <div class="w-full md:w-1/2 px-2">
-                <div class="h-[274px] rounded-xl flex items-center p-8 transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:shadow-[10px_10px_#0067B9] relative overflow-hidden homepage-cta">
-                    <img alt="" class="homepage-cta-bg-1 absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-1.jpg">
-                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-1-component.png" class="homepage-cta-component-1 absolute bottom-0 right-0 h-full max-w-[120%] duration-300" alt="">
 
-                    <div class="relative">
+<div class="homePage pt-48 md:pt-0">
+    <div class="container">
+        <div class="flex flex-wrap -mx-2 py-44 gap-y-5">
+            <div class="w-full md:w-1/2 px-2">
+                <div class="h-[447px] md:h-[274px] rounded-xl flex items-stretch md:items-center p-8 transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:shadow-[10px_10px_#0067B9] relative overflow-hidden homepage-cta">
+                    <img alt="" class="homepage-cta-bg-1 absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-1.jpg">
+                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-1-component.png" class="homepage-cta-component-1 absolute bottom-0 right-0 max-w-[120%] duration-300" alt="">
+
+                    <div class="relative flex flex-col h-full justify-between md:justify-center md:items-start">
                         <div class="text-4xl font-bold text-dark-blue pb-10">Same day service<div class="text-white">guarantee or its free!</div>
                         </div>
                         <a href="./" class="btn-yellow-hover-main-blue px-14 "><span class="relative z-10">Learn More</span></a>
@@ -84,47 +85,60 @@ get_template_part('parts/section', 'homebanner');
         </div>
     </div>
 
+    <?php $services = get_field('services'); ?>
     <div class="py-28 bg-no-repeat bg-contain" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/homepage_services.png')">
-        <div class="container py-20">
-            <div class="mx-auto w-11/12 lg:w-2/3 text-grey text-heading leading-none font-bold text-center">Our wide range of <span class="text-main-blue">professional plumbing</span> services</div>
-            <div class="mx-auto w-11/12 lg:w-1/2 text-grey font-articulat text-center pt-14">Our team of experienced plumbers provides services to both residential and commercial customers. Here is a list of some of the services we offer:</div>
-            <div class="bg-light rounded-[35px] py-16 mt-16 shadow-[inset_0px_0px_36px_0px_rgba(0, 0, 0, 0.05)]">
+        <div class="container md:py-20">
+            <div class="mx-auto w-11/12 lg:w-2/3 text-grey text-4xl md:text-heading leading-none font-bold text-center"><?= $services['heading'] ?></div>
+            <div class="mx-auto w-11/12 lg:w-2/3 text-grey font-articulat text-center pt-9 md:pt-14"><?= $services['description'] ?></div>
+            <div class="bg-light rounded-[35px] py-16 md:mt-16 shadow-[inset_0px_0px_36px_0px_rgba(0, 0, 0, 0.05)]">
                 <div id="homepage_service_slider" class="homepage_service_slider pb-12">
-                    <?php for ($i = 0; $i < 10; $i++) : ?>
-                        <div class="bg-quaternary rounded-2xl p-4 flex flex-col justify-between">
-                            <div class="pb-16">
-                                <div class="h-[147px] w-full bg-grey rounded-[10px] p-3 flex items-end bg-no-repeat bg-cover" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/cta-1.jpg')">
-                                    <img src="<?= get_template_directory_uri() ?>/images/icons/service-icon.png" alt="">
-                                </div>
-                                <div class="text-2xl font-bold text-main-blue pt-3">Service name</div>
-                            </div>
-                            <a href="./" class="border border-light-blue rounded-md h-[48px] flex items-center justify-center text-center text-main-blue font-articulat font-semibold gap-x-4">
-                                Explore now
-                                <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.86279 16.0078L8.28068 9.58992C8.67121 9.1994 8.67121 8.56623 8.28069 8.17571L1.86279 1.75781" stroke="#5AB2F8" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" />
-                                </svg>
-                            </a>
-                        </div>
-                    <?php endfor; ?>
+                    <?php if (have_rows('services')) :
+                        while (have_rows('services')) : the_row();
+                            if (have_rows('services_list')) :
+                                while (have_rows('services_list')) : the_row();
+                                    $image = get_sub_field('image');
+                                    $serviceName = get_sub_field('service_name');
+                                    $link = get_sub_field('link');
+                    ?>
+                                    <div class="bg-quaternary rounded-2xl p-4 flex flex-col justify-between">
+                                        <div class="pb-16">
+                                            <div class="h-[147px] w-full bg-grey rounded-[10px] p-3 flex items-end bg-no-repeat bg-cover" style="background-image: url('<?= $image['url'] ?>')">
+                                                <img src="<?= get_template_directory_uri() ?>/images/icons/service-icon.png" alt="">
+                                            </div>
+                                            <div class="text-2xl font-bold text-main-blue pt-3"><?= $serviceName ?></div>
+                                        </div>
+                                        <a href="<?= $link ?>" class="border border-light-blue rounded-md h-[48px] flex items-center justify-center text-center text-main-blue font-articulat font-semibold gap-x-4">
+                                            Explore now
+                                            <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.86279 16.0078L8.28068 9.58992C8.67121 9.1994 8.67121 8.56623 8.28069 8.17571L1.86279 1.75781" stroke="#5AB2F8" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                    <?php
+                                endwhile;
+                            endif;
+                        endwhile;
+                    endif;
+                    ?>
                 </div>
                 <div class="flex justify-center">
-                    <a href="./" class="btn-yellow-hover-main-blue px-14"><span class="relative z-10">Button name here</span></a>
+                    <a href="<?= $services['button']['url'] ?>" target="<?= $services['button']['target'] ?>" class="btn-yellow-hover-main-blue px-14 w-full md:w-fit"><span class="relative z-10"><?= $services['button']['title'] ?></span></a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="bg-dark-blue pt-40 bg-no-repeat" style="background-image:url(<?= get_template_directory_uri() ?>/images/background/homepage_guarantee_vector.png)">
+    <div class="bg-dark-blue pt-14 md:pt-40 bg-no-repeat bg-cover md:bg-contain" style="background-image:url(<?= get_template_directory_uri() ?>/images/background/homepage_guarantee_vector.png)">
         <div class="container">
             <div class="flex flex-wrap justify-between">
                 <div class="w-full lg:w-5/12">
-                    <div class="text-white text-heading font-bold leading-none pb-12">What you're <span class="text-light-blue">guaranteed</span> to get from us</div>
-                    <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.png" alt="">
+                    <div class="text-white text-4xl md:text-heading font-bold leading-none pb-12">What you're <span class="text-light-blue">guaranteed</span> to get from us</div>
+                    <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.png" alt="plumb" class="hidden md:block">
                 </div>
                 <div class="w-full lg:w-1/2">
-                    <div class="flex flex-wrap -mx-2 gap-y-5">
-                        <div class="w-full md:w-1/3 px-2 group">
-                            <div class="relative bg-white h-full w-full rounded-2xl py-4 px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
+                    <div class="flex flex-wrap -mx-2 gap-y-4 md:gap-y-5">
+                        <div class="w-1/2 md:w-1/3 px-2 group">
+                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                                 <div class="flex flex-col items-center gap-y-4 relative h-full">
                                     <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
@@ -134,16 +148,16 @@ get_template_part('parts/section', 'homebanner');
                                         </svg>
                                     </div>
                                     <div class="flex justify-center">
-                                        <div class="text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150 border-b border-light-blue pb-3">
+                                        <div class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150 border-b border-light-blue pb-3">
                                             01
                                         </div>
                                     </div>
-                                    <div class="text-grey group-hover:text-white duration-300 font-articulat text-center">Call us and speak to an expert</div>
+                                    <div class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Call us and speak to an expert</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full md:w-1/3 px-2 group">
-                            <div class="relative bg-white h-full w-full rounded-2xl py-4 px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
+                        <div class="w-1/2 md:w-1/3 px-2 group">
+                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                                 <div class="flex flex-col items-center gap-y-4 relative h-full">
                                     <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
@@ -154,16 +168,16 @@ get_template_part('parts/section', 'homebanner');
                                         </svg>
                                     </div>
                                     <div class="flex justify-center">
-                                        <div class="text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150 border-b border-light-blue pb-3">
+                                        <div class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150 border-b border-light-blue pb-3">
                                             02
                                         </div>
                                     </div>
-                                    <div class="text-grey group-hover:text-white duration-300 font-articulat text-center">Onsite review</div>
+                                    <div class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Onsite review</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full md:w-1/3 px-2 group">
-                            <div class="relative bg-white h-full w-full rounded-2xl py-4 px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
+                        <div class="w-1/2 md:w-1/3 px-2 group">
+                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                                 <div class="flex flex-col items-center gap-y-4 relative h-full">
                                     <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
@@ -178,16 +192,16 @@ get_template_part('parts/section', 'homebanner');
                                         </svg>
                                     </div>
                                     <div class="flex justify-center">
-                                        <div class="text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150 border-b border-light-blue pb-3">
+                                        <div class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150 border-b border-light-blue pb-3">
                                             03
                                         </div>
                                     </div>
-                                    <div class="text-grey group-hover:text-white duration-300 font-articulat text-center">Deliver a free quote</div>
+                                    <div class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Deliver a free quote</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full md:w-1/3 px-2 group">
-                            <div class="relative bg-white h-full w-full rounded-2xl py-4 px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
+                        <div class="w-1/2 md:w-1/3 px-2 group">
+                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                                 <div class="flex flex-col items-center gap-y-4 relative h-full">
                                     <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
@@ -198,16 +212,16 @@ get_template_part('parts/section', 'homebanner');
                                         </svg>
                                     </div>
                                     <div class="flex justify-center">
-                                        <div class="text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150 border-b border-light-blue pb-3">
+                                        <div class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150 border-b border-light-blue pb-3">
                                             04
                                         </div>
                                     </div>
-                                    <div class="text-grey group-hover:text-white duration-300 font-articulat text-center">Complete work with updates, we maintain consant dialogue</div>
+                                    <div class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Complete work with updates, we maintain consant dialogue</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full md:w-1/3 px-2 group">
-                            <div class="relative bg-white h-full w-full rounded-2xl py-4 px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
+                        <div class="w-1/2 md:w-1/3 px-2 group">
+                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                                 <div class="flex flex-col items-center gap-y-4 relative h-full">
                                     <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
@@ -219,16 +233,16 @@ get_template_part('parts/section', 'homebanner');
                                         </svg>
                                     </div>
                                     <div class="flex justify-center">
-                                        <div class="text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150 border-b border-light-blue pb-3">
+                                        <div class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150 border-b border-light-blue pb-3">
                                             05
                                         </div>
                                     </div>
-                                    <div class="text-grey group-hover:text-white duration-300 font-articulat text-center">Clean up</div>
+                                    <div class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Clean up</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full md:w-1/3 px-2 group">
-                            <div class="relative bg-white h-full w-full rounded-2xl py-4 px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
+                        <div class="w-1/2 md:w-1/3 px-2 group">
+                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                                 <div class="flex flex-col items-center gap-y-4 relative h-full">
                                     <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
@@ -238,13 +252,16 @@ get_template_part('parts/section', 'homebanner');
                                         </svg>
                                     </div>
                                     <div class="flex justify-center">
-                                        <div class="text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150 border-b border-light-blue pb-3">
+                                        <div class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150 border-b border-light-blue pb-3">
                                             06
                                         </div>
                                     </div>
-                                    <div class="text-grey group-hover:text-white duration-300 font-articulat text-center">Review and follow up</div>
+                                    <div class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Review and follow up</div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="w-full md:hidden">
+                            <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.png" alt="plumb">
                         </div>
                     </div>
                 </div>
@@ -256,11 +273,11 @@ get_template_part('parts/section', 'homebanner');
         <div class="absolute bottom-full overflow-x-hidden">
             <img src="<?= get_template_directory_uri() ?>/images/background/why-choose-vector.png" alt="" class="group-hover:-translate-x-96 duration-500 max-w-[200%]">
         </div>
-        <div class="bg-secondary-blue duration-500 pb-40">
+        <div class="bg-secondary-blue duration-500 pb-14 md:pb-40 pt-10 md:pt-0">
             <div class="container">
                 <div class="flex flex-wrap justify-between items-center">
-                    <div class="text-heading font-bold text-white duration-500">Why Choose Fix N Flow?</div>
-                    <div class="w-fit"><a href="./" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Button name here</span></a></div>
+                    <div class="text-4xl md:text-heading font-bold text-white duration-500 leading-none">Why Choose Fix N Flow?</div>
+                    <div class="w-fit hidden md:block"><a href="./" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Button name here</span></a></div>
                 </div>
                 <div class="w-full lg:w-10/12 pt-7">
                     <div class="flex flex-wrap -mx-2 text-white duration-500 font-articulat leading-loose">
@@ -273,9 +290,9 @@ get_template_part('parts/section', 'homebanner');
                     </div>
                 </div>
 
-                <div class="flex flex-wrap -mx-2 mt-20">
+                <div class="flex flex-wrap -mx-2 mt-20 gap-y-4">
                     <div class="w-full lg:w-3/4 px-2">
-                        <div class="flex flex-wrap -mx-2">
+                        <div class="flex flex-wrap -mx-2 gap-y-4">
                             <div class="w-full lg:w-1/3 px-2">
                                 <div class="h-[255px] rounded-[10px] relative overflow-hidden whyus-card">
                                     <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-1.jpg" class="whyus-card-bg-1 absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] duration-300" alt="">
@@ -284,7 +301,7 @@ get_template_part('parts/section', 'homebanner');
 
                                     <div class="flex h-full items-end p-7 relative">
                                         <div class="w-full">
-                                            <div class="text-white text-4xl font-semibold pb-7"><span class="font-bold">Family</span> owned<br /> & operated</div>
+                                            <div class="text-white text-2xl md:text-4xl font-semibold md:pb-7"><span class="font-bold">Family</span> owned<br /> & operated</div>
                                             <div class="flex flex-wrap justify-between items-end">
                                                 <div class="w-fit font-articulat text-white flex-1 text-base leading-loose">
                                                     We treat our customers like family.
@@ -296,14 +313,14 @@ get_template_part('parts/section', 'homebanner');
                                 </div>
                             </div>
                             <div class="w-full lg:w-2/3 px-2">
-                                <div class="h-[255px] rounded-[10px] relative overflow-hidden whyus-card">
+                                <div class="h-[450px] md:h-[255px] rounded-[10px] relative overflow-hidden whyus-card">
                                     <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-2.jpg" class="whyus-card-bg-1 absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] duration-300" alt="">
                                     <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-2.png" class="whyus-card-bg-component-1 absolute bottom-0 right-0 duration-300" alt="">
                                     <div class="absolute w-full h-full bg-gradient-to-b from-transparent to-black/75"></div>
 
-                                    <div class="flex h-full items-end p-7 relative">
+                                    <div class="flex h-full md:items-end p-7 relative">
                                         <div class="w-full">
-                                            <div class="text-white text-4xl font-semibold">We guarantee a <div class="font-bold">60-minute</div> response time</div>
+                                            <div class="text-white text-2xl md:text-4xl font-semibold">We guarantee a <div class="font-bold">60-minute</div> response time</div>
                                             <div class="flex flex-wrap justify-between items-end">
                                                 <div class="w-fit font-articulat text-white flex-1 text-base">
                                                     To ensure that your plumbing needs are attended to promptly.
@@ -315,17 +332,17 @@ get_template_part('parts/section', 'homebanner');
                                 </div>
                             </div>
                         </div>
-                        <div class="flex flex-wrap -mx-2 mt-4">
+                        <div class="flex flex-wrap -mx-2 mt-4 gap-y-4">
                             <div class="w-full lg:w-2/3 px-2">
-                                <div class="h-[255px] rounded-[10px] relative overflow-hidden whyus-card bg-gradient-to-r from-[#f3f3f3] to-[#e4e2e2]">
+                                <div class="h-[450px] md:h-[255px] rounded-[10px] relative overflow-hidden whyus-card bg-gradient-to-r from-[#f3f3f3] to-[#e4e2e2]">
                                     <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-3.png" class="whyus-card-bg-component-3 absolute bottom-0 right-0 duration-300" alt="">
 
-                                    <div class="flex h-full items-end p-7 relative">
+                                    <div class="flex h-full md:items-end p-7 relative">
                                         <div class="w-full">
-                                            <div class="text-dark-blue text-4xl font-bold pb-7">Detailed breakdown <div class="text-light-blue">of all costs</div>
+                                            <div class="text-dark-blue text-2xl md:text-4xl font-bold pb-7">Detailed breakdown <div class="text-light-blue">of all costs</div>
                                             </div>
                                             <div class="flex flex-wrap justify-between items-end">
-                                                <div class="w-7/12 font-articulat text-dark-blue text-base leading-loose">
+                                                <div class="w-9/12 md:w-7/12 font-articulat text-dark-blue text-sm md:text-base leading-loose">
                                                     Our team of expert plumbers will ensure you can make informed decisions.
                                                 </div>
                                                 <div class="w-fit"><img src="<?= get_template_directory_uri() ?>/images/icons/why-us-icon-3.png" alt=""></div>
@@ -341,7 +358,7 @@ get_template_part('parts/section', 'homebanner');
 
                                     <div class="flex h-full items-end p-7 relative">
                                         <div class="w-full">
-                                            <div class="text-white text-4xl font-bold pb-7">We believe in <div class="text-dark-blue">transparency</div>
+                                            <div class="text-white text-2xl md:text-4xl font-bold pb-7">We believe in <div class="text-dark-blue">transparency</div>
                                             </div>
                                             <div class="flex flex-wrap justify-between items-end">
                                                 <div class="w-fit font-articulat text-white flex-1 text-base leading-loose">
@@ -356,15 +373,15 @@ get_template_part('parts/section', 'homebanner');
                         </div>
                     </div>
                     <div class="w-full lg:w-1/4 px-2">
-                        <div class="h-full rounded-[10px] relative overflow-hidden whyus-card bg-white">
+                        <div class="h-[450px] md:h-full rounded-[10px] relative overflow-hidden whyus-card bg-white">
                             <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-5.png" class="absolute top-0 right-0 w-full duration-300" alt="">
                             <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-5.png" class="whyus-card-bg-component-5 absolute top-0 right-0 h-full max-w-[120%] duration-300" alt="">
 
                             <div class="flex h-full items-end p-7 relative">
                                 <div class="w-full">
-                                    <div class="text-dark-blue text-4xl font-bold pb-7">Affordable & <br /><span class="text-light-blue">fair</span> pricing</div>
+                                    <div class="text-dark-blue text-2xl md:text-4xl font-bold md:pb-7">Affordable & <br /><span class="text-light-blue">fair</span> pricing</div>
                                     <div class="flex flex-wrap justify-between items-end">
-                                        <div class="w-8/12 font-articulat text-dark-blue text-base leading-loose">
+                                        <div class="w-8/12 font-articulat text-dark-blue text-sm md:text-base leading-loose">
                                             Without compromising on the quality of our services.
                                         </div>
                                         <div class="w-fit"><img src="<?= get_template_directory_uri() ?>/images/icons/why-us-icon-5.png" alt=""></div>
@@ -374,29 +391,32 @@ get_template_part('parts/section', 'homebanner');
                         </div>
                     </div>
                 </div>
+
+                <div class="md:hidden pt-14"><a href="./" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Button name here</span></a></div>
             </div>
         </div>
     </div>
 
-    <div class="homepageContact bg-[#D3E2EF] relative overflow-hidden pt-16 pb-20 group">
-        <img src="<?= get_template_directory_uri() ?>/images/background/homepageContact-component.png" alt="" class="absolute top-0 left-0 group-hover:-top-full duration-1000">
-        <div class="container relative">
-            <div class="flex flex-wrap justify-between">
+    <div class="homepageContact bg-light-blue md:bg-[#D3E2EF] relative overflow-hidden group">
+        <img src="<?= get_template_directory_uri() ?>/images/background/homepageContact-component.png" alt="" class="absolute top-0 left-0 group-hover:-top-[50%] duration-1000 hidden md:block">
+
+        <div class="container relative py-16 md:pb-20">
+            <div class="flex flex-wrap justify-between gap-y-10">
                 <div class="w-full lg:w-1/2">
                     <img src="<?= get_template_directory_uri() ?>/images/icons/homepage-getintouch.png" alt="">
-                    <div class="text-heading text-white font-bold leading-none pt-10">Get in <span class="text-dark-blue">touch</span></div>
-                    <div class="text-white font-articulat font-semibold py-8">One of our expert plumbers will get back to you as soon as possible.</div>
+                    <div class="text-4xl md:text-heading text-white font-bold leading-none pt-7 md:pt-10">Get in <span class="text-dark-blue">touch</span></div>
+                    <div class="text-white font-articulat font-semibold py-3 md:py-8">One of our expert plumbers will get back to you as soon as possible.</div>
                     <div class="hidden h-14 bg-transparent border-b border-white w-full mt-3 mt-5 outline-none font-semibold text-white gap-y-5"></div>
-                    <?= do_shortcode('[contact-form-7 id="22" title="Homepage Contact"]') ?>                        
+                    <?= do_shortcode('[contact-form-7 id="22" title="Homepage Contact"]') ?>
                 </div>
-                <div class="w-full lg:w-5/12">
+                <div class="w-full lg:w-5/12 hidden md:block">
                     <img src="<?= get_template_directory_uri() ?>/images/icons/nearby.png" alt="">
-                    <div class="text-heading text-grey font-bold leading-none py-10">We're always <br /><span class="text-main-blue">nearby!</span></div>
-                    <div class="font-bold font-articulat text-main-blue">Call us today</div>
+                    <div class="text-4xl md:text-heading text-grey font-bold leading-none py-10">We're always <br /><span class="text-main-blue">nearby!</span></div>
+                    <div class="font-bold font-articulat text-main-blue pb-10">Call us today</div>
 
-                    <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-heading text-main-blue font-bold"><?= get_field('phone_number', 'options') ?></a>
+                    <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-4xl md:text-heading text-main-blue font-bold"><?= get_field('phone_number', 'options') ?></a>
 
-                    <div class="text-base font-articulat text-grey leading-loose pt-5 pb-10">
+                    <div class="text-sm md:text-base font-articulat text-grey leading-loose pt-5 pb-9 w-full xl:w-11/12">
                         <p class="pb-5">We’re here for all your plumbing needs. Our team of expert plumbers is available 24/7 to help you with any plumbing emergencies.</p>
                         <p>At Fix N Flow, we are committed to providing our customers with top-quality plumbing services. Contact us today for all your plumbing needs.</p>
                     </div>
@@ -405,17 +425,40 @@ get_template_part('parts/section', 'homebanner');
                 </div>
             </div>
         </div>
+        <img src="<?= get_template_directory_uri() ?>/images/lib/contact_guy.png" class="absolute right-0 bottom-0 hidden md:block" alt="">
     </div>
 
-    <div class="testimonials py-40">
-        <div class="container pb-20">
-            <div class="flex flex-wrap justify-between">
-                <div class="text-heading text-grey font-bold flex leading-none">
-                    <div>Our <span class="text-main-blue">happy</span> customers</div>
-                    <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5.01432 27.8241H18.9205C20.1499 27.8241 21.329 27.3357 22.1983 26.4664C23.0676 25.5971 23.556 24.4181 23.556 23.1887V20.871C23.556 20.2563 23.3118 19.6668 22.8771 19.2321C22.4425 18.7975 21.8529 18.5533 21.2383 18.5533C20.6236 18.5533 20.034 18.7975 19.5994 19.2321C19.1647 19.6668 18.9205 20.2563 18.9205 20.871V23.1887H5.01432V9.28244H7.33202C7.94672 9.28244 8.53623 9.03826 8.97089 8.6036C9.40554 8.16895 9.64973 7.57943 9.64973 6.96474C9.64973 6.35005 9.40554 5.76053 8.97089 5.32587C8.53623 4.89122 7.94672 4.64703 7.33202 4.64703H5.01432C3.78493 4.64703 2.60589 5.13541 1.73659 6.00471C0.867279 6.87402 0.378906 8.05306 0.378906 9.28244L0.378906 23.1887C0.378906 24.4181 0.867279 25.5971 1.73659 26.4664C2.60589 27.3357 3.78493 27.8241 5.01432 27.8241Z" fill="#5AB2F8" />
-                        <path d="M27.033 0.0112323H15.4445C15.215 0.0108217 14.9905 0.0785645 14.7996 0.205873C14.6086 0.333181 14.4598 0.514321 14.3719 0.72633C14.284 0.938338 14.2611 1.17167 14.3059 1.39674C14.3508 1.6218 14.4615 1.82848 14.624 1.99055L18.7797 6.14388L12.647 12.2788C12.4257 12.4926 12.2491 12.7484 12.1276 13.0312C12.0062 13.3139 11.9422 13.6181 11.9395 13.9258C11.9369 14.2335 11.9955 14.5387 12.112 14.8236C12.2286 15.1084 12.4007 15.3672 12.6183 15.5848C12.8359 15.8024 13.0947 15.9745 13.3795 16.0911C13.6644 16.2076 13.9696 16.2662 14.2773 16.2636C14.585 16.2609 14.8892 16.197 15.1719 16.0755C15.4547 15.954 15.7105 15.7774 15.9243 15.5561L22.0592 9.42343L26.2126 13.5791C26.3204 13.6866 26.4483 13.7719 26.5891 13.8299C26.7299 13.888 26.8807 13.9177 27.033 13.9175C27.1849 13.9167 27.3351 13.8868 27.4757 13.8294C27.6876 13.7418 27.8688 13.5933 27.9963 13.4027C28.1238 13.2121 28.1918 12.9879 28.1919 12.7586V1.17008C28.1919 0.862738 28.0698 0.567979 27.8525 0.350652C27.6351 0.133325 27.3404 0.0112323 27.033 0.0112323Z" fill="#5AB2F8" />
-                    </svg>
+    <div class="md:hidden bg-[#D3E2EF]">
+        <img src="<?= get_template_directory_uri() ?>/images/background/mobile-contact-vector.png" class="w-full" alt="">
+        <div class="container pt-9 pb-16">
+            <img src="<?= get_template_directory_uri() ?>/images/icons/nearby.png" alt="">
+            <div class="text-4xl md:text-heading text-grey font-bold leading-none py-10">We're always <br /><span class="text-main-blue">nearby!</span></div>
+            <div class="font-bold font-articulat text-main-blue pb-10">Call us today</div>
+
+            <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-4xl md:text-heading text-main-blue font-bold"><?= get_field('phone_number', 'options') ?></a>
+
+            <div class="text-sm md:text-base font-articulat text-grey leading-loose pt-5 pb-9 w-full xl:w-11/12">
+                <p class="pb-5">We’re here for all your plumbing needs. Our team of expert plumbers is available 24/7 to help you with any plumbing emergencies.</p>
+                <p>At Fix N Flow, we are committed to providing our customers with top-quality plumbing services. Contact us today for all your plumbing needs.</p>
+            </div>
+            <a href="./" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10">Button name here</span></a>
+        </div>
+    </div>
+
+    <div class="testimonials py-16 md:py-40 relative group">
+        <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-left-floater.png" class="absolute left-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="">
+        <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-right-floater.png" class="absolute right-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="">
+        <div class="container pb-11 md:pb-20">
+            <div class="flex flex-wrap justify-between gap-y-10">
+                <div class="text-4xl md:text-heading text-grey font-bold flex leading-none">
+                    <div>Our <span class="text-main-blue">happy</span><br class="md:hidden" /> customers</div>
+                    
+                    <div class="hidden md:inline">
+                        <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.01432 27.8241H18.9205C20.1499 27.8241 21.329 27.3357 22.1983 26.4664C23.0676 25.5971 23.556 24.4181 23.556 23.1887V20.871C23.556 20.2563 23.3118 19.6668 22.8771 19.2321C22.4425 18.7975 21.8529 18.5533 21.2383 18.5533C20.6236 18.5533 20.034 18.7975 19.5994 19.2321C19.1647 19.6668 18.9205 20.2563 18.9205 20.871V23.1887H5.01432V9.28244H7.33202C7.94672 9.28244 8.53623 9.03826 8.97089 8.6036C9.40554 8.16895 9.64973 7.57943 9.64973 6.96474C9.64973 6.35005 9.40554 5.76053 8.97089 5.32587C8.53623 4.89122 7.94672 4.64703 7.33202 4.64703H5.01432C3.78493 4.64703 2.60589 5.13541 1.73659 6.00471C0.867279 6.87402 0.378906 8.05306 0.378906 9.28244L0.378906 23.1887C0.378906 24.4181 0.867279 25.5971 1.73659 26.4664C2.60589 27.3357 3.78493 27.8241 5.01432 27.8241Z" fill="#5AB2F8" />
+                            <path d="M27.033 0.0112323H15.4445C15.215 0.0108217 14.9905 0.0785645 14.7996 0.205873C14.6086 0.333181 14.4598 0.514321 14.3719 0.72633C14.284 0.938338 14.2611 1.17167 14.3059 1.39674C14.3508 1.6218 14.4615 1.82848 14.624 1.99055L18.7797 6.14388L12.647 12.2788C12.4257 12.4926 12.2491 12.7484 12.1276 13.0312C12.0062 13.3139 11.9422 13.6181 11.9395 13.9258C11.9369 14.2335 11.9955 14.5387 12.112 14.8236C12.2286 15.1084 12.4007 15.3672 12.6183 15.5848C12.8359 15.8024 13.0947 15.9745 13.3795 16.0911C13.6644 16.2076 13.9696 16.2662 14.2773 16.2636C14.585 16.2609 14.8892 16.197 15.1719 16.0755C15.4547 15.954 15.7105 15.7774 15.9243 15.5561L22.0592 9.42343L26.2126 13.5791C26.3204 13.6866 26.4483 13.7719 26.5891 13.8299C26.7299 13.888 26.8807 13.9177 27.033 13.9175C27.1849 13.9167 27.3351 13.8868 27.4757 13.8294C27.6876 13.7418 27.8688 13.5933 27.9963 13.4027C28.1238 13.2121 28.1918 12.9879 28.1919 12.7586V1.17008C28.1919 0.862738 28.0698 0.567979 27.8525 0.350652C27.6351 0.133325 27.3404 0.0112323 27.033 0.0112323Z" fill="#5AB2F8" />
+                        </svg>
+                    </div>
                 </div>
                 <div>
                     <img src="<?= get_template_directory_uri() ?>/images/logo/testimonials-review.png" alt="">
@@ -473,36 +516,39 @@ get_template_part('parts/section', 'homebanner');
             <?php endfor; ?>
         </div>
 
-        <div class="container pt-40">
-            <div class="text-center text-heading text-grey font-bold leading-tight">At Fix N Flow, we work with <span class="text-main-blue">leading brands</span> in the plumbing industry...</div>
-            <div class="font-articulat text-grey text-center py-10">
-                We ensure that we provide our customers with the best quality products. Some of the brands we work with include:
-            </div>
-            <div class="w-full lg:w-10/12 h-[162px] mx-auto bg-light rounded-[35px] shadow-[inset_0px_0px_36px_0px_rgba(0, 0, 0, 0.05)] py-8 px-12">
-                <div id="brand_slider" class="brand_slider">
-                    <div><img src="<?= get_template_directory_uri() ?>/images/logo/clark.png" alt=""></div>
-                    <div><img src="<?= get_template_directory_uri() ?>/images/logo/dorf.png" alt=""></div>
-                    <div><img src="<?= get_template_directory_uri() ?>/images/logo/flower.png" alt=""></div>
-                    <div><img src="<?= get_template_directory_uri() ?>/images/logo/dux.png" alt=""></div>
-                    <div><img src="<?= get_template_directory_uri() ?>/images/logo/grohe.png" alt=""></div>
-                    <div><img src="<?= get_template_directory_uri() ?>/images/logo/caroma.png" alt=""></div>
-                    <div><img src="<?= get_template_directory_uri() ?>/images/logo/reece.png" alt=""></div>
-                    <div><img src="<?= get_template_directory_uri() ?>/images/logo/kohler.png" alt=""></div>
-                    <div><img src="<?= get_template_directory_uri() ?>/images/logo/rinnai.png" alt=""></div>
+        <div class="bg-no-repeat bg-contain" style="background-image:url(<?= get_template_directory_uri() ?>/images/background/brands-bg.png)">
+            <div class="container pt-16 md:pt-40">
+                <div class="md:text-center text-4xl md:text-heading text-grey font-bold leading-tight">At Fix N Flow, we work with <span class="text-main-blue">leading brands</span> in the plumbing industry...</div>
+                <div class="font-articulat text-grey md:text-center py-7 md:py-10">
+                    We ensure that we provide our customers with the best quality products. Some of the brands we work with include:
+                </div>
+                <div class="w-full lg:w-10/12 h-[162px] mx-auto bg-light rounded-[35px] shadow-[inset_0px_0px_36px_0px_rgba(0, 0, 0, 0.05)] py-8 px-4 md:px-12">
+                    <div id="brand_slider" class="brand_slider">
+                        <?php
+                        if (have_rows('leading_brands')) :
+                            while (have_rows('leading_brands')) : the_row();
+                                $brand_logo = get_sub_field('image');
+                        ?>
+                                <div><img src="<?= $brand_logo['url'] ?>" alt="<?= $brand_logo['alt'] ?>"></div>
+                        <?php
+                            endwhile;
+                        endif;
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="bg-light-grey pt-40 pb-52 relative">
+    <div class="bg-light-grey pt-20 pb-40 md:pt-40 md:pb-52 relative">
         <div class="container">
-            <div class="text-center text-heading text-grey font-bold leading-tight">Fix n Flow are <span class="text-main-blue">proud sponsors</span></div>
-            <div class="w-full lg:w-1/2 mx-auto my-12 p-7 border-t border-b border-light-blue text-grey font-articulat text-center leading-loose">
+            <div class="md:text-center text-4xl md:text-heading text-grey font-bold leading-tight">Fix n Flow are <span class="text-main-blue">proud sponsors</span></div>
+            <div class="w-full lg:w-1/2 mx-auto my-10 md:my-12 p-7 border-t border-b border-light-blue text-grey font-articulat text-center leading-loose">
                 <div class="w-full lg:w-10/12 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
             </div>
 
             <div class="w-full lg:w-10/12 mx-auto">
-                <div class="flex flex-wrap -mx-2">
+                <div class="flex flex-wrap -mx-2 gap-y-5">
                     <div class="w-full lg:w-1/3 px-2">
                         <div class="bg-white shadow p-2 rounded-[10px] h-full">
                             <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
