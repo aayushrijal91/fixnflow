@@ -96,8 +96,69 @@
                 </div>
             </div>
 
-            <div class="flex flex-wrap pt-24">
-                <div class="w-full lg:w-1/2">
+            <div class="md:hidden pt-12">
+                <div class="container">
+                    <div class="rounded-2xl bg-quaternary/[0.1] py-9 px-5 flex flex-col gap-y-5">
+                        <div>
+                            <div class="text-light-blue text-xl font-bold text-center">Quick links</div>
+                            <ul class="text-center flex flex-col gap-y-3 pt-4 text-sm">
+                                <li><a href="" class="text-primary-light">Home</a></li>
+                                <li><a href="" class="text-primary-light">About us</a></li>
+                                <li><a href="" class="text-primary-light">Areas we service</a></li>
+                                <li><a href="" class="text-primary-light">Blogs</a></li>
+                                <li><a href="" class="text-primary-light">FAQs</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <div class="text-light-blue text-xl font-bold text-center">Our services</div>
+                            <ul class="text-center flex flex-col gap-y-3 pt-4 text-sm">
+                                <li><a href="" class="text-primary-light">Emergency Plumbing</a></li>
+                                <li><a href="" class="text-primary-light">Blocked Drains</a></li>
+                                <li><a href="" class="text-primary-light">Hot Water Services</a></li>
+                                <li><a href="" class="text-primary-light">Taps & Toilets</a></li>
+                                <li><a href="" class="text-primary-light">Rainwater Tanks & Pumps</a></li>
+                                <li><a href="" class="text-primary-light">Gas Plumbing</a></li>
+                                <li><a href="" class="text-primary-light">General Plumbing</a></li>
+                                <li><a href="" class="text-primary-light">Commercial Plumbing</a></li>
+                                <li><a href="" class="text-primary-light">Bathroom Renovations</a></li>
+                                <li><a href="" class="text-primary-light">Water Filters</a></li>
+                                <li><a href="" class="text-primary-light">Backflow Prevention & RPZ Valves</a></li>
+                                <li><a href="" class="text-primary-light">Septic Systems</a></li>
+                                <li><a href="" class="text-primary-light">Roofing & Guttering</a></li>
+                                <li><a href="" class="text-primary-light">Renovation Plumber</a></li>
+                                <li><a href="" class="text-primary-light">Leak Detection</a></li>
+                                <li><a href="" class="text-primary-light">Pool</a></li>
+                                <li><a href="" class="text-primary-light">Property & Strata Managers</a></li>
+                                <li><a href="" class="text-primary-light">Kitchen Renovations</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <div class="text-light-blue text-xl font-bold text-center">Discover more</div>
+                            <ul class="text-center flex flex-col gap-y-3 pt-4 text-sm">
+                                <li><a href="" class="text-primary-light">Areas we service</a></li>
+                                <li><a href="" class="text-primary-light">Careers</a></li>
+                                <li><a href="" class="text-primary-light">Membership</a></li>
+                                <li><a href="" class="text-primary-light">Home Safety Inspections</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <div class="text-light-blue text-xl font-bold text-center">Contact us</div>
+                            <ul class="text-center flex flex-col gap-y-3 pt-4 text-sm">
+                            <li><a href="" class="text-primary-light">Contact us</a></li>
+                                <li><a href="" class="text-primary-light">Booking form</a></li>
+                                <li><a href="" class="text-primary-light">Privacy policy</a></li>
+                                <li><a href="" class="text-primary-light">Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap md:pt-24">
+                <div class="w-full lg:w-1/2 hidden md:block">
                     <div class="text-light-blue text-2xl font-bold">Our services</div>
                     <ul class="pt-9 leading-loose columns-2">
                         <li><a href="" class="text-primary-light">Emergency Plumbing</a></li>
@@ -122,7 +183,7 @@
                 </div>
                 <div class="w-full lg:w-1/2">
                     <div class="flex flex-wrap justify-between">
-                        <div class="w-fit">
+                        <div class="w-fit hidden md:block">
                             <div class="text-light-blue text-2xl font-bold">Quick links</div>
                             <ul class="pt-9 leading-loose">
                                 <li><a href="" class="text-primary-light">Home</a></li>
@@ -132,7 +193,7 @@
                                 <li><a href="" class="text-primary-light">FAQs</a></li>
                             </ul>
                         </div>
-                        <div class="w-fit">
+                        <div class="w-fit hidden md:block">
                             <div class="text-light-blue text-2xl font-bold">Discover more</div>
                             <ul class="pt-9 leading-loose">
                                 <li><a href="" class="text-primary-light">Areas we service</a></li>
@@ -141,7 +202,7 @@
                                 <li><a href="" class="text-primary-light">Home Safety Inspections</a></li>
                             </ul>
                         </div>
-                        <div class="w-fit">
+                        <div class="w-fit hidden md:block">
                             <div class="text-light-blue text-2xl font-bold">Contact us</div>
                             <ul class="pt-9 leading-loose">
                                 <li><a href="" class="text-primary-light">Contact us</a></li>
