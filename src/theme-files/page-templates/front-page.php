@@ -10,7 +10,7 @@ get_template_part('parts/section', 'homebanner');
 
 <div class="homePage pt-48 md:pt-0">
     <div class="container">
-        <div class="flex flex-wrap -mx-2 py-44 gap-y-5">
+        <div class="flex flex-wrap -mx-2 pt-44 pb-20 md:pb-44 gap-y-5">
             <div class="w-full md:w-1/2 px-2">
                 <div class="h-[447px] md:h-[274px] rounded-xl flex items-stretch md:items-center p-8 transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:shadow-[10px_10px_#0067B9] relative overflow-hidden homepage-cta">
                     <img alt="" class="homepage-cta-bg-1 absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-1.jpg">
@@ -57,7 +57,7 @@ get_template_part('parts/section', 'homebanner');
         </div>
     </div>
 
-    <div class="container">
+    <div class="container hidden md:block">
         <div class="flex justify-center group relative">
             <div class="w-full lg:w-5/12 absolute top-0 left-0 opacity-0 group-hover:opacity-100 translate-y-96 group-hover:translate-y-0 duration-1000">
                 <div class="text-heading leading-none font-bold text-main-blue">From leaks to clogs, <span class="text-light-blue">we fix it all</span></div>
@@ -81,6 +81,39 @@ get_template_part('parts/section', 'homebanner');
                         <rect x="14.917" y="0.741211" width="4.85152" height="24.4202" rx="2.42576" fill="#0067B9" />
                     </svg>
                 </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="md:hidden">
+        <div class="container">
+            <div class="flex flex-wrap justify-center gap-y-20">
+                <div class="w-full">
+                    <div class="w-full rounded-xl h-[188px] bg-no-repeat bg-cover flex items-end bg-center p-6 shadow-[5px_5px_#5AB2F8]" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/video-thumbnail.jpg')">
+                        <a href="./" class="h-[36px] w-[36px] rounded-full bg-[#F7F8FA] flex items-center justify-center">
+                            <svg width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle opacity="0.5" cx="17.8022" cy="17.2864" r="17.2227" fill="#F7F8FA" />
+                                <rect x="12.8638" y="11.1709" width="2.4299" height="12.2309" rx="0.789109" fill="#0067B9" />
+                                <rect x="20.3125" y="11.1709" width="2.4299" height="12.2309" rx="0.789109" fill="#0067B9" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="text-4xl md:text-heading leading-none font-bold text-main-blue">From leaks to clogs, <span class="text-light-blue">we fix it all</span></div>
+                    <div class="text-grey font-articulat py-14 leading-loose">
+                        <p class="pb-5">Fix N Flow is a local, family-owned plumbing company providing top-quality services to residents and businesses in <span class="font-bold">Sydney Metro, Central Coast, South Coast & Illawarra, Hunter Valley, and Blue Mountains.</span> Our team of expert plumbers is <span class="font-bold">available 24/7 for all your plumbing needs,</span> from emergency repairs to regular maintenance.</p>
+                        <p>Our mission is to provide you with efficient and reliable plumbing services with a 60-minutes response time guarantee.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-y-4">
+                        <div class="w-full">
+                            <a href="" class="btn-yellow-hover-main-blue w-full"><span class="relative z-10">Button name here</span></a>
+                        </div>
+                        <div class="w-full">
+                            <a href="" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10">Button name here</span></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -452,7 +485,7 @@ get_template_part('parts/section', 'homebanner');
             <div class="flex flex-wrap justify-between gap-y-10">
                 <div class="text-4xl md:text-heading text-grey font-bold flex leading-none">
                     <div>Our <span class="text-main-blue">happy</span><br class="md:hidden" /> customers</div>
-                    
+
                     <div class="hidden md:inline">
                         <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.01432 27.8241H18.9205C20.1499 27.8241 21.329 27.3357 22.1983 26.4664C23.0676 25.5971 23.556 24.4181 23.556 23.1887V20.871C23.556 20.2563 23.3118 19.6668 22.8771 19.2321C22.4425 18.7975 21.8529 18.5533 21.2383 18.5533C20.6236 18.5533 20.034 18.7975 19.5994 19.2321C19.1647 19.6668 18.9205 20.2563 18.9205 20.871V23.1887H5.01432V9.28244H7.33202C7.94672 9.28244 8.53623 9.03826 8.97089 8.6036C9.40554 8.16895 9.64973 7.57943 9.64973 6.96474C9.64973 6.35005 9.40554 5.76053 8.97089 5.32587C8.53623 4.89122 7.94672 4.64703 7.33202 4.64703H5.01432C3.78493 4.64703 2.60589 5.13541 1.73659 6.00471C0.867279 6.87402 0.378906 8.05306 0.378906 9.28244L0.378906 23.1887C0.378906 24.4181 0.867279 25.5971 1.73659 26.4664C2.60589 27.3357 3.78493 27.8241 5.01432 27.8241Z" fill="#5AB2F8" />
