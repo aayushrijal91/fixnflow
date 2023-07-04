@@ -14,6 +14,13 @@ jQuery(function ($) {
                     slidesToScroll: 1,
                     responsive: [
                         {
+                            breakpoint: 1024,
+                            settings: {
+                                centerPadding: "60px",
+                                slidesToShow: 2,
+                            }
+                        },
+                        {
                             breakpoint: 540,
                             settings: {
                                 centerPadding: "20px",
@@ -31,6 +38,13 @@ jQuery(function ($) {
                     centerPadding: '220px',
                     autoplay: true,
                     responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                centerPadding: "60px",
+                                slidesToShow: 2,
+                            }
+                        },
                         {
                             breakpoint: 540,
                             settings: {
@@ -64,6 +78,13 @@ jQuery(function ($) {
                     autoplay: true,
                     centerPadding: '150px',
                     responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                centerPadding: "40px",
+                                slidesToShow: 2,
+                            }
+                        },
                         {
                             breakpoint: 540,
                             settings: {

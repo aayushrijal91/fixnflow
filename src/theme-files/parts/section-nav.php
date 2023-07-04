@@ -1,7 +1,7 @@
 <div class="fixed w-full z-50 navigation_bar">
     <div class="container">
         <div class="flex flex-wrap justify-between items-center py-3 md:py-12 text-white">
-            <div class="w-1/2 link_section">
+            <div class="w-1/2 md:w-fit lg:w-1/2 link_section">
                 <div class="flex flex-wrap justify-between items-center">
                     <div class="w-fit">
                         <a href="./" class="logo_img">
@@ -9,7 +9,7 @@
                             <img src="<?= get_template_directory_uri() ?>/images/logo/color_logo.png" alt="Fix N Flow" class="color_logo">
                         </a>
                     </div>
-                    <div class="w-fit hidden md:block">
+                    <div class="w-fit hidden xl:block">
                         <div class="flex flex-wrap items-center -mx-4">
                             <div class="w-fit px-4">
                                 <a href="/about-us" class="change_text_color_on_scroll font-articulat font-semibold text-base">About us</a>

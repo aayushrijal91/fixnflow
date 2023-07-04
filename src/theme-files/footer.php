@@ -65,7 +65,7 @@
                                 <a href="mailto:<?= get_field('admin_email', 'options') ?>" class="text-2xl md:text-4xl font-bold text-white"><?= get_field('admin_email', 'options') ?></a>
                             </div>
                         </div>
-                        <div class="flex flex-wrap -mx-2 gap-y-4 pt-10 md:pt-0">
+                        <div class="flex flex-wrap -mx-2 gap-y-4 pt-10 lg:pt-0">
                             <div class="w-full md:w-fit px-2">
                                 <a href="./" class="btn-tertiary-hover-white w-full px-14"><span class="relative z-10">Button name here</span></a>
                             </div>
@@ -96,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="md:hidden pt-12">
+            <div class="lg:hidden pt-12">
                 <div class="container">
                     <div class="rounded-2xl bg-quaternary/[0.1] py-9 px-5 flex flex-col gap-y-5">
                         <div>
@@ -157,8 +157,8 @@
                 </div>
             </div>
 
-            <div class="flex flex-wrap md:pt-24">
-                <div class="w-full lg:w-1/2 hidden md:block">
+            <div class="flex flex-wrap lg:pt-24">
+                <div class="w-full lg:w-1/2 hidden lg:block">
                     <div class="text-light-blue text-2xl font-bold">Our services</div>
                     <ul class="pt-9 leading-loose columns-2">
                         <li><a href="" class="text-primary-light">Emergency Plumbing</a></li>
@@ -183,7 +183,7 @@
                 </div>
                 <div class="w-full lg:w-1/2">
                     <div class="flex flex-wrap justify-between">
-                        <div class="w-fit hidden md:block">
+                        <div class="w-fit hidden lg:block">
                             <div class="text-light-blue text-2xl font-bold">Quick links</div>
                             <ul class="pt-9 leading-loose">
                                 <li><a href="" class="text-primary-light">Home</a></li>
@@ -193,7 +193,7 @@
                                 <li><a href="" class="text-primary-light">FAQs</a></li>
                             </ul>
                         </div>
-                        <div class="w-fit hidden md:block">
+                        <div class="w-fit hidden lg:block">
                             <div class="text-light-blue text-2xl font-bold">Discover more</div>
                             <ul class="pt-9 leading-loose">
                                 <li><a href="" class="text-primary-light">Areas we service</a></li>
@@ -202,7 +202,7 @@
                                 <li><a href="" class="text-primary-light">Home Safety Inspections</a></li>
                             </ul>
                         </div>
-                        <div class="w-fit hidden md:block">
+                        <div class="w-fit hidden lg:block">
                             <div class="text-light-blue text-2xl font-bold">Contact us</div>
                             <ul class="pt-9 leading-loose">
                                 <li><a href="" class="text-primary-light">Contact us</a></li>
@@ -215,7 +215,7 @@
 
                     <div class="border-b border-main-blue my-12"></div>
 
-                    <div class="font-bold text-white text-base text-center md:text-start"><span class="text-light-blue text-sm">License no.</span> 356346C</div>
+                    <div class="font-bold text-white text-base text-center lg:text-start"><span class="text-light-blue text-sm">License no.</span> 356346C</div>
 
                     <div class="flex flex-wrap items-center -mx-2 pt-6">
                         <div class="w-1/3 px-2 flex flex-col md:flex-row items-center gap-x-5 gap-y-5 justify-center">

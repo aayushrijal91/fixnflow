@@ -11,7 +11,7 @@ get_template_part('parts/section', 'homebanner');
 <div class="homePage pt-48 md:pt-0">
     <div class="container">
         <div class="flex flex-wrap -mx-2 pt-44 pb-20 md:pb-44 gap-y-5">
-            <div class="w-full md:w-1/2 px-2">
+            <div class="w-full lg:w-1/2 px-2">
                 <div class="h-[447px] md:h-[274px] rounded-xl flex items-stretch md:items-center p-8 transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:shadow-[10px_10px_#0067B9] relative overflow-hidden homepage-cta">
                     <img alt="" class="homepage-cta-bg-1 absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-1.jpg">
                     <img src="<?= get_template_directory_uri() ?>/images/background/cta-1-component.png" class="homepage-cta-component-1 absolute bottom-0 right-0 max-w-[120%] duration-300" alt="">
@@ -23,7 +23,7 @@ get_template_part('parts/section', 'homebanner');
                     </div>
                 </div>
             </div>
-            <div class="w-full md:w-1/4 px-2">
+            <div class="w-full md:w-1/2 lg:w-1/4 px-2">
                 <div class="h-[274px] rounded-xl bg-gradient-to-b from-[#316A9E] to-[#153B74] flex items-end p-7 transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:shadow-[10px_10px_#0067B9] relative overflow-hidden homepage-cta">
                     <img alt="" class="homepage-cta-bg-1 absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-2.png">
                     <img src="<?= get_template_directory_uri() ?>/images/background/cta-2-logo.png" class="homepage-logo-2 absolute top-0 right-0  max-w-[120%] duration-300" alt="">
@@ -39,7 +39,7 @@ get_template_part('parts/section', 'homebanner');
                     </div>
                 </div>
             </div>
-            <div class="w-full md:w-1/4 px-2">
+            <div class="w-full md:w-1/2 lg:w-1/4 px-2">
                 <div class="h-[274px] rounded-xl bg-gradient-to-b from-main-blue to-[#0E3659] flex items-end p-7 transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:shadow-[10px_10px_#0067B9] relative overflow-hidden homepage-cta">
                     <img alt="" class="homepage-cta-bg-1 absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-3.png">
                     <img src="<?= get_template_directory_uri() ?>/images/background/cta-3-component.png" class="homepage-cta-component-2 absolute top-0 right-0  max-w-[120%] duration-300" alt="">
@@ -57,7 +57,7 @@ get_template_part('parts/section', 'homebanner');
         </div>
     </div>
 
-    <div class="container hidden md:block">
+    <div class="container hidden lg:block">
         <div class="flex justify-center group relative">
             <div class="w-full lg:w-5/12 absolute top-0 left-0 opacity-0 group-hover:opacity-100 translate-y-96 group-hover:translate-y-0 duration-1000">
                 <div class="text-heading leading-none font-bold text-main-blue">From leaks to clogs, <span class="text-light-blue">we fix it all</span></div>
@@ -85,11 +85,11 @@ get_template_part('parts/section', 'homebanner');
         </div>
     </div>
 
-    <div class="md:hidden">
+    <div class="lg:hidden">
         <div class="container">
             <div class="flex flex-wrap justify-center gap-y-20">
                 <div class="w-full">
-                    <div class="w-full rounded-xl h-[188px] bg-no-repeat bg-cover flex items-end bg-center p-6 shadow-[5px_5px_#5AB2F8]" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/video-thumbnail.jpg')">
+                    <div class="w-full rounded-xl h-[188px] md:h-[300px] bg-no-repeat bg-cover flex items-end bg-center p-6 shadow-[5px_5px_#5AB2F8]" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/video-thumbnail.jpg')">
                         <a href="./" class="h-[36px] w-[36px] rounded-full bg-[#F7F8FA] flex items-center justify-center">
                             <svg width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle opacity="0.5" cx="17.8022" cy="17.2864" r="17.2227" fill="#F7F8FA" />
@@ -100,16 +100,16 @@ get_template_part('parts/section', 'homebanner');
                     </div>
                 </div>
                 <div class="w-full">
-                    <div class="text-4xl md:text-heading leading-none font-bold text-main-blue">From leaks to clogs, <span class="text-light-blue">we fix it all</span></div>
+                    <div class="text-4xl md:text-5xl leading-none font-bold text-main-blue">From leaks to clogs, <span class="text-light-blue">we fix it all</span></div>
                     <div class="text-grey font-articulat py-14 leading-loose">
                         <p class="pb-5">Fix N Flow is a local, family-owned plumbing company providing top-quality services to residents and businesses in <span class="font-bold">Sydney Metro, Central Coast, South Coast & Illawarra, Hunter Valley, and Blue Mountains.</span> Our team of expert plumbers is <span class="font-bold">available 24/7 for all your plumbing needs,</span> from emergency repairs to regular maintenance.</p>
                         <p>Our mission is to provide you with efficient and reliable plumbing services with a 60-minutes response time guarantee.</p>
                     </div>
-                    <div class="flex flex-wrap gap-y-4">
-                        <div class="w-full">
+                    <div class="flex flex-wrap gap-y-4 -mx-2">
+                        <div class="w-full md:w-1/2 px-2">
                             <a href="" class="btn-yellow-hover-main-blue w-full"><span class="relative z-10">Button name here</span></a>
                         </div>
-                        <div class="w-full">
+                        <div class="w-full md:w-1/2 px-2">
                             <a href="" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10">Button name here</span></a>
                         </div>
                     </div>
@@ -120,8 +120,8 @@ get_template_part('parts/section', 'homebanner');
 
     <?php $services = get_field('services'); ?>
     <div class="py-28 bg-no-repeat bg-contain" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/homepage_services.png')">
-        <div class="container md:py-20">
-            <div class="mx-auto w-11/12 lg:w-2/3 text-grey text-4xl md:text-heading leading-none font-bold text-center"><?= $services['heading'] ?></div>
+        <div class="container md:pt-20 lg:pb-20">
+            <div class="mx-auto w-11/12 lg:w-2/3 text-grey text-4xl md:text-5xl lg:text-heading leading-none font-bold text-center"><?= $services['heading'] ?></div>
             <div class="mx-auto w-11/12 lg:w-2/3 text-grey font-articulat text-center pt-9 md:pt-14"><?= $services['description'] ?></div>
             <div class="bg-light rounded-[35px] py-16 md:mt-16 shadow-[inset_0px_0px_36px_0px_rgba(0, 0, 0, 0.05)]">
                 <div id="homepage_service_slider" class="homepage_service_slider pb-12">
@@ -161,12 +161,12 @@ get_template_part('parts/section', 'homebanner');
         </div>
     </div>
 
-    <div class="bg-dark-blue pt-14 md:pt-40 bg-no-repeat bg-cover md:bg-contain" style="background-image:url(<?= get_template_directory_uri() ?>/images/background/homepage_guarantee_vector.png)">
+    <div class="bg-dark-blue pt-14 md:pt-20 lg:pt-40 bg-no-repeat bg-cover lg:bg-contain" style="background-image:url(<?= get_template_directory_uri() ?>/images/background/homepage_guarantee_vector.png)">
         <div class="container">
             <div class="flex flex-wrap justify-between">
                 <div class="w-full lg:w-5/12">
-                    <div class="text-white text-4xl md:text-heading font-bold leading-none pb-12">What you're <span class="text-light-blue">guaranteed</span> to get from us</div>
-                    <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.png" alt="plumb" class="hidden md:block">
+                    <div class="text-white text-4xl md:text-5xl lg:text-heading font-bold leading-none pb-12">What you're <span class="text-light-blue">guaranteed</span> to get from us</div>
+                    <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.png" alt="plumb" class="hidden lg:block">
                 </div>
                 <div class="w-full lg:w-1/2">
                     <div class="flex flex-wrap -mx-2 gap-y-4 md:gap-y-5">
@@ -293,7 +293,7 @@ get_template_part('parts/section', 'homebanner');
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full md:hidden">
+                        <div class="w-full lg:hidden">
                             <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.png" alt="plumb">
                         </div>
                     </div>
@@ -306,11 +306,11 @@ get_template_part('parts/section', 'homebanner');
         <div class="absolute bottom-full overflow-x-hidden">
             <img src="<?= get_template_directory_uri() ?>/images/background/why-choose-vector.png" alt="" class="group-hover:-translate-x-96 duration-500 max-w-[200%]">
         </div>
-        <div class="bg-secondary-blue duration-500 pb-14 md:pb-40 pt-10 md:pt-0">
+        <div class="bg-secondary-blue duration-500 pb-14 md:pb-40 pt-10 lg:pt-0">
             <div class="container">
                 <div class="flex flex-wrap justify-between items-center">
-                    <div class="text-4xl md:text-heading font-bold text-white duration-500 leading-none">Why Choose Fix N Flow?</div>
-                    <div class="w-fit hidden md:block"><a href="./" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Button name here</span></a></div>
+                    <div class="text-4xl md:text-5xl lg:text-heading font-bold text-white duration-500 leading-none">Why Choose Fix N Flow?</div>
+                    <div class="w-fit hidden lg:block"><a href="./" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Button name here</span></a></div>
                 </div>
                 <div class="w-full lg:w-10/12 pt-7">
                     <div class="flex flex-wrap -mx-2 text-white duration-500 font-articulat leading-loose">
@@ -326,7 +326,7 @@ get_template_part('parts/section', 'homebanner');
                 <div class="flex flex-wrap -mx-2 mt-20 gap-y-4">
                     <div class="w-full lg:w-3/4 px-2">
                         <div class="flex flex-wrap -mx-2 gap-y-4">
-                            <div class="w-full lg:w-1/3 px-2">
+                            <div class="w-full md:w-1/2 lg:w-1/3 px-2 order-1">
                                 <div class="h-[255px] rounded-[10px] relative overflow-hidden whyus-card">
                                     <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-1.jpg" class="whyus-card-bg-1 absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] duration-300" alt="">
                                     <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-1.png" class="whyus-card-bg-component-1 absolute bottom-0 right-0 h-full max-w-[120%] duration-300" alt="">
@@ -345,7 +345,7 @@ get_template_part('parts/section', 'homebanner');
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-full lg:w-2/3 px-2">
+                            <div class="w-full lg:w-2/3 px-2 order-2 md:order-4 lg:order-2">
                                 <div class="h-[450px] md:h-[255px] rounded-[10px] relative overflow-hidden whyus-card">
                                     <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-2.jpg" class="whyus-card-bg-1 absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] duration-300" alt="">
                                     <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-2.png" class="whyus-card-bg-component-1 absolute bottom-0 right-0 duration-300" alt="">
@@ -364,9 +364,7 @@ get_template_part('parts/section', 'homebanner');
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="flex flex-wrap -mx-2 mt-4 gap-y-4">
-                            <div class="w-full lg:w-2/3 px-2">
+                            <div class="w-full lg:w-2/3 px-2 order-3 md:order-3 lg:order-3">
                                 <div class="h-[450px] md:h-[255px] rounded-[10px] relative overflow-hidden whyus-card bg-gradient-to-r from-[#f3f3f3] to-[#e4e2e2]">
                                     <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-3.png" class="whyus-card-bg-component-3 absolute bottom-0 right-0 duration-300" alt="">
 
@@ -384,7 +382,7 @@ get_template_part('parts/section', 'homebanner');
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-full lg:w-1/3 px-2">
+                            <div class="w-full md:w-1/2 lg:w-1/3 px-2 order-4 md:order-2 lg:order-4">
                                 <div class="h-[255px] rounded-[10px] relative overflow-hidden whyus-card">
                                     <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-4.jpg" class="whyus-card-bg-1 absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] duration-300" alt="">
                                     <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-4.png" class="whyus-card-bg-component-3 absolute bottom-0 right-0 h-full max-w-[120%] duration-300" alt="">
@@ -406,7 +404,7 @@ get_template_part('parts/section', 'homebanner');
                         </div>
                     </div>
                     <div class="w-full lg:w-1/4 px-2">
-                        <div class="h-[450px] md:h-full rounded-[10px] relative overflow-hidden whyus-card bg-white">
+                        <div class="h-[850px] lg:h-full rounded-[10px] relative overflow-hidden whyus-card bg-white">
                             <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-5.png" class="absolute top-0 right-0 w-full duration-300" alt="">
                             <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-5.png" class="whyus-card-bg-component-5 absolute top-0 right-0 h-full max-w-[120%] duration-300" alt="">
 
@@ -425,29 +423,29 @@ get_template_part('parts/section', 'homebanner');
                     </div>
                 </div>
 
-                <div class="md:hidden pt-14"><a href="./" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Button name here</span></a></div>
+                <div class="lg:hidden pt-14"><a href="./" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Button name here</span></a></div>
             </div>
         </div>
     </div>
 
-    <div class="homepageContact bg-light-blue md:bg-[#D3E2EF] relative overflow-hidden group">
-        <img src="<?= get_template_directory_uri() ?>/images/background/homepageContact-component.png" alt="" class="absolute top-0 left-0 group-hover:-top-[50%] duration-1000 hidden md:block">
+    <div class="homepageContact bg-light-blue lg:bg-[#D3E2EF] relative overflow-hidden group">
+        <img src="<?= get_template_directory_uri() ?>/images/background/homepageContact-component.png" alt="" class="absolute top-0 left-0 group-hover:-top-[50%] duration-1000 hidden lg:block">
 
         <div class="container relative py-16 md:pb-20">
             <div class="flex flex-wrap justify-between gap-y-10">
                 <div class="w-full lg:w-1/2">
                     <img src="<?= get_template_directory_uri() ?>/images/icons/homepage-getintouch.png" alt="">
-                    <div class="text-4xl md:text-heading text-white font-bold leading-none pt-7 md:pt-10">Get in <span class="text-dark-blue">touch</span></div>
+                    <div class="text-4xl md:text-5xl lg:text-heading text-white font-bold leading-none pt-7 md:pt-10">Get in <span class="text-dark-blue">touch</span></div>
                     <div class="text-white font-articulat font-semibold py-3 md:py-8">One of our expert plumbers will get back to you as soon as possible.</div>
                     <div class="hidden h-14 bg-transparent border-b border-white w-full mt-3 mt-5 outline-none font-semibold text-white gap-y-5"></div>
                     <?= do_shortcode('[contact-form-7 id="22" title="Homepage Contact"]') ?>
                 </div>
-                <div class="w-full lg:w-5/12 hidden md:block">
+                <div class="w-full lg:w-5/12 hidden lg:block">
                     <img src="<?= get_template_directory_uri() ?>/images/icons/nearby.png" alt="">
-                    <div class="text-4xl md:text-heading text-grey font-bold leading-none py-10">We're always <br /><span class="text-main-blue">nearby!</span></div>
+                    <div class="text-4xl md:text-5xl lg:text-heading text-grey font-bold leading-none py-10">We're always <br /><span class="text-main-blue">nearby!</span></div>
                     <div class="font-bold font-articulat text-main-blue pb-10">Call us today</div>
 
-                    <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-4xl md:text-heading text-main-blue font-bold"><?= get_field('phone_number', 'options') ?></a>
+                    <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-4xl md:text-5xl lg:text-heading text-main-blue font-bold"><?= get_field('phone_number', 'options') ?></a>
 
                     <div class="text-sm md:text-base font-articulat text-grey leading-loose pt-5 pb-9 w-full xl:w-11/12">
                         <p class="pb-5">We’re here for all your plumbing needs. Our team of expert plumbers is available 24/7 to help you with any plumbing emergencies.</p>
@@ -458,17 +456,17 @@ get_template_part('parts/section', 'homebanner');
                 </div>
             </div>
         </div>
-        <img src="<?= get_template_directory_uri() ?>/images/lib/contact_guy.png" class="absolute right-0 bottom-0 hidden md:block" alt="">
+        <img src="<?= get_template_directory_uri() ?>/images/lib/contact_guy.png" class="absolute right-0 bottom-0 hidden lg:block" alt="">
     </div>
 
-    <div class="md:hidden bg-[#D3E2EF]">
+    <div class="lg:hidden bg-[#D3E2EF]">
         <img src="<?= get_template_directory_uri() ?>/images/background/mobile-contact-vector.png" class="w-full" alt="">
         <div class="container pt-9 pb-16">
             <img src="<?= get_template_directory_uri() ?>/images/icons/nearby.png" alt="">
-            <div class="text-4xl md:text-heading text-grey font-bold leading-none py-10">We're always <br /><span class="text-main-blue">nearby!</span></div>
+            <div class="text-4xl md:text-5xl lg:text-heading text-grey font-bold leading-none py-10">We're always <br /><span class="text-main-blue">nearby!</span></div>
             <div class="font-bold font-articulat text-main-blue pb-10">Call us today</div>
 
-            <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-4xl md:text-heading text-main-blue font-bold"><?= get_field('phone_number', 'options') ?></a>
+            <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-4xl md:text-5xl lg:text-heading text-main-blue font-bold"><?= get_field('phone_number', 'options') ?></a>
 
             <div class="text-sm md:text-base font-articulat text-grey leading-loose pt-5 pb-9 w-full xl:w-11/12">
                 <p class="pb-5">We’re here for all your plumbing needs. Our team of expert plumbers is available 24/7 to help you with any plumbing emergencies.</p>
@@ -478,7 +476,7 @@ get_template_part('parts/section', 'homebanner');
         </div>
     </div>
 
-    <div class="testimonials py-16 md:py-40 relative group">
+    <div class="testimonials py-16 md:py-36 lg:py-40 relative group">
         <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-left-floater.png" class="absolute left-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="">
         <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-right-floater.png" class="absolute right-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="">
         <div class="container pb-11 md:pb-20">
@@ -551,7 +549,7 @@ get_template_part('parts/section', 'homebanner');
 
         <div class="bg-no-repeat bg-contain" style="background-image:url(<?= get_template_directory_uri() ?>/images/background/brands-bg.png)">
             <div class="container pt-16 md:pt-40">
-                <div class="md:text-center text-4xl md:text-heading text-grey font-bold leading-tight">At Fix N Flow, we work with <span class="text-main-blue">leading brands</span> in the plumbing industry...</div>
+                <div class="md:text-center text-4xl md:text-5xl lg:text-heading text-grey font-bold leading-tight">At Fix N Flow, we work with <span class="text-main-blue">leading brands</span> in the plumbing industry...</div>
                 <div class="font-articulat text-grey md:text-center py-7 md:py-10">
                     We ensure that we provide our customers with the best quality products. Some of the brands we work with include:
                 </div>
@@ -575,14 +573,14 @@ get_template_part('parts/section', 'homebanner');
 
     <div class="bg-light-grey pt-20 pb-40 md:pt-40 md:pb-52 relative">
         <div class="container">
-            <div class="md:text-center text-4xl md:text-heading text-grey font-bold leading-tight">Fix n Flow are <span class="text-main-blue">proud sponsors</span></div>
+            <div class="md:text-center text-4xl md:text-5xl lg:text-heading text-grey font-bold leading-tight">Fix n Flow are <span class="text-main-blue">proud sponsors</span></div>
             <div class="w-full lg:w-1/2 mx-auto my-10 md:my-12 p-7 border-t border-b border-light-blue text-grey font-articulat text-center leading-loose">
                 <div class="w-full lg:w-10/12 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
             </div>
 
             <div class="w-full lg:w-10/12 mx-auto">
-                <div class="flex flex-wrap -mx-2 gap-y-5">
-                    <div class="w-full lg:w-1/3 px-2">
+                <div class="flex flex-wrap justify-center -mx-2 gap-y-5">
+                    <div class="w-full md:w-1/2 lg:w-1/3 px-2">
                         <div class="bg-white shadow p-2 rounded-[10px] h-full">
                             <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-1.jpg" class="w-full object-cover object-center h-full" alt="">
@@ -600,7 +598,7 @@ get_template_part('parts/section', 'homebanner');
                             </div>
                         </div>
                     </div>
-                    <div class="w-full lg:w-1/3 px-2">
+                    <div class="w-full  md:w-1/2 lg:w-1/3 px-2">
                         <div class="bg-white shadow p-2 rounded-[10px] h-full">
                             <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-2.jpg" class="w-full object-cover object-center h-full" alt="">
@@ -618,7 +616,7 @@ get_template_part('parts/section', 'homebanner');
                             </div>
                         </div>
                     </div>
-                    <div class="w-full lg:w-1/3 px-2">
+                    <div class="w-full md:w-1/2 lg:w-1/3 px-2">
                         <div class="bg-dark-blue shadow p-2 rounded-[10px] h-full">
                             <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-3.jpg" class="w-full object-cover object-center h-full" alt="">
