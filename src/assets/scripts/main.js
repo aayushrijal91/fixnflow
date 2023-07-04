@@ -14,7 +14,7 @@ jQuery(function ($) {
                     slidesToScroll: 1,
                     responsive: [
                         {
-                            breakpoint: 1024,
+                            breakpoint: 1100,
                             settings: {
                                 centerPadding: "60px",
                                 slidesToShow: 2,
@@ -46,7 +46,7 @@ jQuery(function ($) {
                             }
                         },
                         {
-                            breakpoint: 1024,
+                            breakpoint: 1100,
                             settings: {
                                 centerPadding: "60px",
                                 slidesToShow: 2,
@@ -93,7 +93,7 @@ jQuery(function ($) {
                             }
                         },
                         {
-                            breakpoint: 1024,
+                            breakpoint: 1100,
                             settings: {
                                 centerPadding: "40px",
                                 slidesToShow: 2,

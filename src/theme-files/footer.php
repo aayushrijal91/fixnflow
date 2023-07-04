@@ -65,7 +65,7 @@
                                 <a href="mailto:<?= get_field('admin_email', 'options') ?>" class="text-2xl md:text-4xl font-bold text-white"><?= get_field('admin_email', 'options') ?></a>
                             </div>
                         </div>
-                        <div class="flex flex-wrap -mx-2 gap-y-4 pt-10 lg:pt-0">
+                        <div class="flex flex-wrap -mx-2 gap-y-4 pt-10 xl:pt-0">
                             <div class="w-full md:w-fit px-2">
                                 <a href="./" class="btn-tertiary-hover-white w-full px-14"><span class="relative z-10">Button name here</span></a>
                             </div>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="w-full lg:w-1/2 px-3">
                     <div class="rounded-[29px] bg-main-blue p-6 md:py-9 md:px-11 h-full bg-no-repeat bg-cover" style="background-image: url(<?= get_template_directory_uri() ?>/images/background/footer_cta_2.jpg)">
-                        <div class="bg-tertiary rounded-[10px] pt-4 md:py-4 px-7 text-2xl md:text-[35px] font-bold text-white leading-none relative text-center md:text-start">
+                        <div class="bg-tertiary rounded-[10px] pt-4 md:py-4 px-7 text-2xl md:text-[35px] font-bold text-white leading-none relative text-center md:text-start lg:min-h-[300px] xl:min-h-fit">
                             Fix n Flow <br /> <span class="text-dark-blue">Membership</span>
                             <img src="<?= get_template_directory_uri() ?>/images/lib/vip-membership.png" alt="Vip membership" class="md:absolute right-0 bottom-0">
                         </div>
@@ -147,7 +147,7 @@
                         <div>
                             <div class="text-light-blue text-xl font-bold text-center">Contact us</div>
                             <ul class="text-center flex flex-col gap-y-3 pt-4 text-sm">
-                            <li><a href="" class="text-primary-light">Contact us</a></li>
+                                <li><a href="" class="text-primary-light">Contact us</a></li>
                                 <li><a href="" class="text-primary-light">Booking form</a></li>
                                 <li><a href="" class="text-primary-light">Privacy policy</a></li>
                                 <li><a href="" class="text-primary-light">Conditions</a></li>
@@ -157,8 +157,8 @@
                 </div>
             </div>
 
-            <div class="flex flex-wrap lg:pt-24">
-                <div class="w-full lg:w-1/2 hidden lg:block">
+            <div class="flex flex-wrap lg:pt-24 -mx-2">
+                <div class="w-full lg:w-1/2 px-2 hidden lg:block">
                     <div class="text-light-blue text-2xl font-bold">Our services</div>
                     <ul class="pt-9 leading-loose columns-2">
                         <li><a href="" class="text-primary-light">Emergency Plumbing</a></li>
@@ -181,7 +181,7 @@
                         <li><a href="" class="text-primary-light">Kitchen Renovations</a></li>
                     </ul>
                 </div>
-                <div class="w-full lg:w-1/2">
+                <div class="w-full lg:w-1/2 px-2">
                     <div class="flex flex-wrap justify-between">
                         <div class="w-fit hidden lg:block">
                             <div class="text-light-blue text-2xl font-bold">Quick links</div>
@@ -218,15 +218,15 @@
                     <div class="font-bold text-white text-base text-center lg:text-start"><span class="text-light-blue text-sm">License no.</span> 356346C</div>
 
                     <div class="flex flex-wrap items-center -mx-2 pt-6">
-                        <div class="w-1/3 px-2 flex flex-col md:flex-row items-center gap-x-5 gap-y-5 justify-center">
+                        <div class="w-1/3 px-2 flex flex-col md:flex-row lg:flex-col xl:flex-row items-center gap-x-5 gap-y-5 justify-center">
                             <img src="<?= get_template_directory_uri() ?>/images/logo/master-plumber-association.png" alt="">
-                            <div class="font-articulat text-white text-center md:text-start text-sm md:text-base">Master Plumber<br />Association<br /> NSW</div>
+                            <div class="font-articulat text-white text-center md:text-start lg:text-center xl:text-start text-sm md:text-base">Master Plumber<br />Association<br /> NSW</div>
                         </div>
-                        <div class="w-1/3 px-2 flex flex-col md:flex-row items-center gap-x-5 gap-y-5 justify-center">
+                        <div class="w-1/3 px-2 flex flex-col md:flex-row lg:flex-col xl:flex-row items-center gap-x-5 gap-y-5 justify-center">
                             <img src="<?= get_template_directory_uri() ?>/images/logo/ebix.png" alt="">
-                            <div class="font-articulat text-white text-center md:text-start text-sm md:text-base">EBiX Trades<br />Monitor</div>
+                            <div class="font-articulat text-white text-center md:text-start lg:text-center xl:text-start text-sm md:text-base">EBiX Trades<br />Monitor</div>
                         </div>
-                        <div class="w-1/3 px-2 flex flex-col md:flex-row items-center gap-x-5 gap-y-5 justify-center">
+                        <div class="w-1/3 px-2 flex flex-col md:flex-row lg:flex-col xl:flex-row items-center gap-x-5 gap-y-5 justify-center">
                             <img src="<?= get_template_directory_uri() ?>/images/logo/accredited.png" alt="">
                             <div class="font-articulat text-white text-center md:text-start text-sm md:text-base">Accredited<br />Plumber</div>
                         </div>

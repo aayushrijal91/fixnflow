@@ -2,7 +2,7 @@
 
 <div class="homeBanner h-[680px] md:h-[820px]">
     <div class="homeBannerInner h-full">
-        <div class="container pt-32 md:pt-64">
+        <div class="container pt-32 md:pt-64 lg:pt-52 xl:pt-64">
             <div class="flex justify-center">
                 <div class="w-8/12 md:w-10/12 lg:w-2/3 text-white text-center">
                     <div class="font-articulat text-[22px] lg:text-3xl">Your trusted plumbing partner in Sydney</div>

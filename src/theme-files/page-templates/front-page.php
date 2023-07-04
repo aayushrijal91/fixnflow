@@ -11,7 +11,7 @@ get_template_part('parts/section', 'homebanner');
 <div class="homePage pt-48 md:pt-0">
     <div class="container">
         <div class="flex flex-wrap -mx-2 pt-44 pb-20 md:pb-44 gap-y-5">
-            <div class="w-full lg:w-1/2 px-2">
+            <div class="w-full xl:w-1/2 px-2">
                 <div class="h-[447px] md:h-[274px] rounded-xl flex items-stretch md:items-center p-8 transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:shadow-[10px_10px_#0067B9] relative overflow-hidden homepage-cta">
                     <img alt="" class="homepage-cta-bg-1 absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-1.jpg">
                     <img src="<?= get_template_directory_uri() ?>/images/background/cta-1-component.png" class="homepage-cta-component-1 absolute bottom-0 right-0 max-w-[120%] duration-300" alt="">
@@ -23,7 +23,7 @@ get_template_part('parts/section', 'homebanner');
                     </div>
                 </div>
             </div>
-            <div class="w-full md:w-1/2 lg:w-1/4 px-2">
+            <div class="w-full md:w-1/2 xl:w-1/4 px-2">
                 <div class="h-[274px] rounded-xl bg-gradient-to-b from-[#316A9E] to-[#153B74] flex items-end p-7 transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:shadow-[10px_10px_#0067B9] relative overflow-hidden homepage-cta">
                     <img alt="" class="homepage-cta-bg-1 absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-2.png">
                     <img src="<?= get_template_directory_uri() ?>/images/background/cta-2-logo.png" class="homepage-logo-2 absolute top-0 right-0  max-w-[120%] duration-300" alt="">
@@ -39,7 +39,7 @@ get_template_part('parts/section', 'homebanner');
                     </div>
                 </div>
             </div>
-            <div class="w-full md:w-1/2 lg:w-1/4 px-2">
+            <div class="w-full md:w-1/2 xl:w-1/4 px-2">
                 <div class="h-[274px] rounded-xl bg-gradient-to-b from-main-blue to-[#0E3659] flex items-end p-7 transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:shadow-[10px_10px_#0067B9] relative overflow-hidden homepage-cta">
                     <img alt="" class="homepage-cta-bg-1 absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-3.png">
                     <img src="<?= get_template_directory_uri() ?>/images/background/cta-3-component.png" class="homepage-cta-component-2 absolute top-0 right-0  max-w-[120%] duration-300" alt="">
@@ -60,7 +60,7 @@ get_template_part('parts/section', 'homebanner');
     <div class="container hidden lg:block">
         <div class="flex justify-center group relative">
             <div class="w-full lg:w-5/12 absolute top-0 left-0 opacity-0 group-hover:opacity-100 translate-y-96 group-hover:translate-y-0 duration-1000">
-                <div class="text-heading leading-none font-bold text-main-blue">From leaks to clogs, <span class="text-light-blue">we fix it all</span></div>
+                <div class="text-5xl xl:text-heading leading-none font-bold text-main-blue">From leaks to clogs, <span class="text-light-blue">we fix it all</span></div>
                 <div class="text-grey font-articulat py-16 leading-loose">
                     <p class="pb-5">Fix N Flow is a local, family-owned plumbing company providing top-quality services to residents and businesses in <span class="font-bold">Sydney Metro, Central Coast, South Coast & Illawarra, Hunter Valley, and Blue Mountains.</span> Our team of expert plumbers is <span class="font-bold">available 24/7 for all your plumbing needs,</span> from emergency repairs to regular maintenance.</p>
                     <p>Our mission is to provide you with efficient and reliable plumbing services with a 60-minutes response time guarantee.</p>
@@ -74,7 +74,7 @@ get_template_part('parts/section', 'homebanner');
                     </div>
                 </div>
             </div>
-            <div class="group-hover:translate-x-[30rem] duration-1000 w-full lg:w-9/12 rounded-[30px] h-[641px] bg-no-repeat bg-cover bg-center p-6 shadow-[14px_14px_#5AB2F8]" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/video-thumbnail.jpg')">
+            <div class="lg:group-hover:translate-x-[20rem] xl:group-hover:translate-x-[30rem] duration-1000 w-full lg:w-9/12 rounded-[30px] h-[641px] bg-no-repeat bg-cover bg-center p-6 shadow-[14px_14px_#5AB2F8]" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/video-thumbnail.jpg')">
                 <a href="./" class="h-[69px] w-[69px] rounded-full bg-[#F7F8FA] flex items-center justify-center">
                     <svg width="20" height="26" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="0.0439453" y="0.741211" width="4.85152" height="24.4202" rx="2.42576" fill="#0067B9" />
@@ -161,17 +161,17 @@ get_template_part('parts/section', 'homebanner');
         </div>
     </div>
 
-    <div class="bg-dark-blue pt-14 md:pt-20 lg:pt-40 bg-no-repeat bg-cover lg:bg-contain" style="background-image:url(<?= get_template_directory_uri() ?>/images/background/homepage_guarantee_vector.png)">
+    <div class="bg-dark-blue pt-14 md:pt-20 lg:pt-40 lg:pb-40 xl:pb-0 bg-no-repeat bg-cover lg:bg-contain" style="background-image:url(<?= get_template_directory_uri() ?>/images/background/homepage_guarantee_vector.png)">
         <div class="container">
             <div class="flex flex-wrap justify-between">
                 <div class="w-full lg:w-5/12">
-                    <div class="text-white text-4xl md:text-5xl lg:text-heading font-bold leading-none pb-12">What you're <span class="text-light-blue">guaranteed</span> to get from us</div>
+                    <div class="text-white text-4xl md:text-5xl xl:text-heading font-bold leading-none pb-12">What you're <span class="text-light-blue">guaranteed</span> to get from us</div>
                     <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.png" alt="plumb" class="hidden lg:block">
                 </div>
-                <div class="w-full lg:w-1/2">
+                <div class="w-full lg:w-7/12 xl:w-1/2">
                     <div class="flex flex-wrap -mx-2 gap-y-4 md:gap-y-5">
                         <div class="w-1/2 md:w-1/3 px-2 group">
-                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
+                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 lg:px-4 xl:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                                 <div class="flex flex-col items-center gap-y-4 relative h-full">
                                     <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
@@ -190,7 +190,7 @@ get_template_part('parts/section', 'homebanner');
                             </div>
                         </div>
                         <div class="w-1/2 md:w-1/3 px-2 group">
-                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
+                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 lg:px-4 xl:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                                 <div class="flex flex-col items-center gap-y-4 relative h-full">
                                     <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
@@ -210,7 +210,7 @@ get_template_part('parts/section', 'homebanner');
                             </div>
                         </div>
                         <div class="w-1/2 md:w-1/3 px-2 group">
-                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
+                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 lg:px-4 xl:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                                 <div class="flex flex-col items-center gap-y-4 relative h-full">
                                     <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
@@ -234,7 +234,7 @@ get_template_part('parts/section', 'homebanner');
                             </div>
                         </div>
                         <div class="w-1/2 md:w-1/3 px-2 group">
-                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
+                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 lg:px-4 xl:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                                 <div class="flex flex-col items-center gap-y-4 relative h-full">
                                     <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
@@ -254,7 +254,7 @@ get_template_part('parts/section', 'homebanner');
                             </div>
                         </div>
                         <div class="w-1/2 md:w-1/3 px-2 group">
-                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
+                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 lg:px-4 xl:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                                 <div class="flex flex-col items-center gap-y-4 relative h-full">
                                     <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
@@ -275,7 +275,7 @@ get_template_part('parts/section', 'homebanner');
                             </div>
                         </div>
                         <div class="w-1/2 md:w-1/3 px-2 group">
-                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
+                            <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 lg:px-4 xl:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                                 <div class="flex flex-col items-center gap-y-4 relative h-full">
                                     <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
@@ -309,7 +309,7 @@ get_template_part('parts/section', 'homebanner');
         <div class="bg-secondary-blue duration-500 pb-14 md:pb-40 pt-10 lg:pt-0">
             <div class="container">
                 <div class="flex flex-wrap justify-between items-center">
-                    <div class="text-4xl md:text-5xl lg:text-heading font-bold text-white duration-500 leading-none">Why Choose Fix N Flow?</div>
+                    <div class="text-4xl md:text-5xl xl:text-heading font-bold text-white duration-500 leading-none">Why Choose Fix N Flow?</div>
                     <div class="w-fit hidden lg:block"><a href="./" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Button name here</span></a></div>
                 </div>
                 <div class="w-full lg:w-10/12 pt-7">
@@ -323,8 +323,8 @@ get_template_part('parts/section', 'homebanner');
                     </div>
                 </div>
 
-                <div class="flex flex-wrap -mx-2 mt-20 gap-y-4">
-                    <div class="w-full lg:w-3/4 px-2">
+                <div class="flex flex-wrap -mx-2 mt-20 gap-y-4 justify-center">
+                    <div class="w-full xl:w-3/4 px-2">
                         <div class="flex flex-wrap -mx-2 gap-y-4">
                             <div class="w-full md:w-1/2 lg:w-1/3 px-2 order-1">
                                 <div class="h-[255px] rounded-[10px] relative overflow-hidden whyus-card">
@@ -403,8 +403,8 @@ get_template_part('parts/section', 'homebanner');
                             </div>
                         </div>
                     </div>
-                    <div class="w-full lg:w-1/4 px-2">
-                        <div class="h-[850px] lg:h-full rounded-[10px] relative overflow-hidden whyus-card bg-white">
+                    <div class="w-full lg:w-1/2 xl:w-1/4 px-2">
+                        <div class="h-[850px] lg:h-[650px] xl:h-full rounded-[10px] relative overflow-hidden whyus-card bg-white">
                             <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-5.png" class="absolute top-0 right-0 w-full duration-300" alt="">
                             <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-5.png" class="whyus-card-bg-component-5 absolute top-0 right-0 h-full max-w-[120%] duration-300" alt="">
 
@@ -428,7 +428,7 @@ get_template_part('parts/section', 'homebanner');
         </div>
     </div>
 
-    <div class="homepageContact bg-light-blue lg:bg-[#D3E2EF] relative overflow-hidden group">
+    <div class="homepageContact bg-light-blue xl:bg-[#D3E2EF] relative overflow-hidden group">
         <img src="<?= get_template_directory_uri() ?>/images/background/homepageContact-component.png" alt="" class="absolute top-0 left-0 group-hover:-top-[50%] duration-1000 hidden lg:block">
 
         <div class="container relative py-16 md:pb-20">
@@ -442,12 +442,12 @@ get_template_part('parts/section', 'homebanner');
                 </div>
                 <div class="w-full lg:w-5/12 hidden lg:block">
                     <img src="<?= get_template_directory_uri() ?>/images/icons/nearby.png" alt="">
-                    <div class="text-4xl md:text-5xl lg:text-heading text-grey font-bold leading-none py-10">We're always <br /><span class="text-main-blue">nearby!</span></div>
+                    <div class="text-4xl md:text-5xl xl:text-heading text-grey lg:text-white xl:text-grey font-bold leading-none py-10">We're always <br /><span class="text-main-blue">nearby!</span></div>
                     <div class="font-bold font-articulat text-main-blue pb-10">Call us today</div>
 
-                    <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-4xl md:text-5xl lg:text-heading text-main-blue font-bold"><?= get_field('phone_number', 'options') ?></a>
+                    <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-4xl md:text-5xl xl:text-heading text-main-blue font-bold"><?= get_field('phone_number', 'options') ?></a>
 
-                    <div class="text-sm md:text-base font-articulat text-grey leading-loose pt-5 pb-9 w-full xl:w-11/12">
+                    <div class="text-sm md:text-base font-articulat text-grey leading-loose pt-5 pb-9 w-full xl:w-11/12 lg:text-white xl:text-grey">
                         <p class="pb-5">We’re here for all your plumbing needs. Our team of expert plumbers is available 24/7 to help you with any plumbing emergencies.</p>
                         <p>At Fix N Flow, we are committed to providing our customers with top-quality plumbing services. Contact us today for all your plumbing needs.</p>
                     </div>
@@ -456,7 +456,7 @@ get_template_part('parts/section', 'homebanner');
                 </div>
             </div>
         </div>
-        <img src="<?= get_template_directory_uri() ?>/images/lib/contact_guy.png" class="absolute right-0 bottom-0 hidden lg:block" alt="">
+        <img src="<?= get_template_directory_uri() ?>/images/lib/contact_guy.png" class="absolute right-0 bottom-0 hidden xl:block" alt="">
     </div>
 
     <div class="lg:hidden bg-[#D3E2EF]">
@@ -574,11 +574,11 @@ get_template_part('parts/section', 'homebanner');
     <div class="bg-light-grey pt-20 pb-40 md:pt-40 md:pb-52 relative">
         <div class="container">
             <div class="md:text-center text-4xl md:text-5xl lg:text-heading text-grey font-bold leading-tight">Fix n Flow are <span class="text-main-blue">proud sponsors</span></div>
-            <div class="w-full lg:w-1/2 mx-auto my-10 md:my-12 p-7 border-t border-b border-light-blue text-grey font-articulat text-center leading-loose">
+            <div class="w-full lg:w-8/12 xl:w-1/2 mx-auto my-10 md:my-12 p-7 border-t border-b border-light-blue text-grey font-articulat text-center leading-loose">
                 <div class="w-full lg:w-10/12 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
             </div>
 
-            <div class="w-full lg:w-10/12 mx-auto">
+            <div class="w-full xl:w-10/12 mx-auto">
                 <div class="flex flex-wrap justify-center -mx-2 gap-y-5">
                     <div class="w-full md:w-1/2 lg:w-1/3 px-2">
                         <div class="bg-white shadow p-2 rounded-[10px] h-full">
