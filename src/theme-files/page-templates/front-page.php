@@ -18,7 +18,7 @@ get_template_part('parts/section', 'nav');
                 </div>
             </div>
             <div class="flex flex-wrap justify-between items-center pt-24 lg:pt-32 gap-y-16">
-                <div class="w-full lg:w-7/12 order-2 lg:order-1">
+                <div class="w-full lg:w-7/12 order-2 lg:order-1" data-aos="zoom-in">
                     <div class="bg-white rounded-[30px] px-8 py-6 shadow-xl">
                         <div class="text-dark-blue text-xl md:text-2xl font-extrabold pb-8">Check if we service your area</div>
                         <div class="hidden h-14 bg-light-grey rounded-md px-4 w-full mt-3 outline-none font-semibold gap-y-5"></div>
@@ -71,52 +71,8 @@ get_template_part('parts/section', 'nav');
 </div>
 
 <div class="homePage pt-48 md:pt-0">
-    <div class="container">
-        <div class="flex flex-wrap -mx-2 pt-44 pb-20 md:pb-44 gap-y-5">
-            <div class="w-full xl:w-1/2 px-2">
-                <div class="h-[447px] md:h-[274px] rounded-xl flex items-stretch md:items-center p-8 transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:shadow-[10px_10px_#0067B9] relative overflow-hidden homepage-cta">
-                    <img alt="" class="homepage-cta-bg-1 absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-1.jpg">
-                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-1-component.png" class="homepage-cta-component-1 absolute bottom-0 right-0 max-w-[120%] duration-300" alt="">
-
-                    <div class="relative flex flex-col h-full justify-between md:justify-center md:items-start">
-                        <div class="text-4xl font-bold text-dark-blue pb-10">Same day service<div class="text-white">guarantee or its free!</div>
-                        </div>
-                        <a href="./" class="btn-yellow-hover-main-blue px-14 "><span class="relative z-10">Learn More</span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full md:w-1/2 xl:w-1/4 px-2">
-                <div class="h-[274px] rounded-xl bg-gradient-to-b from-[#316A9E] to-[#153B74] flex items-end p-7 transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:shadow-[10px_10px_#0067B9] relative overflow-hidden homepage-cta">
-                    <img alt="" class="homepage-cta-bg-1 absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-2.png">
-                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-2-logo.png" class="homepage-logo-2 absolute top-0 right-0  max-w-[120%] duration-300" alt="">
-                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-2-component.png" class="homepage-cta-component-2 absolute bottom-0 right-0 h-full max-w-[120%] duration-300" alt="">
-
-                    <div class="flex items-center relative">
-                        <div class="text-4xl font-bold text-light-blue">10% off <span class="text-white">online bookings</span></div>
-                        <a href="./">
-                            <svg width="19" height="33" viewBox="0 0 19 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.04346 30.0151L15.1987 17.8598C16.0131 17.0455 16.0131 15.7251 15.1987 14.9107L3.04346 2.75537" stroke="#F7F8FA" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full md:w-1/2 xl:w-1/4 px-2">
-                <div class="h-[274px] rounded-xl bg-gradient-to-b from-main-blue to-[#0E3659] flex items-end p-7 transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:shadow-[10px_10px_#0067B9] relative overflow-hidden homepage-cta">
-                    <img alt="" class="homepage-cta-bg-1 absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-3.png">
-                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-3-component.png" class="homepage-cta-component-2 absolute top-0 right-0  max-w-[120%] duration-300" alt="">
-
-                    <div class="flex items-center">
-                        <div class="text-[35px] leading-none font-bold text-yellow">10% off <span class="text-white">Seniors discount</span></div>
-                        <a href="">
-                            <svg width="19" height="33" viewBox="0 0 19 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.04346 30.0151L15.1987 17.8598C16.0131 17.0455 16.0131 15.7251 15.1987 14.9107L3.04346 2.75537" stroke="#F7F8FA" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container pt-44 pb-20 md:pb-44">
+        <?php get_template_part('parts/section', 'globalcta') ?>
     </div>
 
     <div class="container hidden lg:block">
@@ -195,7 +151,7 @@ get_template_part('parts/section', 'nav');
                                     $serviceName = get_sub_field('service_name');
                                     $link = get_sub_field('link');
                     ?>
-                                    <div class="bg-quaternary rounded-2xl p-4 flex flex-col justify-between">
+                                    <div class="bg-quaternary rounded-2xl p-4 flex flex-col justify-between" data-aos="zoom-in">
                                         <div class="pb-16">
                                             <div class="h-[147px] w-full bg-grey rounded-[10px] p-3 flex items-end bg-no-repeat bg-cover" style="background-image: url('<?= $image['url'] ?>')">
                                                 <img src="<?= get_template_directory_uri() ?>/images/icons/service-icon.png" alt="">
@@ -269,7 +225,7 @@ get_template_part('parts/section', 'nav');
 
         <div class="testimonial_slider" id="homepage_testimonial_slider_1">
             <?php for ($i = 0; $i < 10; $i++) : ?>
-                <div class="bg-[#EEF1F6] rounded-[10px] p-5">
+                <div class="bg-[#EEF1F6] rounded-[10px] p-5" data-aos="zoom-in">
                     <div class="flex flex-wrap items-center justify-between">
                         <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.8422 5.52532C13.4092 5.52436 14.926 6.0781 16.1238 7.08845L19.4788 3.89345C18.1909 2.70588 16.6439 1.83485 14.9606 1.34948C13.2773 0.86411 11.5041 0.777758 9.78161 1.09728C8.05912 1.4168 6.43482 2.1334 5.03761 3.1902C3.64039 4.24701 2.50873 5.61493 1.73242 7.18541L5.51481 10.1008C5.95593 8.77064 6.80439 7.61296 7.94 6.79177C9.07561 5.97059 10.4408 5.52751 11.8422 5.52532Z" fill="#D94F3D" />
@@ -294,7 +250,7 @@ get_template_part('parts/section', 'nav');
 
         <div class="testimonial_slider mt-4" id="homepage_testimonial_slider_2">
             <?php for ($i = 0; $i < 10; $i++) : ?>
-                <div class="bg-[#EEF1F6] rounded-[10px] p-5">
+                <div class="bg-[#EEF1F6] rounded-[10px] p-5" data-aos="zoom-in">
                     <div class="flex flex-wrap items-center justify-between">
                         <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.8422 5.52532C13.4092 5.52436 14.926 6.0781 16.1238 7.08845L19.4788 3.89345C18.1909 2.70588 16.6439 1.83485 14.9606 1.34948C13.2773 0.86411 11.5041 0.777758 9.78161 1.09728C8.05912 1.4168 6.43482 2.1334 5.03761 3.1902C3.64039 4.24701 2.50873 5.61493 1.73242 7.18541L5.51481 10.1008C5.95593 8.77064 6.80439 7.61296 7.94 6.79177C9.07561 5.97059 10.4408 5.52751 11.8422 5.52532Z" fill="#D94F3D" />
@@ -329,7 +285,7 @@ get_template_part('parts/section', 'nav');
 
             <div class="w-full xl:w-10/12 mx-auto">
                 <div class="flex flex-wrap justify-center -mx-2 gap-y-5">
-                    <div class="w-full md:w-1/2 lg:w-1/3 px-2">
+                    <div class="w-full md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
                         <div class="bg-white shadow p-2 rounded-[10px] h-full">
                             <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-1.jpg" class="w-full object-cover object-center h-full" alt="">
@@ -347,7 +303,7 @@ get_template_part('parts/section', 'nav');
                             </div>
                         </div>
                     </div>
-                    <div class="w-full  md:w-1/2 lg:w-1/3 px-2">
+                    <div class="w-full  md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
                         <div class="bg-white shadow p-2 rounded-[10px] h-full">
                             <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-2.jpg" class="w-full object-cover object-center h-full" alt="">
@@ -365,7 +321,7 @@ get_template_part('parts/section', 'nav');
                             </div>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2 lg:w-1/3 px-2">
+                    <div class="w-full md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
                         <div class="bg-dark-blue shadow p-2 rounded-[10px] h-full">
                             <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
                                 <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-3.jpg" class="w-full object-cover object-center h-full" alt="">
