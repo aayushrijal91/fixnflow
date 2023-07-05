@@ -107,6 +107,72 @@ jQuery(function ($) {
                             }
                         }
                     ]
+                });
+
+                let teamSlider1 = $("#team_slider_1").slick({
+                    slidesToShow: 2,
+                    centerMode: true,
+                    centerPadding: "400px",
+                    arrows: false,
+                    infinite: false,
+                    initialSlide: 2,
+                    draggable: false,
+                });
+
+                $('#gotoTeam1_1').on('click', function () {
+                    teamSlider1.slick('slickGoTo', 1);
+                    $('#team_slider_1 .team_card_1').css('opacity', 1);
+                    $('#team_slider_1 .team_card_4').css('opacity', 0);
+                })
+
+                $('#gotoTeam1_4').on('click', function () {
+                    teamSlider1.slick('slickGoTo', 4);
+                    $('#team_slider_1 .team_card_4').css('opacity', 1);
+                    $('#team_slider_1 .team_card_1').css('opacity', 0);
+                })
+
+                let teamSlider2 = $("#team_slider_2").slick({
+                    slidesToShow: 2,
+                    centerMode: true,
+                    centerPadding: "400px",
+                    arrows: false,
+                    infinite: false,
+                    initialSlide: 2,
+                    draggable: false,
+                });
+
+                $('#gotoTeam2_1').on('click', function () {
+                    teamSlider2.slick('slickGoTo', 1);
+                    $('#team_slider_2 .team_card_1').css('opacity', 1);
+                    $('#team_slider_2 .team_card_4').css('opacity', 0);
+                })
+
+                $('#gotoTeam2_4').on('click', function () {
+                    teamSlider2.slick('slickGoTo', 4);
+                    $('#team_slider_2 .team_card_4').css('opacity', 1);
+                    $('#team_slider_2 .team_card_1').css('opacity', 0);
+                })
+
+                let teamSlider3 = $("#team_slider_3").slick({
+                    slidesToShow: 2,
+                    centerMode: true,
+                    centerPadding: "400px",
+                    arrows: false,
+                    infinite: false,
+                    initialSlide: 2,
+                    draggable: false,
+                });
+
+                $('#gotoTeam3_1').on('click', function () {
+                    teamSlider3.slick('slickGoTo', 1);
+                    $('#team_slider_3 .team_card_1').css('opacity', 1);
+                    $('#team_slider_3 .team_card_4').css('opacity', 0);
+                })
+
+                $('#gotoTeam3_4').on('click', function () {
+                    teamSlider3.slick('slickGoTo', 4);
+                    $('#team_slider_3 .team_card_4').css('opacity', 1);
+                    $('#team_slider_3 .team_card_1').css('opacity', 0);
                 })
 
                 scrollBehaviour();

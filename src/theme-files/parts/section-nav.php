@@ -4,7 +4,7 @@
             <div class="w-1/2 md:w-fit xl:w-1/2 link_section">
                 <div class="flex flex-wrap justify-between items-center">
                     <div class="w-fit">
-                        <a href="./" class="logo_img">
+                        <a href="<?= get_site_url() ?>" class="logo_img">
                             <img src="<?= get_template_directory_uri() ?>/images/logo/logo.png" alt="Fix N Flow" class="white_logo">
                             <img src="<?= get_template_directory_uri() ?>/images/logo/color_logo.png" alt="Fix N Flow" class="color_logo">
                         </a>
@@ -12,13 +12,13 @@
                     <div class="w-fit hidden xl:block">
                         <div class="flex flex-wrap items-center -mx-4">
                             <div class="w-fit px-4">
-                                <a href="/about-us" class="change_text_color_on_scroll font-articulat font-semibold text-base">About us</a>
+                                <a href="<?= get_site_url() ?>/about-us" class="change_text_color_on_scroll font-articulat font-semibold text-base">About us</a>
                             </div>
                             <div class="w-fit px-4">
-                                <a href="/contact-us" class="change_text_color_on_scroll font-articulat font-semibold text-base">Contact us</a>
+                                <a href="<?= get_site_url() ?>/contact-us" class="change_text_color_on_scroll font-articulat font-semibold text-base">Contact us</a>
                             </div>
                             <div class="w-fit px-4">
-                                <a href="/contact-us" class="change_text_color_on_scroll font-articulat font-semibold text-base flex items-center justify-center gap-x-3 border border-yellow rounded-md h-[41px] px-3.5">
+                                <a href="<?= get_site_url() ?>/services" class="change_text_color_on_scroll font-articulat font-semibold text-base flex items-center justify-center gap-x-3 border border-yellow rounded-md h-[41px] px-3.5">
                                     See all services
                                     <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2.2041 16.2158L8.62199 9.79793C9.01252 9.4074 9.01252 8.77424 8.62199 8.38371L2.2041 1.96582" stroke="#FFAE35" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" />
