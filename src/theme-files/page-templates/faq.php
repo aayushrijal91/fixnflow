@@ -47,6 +47,47 @@ get_header();
         <div class="container">
             <div class="w-full lg:w-8/12 mx-auto">
                 <div class="text-center text-grey text-heading font-bold"><span class="text-main-blue">FAQ</span> Fix N Flow Plumbing</div>
+                <div class="text-main-blue text-center pt-7 font-semibold">All your plumbing questions answered here</div>
+
+                <div class="accordion-container pt-20">
+                    <?php if (have_rows('faq_list')) :
+                        $index = 1;
+                        while (have_rows('faq_list')) : the_row();
+                            $question = get_sub_field('question');
+                            $answer = get_sub_field('answer');
+                    ?>
+                            <div class="accordion-card">
+                                <div class="accordion-head<?= ($index == 1) ? " active" : ""; ?>">
+                                    <div class="flex w-full justify-between">
+                                        <div class="h-inherit">
+                                            <?= $question ?>
+                                        </div>
+                                        <div class="h-inherit">
+                                            <div class="plusminus">
+                                                <?php if ($index == 1) { ?>
+                                                    <svg width="25" height="4" viewBox="0 0 25 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.56055 1.81152H22.5852" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                <?php } else { ?>
+                                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.0723 1.99902V23.0237" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M1.56006 12.5112H22.5847" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                <?php } ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-body" style="<?= ($index == 1) ? 'display: block;' : ''; ?>">
+                                    <?= $answer ?>
+                                </div>
+                            </div>
+                    <?php
+                            $index++;
+                        endwhile;
+                    endif;
+                    ?>
+                </div>
             </div>
         </div>
     </div>

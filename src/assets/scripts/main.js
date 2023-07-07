@@ -207,11 +207,6 @@ jQuery(function ($) {
 
                 $(window).on('scroll', () => {
                     scrollBehaviour();
-                    // if ($(this).scrollTop() >= 600) {
-                    //     $('#return-to-top').fadeIn(300);
-                    // } else {
-                    //     $('#return-to-top').fadeOut(300);
-                    // }
                 });
 
                 function scrollBehaviour() {
@@ -222,14 +217,22 @@ jQuery(function ($) {
                     }
                 }
 
-                // $('#return-to-top').on('click', () => {
-                //     $('body,html').animate({
-                //         scrollTop: 0
-                //     }, 500);
-                // });
+                $(".accordion-head").on('click', function () {
+                    $(".accordion-head").removeClass("active");
+                    $(this).addClass('active');
 
+                    if ($('.accordion-body').is(':visible')) {
+                        $(".accordion-body").slideUp(300);
+                    }
+                    if ($(this).next(".accordion-body").is(':visible')) {
+                        $(this).next(".accordion-body").slideUp(300);
+                    } else {
+                        $(this).next(".accordion-body").slideDown(300);
+                    }
 
-
+                    $(".accordion-head").find('.plusminus').html('<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0723 1.99902V23.0237" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M1.56006 12.5112H22.5847" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+                    $(".accordion-head.active").find('.plusminus').html('<svg width="25" height="4" viewBox="0 0 25 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.56055 1.81152H22.5852" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+                });
 
             }, // end misc
         }, // end ui
