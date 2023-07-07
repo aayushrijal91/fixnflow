@@ -192,7 +192,7 @@ jQuery(function ($) {
 
                 AOS.refresh();
 
-                $('.contactus_services').slick({
+                $('.part_contactus_services').slick({
                     variableWidth: true,
                     draggable: false,
                     autoplay: true,

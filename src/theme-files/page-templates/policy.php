@@ -9,7 +9,7 @@ $banner = get_field('banner');
 get_template_part('parts/section', 'nav');
 ?>
 
-<div class="policyPage bg-[#F7F8FA]">
+<div class="policyPage bg-off-white">
     <div class="p-6">
         <div class="generalBanner max-w-[1874px] mx-auto h-[444px] rounded-[30px] overflow-hidden">
             <div class="pt-48 pb-24 text-white text-center">

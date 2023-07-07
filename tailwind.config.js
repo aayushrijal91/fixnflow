@@ -25,6 +25,7 @@ module.exports = {
         'grey': '#535456',
         'light-grey': '#EEF1F6',
         'light': '#f6f7fa',
+        'off-white': '#F7F8FA'
       },
       fontFamily: {
         friends: ["Friends", "sans-serif"],

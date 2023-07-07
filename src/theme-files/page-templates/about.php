@@ -9,7 +9,7 @@ $banner = get_field('banner');
 get_template_part('parts/section', 'nav');
 ?>
 
-<div class="bg-[#F7F8FA]">
+<div class="bg-off-white">
     <div class="aboutBanner max-w-[1874px] mx-auto p-6">
         <div class="flex flex-wrap -mx-2">
             <div class="w-7/12 px-2">

@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<div class="bookingFormPage bg-[#F7F8FA]">
+<div class="bookingFormPage bg-off-white">
     <?php get_template_part('parts/section', 'banner'); ?>
 </div>
 

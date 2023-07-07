@@ -83,7 +83,6 @@
 
 .aboutPage {
     .team_slider {
-
         .team_card_1,
         .team_card_4 {
             opacity: 0;
@@ -100,17 +99,15 @@
     }
 }
 
-.contactUsPage {
-    .contactus_services {
-        .slick-slide {
-            @apply mx-2 rounded-full border border-light-blue px-10 py-3 text-light-blue font-articulat;
-        }
+.part_contactus_services {
+    .slick-slide {
+        @apply mx-2 rounded-full border border-light-blue px-10 py-3 text-light-blue font-articulat;
     }
 }
 
 .policyPage {
     .policyPageContent {
-        p{
+        p {
             font-family: "articulat-cf", "sans-serif" !important;
             line-height: 2;
             color: #535456;
@@ -132,7 +129,7 @@
             li {
                 font-family: "articulat-cf", "sans-serif" !important;
                 line-height: 2;
-                color: #535456; 
+                color: #535456;
             }
         }
     }

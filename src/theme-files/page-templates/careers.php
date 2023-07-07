@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<div class="careersPage bg-[#F7F8FA]">
+<div class="careersPage bg-off-white">
     <?php get_template_part('parts/section', 'banner'); ?>
 </div>
 

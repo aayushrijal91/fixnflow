@@ -128,6 +128,42 @@ body {
     }
 }
 
+.btn-light-blue-hover-white {
+    position: relative;
+    overflow: hidden;
+    @apply bg-light-blue rounded-[10px] h-14 text-white inline-flex justify-center items-center font-bold transition-all duration-75 hover:shadow-[4px_4px_#0067B9];
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        @apply bg-white;
+        top: 0;
+        left: 0;
+        outline: none;
+        transition: all 0.6s ease;
+        z-index: 1;
+    }
+
+    &:hover {
+        @apply text-main-blue duration-300 transition-all;
+
+        &::before {
+            width: 30px;
+            @apply text-main-blue;
+            border-radius: 50px;
+            height: 30px;
+            transform: scale(106.5);
+        }
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0;
+    }
+}
+
 .container {
     max-width: 1379px;
     padding-left: 8px;

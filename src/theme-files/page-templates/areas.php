@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-    <div class="areasPage bg-[#F7F8FA]">
+    <div class="areasPage bg-off-white">
     <?php get_template_part('parts/section', 'banner'); ?>
 </div>
 
