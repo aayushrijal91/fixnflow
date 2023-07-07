@@ -203,6 +203,30 @@ jQuery(function ($) {
                     rtl: false
                 })
 
+                let bookingFormSlider = $('#bookingFormSlider').slick({
+                    slidesToShow: 1,
+                    arrows: false,
+                    draggable: false
+                });
+
+                $('ul.formTypeSlider li.slide').width($('ul.formTypeSlider li:nth-child(1)').width());
+
+                $('.formTypeSliderBtn').on('click', function () {
+                    $(this).parents('li').siblings().removeClass("active");
+                    $(this).parents('li').addClass('active');
+
+                    $('ul.formTypeSlider li:nth-child(1).active ~ .slide').width($('ul.formTypeSlider li:nth-child(1)').width());
+                    $('ul.formTypeSlider li:nth-child(1).active ~ .slide').css('left', 0);
+                    $('ul.formTypeSlider li:nth-child(2).active ~ .slide').width($('ul.formTypeSlider li:nth-child(2)').width());
+                    $('ul.formTypeSlider li:nth-child(2).active ~ .slide').css('left', $('ul.formTypeSlider li:nth-child(1)').width());
+                    $('ul.formTypeSlider li:nth-child(3).active ~ .slide').width($('ul.formTypeSlider li:nth-child(3)').width());
+                    $('ul.formTypeSlider li:nth-child(3).active ~ .slide').css('left', $('ul.formTypeSlider li:nth-child(1)').width() + $('ul.formTypeSlider li:nth-child(2)').width());
+                    $('ul.formTypeSlider li:nth-child(4).active ~ .slide').width($('ul.formTypeSlider li:nth-child(4)').width());
+                    $('ul.formTypeSlider li:nth-child(4).active ~ .slide').css('left', $('ul.formTypeSlider li:nth-child(1)').width() + $('ul.formTypeSlider li:nth-child(2)').width() + $('ul.formTypeSlider li:nth-child(3)').width());
+
+                    bookingFormSlider.slick('slickGoTo', $(this).attr('slideTarget'));
+                });
+
                 scrollBehaviour();
 
                 $(window).on('scroll', () => {

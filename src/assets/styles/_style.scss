@@ -136,6 +136,46 @@
     }
 }
 
+.bookingFormPage {
+    ul.formTypeSlider {
+        display: flex;
+        position: relative;
+
+        li {
+            list-style: none;
+
+            &.active {
+                .formTypeSliderBtn {
+                    color: #ffffff;
+                }
+            }
+
+            .formTypeSliderBtn {
+                transition: 0.5s;
+                padding: 6px 24px;
+                position: relative;
+                height: 54px;
+                z-index: 5;
+                display: flex;
+                align-items: center;
+            }
+
+            &.slide {
+                @apply bg-main-blue rounded-t-2xl absolute h-[54px] top-0 left-0 opacity-0;
+                z-index: 1;
+                transition: 0.5s;
+            }
+
+            &:nth-child(1).active~.slide,
+            &:nth-child(2).active~.slide,
+            &:nth-child(3).active~.slide,
+            &:nth-child(4).active~.slide {
+                opacity: 1;
+            }
+        }
+    }
+}
+
 .partContact {
 
     input::placeholder,
@@ -214,7 +254,7 @@
         @apply border-b border-grey mb-14 pb-14 leading-7;
 
         .accordion-head {
-            @apply  cursor-pointer font-bold transition-all duration-200 text-2xl text-main-blue;
+            @apply cursor-pointer font-bold transition-all duration-200 text-2xl text-main-blue;
 
             .plusminus {
                 @apply flex justify-center items-center h-[52px] w-[52px] text-[#5AB2F8] rounded-full;
@@ -233,6 +273,7 @@
             font-weight: 500;
             line-height: 2;
             padding-top: 20px;
+
             a {
                 color: #fff !important;
                 text-decoration: underline;
