@@ -47,7 +47,7 @@ get_template_part('parts/section', 'nav');
             </div>
         </div>
 
-        <div class="flex flex-wrap justify-center -mt-44">
+        <div class="flex flex-wrap justify-center -mt-44" data-aos="zoom-in">
             <div class="w-full lg:w-5/12 order-2 lg:order-1">
                 <div class="bg-white rounded-[30px] px-8 py-6 shadow-xl">
                     <div class="text-dark-blue text-xl md:text-2xl font-extrabold pb-8">Check if we service your area</div>

@@ -30,6 +30,8 @@ jQuery(function ($) {
                     ]
                 });
 
+                AOS.refresh();
+
                 $('#homepage_testimonial_slider_1').slick({
                     slidesToShow: 4,
                     slidesToScroll: 1,
@@ -62,8 +64,13 @@ jQuery(function ($) {
                     ]
                 });
 
+                AOS.refresh();
+
                 $('#brand_slider').slick({
                     slidesToShow: 5,
+                    cssEase: 'linear',
+                    speed: 1500,
+                    autoplaySpeed: 0,
                     slidesToScroll: 1,
                     arrows: false,
                     autoplay: true,
@@ -75,7 +82,9 @@ jQuery(function ($) {
                             }
                         }
                     ]
-                })
+                });
+
+                AOS.refresh();
 
                 $('#homepage_testimonial_slider_2').slick({
                     slidesToShow: 4,
@@ -109,6 +118,8 @@ jQuery(function ($) {
                     ]
                 });
 
+                AOS.refresh();
+
                 let teamSlider1 = $("#team_slider_1").slick({
                     slidesToShow: 2,
                     centerMode: true,
@@ -141,6 +152,8 @@ jQuery(function ($) {
                     draggable: false,
                 });
 
+                AOS.refresh();
+
                 $('#gotoTeam2_1').on('click', function () {
                     teamSlider2.slick('slickGoTo', 1);
                     $('#team_slider_2 .team_card_1').css('opacity', 1);
@@ -163,6 +176,8 @@ jQuery(function ($) {
                     draggable: false,
                 });
 
+                AOS.refresh();
+
                 $('#gotoTeam3_1').on('click', function () {
                     teamSlider3.slick('slickGoTo', 1);
                     $('#team_slider_3 .team_card_1').css('opacity', 1);
@@ -173,6 +188,19 @@ jQuery(function ($) {
                     teamSlider3.slick('slickGoTo', 4);
                     $('#team_slider_3 .team_card_4').css('opacity', 1);
                     $('#team_slider_3 .team_card_1').css('opacity', 0);
+                })
+
+                AOS.refresh();
+
+                $('.contactus_services').slick({
+                    variableWidth: true,
+                    draggable: false,
+                    autoplay: true,
+                    slidesToScroll: 1,
+                    cssEase: 'linear',
+                    speed: 2000,
+                    autoplaySpeed: 0,
+                    rtl: false
                 })
 
                 scrollBehaviour();
