@@ -5,6 +5,7 @@
  *
  */
 get_header();
+$banner = get_field('banner');
 get_template_part('parts/section', 'nav');
 ?>
 
@@ -14,8 +15,15 @@ get_template_part('parts/section', 'nav');
             <div class="w-7/12 px-2">
                 <div class="rounded-[30px] bg-light-blue bg-cover bg-no-repeat h-full" style="background:url(<?= get_template_directory_uri() ?>/images/background/about-banner-left.png), #5AB2F8">
                     <div class="w-10/12 ml-auto px-10 pt-48 pb-14">
-                        <div class="text-4xl md:text-5xl xl:text-heading text-white font-bold"><?= get_the_title() ?></div>
-                        <div class="pt-6 text-lg font-articulat text-white">Your trusted local family owned plumbing company in Sydney</div>
+                        <?php if (isset($banner)) : ?>
+                            <div class="text-4xl md:text-5xl xl:text-heading text-white font-bold"><?= $banner['title'] ? $banner['title'] : get_the_title() ?></div>
+                            <?php if ($banner['subtitle']) : ?>
+                                <div class="pt-6 text-lg font-articulat text-white">
+                                    <?= $banner['subtitle'] ?>
+                                </div>
+                        <?php
+                            endif;
+                        endif; ?>
                         <div class="pt-24 pb-3">
                             <div class="w-1/3 px-1">
                                 <img src="<?= get_template_directory_uri() ?>/images/icons/google-reviews.png" alt="google">
@@ -316,7 +324,7 @@ get_template_part('parts/section', 'nav');
     <?php get_template_part('parts/section', 'whyus') ?>
 
     <?php get_template_part('parts/section', 'contact') ?>
-    
+
     <div class="pb-40 lg:pb-60">
         <?php get_template_part('parts/section', 'leadingbrands') ?>
     </div>

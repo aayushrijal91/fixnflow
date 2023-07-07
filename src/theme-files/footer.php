@@ -185,31 +185,30 @@
                     <div class="flex flex-wrap justify-between">
                         <div class="w-fit hidden lg:block">
                             <div class="text-light-blue text-2xl font-bold">Quick links</div>
-                            <ul class="pt-9 leading-loose">
-                                <li><a href="" class="text-primary-light">Home</a></li>
-                                <li><a href="" class="text-primary-light">About us</a></li>
-                                <li><a href="" class="text-primary-light">Areas we service</a></li>
-                                <li><a href="" class="text-primary-light">Blogs</a></li>
-                                <li><a href="" class="text-primary-light">FAQs</a></li>
-                            </ul>
+                            <?php wp_nav_menu(array(
+                                'menu' => 'Quick Links',
+                                'item_class' => 'nav-item',
+                                'link_class' => 'nav-link leading-loose text-primary-light',
+                                'container_class' => 'footer_menu pt-9',
+                            )); ?>
                         </div>
                         <div class="w-fit hidden lg:block">
                             <div class="text-light-blue text-2xl font-bold">Discover more</div>
-                            <ul class="pt-9 leading-loose">
-                                <li><a href="" class="text-primary-light">Areas we service</a></li>
-                                <li><a href="" class="text-primary-light">Careers</a></li>
-                                <li><a href="" class="text-primary-light">Membership</a></li>
-                                <li><a href="" class="text-primary-light">Home Safety Inspections</a></li>
-                            </ul>
+                            <?php wp_nav_menu(array(
+                                'menu' => 'Discover more',
+                                'item_class' => 'nav-item',
+                                'link_class' => 'nav-link leading-loose text-primary-light',
+                                'container_class' => 'footer_menu pt-9',
+                            )); ?>
                         </div>
                         <div class="w-fit hidden lg:block">
                             <div class="text-light-blue text-2xl font-bold">Contact us</div>
-                            <ul class="pt-9 leading-loose">
-                                <li><a href="" class="text-primary-light">Contact us</a></li>
-                                <li><a href="" class="text-primary-light">Booking form</a></li>
-                                <li><a href="" class="text-primary-light">Privacy policy</a></li>
-                                <li><a href="" class="text-primary-light">Conditions</a></li>
-                            </ul>
+                            <?php wp_nav_menu(array(
+                                'menu' => 'Contact us',
+                                'item_class' => 'nav-item',
+                                'link_class' => 'nav-link leading-loose text-primary-light',
+                                'container_class' => 'footer_menu pt-9',
+                            )); ?>
                         </div>
                     </div>
 

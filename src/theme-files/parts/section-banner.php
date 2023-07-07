@@ -1,11 +1,19 @@
+<?php $banner = get_field('banner'); ?>
+
 <?= get_template_part('parts/section', 'nav') ?>
 
 <div class="p-6">
     <div class="generalBanner max-w-[1874px] mx-auto h-[624px] rounded-[30px] overflow-hidden">
         <div class="container">
             <div class="pt-48 pb-24 text-white text-center">
-                <div class="text-4xl md:text-5xl xl:text-heading font-bold">Contact us today</div>
-                <div class="text-base md:text-lg pt-10">Your trusted local family owned plumbing company in Sydney</div>
+                <?php if (isset($banner)) : ?>
+                    <div class="text-4xl md:text-5xl xl:text-heading font-bold"><?= $banner['title'] ? $banner['title'] : get_the_title(); ?> </div>
+                    <?php if (isset($banner['subtitle'])) : ?>
+                        <div class="text-base md:text-lg pt-10">
+                            <?= $banner['subtitle'] ?>
+                        </div>
+                <?php endif;
+                endif; ?>
             </div>
 
             <div class="flex flex-wrap justify-between">
@@ -42,12 +50,12 @@
         </div>
     </div>
     <div class="flex flex-wrap justify-center -mt-44" data-aos="zoom-in">
-            <div class="w-full lg:w-5/12 order-2 lg:order-1">
-                <div class="bg-white rounded-[30px] px-8 py-6 shadow-xl">
-                    <div class="text-dark-blue text-xl md:text-2xl font-extrabold pb-8">Check if we service your area</div>
-                    <div class="hidden h-14 bg-light-grey rounded-md px-4 w-full mt-3 outline-none font-semibold gap-y-5"></div>
-                    <?= do_shortcode('[contact-form-7 id="9" title="Check Service Area"]') ?>
-                </div>
+        <div class="w-full lg:w-5/12 order-2 lg:order-1">
+            <div class="bg-white rounded-[30px] px-8 py-6 shadow-xl">
+                <div class="text-dark-blue text-xl md:text-2xl font-extrabold pb-8">Check if we service your area</div>
+                <div class="hidden h-14 bg-light-grey rounded-md px-4 w-full mt-3 outline-none font-semibold gap-y-5"></div>
+                <?= do_shortcode('[contact-form-7 id="9" title="Check Service Area"]') ?>
             </div>
         </div>
+    </div>
 </div>

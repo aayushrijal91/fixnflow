@@ -108,6 +108,36 @@
     }
 }
 
+.policyPage {
+    .policyPageContent {
+        p{
+            font-family: "articulat-cf", "sans-serif" !important;
+            line-height: 2;
+            color: #535456;
+            padding-bottom: 24px;
+        }
+
+        .wp-block-heading {
+            font-size: 35px;
+            color: #0067B9;
+            font-weight: 700;
+            padding: 48px 0;
+        }
+
+        ul {
+            padding-bottom: 24px;
+            list-style: disc;
+            padding-inline-start: 20px;
+
+            li {
+                font-family: "articulat-cf", "sans-serif" !important;
+                line-height: 2;
+                color: #535456; 
+            }
+        }
+    }
+}
+
 .partContact {
 
     input::placeholder,
