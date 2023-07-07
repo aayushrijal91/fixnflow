@@ -14,10 +14,10 @@ get_header();
         <div class="container">
             <div class="flex flex-wrap -mx-3">
                 <div class="w-full md:w-1/2 px-3">
-                    <div class="partGlobalCta h-[402px] rounded-[30px] bg-gradient-to-b from-[#316A9E] to-[#153B74] flex px-20 py-11 transition-all duration-300 relative overflow-hidden">
+                    <div class="partGlobalCta h-[402px] rounded-[30px] bg-gradient-to-b from-[#316A9E] to-[#153B74] flex px-20 py-11 relative overflow-hidden">
                         <img alt="" class="globalCtaBg absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-2.png">
                         <img src="<?= get_template_directory_uri() ?>/images/lib/faq-floating-logo.png" class="globalCtaLogo_2 absolute bottom-0 right-[-10%] w-[120%] max-w-[120%] duration-300" alt="">
-                        <img src="<?= get_template_directory_uri() ?>/images/lib/floating-laptop.png" class="globalCtaComponent_2 absolute bottom-[-20%] left-[-3%] h-full max-w-[120%] duration-300" alt="">
+                        <img src="<?= get_template_directory_uri() ?>/images/lib/floating-laptop.png" class="globalCtaComponent_2 absolute bottom-[-30%] left-[-3%] h-full max-w-[120%] duration-300" alt="">
 
                         <div class="relative text-center">
                             <div class="text-4xl lg:text-[45px] font-bold text-light-blue">Book online now <span class="text-white">for all your plumbing needs</span></div>
@@ -27,14 +27,12 @@ get_header();
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 px-3">
-                    <div class="partGlobalCta h-[402px] rounded-[30px] bg-gradient-to-b from-[#316A9E] to-[#153B74] flex px-20 py-11 transition-all duration-300 relative overflow-hidden">
-                        <img alt="" class="globalCtaBg absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-2.png">
-                        <img src="<?= get_template_directory_uri() ?>/images/lib/faq-floating-logo.png" class="globalCtaLogo_2 absolute bottom-0 right-[-10%] w-[120%] max-w-[120%] duration-300" alt="">
-                        <img src="<?= get_template_directory_uri() ?>/images/lib/floating-laptop.png" class="globalCtaComponent_2 absolute bottom-[-20%] left-[-3%] h-full max-w-[120%] duration-300" alt="">
+                    <div class="partGlobalCta h-[402px] rounded-[30px] px-20 py-11 bg-no-repeat bg-cover relative overflow-hidden" style="background:url(<?= get_template_directory_uri() ?>/images/background/faq_cta_2.jpg)">
+                        <img alt="" class="absolute -left-7 bottom-0 duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-1-component.png">
+                        <img src="<?= get_template_directory_uri() ?>/images/background/faq-cta-component-2.png" class="absolute bottom-0 right-0 duration-300 group-hover:right-[-10%]" alt="">
 
                         <div class="relative text-center">
-                            <div class="text-4xl lg:text-[45px] font-bold text-light-blue">Book online now <span class="text-white">for all your plumbing needs</span></div>
-                            <div class="text-white font-articulat py-7">Plus receive 10% off all online bookings!</div>
+                            <div class="text-4xl lg:text-[45px] font-bold text-dark-blue pb-7">Contact us today <br /><span class="text-white">to speak<br /> to an expert</span></div>
                             <a href="./" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10">Learn More</span></a>
                         </div>
                     </div>
