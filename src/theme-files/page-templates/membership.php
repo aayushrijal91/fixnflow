@@ -61,13 +61,11 @@ get_header();
     <div class="bg-white py-32">
         <div class="container">
             <div class="flex flex-wrap justify-around pb-20">
-                <div class="w-full lg:w-5/12">
-                    <div class="text-4xl md:text-5xl xl:text-heading leading-none text-grey font-bold text-center">Join and receive <span class="text-main-blue">exclusive perks!</span></div>
+                <div class="w-full lg:w-5/12 text-4xl md:text-5xl xl:text-heading leading-none text-grey font-bold text-center">
+                    Join and receive <span class="text-main-blue">exclusive perks!</span>
                 </div>
-                <div class="w-full lg:w-5/12">
-                    <div class="text-grey font-articulat text-base leading-loose">
-                        As a member of our VIP club, you'll receive exclusive perks and discounts that can help you <span class="font-bold">save on your monthly plumbing expenses,</span> as well as discounted rates on repairs and services. Our dedicated team is committed to providing you with the <span class="font-bold">best possible plumbing solutions and premium customer service.</span>
-                    </div>
+                <div class="w-full lg:w-5/12 text-grey font-articulat text-base leading-loose">
+                    As a member of our VIP club, you'll receive exclusive perks and discounts that can help you <span class="font-bold">save on your monthly plumbing expenses,</span> as well as discounted rates on repairs and services. Our dedicated team is committed to providing you with the <span class="font-bold">best possible plumbing solutions and premium customer service.</span>
                 </div>
             </div>
 
@@ -130,12 +128,12 @@ get_header();
                             <?= echo_theme_image('/images/lib/priority-booking-eg.png', 'absolute right-0 bottom-0') ?>
                             <div>Guaranteed <br /><span class="text-grey">priority booking</span></div>
                         </div>
-    
+
                         <div class="bg-gradient-to-r from-[#4299DE] via-[#64B7F9] to-[#48CCF5] rounded-[10px] min-h-[174px] p-7 relative text-white text-[35px] font-bold flex items-center leading-none">
                             <?= echo_theme_image('/images/lib/service-upgrade-eg.png', 'absolute right-0 bottom-0') ?>
                             <div>Discounted <br /><span class="text-dark-blue">service<br /> upgrades</span></div>
                         </div>
-    
+
                         <div class="bg-gradient-to-r from-[#396BB5] to-[#1E4785] rounded-[10px] min-h-[174px] p-7 relative flex items-center">
                             <?= echo_theme_image('/images/lib/drain-camera-inspection.png', 'absolute right-0 bottom-0') ?>
                             <div>

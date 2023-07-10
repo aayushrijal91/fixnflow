@@ -258,6 +258,26 @@ jQuery(function ($) {
                     $(".accordion-head.active").find('.plusminus').html('<svg width="25" height="4" viewBox="0 0 25 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.56055 1.81152H22.5852" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
                 });
 
+                $('#file_resume').on('change', function () {
+                    let file = $('#file_resume').val();
+
+                    if (file != "") {
+                        let theSplit = file.split('\\');
+                        let fileName = theSplit[theSplit.length - 1];
+                        $('#uploaded_resume_name').html(fileName.substring(0, 50));
+                    }
+                });
+
+                $('#file_coverletter').on('change', function () {
+                    let file = $('#file_coverletter').val();
+
+                    if (file != "") {
+                        let theSplit = file.split('\\');
+                        let fileName = theSplit[theSplit.length - 1];
+                        $('#uploaded_coverletter_name').html(fileName.substring(0, 50));
+                    }
+                });
+
             }, // end misc
         }, // end ui
         //utils: {
