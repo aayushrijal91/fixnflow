@@ -185,7 +185,7 @@ get_template_part('parts/section', 'nav');
 
     <?php get_template_part('parts/section', 'contact') ?>
 
-    <div class="lg:hidden bg-[#D3E2EF]">
+    <div class="lg:hidden bg-quaternary">
         <img src="<?= get_template_directory_uri() ?>/images/background/mobile-contact-vector.png" class="w-full" alt="">
         <div class="container pt-9 pb-16">
             <img src="<?= get_template_directory_uri() ?>/images/icons/nearby.png" alt="">

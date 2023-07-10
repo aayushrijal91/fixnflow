@@ -1,20 +1,22 @@
 <?php
 // enable ACF options page
 
-function init_setup() {
-    add_theme_support( 'title-tag' );
-    
-    if ( function_exists( 'add_theme_support' ) ) {
-        add_theme_support( 'post-thumbnails' );
+function init_setup()
+{
+    add_theme_support('title-tag');
+
+    if (function_exists('add_theme_support')) {
+        add_theme_support('post-thumbnails');
     }
 }
-add_action( 'after_setup_theme', 'init_setup' );
+add_action('after_setup_theme', 'init_setup');
 
 if (function_exists('acf_add_options_page')) acf_add_options_page();
 
 add_filter('wpcf7_validate_customlist*', 'wpcf7_customlist_validation_filter', 10, 2);
 
-function wpcf7_customlist_validation_filter($result, $tag) {
+function wpcf7_customlist_validation_filter($result, $tag)
+{
     $tag = new WPCF7_FormTag($tag);
 
     $name = $tag->name;
@@ -39,80 +41,81 @@ function wpcf7_customlist_validation_filter($result, $tag) {
 /* CF7 remove auto p */
 add_filter('wpcf7_autop_or_not', '__return_false');
 
-function numeric_posts_nav() {
- 
-    if( is_singular() )
+function numeric_posts_nav()
+{
+
+    if (is_singular())
         return;
- 
+
     global $wp_query;
- 
+
     /** Stop execution if there's only 1 page */
-    if( $wp_query->max_num_pages <= 1 )
+    if ($wp_query->max_num_pages <= 1)
         return;
- 
-    $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-    $max   = intval( $wp_query->max_num_pages );
- 
+
+    $paged = get_query_var('paged') ? absint(get_query_var('paged')) : 1;
+    $max   = intval($wp_query->max_num_pages);
+
     /** Add current page to the array */
-    if ( $paged >= 1 )
+    if ($paged >= 1)
         $links[] = $paged;
- 
+
     /** Add the pages around the current page to the array */
-    if ( $paged >= 3 ) {
+    if ($paged >= 3) {
         $links[] = $paged - 1;
         $links[] = $paged - 2;
     }
- 
-    if ( ( $paged + 2 ) <= $max ) {
+
+    if (($paged + 2) <= $max) {
         $links[] = $paged + 2;
         $links[] = $paged + 1;
     }
- 
+
     echo '<div class="d-flex flex-wrap align-items-center justify-content-center mt-md-5 mt-2 mb-md-0 mb-5"><ul class="pagination">' . "\n";
- 
+
     /** Previous Post Link */
-    if ( get_previous_posts_link() )
-        printf( '<li class="page-item">%s</li>' . "\n", get_previous_posts_link('Prev') );
- 
+    if (get_previous_posts_link())
+        printf('<li class="page-item">%s</li>' . "\n", get_previous_posts_link('Prev'));
+
     /** Link to first page, plus ellipses if necessary */
-    if ( ! in_array( 1, $links ) ) {
+    if (!in_array(1, $links)) {
         $class = 1 == $paged ? ' class="page-item active"' : ' class="page-item"';
- 
-        printf( '<li%s><a href="%s" class="page-link">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
- 
-        if ( ! in_array( 2, $links ) )
+
+        printf('<li%s><a href="%s" class="page-link">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link(1)), '1');
+
+        if (!in_array(2, $links))
             echo '<li class="page-item">�</li>';
     }
- 
+
     /** Link to current page, plus 2 pages in either direction if necessary */
-    sort( $links );
-    foreach ( (array) $links as $link ) {
+    sort($links);
+    foreach ((array) $links as $link) {
         $class = $paged == $link ? ' class="page-item active"' : ' class="page-item"';
-        printf( '<li%s><a href="%s" class="page-link">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+        printf('<li%s><a href="%s" class="page-link">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link($link)), $link);
     }
- 
+
     /** Link to last page, plus ellipses if necessary */
-    if ( ! in_array( $max, $links ) ) {
-        if ( ! in_array( $max - 1, $links ) )
+    if (!in_array($max, $links)) {
+        if (!in_array($max - 1, $links))
             echo '<li>�</li>' . "\n";
- 
+
         $class = $paged == $max ? ' class="page-item active"' : ' class="page-item"';
-        printf( '<li%s><a href="%s" class="page-link">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
+        printf('<li%s><a href="%s" class="page-link">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link($max)), $max);
     }
- 
+
     /** Next Post Link */
-    if ( get_next_posts_link() )
-        printf( '<li class="page-item">%s</li>' . "\n", get_next_posts_link('Next') );
- 
+    if (get_next_posts_link())
+        printf('<li class="page-item">%s</li>' . "\n", get_next_posts_link('Next'));
+
     echo '</ul></div>' . "\n";
- 
 }
 
 add_filter('next_posts_link_attributes', 'posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'posts_link_attributes');
 
-function posts_link_attributes() {
-  return 'class="page-link link-arrow"';
+function posts_link_attributes()
+{
+    return 'class="page-link link-arrow"';
 }
 
 /* contact 7 button */
@@ -123,15 +126,16 @@ add_action('wpcf7_init', 'aiims_child_cf7_button');
 /* adding out submit button tag */
 if (!function_exists('aiims_child_cf7_button')) {
 
-    function aiims_child_cf7_button() {
+    function aiims_child_cf7_button()
+    {
         wpcf7_add_form_tag('submit', 'aiims_child_cf7_button_handler');
     }
-
 }
 /* out button markup inside handler */
 if (!function_exists('aiims_child_cf7_button_handler')) {
 
-    function aiims_child_cf7_button_handler($tag) {
+    function aiims_child_cf7_button_handler($tag)
+    {
         $tag = new WPCF7_FormTag($tag);
         $class = wpcf7_form_controls_class($tag->type);
         $atts = array();
@@ -149,7 +153,8 @@ if (!function_exists('aiims_child_cf7_button_handler')) {
     }
 }
 
-function catch_that_image() {
+function catch_that_image()
+{
     global $post, $posts;
     $first_img = '';
     ob_start();
@@ -158,10 +163,43 @@ function catch_that_image() {
     if (!empty($matches[1][0])) {
         $first_img = $matches[1][0];
     }
-  
-    if(empty($first_img)){ //Defines a default image
-      $website_url = get_template_directory_uri();
-      $first_img =  "$website_url/images/default.jpg";
+
+    if (empty($first_img)) { //Defines a default image
+        $website_url = get_template_directory_uri();
+        $first_img =  "$website_url/images/default.jpg";
     }
     return $first_img;
-  }
+}
+
+function echo_image($image = null, $attachment_id = null, $class = '')
+{
+    $url = '';
+    $alt_text = '';
+
+    // ACF image array
+
+    if ($image) {
+        $url = $image['url'];
+        $alt_text = !empty($image['alt']) ? $image['alt'] : get_bloginfo('name');
+    }
+
+    // WordPress attachment ID
+
+    else if ($attachment_id) {
+        $url = wp_get_attachment_url($attachment_id);
+        $alt_text = get_post_meta($attachment_id, '_wp_attachment_image_alt', TRUE);
+        $alt_text = !empty($alt_text) ? $alt_text : get_bloginfo('name');
+    }
+
+    if ($url) {
+        echo '<img src="' . esc_url($url) . '" alt="' . esc_attr($alt_text) . '" class="' . esc_attr($class) . '" />';
+    }
+}
+
+function echo_theme_image($relative_url, $class = '')
+{
+    $url = get_template_directory_uri() . $relative_url;
+    $alt_text = get_bloginfo('name');  // Default alt text is site name
+
+    echo '<img src="' . esc_url($url) . '" alt="' . esc_attr($alt_text) . '" class="' . esc_attr($class) . '" />';
+}
