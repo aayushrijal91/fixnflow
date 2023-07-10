@@ -39,7 +39,8 @@ get_header();
                 </ul>
             </div>
         </div>
-        <div class="bg-main-blue py-20">
+        <div class="bg-main-blue py-20 relative">
+            <img src="<?= get_template_directory_uri() ?>/images/lib/booking_form_van.png" class="absolute bottom-0 left-0" alt="">
             <div class="container">
                 <div class="flex flex-wrap">
                     <div class="w-full lg:w-1/2">
@@ -55,6 +56,8 @@ get_header();
                                     </div>
                                 </div>
                                 <div class="py-6 text-white font-articulat">One of our expert plumbers will get back to you as soon as possible.</div>
+                                <div class="hidden h-14 bg-transparent border-b border-white w-full mt-3 mt-5 outline-none font-semibold text-white gap-y-5 bg-light-blue rounded-md shadow-[0px_0px_10px_0px_rgba(0,0,0,0.4)_inset] px-2"></div>
+                                <?= do_shortcode('[contact-form-7 id="156" title="Booking Form"]') ?>
                             </div>
                             <div>
                                 <div class="flex flex-wrap gap-x-5 items-center">
@@ -75,6 +78,7 @@ get_header();
                                     </div>
                                 </div>
                                 <div class="py-6 text-white font-articulat">One of our expert plumbers will get back to you as soon as possible.</div>
+                                <?= do_shortcode('[contact-form-7 id="157" title="Booking - Request Callback"]') ?>
                             </div>
                             <div>
                                 <div class="flex flex-wrap gap-x-5 items-center">
@@ -84,6 +88,7 @@ get_header();
                                     </div>
                                 </div>
                                 <div class="py-6 text-white font-articulat">One of our expert plumbers will get back to you as soon as possible.</div>
+                                <?= do_shortcode('[contact-form-7 id="158" title="Booking - Get a free quote"]') ?>
                             </div>
                         </div>
                     </div>
