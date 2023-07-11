@@ -8,8 +8,7 @@ get_header();
 ?>
 
 <div class="areasPage bg-off-white">
-    <?php get_template_part('parts/section', 'banner'); ?>
-    <?php
+    <?php get_template_part('parts/section', 'banner');
     $section_1_left = get_field('section_1_left');
     $section_1_right = get_field('section_1_right');
     ?>
@@ -39,13 +38,6 @@ get_header();
     </div>
 
     <div class="py-24 bg-white">
-        <?php $areas = [
-            "Sydney" => ['Westmead', 'Parramatta', 'Leppington', 'Strathfield', 'Redfern'],
-            "South Coast & Illawarra" => ['Wollongong', 'Kiama'],
-            "Central Coast & Hunter" => ['Cessnock', 'Newcastle', 'Hunter Valley', 'Singleton'],
-            "Blue Mountains" => ['Penrith', 'Katoomba']
-        ]; ?>
-
         <div class="container">
             <div class="text-center text-4xl md:text-5xl xl:text-heading text-main-blue font-bold">Select your region</div>
 
@@ -56,7 +48,6 @@ get_header();
                     if (have_rows('areas')) :
                         while (have_rows('areas')) : the_row();
                             $region = get_sub_field('region');
-                            // $suburbs = get_sub_field('suburbs');
                     ?>
                             <a href="javascript:void(0)" slick-target=<?= $target ?> class="<?= $target == 0 ? 'active ' : '' ?>region_nav_link w-fit text-grey/50 hover:text-grey duration-300 font-bold text-xl"><?= $region ?></a>
                     <?php
@@ -76,8 +67,13 @@ get_header();
                     ?>
                             <div class="flex flex-wrap w-full justify-center">
                                 <ul class="columns-4">
-                                    <?php foreach ($suburbs as $suburb) : ?>
-                                        <li><a href="" class="text-xl font-articulat text-main-blue hover:text-dark-blue duration-200 leading-loose"><?= $suburb ?></a></li>
+                                    <?php foreach ($suburbs as $suburb) :
+                                        $slug = trim($suburb);
+                                        $slug = str_replace(' ', '-', $slug);
+                                        $slug = strtolower($slug);
+                                        $slug = preg_replace('/[^a-z0-9-]/', '', $slug);
+                                    ?>
+                                        <li><a href="<?= get_site_url() . '/' . $slug ?>" class="text-xl font-articulat text-main-blue hover:text-dark-blue duration-200 leading-loose"><?= $suburb ?></a></li>
                                     <?php endforeach; ?>
                                 </ul>
                             </div>
