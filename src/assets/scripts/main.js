@@ -278,6 +278,21 @@ jQuery(function ($) {
                     }
                 });
 
+                let areasSuburbSlider = $('#areas_suburb_slider').slick({
+                    slidesToShow: 1,
+                    arrows: false,
+                    draggable: false,
+                    infinite: false
+                });
+
+                $('.region_nav a.region_nav_link').on('click', function () {
+                    $('.region_nav a.region_nav_link').removeClass('active');
+                    $(this).addClass('active');
+                    areasSuburbSlider.slick('slickGoTo', $(this).attr('slick-target'));
+                });
+
+
+
             }, // end misc
         }, // end ui
         //utils: {

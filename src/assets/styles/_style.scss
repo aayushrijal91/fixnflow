@@ -1,3 +1,9 @@
+.description {
+    p {
+        padding-bottom: 24px !important;
+    }
+}
+
 .navigation_bar {
     .link_section {
         transition: 0.2s all;
@@ -180,6 +186,25 @@
             justify-content: center;
             text-align: center;
             cursor: pointer;
+        }
+    }
+}
+
+.areasPage {
+    .region_nav {
+        a {
+            padding: 8px 24px;
+            transition: 0.1s all ease-in-out;
+
+            &.active {
+                background: #5AB2F8;
+                border-radius: 500px;
+                color: #ffffff;
+                height: 54px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
 }
