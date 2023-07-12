@@ -56,7 +56,7 @@ get_header();
                                     </div>
                                 </div>
                                 <div class="py-6 text-white font-articulat">One of our expert plumbers will get back to you as soon as possible.</div>
-                                <div class="hidden h-14 bg-transparent border-b border-white w-full mt-3 mt-5 outline-none font-semibold text-white gap-y-5 bg-light-blue rounded-md shadow-[0px_0px_10px_0px_rgba(0,0,0,0.4)_inset] px-2"></div>
+                                <div class="hidden md:w-1/4 h-14 md:w-2/3 bg-transparent border-b border-white w-full mt-3 mt-5 outline-none font-semibold text-white gap-y-5 bg-light-blue rounded-md shadow-[0px_0px_10px_0px_rgba(0,0,0,0.4)_inset] px-2"></div>
                                 <?= do_shortcode('[contact-form-7 id="156" title="Booking Form"]') ?>
                             </div>
                             <div>
@@ -67,7 +67,6 @@ get_header();
                                     </div>
                                 </div>
                                 <div class="py-6 text-white font-articulat">One of our expert plumbers will get back to you as soon as possible.</div>
-                                <div class="hidden h-14 bg-transparent border-b border-white w-full mt-3 mt-5 outline-none font-semibold text-white gap-y-5"></div>
                                 <?= do_shortcode('[contact-form-7 id="154" title="Booking - Send enquiry"]') ?>
                             </div>
                             <div>

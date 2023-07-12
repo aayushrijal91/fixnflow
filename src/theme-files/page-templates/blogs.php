@@ -101,47 +101,67 @@ get_header();
 
             <div class="w-[85.5%] py-5 ms-auto">
                 <div class="blogs_slider">
-                    <?php for ($i = 0; $i < 10; $i++) : ?>
-                        <div class="">
-                            <div class="bg-light-blue rounded-[30px] h-[483px] p-7 flex items-end">
-                                <div class="flex flex-wrap w-full -mx-2 gap-y-4">
-                                    <div class="w-1/2 px-2">
-                                        <div class="bg-dark-blue rounded-full px-3 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                <path d="M16.7165 9.00251L8.88825 1.17431C8.73234 1.01835 8.52087 0.930711 8.30035 0.930664H1.64796C1.42741 0.930664 1.21591 1.01827 1.05996 1.17422C0.904016 1.33016 0.816406 1.54167 0.816406 1.76221V8.4146C0.816453 8.63513 0.904094 8.8466 1.06005 9.00251L8.88825 16.8307C9.11991 17.0624 9.39493 17.2462 9.69762 17.3716C10.0003 17.497 10.3247 17.5615 10.6524 17.5615C10.98 17.5615 11.3044 17.497 11.6071 17.3716C11.9098 17.2462 12.1849 17.0624 12.4165 16.8307L16.7165 12.5308C16.9481 12.2991 17.1319 12.0241 17.2573 11.7214C17.3827 11.4187 17.4473 11.0943 17.4473 10.7666C17.4473 10.439 17.3827 10.1146 17.2573 9.81188C17.1319 9.50919 16.9481 9.23416 16.7165 9.00251ZM5.8057 7.58305C5.47677 7.58305 5.15523 7.48552 4.88173 7.30277C4.60824 7.12003 4.39507 6.86029 4.2692 6.5564C4.14332 6.25251 4.11039 5.91811 4.17456 5.5955C4.23873 5.27289 4.39712 4.97656 4.62971 4.74397C4.8623 4.51138 5.15864 4.35299 5.48125 4.28882C5.80385 4.22464 6.13825 4.25758 6.44214 4.38346C6.74603 4.50933 7.00577 4.72249 7.18851 4.99599C7.37126 5.26948 7.4688 5.59103 7.4688 5.91996C7.4688 6.36104 7.29358 6.78405 6.98169 7.09594C6.6698 7.40784 6.24678 7.58305 5.8057 7.58305Z" fill="#0067B9" />
-                                            </svg>
-                                            Emergency Plumbing
+                    <?php
+                    $category_name = 'Most Popular';
+
+                    $category = get_term_by('name', $category_name, 'category');
+
+                    if ($category) :
+                        $args = array(
+                            'cat' => $category->term_id,
+                            'posts_per_page' => -1,
+                            'post_type' => 'post',
+                            'orderby' => 'date',
+                            'order' => 'DESC',
+                        );
+
+                        $the_query = new WP_Query($args);
+
+                        if ($the_query->have_posts()) :
+                            while ($the_query->have_posts()) :
+                                $the_query->the_post();
+                                $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
+                                $featured_description = get_the_content() ? substr(get_the_content(), 0, 140) . '...' : '...';
+                                $date = get_the_time('d', $post->ID) . ' ' . get_the_time('M', $post->ID) . ' ' . get_the_time('Y', $post->ID);
+                    ?>
+                                <div class="">
+                                    <div class="bg-light-blue rounded-[30px] h-[483px] p-7 flex items-end" style="background: url(<?= $featured_img_url ?>) no-repeat center #5AB2F8; background-size: cover;">
+                                        <div class="flex flex-wrap w-full -mx-2 gap-y-4">
+                                            <?php foreach (get_the_tags() as $tag) : ?>
+                                                <div class="w-1/2 px-2">
+                                                    <div class="bg-dark-blue rounded-full px-3 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                            <path d="M16.7165 9.00251L8.88825 1.17431C8.73234 1.01835 8.52087 0.930711 8.30035 0.930664H1.64796C1.42741 0.930664 1.21591 1.01827 1.05996 1.17422C0.904016 1.33016 0.816406 1.54167 0.816406 1.76221V8.4146C0.816453 8.63513 0.904094 8.8466 1.06005 9.00251L8.88825 16.8307C9.11991 17.0624 9.39493 17.2462 9.69762 17.3716C10.0003 17.497 10.3247 17.5615 10.6524 17.5615C10.98 17.5615 11.3044 17.497 11.6071 17.3716C11.9098 17.2462 12.1849 17.0624 12.4165 16.8307L16.7165 12.5308C16.9481 12.2991 17.1319 12.0241 17.2573 11.7214C17.3827 11.4187 17.4473 11.0943 17.4473 10.7666C17.4473 10.439 17.3827 10.1146 17.2573 9.81188C17.1319 9.50919 16.9481 9.23416 16.7165 9.00251ZM5.8057 7.58305C5.47677 7.58305 5.15523 7.48552 4.88173 7.30277C4.60824 7.12003 4.39507 6.86029 4.2692 6.5564C4.14332 6.25251 4.11039 5.91811 4.17456 5.5955C4.23873 5.27289 4.39712 4.97656 4.62971 4.74397C4.8623 4.51138 5.15864 4.35299 5.48125 4.28882C5.80385 4.22464 6.13825 4.25758 6.44214 4.38346C6.74603 4.50933 7.00577 4.72249 7.18851 4.99599C7.37126 5.26948 7.4688 5.59103 7.4688 5.91996C7.4688 6.36104 7.29358 6.78405 6.98169 7.09594C6.6698 7.40784 6.24678 7.58305 5.8057 7.58305Z" fill="#0067B9" />
+                                                        </svg>
+                                                        <?= $tag->name ?>
+                                                    </div>
+                                                </div>
+                                            <?php endforeach; ?>
                                         </div>
                                     </div>
-                                    <div class="w-1/2 px-2">
-                                        <div class="bg-dark-blue rounded-full px-3 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                <path d="M16.7165 9.00251L8.88825 1.17431C8.73234 1.01835 8.52087 0.930711 8.30035 0.930664H1.64796C1.42741 0.930664 1.21591 1.01827 1.05996 1.17422C0.904016 1.33016 0.816406 1.54167 0.816406 1.76221V8.4146C0.816453 8.63513 0.904094 8.8466 1.06005 9.00251L8.88825 16.8307C9.11991 17.0624 9.39493 17.2462 9.69762 17.3716C10.0003 17.497 10.3247 17.5615 10.6524 17.5615C10.98 17.5615 11.3044 17.497 11.6071 17.3716C11.9098 17.2462 12.1849 17.0624 12.4165 16.8307L16.7165 12.5308C16.9481 12.2991 17.1319 12.0241 17.2573 11.7214C17.3827 11.4187 17.4473 11.0943 17.4473 10.7666C17.4473 10.439 17.3827 10.1146 17.2573 9.81188C17.1319 9.50919 16.9481 9.23416 16.7165 9.00251ZM5.8057 7.58305C5.47677 7.58305 5.15523 7.48552 4.88173 7.30277C4.60824 7.12003 4.39507 6.86029 4.2692 6.5564C4.14332 6.25251 4.11039 5.91811 4.17456 5.5955C4.23873 5.27289 4.39712 4.97656 4.62971 4.74397C4.8623 4.51138 5.15864 4.35299 5.48125 4.28882C5.80385 4.22464 6.13825 4.25758 6.44214 4.38346C6.74603 4.50933 7.00577 4.72249 7.18851 4.99599C7.37126 5.26948 7.4688 5.59103 7.4688 5.91996C7.4688 6.36104 7.29358 6.78405 6.98169 7.09594C6.6698 7.40784 6.24678 7.58305 5.8057 7.58305Z" fill="#0067B9" />
-                                            </svg>
-                                            Bathroom renovation
+                                    <div class="text-main-blue text-2xl font-bold leading-none py-6"><?= get_the_title(); ?></div>
+                                    <div class="font-articulat text-grey"><?= $featured_description ?></div>
+                                    <div class="border-b-2 border-quaternary my-6"></div>
+                                    <div class="flex font-articulat text-sm text-main-blue items-center gap-x-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                                            <path d="M6.19141 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M22.5527 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M6.19141 13.4424H22.5566" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M23.7236 6.42871H5.02051C3.08374 6.42871 1.51367 7.99877 1.51367 9.93555V23.9629C1.51367 25.8997 3.08374 27.4697 5.02051 27.4697H23.7236C25.6604 27.4697 27.2305 25.8997 27.2305 23.9629V9.93555C27.2305 7.99877 25.6604 6.42871 23.7236 6.42871Z" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        Published on <?= $date ?>
+                                    </div>
+                                    <div class="flex flex-wrap justify-center pt-6">
+                                        <div class="w-full md:w-10/12">
+                                            <a href="<?= get_the_permalink() ?>" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10">Learn more</span></a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="text-main-blue text-2xl font-bold leading-none py-6">Latest blog amet, consectetur adipiscing elit consectetur adipiscing</div>
-                            <div class="font-articulat text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...</div>
-                            <div class="border-b-2 border-quaternary my-6"></div>
-                            <div class="flex font-articulat text-sm text-main-blue items-center gap-x-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-                                    <path d="M6.19141 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M22.5527 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M6.19141 13.4424H22.5566" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M23.7236 6.42871H5.02051C3.08374 6.42871 1.51367 7.99877 1.51367 9.93555V23.9629C1.51367 25.8997 3.08374 27.4697 5.02051 27.4697H23.7236C25.6604 27.4697 27.2305 25.8997 27.2305 23.9629V9.93555C27.2305 7.99877 25.6604 6.42871 23.7236 6.42871Z" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Published on 15 June 2023
-                            </div>
-                            <div class="flex flex-wrap justify-center pt-6">
-                                <div class="w-full md:w-10/12">
-                                    <a href="" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10">Button name here</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endfor; ?>
+                    <?php
+                            endwhile;
+                        endif;
+                    endif;
+                    ?>
                 </div>
             </div>
         </div>
@@ -167,47 +187,59 @@ get_header();
 
             <div class="w-[85.5%] py-5 ms-auto">
                 <div class="blogs_slider">
-                    <?php for ($i = 0; $i < 10; $i++) : ?>
-                        <div class="">
-                            <div class="bg-light-blue rounded-[30px] h-[483px] p-7 flex items-end">
-                                <div class="flex flex-wrap w-full -mx-2 gap-y-4">
-                                    <div class="w-1/2 px-2">
-                                        <div class="bg-dark-blue rounded-full px-3 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                <path d="M16.7165 9.00251L8.88825 1.17431C8.73234 1.01835 8.52087 0.930711 8.30035 0.930664H1.64796C1.42741 0.930664 1.21591 1.01827 1.05996 1.17422C0.904016 1.33016 0.816406 1.54167 0.816406 1.76221V8.4146C0.816453 8.63513 0.904094 8.8466 1.06005 9.00251L8.88825 16.8307C9.11991 17.0624 9.39493 17.2462 9.69762 17.3716C10.0003 17.497 10.3247 17.5615 10.6524 17.5615C10.98 17.5615 11.3044 17.497 11.6071 17.3716C11.9098 17.2462 12.1849 17.0624 12.4165 16.8307L16.7165 12.5308C16.9481 12.2991 17.1319 12.0241 17.2573 11.7214C17.3827 11.4187 17.4473 11.0943 17.4473 10.7666C17.4473 10.439 17.3827 10.1146 17.2573 9.81188C17.1319 9.50919 16.9481 9.23416 16.7165 9.00251ZM5.8057 7.58305C5.47677 7.58305 5.15523 7.48552 4.88173 7.30277C4.60824 7.12003 4.39507 6.86029 4.2692 6.5564C4.14332 6.25251 4.11039 5.91811 4.17456 5.5955C4.23873 5.27289 4.39712 4.97656 4.62971 4.74397C4.8623 4.51138 5.15864 4.35299 5.48125 4.28882C5.80385 4.22464 6.13825 4.25758 6.44214 4.38346C6.74603 4.50933 7.00577 4.72249 7.18851 4.99599C7.37126 5.26948 7.4688 5.59103 7.4688 5.91996C7.4688 6.36104 7.29358 6.78405 6.98169 7.09594C6.6698 7.40784 6.24678 7.58305 5.8057 7.58305Z" fill="#0067B9" />
-                                            </svg>
-                                            Emergency Plumbing
-                                        </div>
+                    <?php $args = array(
+                        'posts_per_page' => -1,
+                        'post_type' => 'post',
+                        'orderby' => 'date',
+                        'order' => 'DESC',
+                    );
+
+                    $the_query = new WP_Query($args);
+
+                    if ($the_query->have_posts()) :
+                        while ($the_query->have_posts()) :
+                            $the_query->the_post();
+                            $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
+                            $featured_description = get_the_content() ? substr(get_the_content(), 0, 140) . '...' : '...';
+                            $date = get_the_time('d', $post->ID) . ' ' . get_the_time('M', $post->ID) . ' ' . get_the_time('Y', $post->ID);
+                    ?>
+                            <div class="">
+                                <div class="bg-light-blue rounded-[30px] h-[483px] p-7 flex items-end" style="background: url(<?= $featured_img_url ?>) no-repeat center #5AB2F8; background-size: cover;">
+                                    <div class="flex flex-wrap w-full -mx-2 gap-y-4">
+                                        <?php foreach (get_the_tags() as $tag) : ?>
+                                            <div class="w-1/2 px-2">
+                                                <div class="bg-dark-blue rounded-full px-3 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                        <path d="M16.7165 9.00251L8.88825 1.17431C8.73234 1.01835 8.52087 0.930711 8.30035 0.930664H1.64796C1.42741 0.930664 1.21591 1.01827 1.05996 1.17422C0.904016 1.33016 0.816406 1.54167 0.816406 1.76221V8.4146C0.816453 8.63513 0.904094 8.8466 1.06005 9.00251L8.88825 16.8307C9.11991 17.0624 9.39493 17.2462 9.69762 17.3716C10.0003 17.497 10.3247 17.5615 10.6524 17.5615C10.98 17.5615 11.3044 17.497 11.6071 17.3716C11.9098 17.2462 12.1849 17.0624 12.4165 16.8307L16.7165 12.5308C16.9481 12.2991 17.1319 12.0241 17.2573 11.7214C17.3827 11.4187 17.4473 11.0943 17.4473 10.7666C17.4473 10.439 17.3827 10.1146 17.2573 9.81188C17.1319 9.50919 16.9481 9.23416 16.7165 9.00251ZM5.8057 7.58305C5.47677 7.58305 5.15523 7.48552 4.88173 7.30277C4.60824 7.12003 4.39507 6.86029 4.2692 6.5564C4.14332 6.25251 4.11039 5.91811 4.17456 5.5955C4.23873 5.27289 4.39712 4.97656 4.62971 4.74397C4.8623 4.51138 5.15864 4.35299 5.48125 4.28882C5.80385 4.22464 6.13825 4.25758 6.44214 4.38346C6.74603 4.50933 7.00577 4.72249 7.18851 4.99599C7.37126 5.26948 7.4688 5.59103 7.4688 5.91996C7.4688 6.36104 7.29358 6.78405 6.98169 7.09594C6.6698 7.40784 6.24678 7.58305 5.8057 7.58305Z" fill="#0067B9" />
+                                                    </svg>
+                                                    <?= $tag->name ?>
+                                                </div>
+                                            </div>
+                                        <?php endforeach; ?>
                                     </div>
-                                    <div class="w-1/2 px-2">
-                                        <div class="bg-dark-blue rounded-full px-3 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                <path d="M16.7165 9.00251L8.88825 1.17431C8.73234 1.01835 8.52087 0.930711 8.30035 0.930664H1.64796C1.42741 0.930664 1.21591 1.01827 1.05996 1.17422C0.904016 1.33016 0.816406 1.54167 0.816406 1.76221V8.4146C0.816453 8.63513 0.904094 8.8466 1.06005 9.00251L8.88825 16.8307C9.11991 17.0624 9.39493 17.2462 9.69762 17.3716C10.0003 17.497 10.3247 17.5615 10.6524 17.5615C10.98 17.5615 11.3044 17.497 11.6071 17.3716C11.9098 17.2462 12.1849 17.0624 12.4165 16.8307L16.7165 12.5308C16.9481 12.2991 17.1319 12.0241 17.2573 11.7214C17.3827 11.4187 17.4473 11.0943 17.4473 10.7666C17.4473 10.439 17.3827 10.1146 17.2573 9.81188C17.1319 9.50919 16.9481 9.23416 16.7165 9.00251ZM5.8057 7.58305C5.47677 7.58305 5.15523 7.48552 4.88173 7.30277C4.60824 7.12003 4.39507 6.86029 4.2692 6.5564C4.14332 6.25251 4.11039 5.91811 4.17456 5.5955C4.23873 5.27289 4.39712 4.97656 4.62971 4.74397C4.8623 4.51138 5.15864 4.35299 5.48125 4.28882C5.80385 4.22464 6.13825 4.25758 6.44214 4.38346C6.74603 4.50933 7.00577 4.72249 7.18851 4.99599C7.37126 5.26948 7.4688 5.59103 7.4688 5.91996C7.4688 6.36104 7.29358 6.78405 6.98169 7.09594C6.6698 7.40784 6.24678 7.58305 5.8057 7.58305Z" fill="#0067B9" />
-                                            </svg>
-                                            Bathroom renovation
-                                        </div>
+                                </div>
+                                <div class="text-main-blue text-2xl font-bold leading-none py-6"><?= get_the_title(); ?></div>
+                                <div class="font-articulat text-grey"><?= $featured_description ?></div>
+                                <div class="border-b-2 border-quaternary my-6"></div>
+                                <div class="flex font-articulat text-sm text-main-blue items-center gap-x-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                                        <path d="M6.19141 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M22.5527 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M6.19141 13.4424H22.5566" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M23.7236 6.42871H5.02051C3.08374 6.42871 1.51367 7.99877 1.51367 9.93555V23.9629C1.51367 25.8997 3.08374 27.4697 5.02051 27.4697H23.7236C25.6604 27.4697 27.2305 25.8997 27.2305 23.9629V9.93555C27.2305 7.99877 25.6604 6.42871 23.7236 6.42871Z" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Published on <?= $date ?>
+                                </div>
+                                <div class="flex flex-wrap justify-center pt-6">
+                                    <div class="w-full md:w-10/12">
+                                        <a href="<?= get_the_permalink() ?>" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10">Learn more</span></a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="text-main-blue text-2xl font-bold leading-none py-6">Latest blog amet, consectetur adipiscing elit consectetur adipiscing</div>
-                            <div class="font-articulat text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...</div>
-                            <div class="border-b-2 border-quaternary my-6"></div>
-                            <div class="flex font-articulat text-sm text-main-blue items-center gap-x-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-                                    <path d="M6.19141 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M22.5527 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M6.19141 13.4424H22.5566" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M23.7236 6.42871H5.02051C3.08374 6.42871 1.51367 7.99877 1.51367 9.93555V23.9629C1.51367 25.8997 3.08374 27.4697 5.02051 27.4697H23.7236C25.6604 27.4697 27.2305 25.8997 27.2305 23.9629V9.93555C27.2305 7.99877 25.6604 6.42871 23.7236 6.42871Z" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Published on 15 June 2023
-                            </div>
-                            <div class="flex flex-wrap justify-center pt-6">
-                                <div class="w-full md:w-10/12">
-                                    <a href="" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10">Button name here</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endfor; ?>
+                    <?php
+                        endwhile;
+                    endif;
+                    ?>
                 </div>
             </div>
         </div>
@@ -232,48 +264,68 @@ get_header();
             </div>
 
             <div class="w-[85.5%] py-5 ms-auto">
-                <div class="blogs_slider">
-                    <?php for ($i = 0; $i < 10; $i++) : ?>
-                        <div class="">
-                            <div class="bg-light-blue rounded-[30px] h-[483px] p-7 flex items-end">
-                                <div class="flex flex-wrap w-full -mx-2 gap-y-4">
-                                    <div class="w-1/2 px-2">
-                                        <div class="bg-dark-blue rounded-full px-3 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                <path d="M16.7165 9.00251L8.88825 1.17431C8.73234 1.01835 8.52087 0.930711 8.30035 0.930664H1.64796C1.42741 0.930664 1.21591 1.01827 1.05996 1.17422C0.904016 1.33016 0.816406 1.54167 0.816406 1.76221V8.4146C0.816453 8.63513 0.904094 8.8466 1.06005 9.00251L8.88825 16.8307C9.11991 17.0624 9.39493 17.2462 9.69762 17.3716C10.0003 17.497 10.3247 17.5615 10.6524 17.5615C10.98 17.5615 11.3044 17.497 11.6071 17.3716C11.9098 17.2462 12.1849 17.0624 12.4165 16.8307L16.7165 12.5308C16.9481 12.2991 17.1319 12.0241 17.2573 11.7214C17.3827 11.4187 17.4473 11.0943 17.4473 10.7666C17.4473 10.439 17.3827 10.1146 17.2573 9.81188C17.1319 9.50919 16.9481 9.23416 16.7165 9.00251ZM5.8057 7.58305C5.47677 7.58305 5.15523 7.48552 4.88173 7.30277C4.60824 7.12003 4.39507 6.86029 4.2692 6.5564C4.14332 6.25251 4.11039 5.91811 4.17456 5.5955C4.23873 5.27289 4.39712 4.97656 4.62971 4.74397C4.8623 4.51138 5.15864 4.35299 5.48125 4.28882C5.80385 4.22464 6.13825 4.25758 6.44214 4.38346C6.74603 4.50933 7.00577 4.72249 7.18851 4.99599C7.37126 5.26948 7.4688 5.59103 7.4688 5.91996C7.4688 6.36104 7.29358 6.78405 6.98169 7.09594C6.6698 7.40784 6.24678 7.58305 5.8057 7.58305Z" fill="#0067B9" />
-                                            </svg>
-                                            Emergency Plumbing
+            <div class="blogs_slider">
+                    <?php
+                    $category_name = 'Emergency Plumbing';
+
+                    $category = get_term_by('name', $category_name, 'category');
+
+                    if ($category) :
+                        $args = array(
+                            'cat' => $category->term_id,
+                            'posts_per_page' => -1,
+                            'post_type' => 'post',
+                            'orderby' => 'date',
+                            'order' => 'DESC',
+                        );
+
+                        $the_query = new WP_Query($args);
+
+                        if ($the_query->have_posts()) :
+                            while ($the_query->have_posts()) :
+                                $the_query->the_post();
+                                $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
+                                $featured_description = get_the_content() ? substr(get_the_content(), 0, 140) . '...' : '...';
+                                $date = get_the_time('d', $post->ID) . ' ' . get_the_time('M', $post->ID) . ' ' . get_the_time('Y', $post->ID);
+                    ?>
+                                <div class="">
+                                    <div class="bg-light-blue rounded-[30px] h-[483px] p-7 flex items-end" style="background: url(<?= $featured_img_url ?>) no-repeat center #5AB2F8; background-size: cover;">
+                                        <div class="flex flex-wrap w-full -mx-2 gap-y-4">
+                                            <?php foreach (get_the_tags() as $tag) : ?>
+                                                <div class="w-1/2 px-2">
+                                                    <div class="bg-dark-blue rounded-full px-3 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                            <path d="M16.7165 9.00251L8.88825 1.17431C8.73234 1.01835 8.52087 0.930711 8.30035 0.930664H1.64796C1.42741 0.930664 1.21591 1.01827 1.05996 1.17422C0.904016 1.33016 0.816406 1.54167 0.816406 1.76221V8.4146C0.816453 8.63513 0.904094 8.8466 1.06005 9.00251L8.88825 16.8307C9.11991 17.0624 9.39493 17.2462 9.69762 17.3716C10.0003 17.497 10.3247 17.5615 10.6524 17.5615C10.98 17.5615 11.3044 17.497 11.6071 17.3716C11.9098 17.2462 12.1849 17.0624 12.4165 16.8307L16.7165 12.5308C16.9481 12.2991 17.1319 12.0241 17.2573 11.7214C17.3827 11.4187 17.4473 11.0943 17.4473 10.7666C17.4473 10.439 17.3827 10.1146 17.2573 9.81188C17.1319 9.50919 16.9481 9.23416 16.7165 9.00251ZM5.8057 7.58305C5.47677 7.58305 5.15523 7.48552 4.88173 7.30277C4.60824 7.12003 4.39507 6.86029 4.2692 6.5564C4.14332 6.25251 4.11039 5.91811 4.17456 5.5955C4.23873 5.27289 4.39712 4.97656 4.62971 4.74397C4.8623 4.51138 5.15864 4.35299 5.48125 4.28882C5.80385 4.22464 6.13825 4.25758 6.44214 4.38346C6.74603 4.50933 7.00577 4.72249 7.18851 4.99599C7.37126 5.26948 7.4688 5.59103 7.4688 5.91996C7.4688 6.36104 7.29358 6.78405 6.98169 7.09594C6.6698 7.40784 6.24678 7.58305 5.8057 7.58305Z" fill="#0067B9" />
+                                                        </svg>
+                                                        <?= $tag->name ?>
+                                                    </div>
+                                                </div>
+                                            <?php endforeach; ?>
                                         </div>
                                     </div>
-                                    <div class="w-1/2 px-2">
-                                        <div class="bg-dark-blue rounded-full px-3 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                <path d="M16.7165 9.00251L8.88825 1.17431C8.73234 1.01835 8.52087 0.930711 8.30035 0.930664H1.64796C1.42741 0.930664 1.21591 1.01827 1.05996 1.17422C0.904016 1.33016 0.816406 1.54167 0.816406 1.76221V8.4146C0.816453 8.63513 0.904094 8.8466 1.06005 9.00251L8.88825 16.8307C9.11991 17.0624 9.39493 17.2462 9.69762 17.3716C10.0003 17.497 10.3247 17.5615 10.6524 17.5615C10.98 17.5615 11.3044 17.497 11.6071 17.3716C11.9098 17.2462 12.1849 17.0624 12.4165 16.8307L16.7165 12.5308C16.9481 12.2991 17.1319 12.0241 17.2573 11.7214C17.3827 11.4187 17.4473 11.0943 17.4473 10.7666C17.4473 10.439 17.3827 10.1146 17.2573 9.81188C17.1319 9.50919 16.9481 9.23416 16.7165 9.00251ZM5.8057 7.58305C5.47677 7.58305 5.15523 7.48552 4.88173 7.30277C4.60824 7.12003 4.39507 6.86029 4.2692 6.5564C4.14332 6.25251 4.11039 5.91811 4.17456 5.5955C4.23873 5.27289 4.39712 4.97656 4.62971 4.74397C4.8623 4.51138 5.15864 4.35299 5.48125 4.28882C5.80385 4.22464 6.13825 4.25758 6.44214 4.38346C6.74603 4.50933 7.00577 4.72249 7.18851 4.99599C7.37126 5.26948 7.4688 5.59103 7.4688 5.91996C7.4688 6.36104 7.29358 6.78405 6.98169 7.09594C6.6698 7.40784 6.24678 7.58305 5.8057 7.58305Z" fill="#0067B9" />
-                                            </svg>
-                                            Bathroom renovation
+                                    <div class="text-main-blue text-2xl font-bold leading-none py-6"><?= get_the_title(); ?></div>
+                                    <div class="font-articulat text-grey"><?= $featured_description ?></div>
+                                    <div class="border-b-2 border-quaternary my-6"></div>
+                                    <div class="flex font-articulat text-sm text-main-blue items-center gap-x-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                                            <path d="M6.19141 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M22.5527 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M6.19141 13.4424H22.5566" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M23.7236 6.42871H5.02051C3.08374 6.42871 1.51367 7.99877 1.51367 9.93555V23.9629C1.51367 25.8997 3.08374 27.4697 5.02051 27.4697H23.7236C25.6604 27.4697 27.2305 25.8997 27.2305 23.9629V9.93555C27.2305 7.99877 25.6604 6.42871 23.7236 6.42871Z" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        Published on <?= $date ?>
+                                    </div>
+                                    <div class="flex flex-wrap justify-center pt-6">
+                                        <div class="w-full md:w-10/12">
+                                            <a href="<?= get_the_permalink() ?>" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10">Learn more</span></a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="text-main-blue text-2xl font-bold leading-none py-6">Latest blog amet, consectetur adipiscing elit consectetur adipiscing</div>
-                            <div class="font-articulat text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...</div>
-                            <div class="border-b-2 border-quaternary my-6"></div>
-                            <div class="flex font-articulat text-sm text-main-blue items-center gap-x-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-                                    <path d="M6.19141 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M22.5527 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M6.19141 13.4424H22.5566" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M23.7236 6.42871H5.02051C3.08374 6.42871 1.51367 7.99877 1.51367 9.93555V23.9629C1.51367 25.8997 3.08374 27.4697 5.02051 27.4697H23.7236C25.6604 27.4697 27.2305 25.8997 27.2305 23.9629V9.93555C27.2305 7.99877 25.6604 6.42871 23.7236 6.42871Z" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Published on 15 June 2023
-                            </div>
-                            <div class="flex flex-wrap justify-center pt-6">
-                                <div class="w-full md:w-10/12">
-                                    <a href="" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10">Button name here</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endfor; ?>
+                    <?php
+                            endwhile;
+                        endif;
+                    endif;
+                    ?>
                 </div>
             </div>
         </div>

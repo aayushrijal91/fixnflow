@@ -99,8 +99,7 @@ get_header();
             </div>
 
             <div class="flex flex-wrap -mx-2 pt-16">
-                <?php
-                $args = array(
+                <?php $args = array(
                     'posts_per_page' => 3,
                     'post_type' => 'post',
                     'orderby' => 'date',
@@ -117,24 +116,22 @@ get_header();
                         $date = get_the_time('d', $post->ID) . ' ' . get_the_time('M', $post->ID) . ' ' . get_the_time('Y', $post->ID);
                 ?>
                         <div class="w-full md:w-1/2 lg:w-1/3 px-2">
-                            <div class="">
-                                <div class="rounded-[30px] h-[483px] p-7 flex items-end" style="background: url(<?= $featured_img_url ?>) no-repeat center #5AB2F8; background-size: cover;"></div>
-                                <div class="text-main-blue text-2xl font-bold leading-none py-6"><?= get_the_title(); ?></div>
-                                <div class="font-articulat text-grey"><?= $featured_description ?></div>
-                                <div class="border-b-2 border-quaternary my-6"></div>
-                                <div class="flex font-articulat text-sm text-main-blue items-center gap-x-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-                                        <path d="M6.19141 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M22.5527 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M6.19141 13.4424H22.5566" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M23.7236 6.42871H5.02051C3.08374 6.42871 1.51367 7.99877 1.51367 9.93555V23.9629C1.51367 25.8997 3.08374 27.4697 5.02051 27.4697H23.7236C25.6604 27.4697 27.2305 25.8997 27.2305 23.9629V9.93555C27.2305 7.99877 25.6604 6.42871 23.7236 6.42871Z" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                    Published on <?= $date ?>
-                                </div>
-                                <div class="flex flex-wrap justify-center pt-6">
-                                    <div class="w-full md:w-10/12">
-                                        <a href="<?= get_the_permalink() ?>" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10">Learn More</span></a>
-                                    </div>
+                            <div class="rounded-[30px] h-[483px] p-7 flex items-end" style="background: url(<?= $featured_img_url ?>) no-repeat center #5AB2F8; background-size: cover;"></div>
+                            <div class="text-main-blue text-2xl font-bold leading-none py-6"><?= get_the_title(); ?></div>
+                            <div class="font-articulat text-grey"><?= $featured_description ?></div>
+                            <div class="border-b-2 border-quaternary my-6"></div>
+                            <div class="flex font-articulat text-sm text-main-blue items-center gap-x-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                                    <path d="M6.19141 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M22.5527 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M6.19141 13.4424H22.5566" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M23.7236 6.42871H5.02051C3.08374 6.42871 1.51367 7.99877 1.51367 9.93555V23.9629C1.51367 25.8997 3.08374 27.4697 5.02051 27.4697H23.7236C25.6604 27.4697 27.2305 25.8997 27.2305 23.9629V9.93555C27.2305 7.99877 25.6604 6.42871 23.7236 6.42871Z" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                Published on <?= $date ?>
+                            </div>
+                            <div class="flex flex-wrap justify-center pt-6">
+                                <div class="w-full md:w-10/12">
+                                    <a href="<?= get_the_permalink() ?>" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10">Learn More</span></a>
                                 </div>
                             </div>
                         </div>
