@@ -203,11 +203,15 @@ jQuery(function ($) {
                     rtl: false
                 })
 
+                AOS.refresh();
+
                 let bookingFormSlider = $('#bookingFormSlider').slick({
                     slidesToShow: 1,
                     arrows: false,
                     draggable: false
                 });
+                
+                AOS.refresh();
 
                 $('ul.formTypeSlider li.slide').width($('ul.formTypeSlider li:nth-child(1)').width());
 
@@ -226,6 +230,8 @@ jQuery(function ($) {
 
                     bookingFormSlider.slick('slickGoTo', $(this).attr('slideTarget'));
                 });
+
+                AOS.refresh();
 
                 scrollBehaviour();
 
@@ -278,6 +284,46 @@ jQuery(function ($) {
                     }
                 });
 
+                let areasSuburbSlider = $('#areas_suburb_slider').slick({
+                    slidesToShow: 1,
+                    arrows: false,
+                    draggable: false,
+                    infinite: false
+                });
+
+                AOS.refresh();
+
+                $('.region_nav a.region_nav_link').on('click', function () {
+                    $('.region_nav a.region_nav_link').removeClass('active');
+                    $(this).addClass('active');
+                    areasSuburbSlider.slick('slickGoTo', $(this).attr('slick-target'));
+                });
+
+                $('a.blogFilterBtn').on('click', function () {
+                    $('a.blogFilterBtn').removeClass('active');
+                    $(this).addClass('active');
+
+                    let target = $(this).attr('data-target');
+
+                    if (target == 'all') {
+                        $('.blogs_list').css('display', 'block');
+                    } else {
+                        $('.blogs_list').css('display', 'none');
+                        $(`#${target}`).css('display', 'block');
+                    }
+                });
+
+                $('.blogs_slider').slick({
+                    slidesToShow: 3,
+                    centerMode: true,
+                    slidesToScroll: 1,
+                    centerPadding: '100px',
+                    // prevArrow: $(this).parents('.blogs_list').find('.blog_prev'),
+                    // nextArrow: $(this).parents('.blogs_list').find('.blog_next'),
+                    // arrows: true,
+                })
+
+                AOS.refresh();
             }, // end misc
         }, // end ui
         //utils: {
