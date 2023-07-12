@@ -93,12 +93,6 @@
     }
 }
 
-.part_contactus_services {
-    .slick-slide {
-        @apply mx-2 rounded-full border border-light-blue px-10 py-3 text-light-blue font-articulat;
-    }
-}
-
 .policyPage {
     .policyPageContent {
         p {
@@ -206,6 +200,37 @@
                 justify-content: center;
             }
         }
+    }
+}
+
+.blogsPage {
+    .section_1 {
+        background: linear-gradient(90deg, #0067B9 0%, rgba(100, 155, 200, 1) 65%, rgba(255, 255, 255, 0.00) 100%), imgUrl('blogs_section_1.png') right center;
+        background-size: contain;
+    }
+
+    .blogFilterBtn {
+        @apply py-3 px-4 font-articulat font-semibold text-light-blue bg-quaternary rounded-full hover:bg-main-blue hover:text-white duration-200;
+
+        &.active {
+            @apply bg-main-blue text-white;
+        }
+    }
+
+    .blogs_slider {
+        .slick-track {
+            margin-left: -110px;
+        }
+        
+        .slick-slide {
+            margin: 10px;
+        }
+    }
+}
+
+.part_contactus_services {
+    .slick-slide {
+        @apply mx-2 rounded-full border border-light-blue px-10 py-3 text-light-blue font-articulat;
     }
 }
 
