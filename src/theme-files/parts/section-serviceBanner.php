@@ -3,9 +3,9 @@
 <?= get_template_part('parts/section', 'nav') ?>
 
 <div class="p-6">
-    <div class="relative bg-light-blue max-w-[1874px] mx-auto h-[614px] rounded-[30px] overflow-hidden">
+    <div class="relative bg-main-blue max-w-[1874px] mx-auto h-[614px] rounded-[30px] overflow-hidden">
         <video class="absolute w-full" autoplay loop muted>
-            <source src="<?= get_template_directory_uri() ?>/images/background/light-blue-wavy-bg.mp4" type="video/mp4">
+            <source src="<?= get_template_directory_uri() ?>/images/background/dark-blue-wavy-bg.mp4" type="video/mp4">
             Your browser does not support HTML video.
         </video>
         <div class="container relative">

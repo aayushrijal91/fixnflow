@@ -6,7 +6,7 @@
             <?= $leadingBrands['subheading'] ?>
         </div>
 
-        <div class="w-full lg:w-10/12 h-[162px] mx-auto bg-re rounded-[35px] shadow-[inset_0px_0px_36px_0px_rgba(0, 0, 0, 0.05)] py-8 px-4 md:px-12">
+        <div class="w-full lg:w-10/12 h-[162px] mx-auto shadow-inner rounded-[35px] py-8 px-4 md:px-12">
             <div id="brand_slider" class="brand_slider">
                 <?php foreach($leadingBrands['brands'] as $brand) { ?>
                     <div><img src="<?= $brand['url'] ?>" alt="<?= $brand['alt'] ?>"></div>

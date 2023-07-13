@@ -3,13 +3,13 @@
         <div class="flex flex-wrap justify-between">
             <div class="w-full lg:w-5/12" data-aos="fade-right">
                 <div class="text-white text-4xl md:text-5xl xl:text-heading font-bold leading-none pb-12">What you're <span class="text-light-blue">guaranteed</span> to get from us</div>
-                <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.png" alt="plumb" class="hidden lg:block">
+                <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.gif" alt="plumb" class="hidden lg:block">
             </div>
             <div class="w-full lg:w-7/12 xl:w-1/2">
                 <div class="flex flex-wrap -mx-2 gap-y-4 md:gap-y-5">
                     <div class="w-1/2 md:w-1/3 px-2 group" data-aos="zoom-in">
                         <div class="relative bg-white h-full w-full rounded-2xl p-4 md:px-8 lg:px-4 xl:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
-                            <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
+                            <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="cta" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                             <div class="flex flex-col items-center gap-y-4 relative h-full">
                                 <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
                                     <svg width="49" height="46" viewBox="0 0 49 46" fill="none" xmlns="http://www.w3.org/2000/svg">
