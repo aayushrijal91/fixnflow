@@ -30,7 +30,7 @@ get_header();
                 </div>
             </div>
             <div class="w-full lg:w-1/2 px-3" data-aos="zoom-in">
-                <div class="text-center bg-contain rounded-[30px] pt-11 pb-28 px-16" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= get_template_directory_uri() ?>/images/background/membership-guy.jpg) no-repeat center bottom">
+                <div class="text-center bg-contain rounded-[30px] pt-11 pb-28 px-16" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= get_template_directory_uri() ?>/images/background/membership-guy.jpg) no-repeat center bottom; background-size: contain;">
                     <div class="text-white text-[45px] leading-none font-bold">Welcome to <br><span class="text-light-blue">Fix N Flow Plumbing</span></div>
                     <div class="text-white leading-relaxed py-6">Your reliable plumbing partner for life! We take pride in offering more than just ordinary plumbing services. Our goal is to build long-lasting relationships with our valued customers. To achieve this, we are thrilled to introduce our VIP Plumbing Membership program that ensures uninterrupted access to clean water, working toilets, and hot showers for your loved ones.</div>
                     <a href="" class="btn-yellow-hover-main-blue px-14 mt-10"><span class="relative z-10">Button name here</span></a>

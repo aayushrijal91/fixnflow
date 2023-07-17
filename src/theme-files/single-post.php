@@ -113,7 +113,6 @@ get_header();
                         $the_query->the_post();
                         $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
                         $featured_description = get_the_content() ? substr(get_the_content(), 0, 140) . '...' : '...';
-                        $date = get_the_time('d', $post->ID) . ' ' . get_the_time('M', $post->ID) . ' ' . get_the_time('Y', $post->ID);
                 ?>
                         <div class="w-full md:w-1/2 lg:w-1/3 px-2">
                             <div class="rounded-[30px] h-[483px] p-7 flex items-end" style="background: url(<?= $featured_img_url ?>) no-repeat center #5AB2F8; background-size: cover;"></div>
@@ -127,7 +126,7 @@ get_header();
                                     <path d="M6.19141 13.4424H22.5566" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M23.7236 6.42871H5.02051C3.08374 6.42871 1.51367 7.99877 1.51367 9.93555V23.9629C1.51367 25.8997 3.08374 27.4697 5.02051 27.4697H23.7236C25.6604 27.4697 27.2305 25.8997 27.2305 23.9629V9.93555C27.2305 7.99877 25.6604 6.42871 23.7236 6.42871Z" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-                                Published on <?= $date ?>
+                                Published on <?= get_the_date() ?>
                             </div>
                             <div class="flex flex-wrap justify-center pt-6">
                                 <div class="w-full md:w-10/12">
