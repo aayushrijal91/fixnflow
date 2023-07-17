@@ -20,7 +20,6 @@ $args = array(
     )
 );
 $the_query = new WP_Query($args);
-
 ?>
 <div class="servicesPage">
     <?php get_template_part('parts/section', 'serviceBanner'); ?>
@@ -31,7 +30,6 @@ $the_query = new WP_Query($args);
             <div class="pt-24 flex flex-wrap -mx-2 gap-y-4">
                 <?php
                 if ($the_query->have_posts()) :
-                    $count = 0;
                     while ($the_query->have_posts()) : $the_query->the_post();
                         $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
                 ?>

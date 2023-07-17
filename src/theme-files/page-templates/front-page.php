@@ -139,40 +139,54 @@ get_template_part('parts/section', 'nav');
         </div>
     </div>
 
-    <?php $services = get_field('services'); ?>
+    <?php
+    $services = get_field('services');
+
+    $args = array(
+        'post_type'      => 'page',
+        'posts_per_page' => -1,
+        'order'          => 'ASC',
+        'orderby'        => 'publish_date',
+        'meta_query' => array(
+            array(
+                'key' => '_wp_page_template',
+                'value' => 'page-templates/inner-service.php'
+            )
+        )
+    );
+
+    $the_query = new WP_Query($args); ?>
+
     <div class="py-28 bg-no-repeat bg-contain" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/homepage_services.png')">
         <div class="container md:pt-20 lg:pb-20">
             <div class="mx-auto w-11/12 lg:w-2/3 text-grey text-4xl md:text-5xl lg:text-heading leading-none font-bold text-center"><?= $services['heading'] ?></div>
             <div class="mx-auto w-11/12 lg:w-2/3 text-grey font-articulat text-center pt-9 md:pt-14"><?= $services['description'] ?></div>
             <div class="bg-light rounded-[35px] py-16 md:mt-16 shadow-[inset_0px_0px_36px_0px_rgba(0, 0, 0, 0.05)]">
                 <div id="homepage_service_slider" class="homepage_service_slider pb-12">
-                    <?php if (have_rows('services')) :
-                        while (have_rows('services')) : the_row();
-                            if (have_rows('services_list')) :
-                                while (have_rows('services_list')) : the_row();
-                                    $image = get_sub_field('image');
-                                    $serviceName = get_sub_field('service_name');
-                                    $link = get_sub_field('link');
-                    ?>
-                                    <div class="bg-quaternary rounded-2xl p-4 flex flex-col justify-between" data-aos="zoom-in">
-                                        <div class="pb-16">
-                                            <div class="h-[147px] w-full bg-grey rounded-[10px] p-3 flex items-end bg-no-repeat bg-cover" style="background-image: url('<?= $image['url'] ?>')">
-                                                <img src="<?= get_template_directory_uri() ?>/images/icons/service-icon.png" alt="">
-                                            </div>
-                                            <div class="text-2xl font-bold text-main-blue pt-3"><?= $serviceName ?></div>
-                                        </div>
-                                        <a href="<?= $link ?>" class="border border-light-blue rounded-md h-[48px] flex items-center justify-center text-center text-main-blue font-articulat font-semibold gap-x-4">
-                                            Explore now
-                                            <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.86279 16.0078L8.28068 9.58992C8.67121 9.1994 8.67121 8.56623 8.28069 8.17571L1.86279 1.75781" stroke="#5AB2F8" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" />
-                                            </svg>
-                                        </a>
-                                    </div>
                     <?php
-                                endwhile;
-                            endif;
+                    if ($the_query->have_posts()) :
+                        $count = 0;
+                        while ($the_query->have_posts()) : $the_query->the_post();
+                            $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
+                    ?>
+                            <div class="bg-quaternary rounded-2xl p-4 flex flex-col justify-between" data-aos="zoom-in">
+                                <div class="pb-16">
+                                    <div class="h-[147px] w-full bg-grey rounded-[10px] p-3 flex items-end bg-no-repeat bg-cover" style="background-image: url('<?= $featured_img_url ?>'); background-size: cover;">
+                                        <img src="<?= get_template_directory_uri() ?>/images/icons/service-icon.png" alt="">
+                                    </div>
+                                    <div class="text-2xl font-bold text-main-blue pt-3"><?= get_the_title() ?></div>
+                                </div>
+                                <a href="<?= get_the_permalink() ?>" class="border border-light-blue rounded-md h-[48px] flex items-center justify-center text-center text-main-blue font-articulat font-semibold gap-x-4">
+                                    Explore now
+                                    <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.86279 16.0078L8.28068 9.58992C8.67121 9.1994 8.67121 8.56623 8.28069 8.17571L1.86279 1.75781" stroke="#5AB2F8" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                    <?php
                         endwhile;
                     endif;
+                    wp_reset_query();
                     ?>
                 </div>
                 <div class="flex justify-center">
