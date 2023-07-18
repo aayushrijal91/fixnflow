@@ -4,14 +4,14 @@
 
 <div class="p-6">
     <div class="relative bg-light-blue max-w-[1874px] mx-auto h-[614px] rounded-[30px] overflow-hidden">
-        <video class="absolute w-full" autoplay loop muted>
+        <video class="absolute w-full h-full object-cover" autoplay loop muted>
             <source src="<?= get_template_directory_uri() ?>/images/background/light-blue-wavy-bg.mp4" type="video/mp4">
             Your browser does not support HTML video.
         </video>
         <div class="container relative">
             <div class="pt-48 pb-24 text-white text-center">
                 <?php if (isset($banner)) : ?>
-                    <div class="text-4xl md:text-5xl xl:text-heading font-bold"><?= $banner['title'] ? $banner['title'] : get_the_title(); ?> </div>
+                    <div class="text-4xl md:text-5xl xl:text-heading font-semibold"><?= $banner['title'] ? $banner['title'] : get_the_title(); ?> </div>
                     <?php if (isset($banner['subtitle'])) : ?>
                         <div class="text-base md:text-lg pt-10">
                             <?= $banner['subtitle'] ?>

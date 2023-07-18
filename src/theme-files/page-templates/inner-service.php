@@ -21,9 +21,11 @@ get_header();
             <div class="flex flex-wrap -mx-3 gap-y-7">
                 <?php if ($section_1) : ?>
                     <div class="w-full lg:w-1/2 px-3" data-aos="zoom-in">
-                        <div class="text-center bg-contain rounded-[30px] p-20 shadow-lg h-full" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= $section_1['bg_image']['url'] ?>) no-repeat center bottom; background-size: contain;">
-                            <div class="text-light-blue text-[45px] leading-none font-bold highlight-white"><?= $section_1['heading'] ?></div>
-                            <div class="text-white leading-relaxed py-6 font-articulat"><?= $section_1['description'] ?></div>
+                        <div class="text-center bg-contain rounded-[30px] p-20 shadow-lg h-full flex flex-col justify-between items-center" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= $section_1['bg_image']['url'] ?>) no-repeat center bottom; background-size: contain;">
+                            <div>
+                                <div class="text-light-blue text-[45px] leading-none font-bold highlight-white"><?= $section_1['heading'] ?></div>
+                                <div class="text-white leading-relaxed py-6 font-articulat"><?= $section_1['description'] ?></div>
+                            </div>
                             <a href="<?= $section_1['button']['url'] ?>" target="<?= $section_1['button']['target'] ?>" class="btn-yellow-hover-main-blue px-14 mt-10"><span class="relative z-10"><?= $section_1['button']['title'] ?></span></a>
                         </div>
                     </div>

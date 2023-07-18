@@ -13,8 +13,12 @@ get_template_part('parts/section', 'nav');
     <div class="aboutBanner max-w-[1874px] mx-auto p-6">
         <div class="flex flex-wrap -mx-2">
             <div class="w-7/12 px-2">
-                <div class="rounded-[30px] bg-light-blue bg-cover bg-no-repeat h-full" style="background:url(<?= get_template_directory_uri() ?>/images/background/about-banner-left.png), #5AB2F8">
-                    <div class="w-10/12 ml-auto px-10 pt-48 pb-14">
+                <div class="rounded-[30px] bg-light-blue bg-cover bg-no-repeat h-full relative overflow-hidden">
+                    <video class="absolute h-full object-cover" autoplay loop muted>
+                        <source src="<?= get_template_directory_uri() ?>/images/background/light-blue-wavy-bg.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                    <div class="w-10/12 ml-auto px-10 pt-48 pb-14 relative">
                         <?php if (isset($banner)) : ?>
                             <div class="text-4xl md:text-5xl xl:text-heading text-white font-bold"><?= $banner['title'] ? $banner['title'] : get_the_title() ?></div>
                             <?php if ($banner['subtitle']) : ?>
@@ -51,7 +55,7 @@ get_template_part('parts/section', 'nav');
                 </div>
             </div>
             <div class="w-5/12 px-2">
-                <div class="rounded-[30px] bg-light-blue bg-cover bg-no-repeat h-full" style="background: url(<?= get_template_directory_uri() ?>/images/background/about-banner-right.png)"></div>
+            <div class="rounded-[30px] bg-light-blue bg-cover bg-no-repeat h-full" style="background: url(<?= $banner['image']['url'] ?>) no-repeat center; background-size: cover"></div>
             </div>
         </div>
 

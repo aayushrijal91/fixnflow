@@ -161,24 +161,30 @@
                 <div class="w-full lg:w-1/2 px-2 hidden lg:block">
                     <div class="text-light-blue text-2xl font-bold">Our services</div>
                     <ul class="pt-9 leading-loose columns-2">
-                        <li><a href="" class="text-primary-light">Emergency Plumbing</a></li>
-                        <li><a href="" class="text-primary-light">Blocked Drains</a></li>
-                        <li><a href="" class="text-primary-light">Hot Water Services</a></li>
-                        <li><a href="" class="text-primary-light">Taps & Toilets</a></li>
-                        <li><a href="" class="text-primary-light">Rainwater Tanks & Pumps</a></li>
-                        <li><a href="" class="text-primary-light">Gas Plumbing</a></li>
-                        <li><a href="" class="text-primary-light">General Plumbing</a></li>
-                        <li><a href="" class="text-primary-light">Commercial Plumbing</a></li>
-                        <li><a href="" class="text-primary-light">Bathroom Renovations</a></li>
-                        <li><a href="" class="text-primary-light">Water Filters</a></li>
-                        <li><a href="" class="text-primary-light">Backflow Prevention & RPZ Valves</a></li>
-                        <li><a href="" class="text-primary-light">Septic Systems</a></li>
-                        <li><a href="" class="text-primary-light">Roofing & Guttering</a></li>
-                        <li><a href="" class="text-primary-light">Renovation Plumber</a></li>
-                        <li><a href="" class="text-primary-light">Leak Detection</a></li>
-                        <li><a href="" class="text-primary-light">Pool</a></li>
-                        <li><a href="" class="text-primary-light">Property & Strata Managers</a></li>
-                        <li><a href="" class="text-primary-light">Kitchen Renovations</a></li>
+                        <?php
+                        $args = array(
+                            'post_type'      => 'page',
+                            'posts_per_page' => -1,
+                            'order'          => 'ASC',
+                            'orderby'        => 'publish_date',
+                            'meta_query' => array(
+                                array(
+                                    'key' => '_wp_page_template',
+                                    'value' => array('page-templates/inner-service.php', 'page-templates/inner-service-no-child.php'),
+                                ),
+                            )
+                        );
+                        $the_query = new WP_Query($args);
+                        
+                        if ($the_query->have_posts()) :
+                            while ($the_query->have_posts()) : $the_query->the_post();
+                                $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
+                        ?>
+                                <li><a href="<?= get_the_permalink() ?>" class="text-primary-light"><?= get_the_title() ?></a></li>
+                        <?php endwhile;
+                        endif;
+                        wp_reset_query();
+                        ?>
                     </ul>
                 </div>
                 <div class="w-full lg:w-1/2 px-2">

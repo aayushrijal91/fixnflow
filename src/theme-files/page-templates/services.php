@@ -5,7 +5,6 @@
  *
  */
 get_header();
-$banner = get_field('banner');
 
 $args = array(
     'post_type'      => 'page',
@@ -15,8 +14,8 @@ $args = array(
     'meta_query' => array(
         array(
             'key' => '_wp_page_template',
-            'value' => 'page-templates/inner-service.php'
-        )
+            'value' => array('page-templates/inner-service.php', 'page-templates/inner-service-no-child.php'),
+        ),
     )
 );
 $the_query = new WP_Query($args);

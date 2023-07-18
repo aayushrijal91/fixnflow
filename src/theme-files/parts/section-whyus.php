@@ -1,8 +1,8 @@
 <div class="relative group partWhyus">
     <div class="absolute bottom-full overflow-x-hidden">
-        <img src="<?= get_template_directory_uri() ?>/images/background/why-choose-vector.png" alt="" class="group-hover:-translate-x-96 duration-500 max-w-[200%]">
+        <img src="<?= get_template_directory_uri() ?>/images/background/why-choose-vector.png" alt="fix n flow" class="group-hover:-translate-x-80 duration-500 max-w-[200%]">
     </div>
-    <div class="bg-secondary-blue duration-500 pb-14 md:pb-40 pt-10 lg:pt-0">
+    <div class="bg-secondary-blue duration-500 pb-14 md:pb-40 pt-10">
         <div class="container">
             <div class="flex flex-wrap justify-between items-center">
                 <div class="text-4xl md:text-5xl xl:text-heading font-bold text-white duration-500 leading-none">Why Choose Fix N Flow?</div>
