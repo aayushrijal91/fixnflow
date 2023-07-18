@@ -15,6 +15,7 @@ get_template_part('parts/section', 'nav');
             <div class="w-7/12 px-2">
                 <div class="rounded-[30px] bg-light-blue bg-cover bg-no-repeat h-full relative overflow-hidden">
                     <video class="absolute h-full object-cover" autoplay loop muted>
+                        <source src="<?= get_template_directory_uri() ?>/images/background/light-blue-wavy-bg.webm" type="video/webm">
                         <source src="<?= get_template_directory_uri() ?>/images/background/light-blue-wavy-bg.mp4" type="video/mp4">
                         Your browser does not support HTML video.
                     </video>

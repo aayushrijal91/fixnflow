@@ -5,6 +5,7 @@
 <div class="p-6">
     <div class="relative bg-light-blue max-w-[1874px] mx-auto h-[614px] rounded-[30px] overflow-hidden">
         <video class="absolute w-full h-full object-cover" autoplay loop muted>
+            <source src="<?= get_template_directory_uri() ?>/images/background/light-blue-wavy-bg.webm" type="video/webm">
             <source src="<?= get_template_directory_uri() ?>/images/background/light-blue-wavy-bg.mp4" type="video/mp4">
             Your browser does not support HTML video.
         </video>

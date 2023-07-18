@@ -324,6 +324,20 @@ jQuery(function ($) {
                 })
 
                 AOS.refresh();
+
+                let counter = 2;
+                let right = 38;
+
+                $('#growbox').on('click', function () {
+                    right = right - 9;
+                    $(`#growingBox .stepCard:nth-child(${counter})`).addClass('shown');
+                    $(`#growingBox .stepCard:nth-child(${counter + 1})`).addClass('showingNext');
+                    $(this).parent('div').css('right', `${right}%`);
+                    if(right < 0){
+                        $(this).parent('div').remove();
+                    }
+                    counter++;
+                })
             }, // end misc
         }, // end ui
         //utils: {

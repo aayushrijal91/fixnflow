@@ -221,7 +221,7 @@
         .slick-track {
             margin-left: -110px;
         }
-        
+
         .slick-slide {
             margin: 10px;
         }
@@ -341,5 +341,18 @@
 
     &.active {
         display: block;
+    }
+}
+
+#growingBox {
+    position: relative;
+
+    .shown {
+        width: 16.666667% !important;
+    }
+    
+    .showingNext {
+        padding: 8px;
+        width: 8.333333%;
     }
 }
