@@ -19,7 +19,7 @@ get_template_part('parts/section', 'nav');
         <div class="flex justify-center">
             <div class="w-8/12 md:w-10/12 lg:w-2/3 text-white text-center">
                 <div class="font-articulat text-[22px] lg:text-3xl">Your trusted plumbing partner in Sydney</div>
-                <div class="text-4xl md:text-5xl lg:text-heading font-bold leading-none pt-3.5">Flow with the Pros, Choose<br /> <span class="text-light-blue">Fix N Flow</span></div>
+                <h1 class="text-4xl md:text-5xl lg:text-heading font-bold leading-none pt-3.5">Flow with the Pros, Choose<br /> <span class="text-light-blue">Fix N Flow</span></h1>
             </div>
         </div>
         <div class="flex flex-wrap justify-between items-center pt-32 lg:pt-44 gap-y-16">
@@ -173,7 +173,7 @@ get_template_part('parts/section', 'nav');
                             <div class="bg-quaternary rounded-2xl p-4 flex flex-col justify-between" data-aos="zoom-in">
                                 <div class="pb-16">
                                     <div class="h-[147px] w-full bg-grey rounded-[10px] p-3 flex items-end bg-no-repeat bg-cover" style="background-image: url('<?= $featured_img_url ?>'); background-size: cover;">
-                                        <img src="<?= get_template_directory_uri() ?>/images/icons/service-icon.png" alt="">
+                                        <img src="<?= get_template_directory_uri() ?>/images/icons/service-icon.png" alt="fixnflow">
                                     </div>
                                     <div class="text-2xl font-bold text-main-blue pt-3"><?= get_the_title() ?></div>
                                 </div>
@@ -204,9 +204,9 @@ get_template_part('parts/section', 'nav');
     <?php get_template_part('parts/section', 'contact') ?>
 
     <div class="lg:hidden bg-quaternary">
-        <img src="<?= get_template_directory_uri() ?>/images/background/mobile-contact-vector.png" class="w-full" alt="">
+        <?= echo_theme_image('/images/background/mobile-contact-vector.png', 'w-full') ?>
         <div class="container pt-9 pb-16">
-            <img src="<?= get_template_directory_uri() ?>/images/icons/nearby.png" alt="">
+            <?= echo_theme_image('/images/icons/nearby.png') ?>
             <div class="text-4xl md:text-5xl lg:text-heading text-grey font-bold leading-none py-10">We're always <br /><span class="text-main-blue">nearby!</span></div>
             <div class="font-bold font-articulat text-main-blue pb-10">Call us today</div>
 
@@ -221,8 +221,8 @@ get_template_part('parts/section', 'nav');
     </div>
 
     <div class="testimonials py-16 md:py-36 lg:py-40 relative group">
-        <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-left-floater.png" class="absolute left-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="">
-        <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-right-floater.png" class="absolute right-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="">
+        <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-left-floater.png" class="absolute left-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="fixnflow">
+        <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-right-floater.png" class="absolute right-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="fixnflow">
         <div class="container pb-11 md:pb-20">
             <div class="flex flex-wrap justify-between gap-y-10">
                 <div class="text-4xl md:text-heading text-grey font-bold flex leading-none">
@@ -236,7 +236,7 @@ get_template_part('parts/section', 'nav');
                     </div>
                 </div>
                 <div>
-                    <img src="<?= get_template_directory_uri() ?>/images/logo/testimonials-review.png" alt="">
+                    <?= echo_theme_image('/images/logo/testimonials-review.png') ?>
                 </div>
             </div>
         </div>
@@ -306,17 +306,17 @@ get_template_part('parts/section', 'nav');
                     <div class="w-full md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
                         <div class="bg-white shadow p-2 rounded-[10px] h-full">
                             <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
-                                <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-1.jpg" class="w-full object-cover object-center h-full" alt="">
+                                <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-1.jpg" class="w-full object-cover object-center h-full" alt="fixnflow">
                             </div>
                             <div class="mx-auto -mt-7 w-fit h-[57px] rounded-full bg-main-blue px-10 py-1 flex justify-center items-center relative">
-                                <img src="<?= get_template_directory_uri() ?>/images/logo/wish-foundation.png" alt="">
+                                <?= echo_theme_image('/images/logo/wish-foundation.png') ?>
                             </div>
                             <div class="flex flex-wrap justify-between items-center mx-auto w-10/12 pt-4 pb-2">
                                 <div class="font-articulat text-dark-blue leading-relaxed text-sm">
                                     <span class="text-xs font-bold">Proudly supporting</span> <br />Wish Foundation
                                 </div>
-                                <div class="">
-                                    <img src="<?= get_template_directory_uri() ?>/images/icons/sponsor-1.png" alt="">
+                                <div>
+                                    <?= echo_theme_image('/images/icons/sponsor-1.png') ?>
                                 </div>
                             </div>
                         </div>
@@ -324,17 +324,17 @@ get_template_part('parts/section', 'nav');
                     <div class="w-full  md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
                         <div class="bg-white shadow p-2 rounded-[10px] h-full">
                             <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
-                                <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-2.jpg" class="w-full object-cover object-center h-full" alt="">
+                                <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-2.jpg" class="w-full object-cover object-center h-full" alt="fixnflow">
                             </div>
                             <div class="mx-auto -mt-7 w-fit h-[57px] rounded-full bg-dark-blue px-10 py-1 flex justify-center items-center relative">
-                                <img src="<?= get_template_directory_uri() ?>/images/logo/save-the-children.png" alt="">
+                                <?= echo_theme_image('/images/logo/save-the-children.png') ?>
                             </div>
                             <div class="flex flex-wrap justify-between items-center mx-auto w-10/12 pt-4 pb-2">
                                 <div class="font-articulat text-dark-blue leading-relaxed text-sm">
                                     <span class="text-xs font-bold">Proudly supporting</span> <br />Wish Foundation
                                 </div>
                                 <div class="">
-                                    <img src="<?= get_template_directory_uri() ?>/images/icons/sponsor-1.png" alt="">
+                                    <?= echo_theme_image('/images/icons/sponsor-1.png') ?>
                                 </div>
                             </div>
                         </div>
@@ -342,17 +342,17 @@ get_template_part('parts/section', 'nav');
                     <div class="w-full md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
                         <div class="bg-dark-blue shadow p-2 rounded-[10px] h-full">
                             <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
-                                <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-3.jpg" class="w-full object-cover object-center h-full" alt="">
+                                <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-3.jpg" class="w-full object-cover object-center h-full" alt="fixnflow">
                             </div>
                             <div class="mx-auto -mt-12 w-fit relative">
-                                <img src="<?= get_template_directory_uri() ?>/images/logo/earlwood-wanderers.png" alt="">
+                                <?= echo_theme_image('/images/logo/earlwood-wanderers.png') ?>
                             </div>
                             <div class="flex flex-wrap justify-between items-center mx-auto w-10/12 pt-2 pb-2">
                                 <div class="font-articulat text-white leading-relaxed text-sm">
                                     <span class="text-xs font-bold">Proudly supporting</span> <br />Wish Foundation
                                 </div>
-                                <div class="">
-                                    <img src="<?= get_template_directory_uri() ?>/images/icons/sponsor-2.png" alt="">
+                                <div>
+                                    <?= echo_theme_image('/images/icons/sponsor-2.png') ?>
                                 </div>
                             </div>
                         </div>

@@ -29,7 +29,7 @@
             <div>Commercial Plumbing</div>
         </div>
         <div class="absolute w-full bottom-0 flex justify-center">
-            <img src="<?= get_template_directory_uri() ?>/images/lib/professional_plumber.png" alt="">
+            <?= echo_theme_image('/images/lib/professional_plumber.png') ?>
         </div>
     </div>
 </div>

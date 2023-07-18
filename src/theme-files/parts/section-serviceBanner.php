@@ -12,7 +12,7 @@
         <div class="container relative">
             <div class="pt-48 pb-24 text-white text-center">
                 <?php if (isset($banner)) : ?>
-                    <div class="text-4xl md:text-5xl xl:text-heading font-semibold"><?= $banner['title'] ? $banner['title'] : get_the_title(); ?> </div>
+                    <h1 class="text-4xl md:text-5xl xl:text-heading font-semibold"><?= $banner['title'] ? $banner['title'] : get_the_title(); ?></h1>
                     <?php if (isset($banner['subtitle'])) : ?>
                         <div class="text-base md:text-lg pt-10">
                             <?= $banner['subtitle'] ?>

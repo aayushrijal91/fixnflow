@@ -24,8 +24,8 @@
                     <div class="flex flex-wrap -mx-2 gap-y-4">
                         <div class="w-full md:w-1/2 lg:w-1/3 px-2 order-1" data-aos="zoom-in">
                             <div class="h-[255px] rounded-[10px] relative overflow-hidden whyus-card">
-                                <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-1.jpg" class="whyus-card-bg-1 absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] duration-300" alt="">
-                                <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-1.png" class="whyus-card-bg-component-1 absolute bottom-0 right-0 h-full max-w-[120%] duration-300" alt="">
+                                <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-1.jpg" class="whyus-card-bg-1 absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] duration-300" alt="Fix N Flow">
+                                <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-1.png" class="whyus-card-bg-component-1 absolute bottom-0 right-0 h-full max-w-[120%] duration-300" alt="Fix N Flow">
                                 <div class="absolute w-full h-full bg-gradient-to-b from-transparent to-black/75"></div>
 
                                 <div class="flex h-full items-end p-7 relative">
@@ -35,7 +35,7 @@
                                             <div class="w-fit font-articulat text-white flex-1 text-base leading-loose">
                                                 We treat our customers like family.
                                             </div>
-                                            <div class="w-fit"><img src="<?= get_template_directory_uri() ?>/images/icons/why-us-icon-1.png" alt=""></div>
+                                            <div class="w-fit"><?= echo_theme_image('/images/icons/why-us-icon-1.png') ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -43,8 +43,8 @@
                         </div>
                         <div class="w-full lg:w-2/3 px-2 order-2 md:order-4 lg:order-2" data-aos="zoom-in">
                             <div class="h-[450px] md:h-[255px] rounded-[10px] relative overflow-hidden whyus-card">
-                                <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-2.jpg" class="whyus-card-bg-1 absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] duration-300" alt="">
-                                <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-2.png" class="whyus-card-bg-component-1 absolute bottom-0 right-0 duration-300" alt="">
+                                <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-2.jpg" class="whyus-card-bg-1 absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] duration-300" alt="Fix N Flow">
+                                <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-2.png" class="whyus-card-bg-component-1 absolute bottom-0 right-0 duration-300" alt="Fix N Flow">
                                 <div class="absolute w-full h-full bg-gradient-to-b from-transparent to-black/75"></div>
 
                                 <div class="flex h-full md:items-end p-7 relative">
@@ -54,7 +54,7 @@
                                             <div class="w-fit font-articulat text-white flex-1 text-base">
                                                 To ensure that your plumbing needs are attended to promptly.
                                             </div>
-                                            <div class="w-fit"><img src="<?= get_template_directory_uri() ?>/images/icons/why-us-icon-2.png" alt=""></div>
+                                            <div class="w-fit"><?= echo_theme_image('/images/icons/why-us-icon-2.png') ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@
                         </div>
                         <div class="w-full lg:w-2/3 px-2 order-3 md:order-3 lg:order-3" data-aos="zoom-in">
                             <div class="h-[450px] md:h-[255px] rounded-[10px] relative overflow-hidden whyus-card bg-gradient-to-r from-[#f3f3f3] to-[#e4e2e2]">
-                                <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-3.png" class="whyus-card-bg-component-3 absolute bottom-0 right-0 duration-300" alt="">
+                                <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-3.png" class="whyus-card-bg-component-3 absolute bottom-0 right-0 duration-300" alt="Fix N Flow">
 
                                 <div class="flex h-full md:items-end p-7 relative">
                                     <div class="w-full">
@@ -72,7 +72,7 @@
                                             <div class="w-9/12 md:w-7/12 font-articulat text-dark-blue text-sm md:text-base leading-loose">
                                                 Our team of expert plumbers will ensure you can make informed decisions.
                                             </div>
-                                            <div class="w-fit"><img src="<?= get_template_directory_uri() ?>/images/icons/why-us-icon-3.png" alt=""></div>
+                                            <div class="w-fit"><?= echo_theme_image('/images/icons/why-us-icon-3.png') ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -80,8 +80,8 @@
                         </div>
                         <div class="w-full md:w-1/2 lg:w-1/3 px-2 order-4 md:order-2 lg:order-4" data-aos="zoom-in">
                             <div class="h-[255px] rounded-[10px] relative overflow-hidden whyus-card">
-                                <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-4.jpg" class="whyus-card-bg-1 absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] duration-300" alt="">
-                                <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-4.png" class="whyus-card-bg-component-3 absolute bottom-0 right-0 h-full max-w-[120%] duration-300" alt="">
+                                <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-4.jpg" class="whyus-card-bg-1 absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] duration-300" alt="Fix N Flow">
+                                <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-4.png" class="whyus-card-bg-component-3 absolute bottom-0 right-0 h-full max-w-[120%] duration-300" alt="Fix N Flow">
 
                                 <div class="flex h-full items-end p-7 relative">
                                     <div class="w-full">
@@ -91,7 +91,7 @@
                                             <div class="w-fit font-articulat text-white flex-1 text-base leading-loose">
                                                 When it comes to pricing & our services.
                                             </div>
-                                            <div class="w-fit"><img src="<?= get_template_directory_uri() ?>/images/icons/why-us-icon-4.png" alt=""></div>
+                                            <div class="w-fit"><?= echo_theme_image('/images/icons/why-us-icon-4.png') ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -101,8 +101,8 @@
                 </div>
                 <div class="w-full lg:w-1/2 xl:w-1/4 px-2" data-aos="zoom-in">
                     <div class="h-[850px] lg:h-[650px] xl:h-full rounded-[10px] relative overflow-hidden whyus-card bg-white">
-                        <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-5.png" class="absolute top-0 right-0 w-full duration-300" alt="">
-                        <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-5.png" class="whyus-card-bg-component-5 absolute top-0 right-0 h-full max-w-[120%] duration-300" alt="">
+                        <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-5.png" class="absolute top-0 right-0 w-full duration-300" alt="Fix N Flow">
+                        <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-5.png" class="whyus-card-bg-component-5 absolute top-0 right-0 h-full max-w-[120%] duration-300" alt="Fix N Flow">
 
                         <div class="flex h-full items-end p-7 relative">
                             <div class="w-full">
@@ -111,7 +111,7 @@
                                     <div class="w-8/12 font-articulat text-dark-blue text-sm md:text-base leading-loose">
                                         Without compromising on the quality of our services.
                                     </div>
-                                    <div class="w-fit"><img src="<?= get_template_directory_uri() ?>/images/icons/why-us-icon-5.png" alt=""></div>
+                                    <div class="w-fit"><?= echo_theme_image('/images/icons/why-us-icon-5.png') ?></div>
                                 </div>
                             </div>
                         </div>

@@ -21,7 +21,7 @@ get_template_part('parts/section', 'nav');
                     </video>
                     <div class="w-10/12 ml-auto px-10 pt-48 pb-14 relative">
                         <?php if (isset($banner)) : ?>
-                            <div class="text-4xl md:text-5xl xl:text-heading text-white font-bold"><?= $banner['title'] ? $banner['title'] : get_the_title() ?></div>
+                            <h1 class="text-4xl md:text-5xl xl:text-heading text-white font-bold"><?= $banner['title'] ? $banner['title'] : get_the_title() ?></h1>
                             <?php if ($banner['subtitle']) : ?>
                                 <div class="pt-6 text-lg font-articulat text-white">
                                     <?= $banner['subtitle'] ?>
@@ -95,8 +95,8 @@ get_template_part('parts/section', 'nav');
         <div class="pt-10 pb-44">
             <div class="text-center text-4xl md:text-5xl xl:text-heading text-main-blue font-bold pb-36">Meet our expert plumbers</div>
             <div class="relative">
-                <img id="gotoTeam1_1" class="absolute top-[45%] z-[10000] cursor-pointer left-[20%]" src="<?= get_template_directory_uri() ?>/images/icons/arrow-prev.png" alt="">
-                <img id="gotoTeam1_4" class="absolute top-[45%] z-[10000] cursor-pointer right-[20%]" src="<?= get_template_directory_uri() ?>/images/icons/arrow-next.png" alt="">
+                <img id="gotoTeam1_1" class="absolute top-[45%] z-[10000] cursor-pointer left-[20%]" src="<?= get_template_directory_uri() ?>/images/icons/arrow-prev.png" alt="fixnflow">
+                <img id="gotoTeam1_4" class="absolute top-[45%] z-[10000] cursor-pointer right-[20%]" src="<?= get_template_directory_uri() ?>/images/icons/arrow-next.png" alt="fixnflow">
                 <div class="team_slider" id="team_slider_1">
                     <div class="team_card_1 px-2">
                         <div class="min-h-[607px] h-full rounded-[30px] overflow-hidden bg-[#D3E2EF] w-full py-11 px-14">
@@ -121,7 +121,7 @@ get_template_part('parts/section', 'nav');
 
                     <div class="team_card_2 px-2">
                         <div class="min-h-[607px] h-full rounded-[30px] overflow-hidden group relative">
-                            <img src="<?= get_template_directory_uri() ?>/images/background/ricci.jpg" class="w-full h-full grayscale group-hover:grayscale-0 duration-300" alt="">
+                            <img src="<?= get_template_directory_uri() ?>/images/background/ricci.jpg" class="w-full h-full grayscale group-hover:grayscale-0 duration-300" alt="fixnflow">
                             <div class="absolute w-full bg-gradient-to-b from-transparent to-black -bottom-56 group-hover:bottom-0 duration-300 p-12">
                                 <div class="text-2xl text-light-blue font-bold pb-6">Work with Julian</div>
                                 <div class="flex flex-wrap -mx-2 gap-y-4 text-white">
@@ -136,7 +136,7 @@ get_template_part('parts/section', 'nav');
 
                     <div class="team_card_3 px-2">
                         <div class="min-h-[607px] h-full rounded-[30px] overflow-hidden group relative">
-                            <img src="<?= get_template_directory_uri() ?>/images/background/ricci.jpg" class="w-full h-full grayscale group-hover:grayscale-0 duration-300" alt="">
+                            <img src="<?= get_template_directory_uri() ?>/images/background/ricci.jpg" class="w-full h-full grayscale group-hover:grayscale-0 duration-300" alt="fixnflow">
                             <div class="absolute w-full bg-gradient-to-b from-transparent to-black -bottom-56 group-hover:bottom-0 duration-300 p-12">
                                 <div class="text-2xl text-light-blue font-bold pb-6">Work with Julian</div>
                                 <div class="flex flex-wrap -mx-2 gap-y-4 text-white">
@@ -170,8 +170,8 @@ get_template_part('parts/section', 'nav');
                 </div>
             </div>
             <div class="relative mt-5">
-                <img id="gotoTeam2_1" class="absolute top-[45%] z-[10000] cursor-pointer left-[20%]" src="<?= get_template_directory_uri() ?>/images/icons/arrow-prev.png" alt="">
-                <img id="gotoTeam2_4" class="absolute top-[45%] z-[10000] cursor-pointer right-[20%]" src="<?= get_template_directory_uri() ?>/images/icons/arrow-next.png" alt="">
+                <img id="gotoTeam2_1" class="absolute top-[45%] z-[10000] cursor-pointer left-[20%]" src="<?= get_template_directory_uri() ?>/images/icons/arrow-prev.png" alt="fixnflow">
+                <img id="gotoTeam2_4" class="absolute top-[45%] z-[10000] cursor-pointer right-[20%]" src="<?= get_template_directory_uri() ?>/images/icons/arrow-next.png" alt="fixnflow">
                 <div class="team_slider" id="team_slider_2">
                     <div class="team_card_1 px-2">
                         <div class="min-h-[607px] h-full rounded-[30px] overflow-hidden bg-[#D3E2EF] w-full py-11 px-14">
@@ -196,7 +196,7 @@ get_template_part('parts/section', 'nav');
 
                     <div class="team_card_2 px-2">
                         <div class="min-h-[607px] h-full rounded-[30px] overflow-hidden group relative">
-                            <img src="<?= get_template_directory_uri() ?>/images/background/ricci.jpg" class="w-full h-full grayscale group-hover:grayscale-0 duration-300" alt="">
+                            <img src="<?= get_template_directory_uri() ?>/images/background/ricci.jpg" class="w-full h-full grayscale group-hover:grayscale-0 duration-300" alt="fixnflow">
                             <div class="absolute w-full bg-gradient-to-b from-transparent to-black -bottom-56 group-hover:bottom-0 duration-300 p-12">
                                 <div class="text-2xl text-light-blue font-bold pb-6">Work with Julian</div>
                                 <div class="flex flex-wrap -mx-2 gap-y-4 text-white">
@@ -211,7 +211,7 @@ get_template_part('parts/section', 'nav');
 
                     <div class="team_card_3 px-2">
                         <div class="min-h-[607px] h-full rounded-[30px] overflow-hidden group relative">
-                            <img src="<?= get_template_directory_uri() ?>/images/background/ricci.jpg" class="w-full h-full grayscale group-hover:grayscale-0 duration-300" alt="">
+                            <img src="<?= get_template_directory_uri() ?>/images/background/ricci.jpg" class="w-full h-full grayscale group-hover:grayscale-0 duration-300" alt="fixnflow">
                             <div class="absolute w-full bg-gradient-to-b from-transparent to-black -bottom-56 group-hover:bottom-0 duration-300 p-12">
                                 <div class="text-2xl text-light-blue font-bold pb-6">Work with Julian</div>
                                 <div class="flex flex-wrap -mx-2 gap-y-4 text-white">
@@ -245,8 +245,8 @@ get_template_part('parts/section', 'nav');
                 </div>
             </div>
             <div class="relative mt-5">
-                <img id="gotoTeam3_1" class="absolute top-[45%] z-[10000] cursor-pointer left-[20%]" src="<?= get_template_directory_uri() ?>/images/icons/arrow-prev.png" alt="">
-                <img id="gotoTeam3_4" class="absolute top-[45%] z-[10000] cursor-pointer right-[20%]" src="<?= get_template_directory_uri() ?>/images/icons/arrow-next.png" alt="">
+                <img id="gotoTeam3_1" class="absolute top-[45%] z-[10000] cursor-pointer left-[20%]" src="<?= get_template_directory_uri() ?>/images/icons/arrow-prev.png" alt="fixnflow">
+                <img id="gotoTeam3_4" class="absolute top-[45%] z-[10000] cursor-pointer right-[20%]" src="<?= get_template_directory_uri() ?>/images/icons/arrow-next.png" alt="fixnflow">
                 <div class="team_slider" id="team_slider_3">
                     <div class="team_card_1 px-2">
                         <div class="min-h-[607px] h-full rounded-[30px] overflow-hidden bg-[#D3E2EF] w-full py-11 px-14">
@@ -271,7 +271,7 @@ get_template_part('parts/section', 'nav');
 
                     <div class="team_card_2 px-2">
                         <div class="min-h-[607px] h-full rounded-[30px] overflow-hidden group relative">
-                            <img src="<?= get_template_directory_uri() ?>/images/background/ricci.jpg" class="w-full h-full grayscale group-hover:grayscale-0 duration-300" alt="">
+                            <img src="<?= get_template_directory_uri() ?>/images/background/ricci.jpg" class="w-full h-full grayscale group-hover:grayscale-0 duration-300" alt="fixnflow">
                             <div class="absolute w-full bg-gradient-to-b from-transparent to-black -bottom-56 group-hover:bottom-0 duration-300 p-12">
                                 <div class="text-2xl text-light-blue font-bold pb-6">Work with Julian</div>
                                 <div class="flex flex-wrap -mx-2 gap-y-4 text-white">
@@ -286,7 +286,7 @@ get_template_part('parts/section', 'nav');
 
                     <div class="team_card_3 px-2">
                         <div class="min-h-[607px] h-full rounded-[30px] overflow-hidden group relative">
-                            <img src="<?= get_template_directory_uri() ?>/images/background/ricci.jpg" class="w-full h-full grayscale group-hover:grayscale-0 duration-300" alt="">
+                            <img src="<?= get_template_directory_uri() ?>/images/background/ricci.jpg" class="w-full h-full grayscale group-hover:grayscale-0 duration-300" alt="fixnflow">
                             <div class="absolute w-full bg-gradient-to-b from-transparent to-black -bottom-56 group-hover:bottom-0 duration-300 p-12">
                                 <div class="text-2xl text-light-blue font-bold pb-6">Work with Julian</div>
                                 <div class="flex flex-wrap -mx-2 gap-y-4 text-white">

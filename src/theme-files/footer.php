@@ -12,7 +12,7 @@
     <div class="bg-dark-blue pb-10 md:py-10">
         <div class="container">
             <div class="w-fit mx-auto">
-                <a href="./" class=""><img src="<?= get_template_directory_uri() ?>/images/logo/logo.png" alt=""></a>
+                <a href="<?= get_site_url() ?>"><?= echo_theme_image('/images/logo/logo.png') ?></a>
             </div>
 
             <div class="flex flex-wrap justify-center py-12 md:py-14">
@@ -175,7 +175,7 @@
                             )
                         );
                         $the_query = new WP_Query($args);
-                        
+
                         if ($the_query->have_posts()) :
                             while ($the_query->have_posts()) : $the_query->the_post();
                                 $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
@@ -224,15 +224,15 @@
 
                     <div class="flex flex-wrap items-center -mx-2 pt-6">
                         <div class="w-1/3 px-2 flex flex-col md:flex-row lg:flex-col xl:flex-row items-center gap-x-5 gap-y-5 justify-center">
-                            <img src="<?= get_template_directory_uri() ?>/images/logo/master-plumber-association.png" alt="">
+                            <?= echo_theme_image('/images/logo/master-plumber-association.png') ?>
                             <div class="font-articulat text-white text-center md:text-start lg:text-center xl:text-start text-sm md:text-base">Master Plumber<br />Association<br /> NSW</div>
                         </div>
                         <div class="w-1/3 px-2 flex flex-col md:flex-row lg:flex-col xl:flex-row items-center gap-x-5 gap-y-5 justify-center">
-                            <img src="<?= get_template_directory_uri() ?>/images/logo/ebix.png" alt="">
+                            <?= echo_theme_image('/images/logo/ebix.png') ?>
                             <div class="font-articulat text-white text-center md:text-start lg:text-center xl:text-start text-sm md:text-base">EBiX Trades<br />Monitor</div>
                         </div>
                         <div class="w-1/3 px-2 flex flex-col md:flex-row lg:flex-col xl:flex-row items-center gap-x-5 gap-y-5 justify-center">
-                            <img src="<?= get_template_directory_uri() ?>/images/logo/accredited.png" alt="">
+                            <?= echo_theme_image('/images/logo/accredited.png') ?>
                             <div class="font-articulat text-white text-center md:text-start text-sm md:text-base">Accredited<br />Plumber</div>
                         </div>
                     </div>

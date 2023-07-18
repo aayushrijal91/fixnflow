@@ -40,7 +40,7 @@ get_header();
             </div>
         </div>
         <div class="bg-main-blue py-20 relative">
-            <img src="<?= get_template_directory_uri() ?>/images/lib/booking_form_van.png" class="absolute bottom-0 left-0" alt="">
+            <img src="<?= get_template_directory_uri() ?>/images/lib/booking_form_van.png" class="absolute bottom-0 left-0" alt="fixnflow">
             <div class="container">
                 <div class="flex flex-wrap">
                     <div class="w-full lg:w-1/2">
@@ -50,7 +50,7 @@ get_header();
                         <div class="bookingFormSlider" id="bookingFormSlider">
                             <div>
                                 <div class="flex flex-wrap gap-x-5 items-center">
-                                    <div class="w-fit"><img src="<?= get_template_directory_uri() ?>/images/icons/make-a-booking.png" alt=""></div>
+                                    <div class="w-fit"><?= echo_theme_image('/images/icons/make-a-booking.png') ?></div>
                                     <div class="w-fit flex-1 text-4xl md:text-5xl xl:text-heading font-semibold text-light-blue">
                                         Make a <span class="text-white">booking</span>
                                     </div>
@@ -61,7 +61,7 @@ get_header();
                             </div>
                             <div>
                                 <div class="flex flex-wrap gap-x-5 items-center">
-                                    <div class="w-fit"><img src="<?= get_template_directory_uri() ?>/images/icons/make-a-booking.png" alt=""></div>
+                                    <div class="w-fit"><?= echo_theme_image('/images/icons/make-a-booking.png') ?></div>
                                     <div class="w-fit flex-1 text-4xl md:text-5xl xl:text-heading font-semibold text-light-blue">
                                         Send an <span class="text-white">enquiry</span>
                                     </div>
@@ -71,7 +71,7 @@ get_header();
                             </div>
                             <div>
                                 <div class="flex flex-wrap gap-x-5 items-center">
-                                    <div class="w-fit"><img src="<?= get_template_directory_uri() ?>/images/icons/make-a-booking.png" alt=""></div>
+                                    <div class="w-fit"><?= echo_theme_image('/images/icons/make-a-booking.png') ?></div>
                                     <div class="w-fit flex-1 text-4xl md:text-5xl xl:text-[63px] font-semibold text-light-blue">
                                         Request a <span class="text-white">call back</span>
                                     </div>
@@ -81,7 +81,7 @@ get_header();
                             </div>
                             <div>
                                 <div class="flex flex-wrap gap-x-5 items-center">
-                                    <div class="w-fit"><img src="<?= get_template_directory_uri() ?>/images/icons/make-a-booking.png" alt=""></div>
+                                    <div class="w-fit"><?= echo_theme_image('/images/icons/make-a-booking.png') ?></div>
                                     <div class="w-fit flex-1 text-4xl md:text-5xl xl:text-heading font-semibold text-light-blue">
                                         Get a <span class="text-white">free quote</span>
                                     </div>

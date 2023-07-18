@@ -13,7 +13,7 @@
                 </video>
                 <div class="w-10/12 ml-auto px-10 pt-48 pb-14 relative">
                     <?php if (isset($banner)) : ?>
-                        <div class="text-4xl md:text-5xl xl:text-heading text-white font-semibold"><?= $banner['title'] ? $banner['title'] : get_the_title() ?></div>
+                        <h1 class="text-4xl md:text-5xl xl:text-heading text-white font-semibold"><?= $banner['title'] ? $banner['title'] : get_the_title() ?></h1>
                         <?php if ($banner['subtitle']) : ?>
                             <div class="pt-6 text-lg font-articulat text-white">
                                 <?= $banner['subtitle'] ?>

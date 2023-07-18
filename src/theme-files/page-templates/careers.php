@@ -43,11 +43,11 @@ get_template_part('parts/section', 'nav');
                         <div class="font-articulat text-light-blue text-base">We are qualified plumbers</div>
                     </div>
                     <div class="w-1/2 px-2 text-center flex flex-col items-center">
-                        <img src="<?= get_template_directory_uri() ?>/images/logo/ebix.png" alt="">
+                        <img src="<?= get_template_directory_uri() ?>/images/logo/ebix.png" alt="fixnflow">
                         <div class="font-articulat text-primary text-sm font-semibold pt-6">EBiX Trades<br />Monitor</div>
                     </div>
                     <div class="w-1/2 px-2 text-center flex flex-col items-center">
-                        <img src="<?= get_template_directory_uri() ?>/images/logo/master-plumber-association.png" alt="">
+                        <img src="<?= get_template_directory_uri() ?>/images/logo/master-plumber-association.png" alt="fixnflow">
                         <div class="font-articulat text-primary text-sm font-semibold pt-6">Master Plumber<br />Association<br /> NSW</div>
                     </div>
                 </div>
