@@ -62,6 +62,8 @@ get_header();
     <div class="bg-white">
         <?php get_template_part('parts/section', 'professionalPlumbing') ?>
     </div>
+    
+    <?php get_template_part('parts/section', 'serviceGuaranteed') ?>
 
     <div class="container pt-24 pb-60">
         <div class="flex flex-wrap -mx-2 gap-y-5 mb-5">

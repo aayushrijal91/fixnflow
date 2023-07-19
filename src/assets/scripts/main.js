@@ -337,6 +337,10 @@ jQuery(function ($) {
                         $(this).parent('div').remove();
                     }
                     counter++;
+                });
+
+                $('.serviceAttributeBoxesButton').on('click', function() {
+                    $('#serviceAttributeBoxes').css('transform', `translateX(${$(this).val()})`);
                 })
             }, // end misc
         }, // end ui
