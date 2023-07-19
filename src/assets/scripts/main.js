@@ -210,7 +210,7 @@ jQuery(function ($) {
                     arrows: false,
                     draggable: false
                 });
-                
+
                 AOS.refresh();
 
                 $('ul.formTypeSlider li.slide').width($('ul.formTypeSlider li:nth-child(1)').width());
@@ -333,14 +333,24 @@ jQuery(function ($) {
                     $(`#growingBox .stepCard:nth-child(${counter})`).addClass('shown');
                     $(`#growingBox .stepCard:nth-child(${counter + 1})`).addClass('showingNext');
                     $(this).parent('div').css('right', `${right}%`);
-                    if(right < 0){
+                    if (right < 0) {
                         $(this).parent('div').remove();
                     }
                     counter++;
                 });
 
-                $('.serviceAttributeBoxesButton').on('click', function() {
+                $('.serviceAttributeBoxesButton').on('click', function () {
                     $('#serviceAttributeBoxes').css('transform', `translateX(${$(this).val()})`);
+                });
+
+                $('.showServiceDescriptionBtn').on('click', function () {
+                    $(this).parents('.servicDescriptionCard').toggleClass('active');
+                    $(this).parents('.servicDescriptionCard').find('.description').slideToggle();
+
+                    const svg1 = '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="4" viewBox="0 0 25 4" fill="none"><path d="M1.66602 1.53223H22.6907" stroke="#C0E3FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg>';
+                    const svg2 = '<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.76416 12.4197H22.7888" stroke="#0067B9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M12.2764 1.90747L12.2764 22.9321" stroke="#0067B9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg>';
+
+                    $(this).parents('.servicDescriptionCard').hasClass('active') ? $(this).html(svg1) : $(this).html(svg2);
                 })
             }, // end misc
         }, // end ui

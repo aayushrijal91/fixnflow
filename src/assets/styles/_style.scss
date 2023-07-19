@@ -350,9 +350,35 @@
     .shown {
         width: 16.666667% !important;
     }
-    
+
     .showingNext {
         padding: 8px;
         width: 8.333333%;
+    }
+}
+
+.innerInnerServicePage {
+    .servicDescriptionCard {
+        transition: 0.2s all ease-in-out;
+
+        &.active {
+            background:#ffffff;
+            transition: 0.2s all ease-in-out;
+
+            .subHeading {
+                color: #5AB2F8 !important;
+                transition: 0.2s all ease-in-out;
+            }
+
+            .title {
+                color: #0067B9;
+                transition: 0.2s all ease-in-out;
+            }
+
+            button.showServiceDescriptionBtn {
+                background: #0067B9;
+                transition: 0.2s all ease-in-out;
+            }
+        }
     }
 }

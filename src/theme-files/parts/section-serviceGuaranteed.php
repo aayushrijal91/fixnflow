@@ -1,7 +1,7 @@
 <div class="bg-dark-blue py-32" style="background: url(<?= get_template_directory_uri() ?>/images/background/homepage_guarantee_vector.png) no-repeat left top, #1B427D; background-size: contain;">
     <div class="container">
-        <div class="text-4xl md:text-5xl xl:text-heading text-center text-white font-semibold highlight-light-blue leading-none">What you're <span>guaranteed</span> to get from us</div>
-        <div class="w-full lg:w-7/12 mx-auto py-12 text-white text-center font-articulat">We have a simple and efficient process to ensure that our customers get the best possible plumbing services in a timely manner. Our process includes</div>
+        <div class="text-4xl md:text-5xl xl:text-heading text-center text-white font-semibold highlight-light-blue leading-none" data-aos="fade-up">What you're <span>guaranteed</span> to get from us</div>
+        <div class="w-full lg:w-7/12 mx-auto py-12 text-white text-center font-articulat" data-aos="fade-up">We have a simple and efficient process to ensure that our customers get the best possible plumbing services in a timely manner. Our process includes</div>
 
         <div class="flex flex-wrap -mx-2 justify-center relative" id="growingBox">
             <div class="w-1/6 max-w-1/6 p-2 group stepCard">
