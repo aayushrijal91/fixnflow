@@ -1,6 +1,6 @@
 <?php $leadingBrands = get_field('leading_brands', 'options') ?>
 <div class="partLeadingBrands bg-no-repeat bg-contain" style="background-image:url(<?= get_template_directory_uri() ?>/images/background/brands-bg.png)">
-    <div class="container pt-16 md:pt-40">
+    <div class="container pt-16 md:pt-40" data-aos="fade-up">
         <div class="md:text-center text-4xl md:text-5xl lg:text-heading text-grey font-bold leading-tight"><?= $leadingBrands['heading'] ?></div>
         <div class="font-articulat text-grey md:text-center py-7 md:py-10">
             <?= $leadingBrands['subheading'] ?>

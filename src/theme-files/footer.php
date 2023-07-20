@@ -53,7 +53,7 @@
             </div>
 
             <div class="flex flex-wrap -mx-3 gap-y-5">
-                <div class="w-full lg:w-1/2 px-3">
+                <div class="w-full lg:w-1/2 px-3" data-aos="zoom-in">
                     <div class="rounded-[29px] bg-main-blue p-6 md:p-9 h-full flex flex-col justify-between">
                         <div class="flex flex-wrap justify-between -mx-2 gap-y-7">
                             <div class="w-fit px-2">
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full lg:w-1/2 px-3">
+                <div class="w-full lg:w-1/2 px-3" data-aos="zoom-in">
                     <div class="rounded-[29px] bg-main-blue p-6 md:py-9 md:px-11 h-full bg-no-repeat bg-cover" style="background-image: url(<?= get_template_directory_uri() ?>/images/background/footer_cta_2.jpg)">
                         <div class="bg-tertiary rounded-[10px] pt-4 md:py-4 px-7 text-2xl md:text-[35px] font-bold text-white leading-none relative text-center md:text-start lg:min-h-[300px] xl:min-h-fit">
                             Fix n Flow <br /> <span class="text-dark-blue">Membership</span>

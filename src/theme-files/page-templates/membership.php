@@ -29,11 +29,15 @@ get_header();
                     </div>
                 </div>
             </div>
+
+            <?php $introduction = get_field('introduction'); ?>
             <div class="w-full lg:w-1/2 px-3" data-aos="zoom-in">
-                <div class="text-center bg-contain rounded-[30px] pt-11 pb-28 px-16" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= get_template_directory_uri() ?>/images/background/membership-guy.jpg) no-repeat center bottom; background-size: contain;">
-                    <div class="text-white text-[45px] leading-none font-bold">Welcome to <br><span class="text-light-blue">Fix N Flow Plumbing</span></div>
-                    <div class="text-white leading-relaxed py-6">Your reliable plumbing partner for life! We take pride in offering more than just ordinary plumbing services. Our goal is to build long-lasting relationships with our valued customers. To achieve this, we are thrilled to introduce our VIP Plumbing Membership program that ensures uninterrupted access to clean water, working toilets, and hot showers for your loved ones.</div>
-                    <a href="" class="btn-yellow-hover-main-blue px-14 mt-10"><span class="relative z-10">Button name here</span></a>
+                <div class="text-center bg-contain rounded-[30px] pt-11 pb-28 px-16" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= $introduction['background_image'] ? $introduction['background_image']['url'] : ''  ?>) no-repeat center bottom; background-size: contain;">
+                    <div class="text-white text-[45px] leading-none font-bold highlight-light-blue"><?= $introduction['heading'] ?></div>
+                    <div class="text-white leading-relaxed py-6"><?= $introduction['description'] ?></div>
+                    <?php if ($introduction['button']) : ?>
+                        <a href="<?= $introduction['button']['url'] ?>" target="<?= $introduction['button']['target'] ?>" class="btn-yellow-hover-main-blue px-14 mt-10"><span class="relative z-10"><?= $introduction['button']['title'] ?></span></a>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="w-full lg:w-1/4 px-3" data-aos="zoom-in">
@@ -41,7 +45,7 @@ get_header();
                 <div class="flex flex-wrap -mx-2 pt-4">
                     <div class="w-1/2 px-2">
                         <div class="bg-light-blue text-primary h-full rounded-xl py-4 px-3.5">
-                            <div class="text-3xl font-articulat-heavy leading-none">124+</div>
+                            <div class="text-3xl font-articulat-heavy leading-none"><?= $introduction['number_of_reviews'] ?>+</div>
                             <div class="text-sm font-articulat leading-none font-semibold">Customer review</div>
                         </div>
                     </div>
@@ -60,12 +64,13 @@ get_header();
 
     <div class="bg-white py-32">
         <div class="container">
+            <?php $section_2 = get_field('section_2'); ?>
             <div class="flex flex-wrap justify-around pb-20">
-                <div class="w-full lg:w-5/12 text-4xl md:text-5xl xl:text-heading leading-none text-grey font-bold text-center">
-                    Join and receive <span class="text-main-blue">exclusive perks!</span>
+                <div class="w-full lg:w-5/12 text-4xl md:text-5xl xl:text-heading leading-none text-grey font-bold text-center highlight-main-blue">
+                    <?= $section_2['heading'] ?>
                 </div>
-                <div class="w-full lg:w-5/12 text-grey font-articulat text-base leading-loose">
-                    As a member of our VIP club, you'll receive exclusive perks and discounts that can help you <span class="font-bold">save on your monthly plumbing expenses,</span> as well as discounted rates on repairs and services. Our dedicated team is committed to providing you with the <span class="font-bold">best possible plumbing solutions and premium customer service.</span>
+                <div class="w-full lg:w-5/12 text-grey font-articulat text-base leading-loose description">
+                    <?= $section_2['description'] ?>
                 </div>
             </div>
 

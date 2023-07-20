@@ -34,8 +34,8 @@ get_template_part('parts/section', 'nav');
     </div>
 
     <div class="container">
-        <div class="flex flex-wrap -mx-3 items-center py-24">
-            <div class="w-full lg:w-1/4 px-3" data-aos="zoom-in">
+        <div class="flex flex-wrap -mx-3 items-center py-24" data-aos="fade-up">
+            <div class="w-full lg:w-1/4 px-3">
                 <div class="flex flex-wrap items-center justify-center -mx-2 pt-6 gap-y-5">
                     <div class="w-2/3 px-2 text-center flex flex-col items-center">
                         <img src="<?= get_template_directory_uri() ?>/images/logo/accredited.png" alt="Accredited">
@@ -53,7 +53,7 @@ get_template_part('parts/section', 'nav');
                 </div>
             </div>
             <?php $introduction = get_field('introduction'); ?>
-            <div class="w-full lg:w-1/2 px-3" data-aos="zoom-in">
+            <div class="w-full lg:w-1/2 px-3">
                 <div class="text-center bg-quaternary rounded-[30px] p-16">
                     <div class="text-grey text-[45px] leading-none font-bold highlight-light-blue"><?= $introduction['heading'] ?></div>
                     <div class="text-grey leading-relaxed py-11 font-articulat description"><?= $introduction['description'] ?></div>
@@ -62,7 +62,7 @@ get_template_part('parts/section', 'nav');
                     <?php endif; ?>
                 </div>
             </div>
-            <div class="w-full lg:w-1/4 px-3" data-aos="zoom-in">
+            <div class="w-full lg:w-1/4 px-3">
                 <img src="<?= get_template_directory_uri() ?>/images/icons/google-color.png" alt="Google Color">
                 <div class="flex flex-wrap -mx-2 pt-4">
                     <div class="w-1/2 px-2">
@@ -87,7 +87,7 @@ get_template_part('parts/section', 'nav');
     <div class="bg-dark-blue py-28">
         <?php $form = get_field('form'); ?>
         <div class="container">
-            <div class="flex flex-wrap justify-around">
+            <div class="flex flex-wrap justify-around" data-aos="fade-up">
                 <div class="w-full lg:w-5/12 text-4xl md:text-5xl xl:text-heading leading-none text-white font-bold text-center highlight-main-blue">
                     <?= $form['hero_heading'] ? $form['hero_heading'] : '' ?>
                 </div>
@@ -96,7 +96,7 @@ get_template_part('parts/section', 'nav');
                 </div>
             </div>
 
-            <div class="bg-light-blue rounded-[30px] p-10 mt-20">
+            <div class="bg-light-blue rounded-[30px] p-10 mt-20" data-aos="zoom-in">
                 <div class="flex flex-wrap">
                     <div class="w-full lg:w-1/2">
                         <?= echo_theme_image('/images/icons/careers-form.png') ?>
