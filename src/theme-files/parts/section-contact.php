@@ -28,3 +28,20 @@
     </div>
     <img src="<?= get_template_directory_uri() ?>/images/lib/contact_guy.png" class="absolute right-0 bottom-0 hidden xl:block" alt="fixnflow">
 </div>
+
+<div class="lg:hidden bg-quaternary">
+    <?= echo_theme_image('/images/background/mobile-contact-vector.png', 'w-full') ?>
+    <div class="container pt-9 pb-16">
+        <?= echo_theme_image('/images/icons/nearby.png') ?>
+        <div class="text-4xl md:text-5xl lg:text-heading text-grey font-bold leading-none py-10">We're always <br /><span class="text-main-blue">nearby!</span></div>
+        <div class="font-bold font-articulat text-main-blue pb-10">Call us today</div>
+
+        <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-4xl md:text-5xl lg:text-heading text-main-blue font-bold"><?= get_field('phone_number', 'options') ?></a>
+
+        <div class="text-sm md:text-base font-articulat text-grey leading-loose pt-5 pb-9 w-full xl:w-11/12">
+            <p class="pb-5">We’re here for all your plumbing needs. Our team of expert plumbers is available 24/7 to help you with any plumbing emergencies.</p>
+            <p>At Fix N Flow, we are committed to providing our customers with top-quality plumbing services. Contact us today for all your plumbing needs.</p>
+        </div>
+        <a href="./" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10">Button name here</span></a>
+    </div>
+</div>

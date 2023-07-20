@@ -79,66 +79,67 @@ get_template_part('parts/section', 'nav');
         <?php get_template_part('parts/section', 'globalcta') ?>
     </div>
 
-    <div class="container hidden lg:block">
-        <div class="flex justify-center group relative">
-            <div class="w-full lg:w-5/12 absolute top-0 left-0 opacity-0 group-hover:opacity-100 translate-y-96 group-hover:translate-y-0 duration-1000">
-                <div class="text-5xl xl:text-heading leading-none font-bold text-main-blue">From leaks to clogs, <span class="text-light-blue">we fix it all</span></div>
-                <div class="text-grey font-articulat py-16 leading-loose">
-                    <p class="pb-5">Fix N Flow is a local, family-owned plumbing company providing top-quality services to residents and businesses in <span class="font-bold">Sydney Metro, Central Coast, South Coast & Illawarra, Hunter Valley, and Blue Mountains.</span> Our team of expert plumbers is <span class="font-bold">available 24/7 for all your plumbing needs,</span> from emergency repairs to regular maintenance.</p>
-                    <p>Our mission is to provide you with efficient and reliable plumbing services with a 60-minutes response time guarantee.</p>
-                </div>
-                <div class="flex flex-wrap -mx-2">
-                    <div class="w-full md:w-1/2 px-2">
-                        <a href="" class="btn-yellow-hover-main-blue w-full"><span class="relative z-10">Button name here</span></a>
+    <?php $section_1 = get_field('section_1');
+    if ($section_1['heading']) : ?>
+        <div class="container hidden lg:block">
+            <div class="flex justify-center group relative">
+                <div class="w-full lg:w-5/12 absolute top-0 left-0 opacity-0 group-hover:opacity-100 translate-y-96 group-hover:translate-y-0 duration-1000">
+                    <div class="text-5xl xl:text-heading leading-none font-bold text-main-blue highlight-light-blue"><?= $section_1['heading'] ?></div>
+                    <div class="text-grey font-articulat py-16 leading-loose description">
+                        <?= $section_1['description'] ?>
                     </div>
-                    <div class="w-full md:w-1/2 px-2">
-                        <a href="" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10">Button name here</span></a>
+                    <div class="flex flex-wrap -mx-2">
+                        <div class="w-full md:w-1/2 px-2">
+                            <a href="<?= $section_1['button_1']['url'] ?>" target="<?= $section_1['button_1']['target'] ?>" class="btn-yellow-hover-main-blue w-full"><span class="relative z-10"><?= $section_1['button_1']['title'] ?></span></a>
+                        </div>
+                        <div class="w-full md:w-1/2 px-2">
+                            <a href="<?= $section_1['button_2']['url'] ?>" target="<?= $section_1['button_2']['target'] ?>" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10"><?= $section_1['button_2']['title'] ?></span></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="lg:group-hover:translate-x-[20rem] xl:group-hover:translate-x-[30rem] duration-1000 w-full lg:w-9/12 rounded-[30px] h-[641px] bg-no-repeat bg-cover bg-center p-6 shadow-[14px_14px_#5AB2F8]" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/video-thumbnail.jpg')">
-                <a href="./" class="h-[69px] w-[69px] rounded-full bg-[#F7F8FA] flex items-center justify-center">
-                    <svg width="20" height="26" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.0439453" y="0.741211" width="4.85152" height="24.4202" rx="2.42576" fill="#0067B9" />
-                        <rect x="14.917" y="0.741211" width="4.85152" height="24.4202" rx="2.42576" fill="#0067B9" />
-                    </svg>
-                </a>
+                <div class="lg:group-hover:translate-x-[20rem] xl:group-hover:translate-x-[30rem] duration-1000 w-full lg:w-9/12 rounded-[30px] h-[641px] bg-no-repeat bg-cover bg-center p-6 shadow-[14px_14px_#5AB2F8]" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/video-thumbnail.jpg')">
+                    <a href="./" class="h-[69px] w-[69px] rounded-full bg-[#F7F8FA] flex items-center justify-center">
+                        <svg width="20" height="26" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.0439453" y="0.741211" width="4.85152" height="24.4202" rx="2.42576" fill="#0067B9" />
+                            <rect x="14.917" y="0.741211" width="4.85152" height="24.4202" rx="2.42576" fill="#0067B9" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="lg:hidden">
-        <div class="container">
-            <div class="flex flex-wrap justify-center gap-y-20">
-                <div class="w-full">
-                    <div class="w-full rounded-xl h-[188px] md:h-[300px] bg-no-repeat bg-cover flex items-end bg-center p-6 shadow-[5px_5px_#5AB2F8]" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/video-thumbnail.jpg')">
-                        <a href="./" class="h-[36px] w-[36px] rounded-full bg-[#F7F8FA] flex items-center justify-center">
-                            <svg width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle opacity="0.5" cx="17.8022" cy="17.2864" r="17.2227" fill="#F7F8FA" />
-                                <rect x="12.8638" y="11.1709" width="2.4299" height="12.2309" rx="0.789109" fill="#0067B9" />
-                                <rect x="20.3125" y="11.1709" width="2.4299" height="12.2309" rx="0.789109" fill="#0067B9" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="w-full">
-                    <div class="text-4xl md:text-5xl leading-none font-bold text-main-blue">From leaks to clogs, <span class="text-light-blue">we fix it all</span></div>
-                    <div class="text-grey font-articulat py-14 leading-loose">
-                        <p class="pb-5">Fix N Flow is a local, family-owned plumbing company providing top-quality services to residents and businesses in <span class="font-bold">Sydney Metro, Central Coast, South Coast & Illawarra, Hunter Valley, and Blue Mountains.</span> Our team of expert plumbers is <span class="font-bold">available 24/7 for all your plumbing needs,</span> from emergency repairs to regular maintenance.</p>
-                        <p>Our mission is to provide you with efficient and reliable plumbing services with a 60-minutes response time guarantee.</p>
-                    </div>
-                    <div class="flex flex-wrap gap-y-4 -mx-2">
-                        <div class="w-full md:w-1/2 px-2">
-                            <a href="" class="btn-yellow-hover-main-blue w-full"><span class="relative z-10">Button name here</span></a>
+        <div class="lg:hidden">
+            <div class="container">
+                <div class="flex flex-wrap justify-center gap-y-20">
+                    <div class="w-full">
+                        <div class="w-full rounded-xl h-[188px] md:h-[300px] bg-no-repeat bg-cover flex items-end bg-center p-6 shadow-[5px_5px_#5AB2F8]" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/video-thumbnail.jpg')">
+                            <a href="./" class="h-[36px] w-[36px] rounded-full bg-[#F7F8FA] flex items-center justify-center">
+                                <svg width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle opacity="0.5" cx="17.8022" cy="17.2864" r="17.2227" fill="#F7F8FA" />
+                                    <rect x="12.8638" y="11.1709" width="2.4299" height="12.2309" rx="0.789109" fill="#0067B9" />
+                                    <rect x="20.3125" y="11.1709" width="2.4299" height="12.2309" rx="0.789109" fill="#0067B9" />
+                                </svg>
+                            </a>
                         </div>
-                        <div class="w-full md:w-1/2 px-2">
-                            <a href="" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10">Button name here</span></a>
+                    </div>
+                    <div class="w-full">
+                        <div class="text-4xl md:text-5xl leading-none font-bold text-main-blue highlight-light-blue"><?= $section_1['heading'] ?></div>
+                        <div class="text-grey font-articulat py-8 md:py-14 leading-loose description">
+                            <?= $section_1['description'] ?>
+                        </div>
+                        <div class="flex flex-wrap gap-y-4 -mx-2">
+                            <div class="w-full md:w-1/2 px-2">
+                                <a href="<?= $section_1['button_1']['url'] ?>" target="<?= $section_1['button_1']['target'] ?>" class="btn-yellow-hover-main-blue w-full"><span class="relative z-10"><?= $section_1['button_1']['title'] ?></span></a>
+                            </div>
+                            <div class="w-full md:w-1/2 px-2">
+                                <a href="<?= $section_1['button_2']['url'] ?>" target="<?= $section_1['button_2']['target'] ?>" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10"><?= $section_1['button_2']['title'] ?></span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    <?php endif; ?>
 
     <?php
     $services = get_field('services');
@@ -203,23 +204,6 @@ get_template_part('parts/section', 'nav');
 
     <?php get_template_part('parts/section', 'contact') ?>
 
-    <div class="lg:hidden bg-quaternary">
-        <?= echo_theme_image('/images/background/mobile-contact-vector.png', 'w-full') ?>
-        <div class="container pt-9 pb-16">
-            <?= echo_theme_image('/images/icons/nearby.png') ?>
-            <div class="text-4xl md:text-5xl lg:text-heading text-grey font-bold leading-none py-10">We're always <br /><span class="text-main-blue">nearby!</span></div>
-            <div class="font-bold font-articulat text-main-blue pb-10">Call us today</div>
-
-            <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-4xl md:text-5xl lg:text-heading text-main-blue font-bold"><?= get_field('phone_number', 'options') ?></a>
-
-            <div class="text-sm md:text-base font-articulat text-grey leading-loose pt-5 pb-9 w-full xl:w-11/12">
-                <p class="pb-5">We’re here for all your plumbing needs. Our team of expert plumbers is available 24/7 to help you with any plumbing emergencies.</p>
-                <p>At Fix N Flow, we are committed to providing our customers with top-quality plumbing services. Contact us today for all your plumbing needs.</p>
-            </div>
-            <a href="./" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10">Button name here</span></a>
-        </div>
-    </div>
-
     <div class="testimonials py-16 md:py-36 lg:py-40 relative group">
         <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-left-floater.png" class="absolute left-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="fixnflow">
         <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-right-floater.png" class="absolute right-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="fixnflow">
@@ -241,118 +225,137 @@ get_template_part('parts/section', 'nav');
             </div>
         </div>
 
-        <div class="testimonial_slider" id="homepage_testimonial_slider_1">
-            <?php for ($i = 0; $i < 10; $i++) : ?>
-                <div class="bg-[#EEF1F6] rounded-[10px] p-5" data-aos="zoom-in">
-                    <div class="flex flex-wrap items-center justify-between">
-                        <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.8422 5.52532C13.4092 5.52436 14.926 6.0781 16.1238 7.08845L19.4788 3.89345C18.1909 2.70588 16.6439 1.83485 14.9606 1.34948C13.2773 0.86411 11.5041 0.777758 9.78161 1.09728C8.05912 1.4168 6.43482 2.1334 5.03761 3.1902C3.64039 4.24701 2.50873 5.61493 1.73242 7.18541L5.51481 10.1008C5.95593 8.77064 6.80439 7.61296 7.94 6.79177C9.07561 5.97059 10.4408 5.52751 11.8422 5.52532Z" fill="#D94F3D" />
-                            <path d="M5.17369 12.1946C5.17464 11.4829 5.29 10.776 5.51535 10.101L1.73296 7.18558C0.959271 8.74199 0.556641 10.4565 0.556641 12.1946C0.556641 13.9327 0.959271 15.6471 1.73296 17.2036L5.51535 14.2881C5.29 13.6131 5.17464 12.9062 5.17369 12.1946Z" fill="#F2C042" />
-                            <path d="M22.6677 10.1426H11.8945V14.7596H17.9993C17.6361 16.0651 16.8041 17.1907 15.6626 17.9208L19.4157 20.8141C21.814 18.6616 23.2232 15.1613 22.6677 10.1426Z" fill="#5085ED" />
-                            <path d="M15.66 17.9207C14.5001 18.5846 13.1778 18.9111 11.8422 18.8636C10.4408 18.8614 9.07561 18.4183 7.94 17.5971C6.80439 16.7759 5.95593 15.6183 5.51481 14.2881L1.73242 17.2035C2.66668 19.0868 4.10787 20.6721 5.8939 21.781C7.67992 22.8899 9.73994 23.4786 11.8422 23.4806C14.6085 23.5558 17.305 22.6057 19.4132 20.813L15.66 17.9207Z" fill="#57A75C" />
-                        </svg>
-                        <svg width="129" height="26" viewBox="0 0 129 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.9795 2.37817C12.2118 1.79977 13.0306 1.79977 13.2629 2.37817L15.6705 8.37381C15.7695 8.62012 16.0006 8.78807 16.2654 8.80603L22.7116 9.24311C23.3335 9.28528 23.5865 10.064 23.1082 10.4636L18.15 14.6062C17.9464 14.7764 17.8581 15.0482 17.9228 15.3056L19.4991 21.5714C19.6512 22.1758 18.9887 22.6571 18.4609 22.3257L12.9889 18.8903C12.7641 18.7492 12.4783 18.7492 12.2535 18.8903L6.78153 22.3257C6.25365 22.6571 5.59122 22.1758 5.74328 21.5714L7.31958 15.3056C7.38433 15.0482 7.29603 14.7764 7.09235 14.6062L2.13417 10.4636C1.65586 10.064 1.90888 9.28528 2.53075 9.24311L8.97695 8.80603C9.24177 8.78807 9.47293 8.62012 9.57185 8.37381L11.9795 2.37817Z" fill="#FFAE35" />
-                            <path d="M37.8682 2.37799C38.1005 1.79959 38.9193 1.79959 39.1515 2.37799L41.5592 8.37363C41.6581 8.61993 41.8893 8.78789 42.1541 8.80584L48.6003 9.24293C49.2222 9.28509 49.4752 10.0638 48.9969 10.4635L44.0387 14.6061C43.835 14.7762 43.7467 15.048 43.8115 15.3054L45.3878 21.5712C45.5398 22.1756 44.8774 22.6569 44.3495 22.3255L38.8775 18.8901C38.6527 18.749 38.367 18.749 38.1422 18.8901L32.6702 22.3255C32.1423 22.6569 31.4799 22.1756 31.632 21.5712L33.2082 15.3054C33.273 15.048 33.1847 14.7762 32.981 14.6061L28.0228 10.4635C27.5445 10.0638 27.7976 9.28509 28.4194 9.24293L34.8656 8.80584C35.1304 8.78789 35.3616 8.61993 35.4605 8.37363L37.8682 2.37799Z" fill="#FFAE35" />
-                            <path d="M63.7588 2.37817C63.9911 1.79977 64.8099 1.79977 65.0422 2.37817L67.4498 8.37381C67.5488 8.62012 67.7799 8.78807 68.0447 8.80603L74.4909 9.24311C75.1128 9.28528 75.3658 10.064 74.8875 10.4636L69.9293 14.6062C69.7257 14.7764 69.6374 15.0482 69.7021 15.3056L71.2784 21.5714C71.4305 22.1758 70.768 22.6571 70.2402 22.3257L64.7682 18.8903C64.5434 18.7492 64.2576 18.7492 64.0328 18.8903L58.5608 22.3257C58.0329 22.6571 57.3705 22.1758 57.5226 21.5714L59.0989 15.3056C59.1636 15.0482 59.0753 14.7764 58.8716 14.6062L53.9135 10.4636C53.4352 10.064 53.6882 9.28528 54.31 9.24311L60.7562 8.80603C61.0211 8.78807 61.2522 8.62012 61.3511 8.37381L63.7588 2.37817Z" fill="#FFAE35" />
-                            <path d="M89.6455 2.37817C89.8778 1.79977 90.6966 1.79977 90.9289 2.37817L93.3366 8.37381C93.4355 8.62012 93.6666 8.78807 93.9315 8.80603L100.378 9.24311C101 9.28528 101.253 10.064 100.774 10.4636L95.8161 14.6062C95.6124 14.7764 95.5241 15.0482 95.5888 15.3056L97.1651 21.5714C97.3172 22.1758 96.6548 22.6571 96.1269 22.3257L90.6549 18.8903C90.4301 18.7492 90.1443 18.7492 89.9195 18.8903L84.4475 22.3257C83.9197 22.6571 83.2572 22.1758 83.4093 21.5714L84.9856 15.3056C85.0503 15.0482 84.962 14.7764 84.7584 14.6062L79.8002 10.4636C79.3219 10.064 79.5749 9.28528 80.1968 9.24311L86.643 8.80603C86.9078 8.78807 87.139 8.62012 87.2379 8.37381L89.6455 2.37817Z" fill="#FFAE35" />
-                            <path d="M115.534 2.37817C115.766 1.79977 116.585 1.79977 116.818 2.37817L119.225 8.37381C119.324 8.62012 119.555 8.78807 119.82 8.80603L126.266 9.24311C126.888 9.28528 127.141 10.064 126.663 10.4636L121.705 14.6062C121.501 14.7764 121.413 15.0482 121.478 15.3056L123.054 21.5714C123.206 22.1758 122.543 22.6571 122.016 22.3257L116.544 18.8903C116.319 18.7492 116.033 18.7492 115.808 18.8903L110.336 22.3257C109.808 22.6571 109.146 22.1758 109.298 21.5714L110.874 15.3056C110.939 15.0482 110.851 14.7764 110.647 14.6062L105.689 10.4636C105.211 10.064 105.464 9.28528 106.085 9.24311L112.532 8.80603C112.796 8.78807 113.028 8.62012 113.127 8.37381L115.534 2.37817Z" fill="#FFAE35" />
-                        </svg>
+        <?php if (have_rows('testimonials')) :
+            $totalTestimonials = count(get_field('testimonials'));
+            $midValue = ceil(($totalTestimonials + 1) / 2);
+        ?>
+            <div class="testimonial_slider" id="homepage_testimonial_slider_1">
+                <?php foreach (get_field('testimonials') as $key => $testimonial) : the_row();
+                    $username = get_sub_field('username');
+                    $comment = get_sub_field('comment');
+                ?>
+                    <div class="bg-[#EEF1F6] rounded-[10px] p-5" data-aos="zoom-in">
+                        <div class="flex flex-wrap items-center justify-between">
+                            <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.8422 5.52532C13.4092 5.52436 14.926 6.0781 16.1238 7.08845L19.4788 3.89345C18.1909 2.70588 16.6439 1.83485 14.9606 1.34948C13.2773 0.86411 11.5041 0.777758 9.78161 1.09728C8.05912 1.4168 6.43482 2.1334 5.03761 3.1902C3.64039 4.24701 2.50873 5.61493 1.73242 7.18541L5.51481 10.1008C5.95593 8.77064 6.80439 7.61296 7.94 6.79177C9.07561 5.97059 10.4408 5.52751 11.8422 5.52532Z" fill="#D94F3D" />
+                                <path d="M5.17369 12.1946C5.17464 11.4829 5.29 10.776 5.51535 10.101L1.73296 7.18558C0.959271 8.74199 0.556641 10.4565 0.556641 12.1946C0.556641 13.9327 0.959271 15.6471 1.73296 17.2036L5.51535 14.2881C5.29 13.6131 5.17464 12.9062 5.17369 12.1946Z" fill="#F2C042" />
+                                <path d="M22.6677 10.1426H11.8945V14.7596H17.9993C17.6361 16.0651 16.8041 17.1907 15.6626 17.9208L19.4157 20.8141C21.814 18.6616 23.2232 15.1613 22.6677 10.1426Z" fill="#5085ED" />
+                                <path d="M15.66 17.9207C14.5001 18.5846 13.1778 18.9111 11.8422 18.8636C10.4408 18.8614 9.07561 18.4183 7.94 17.5971C6.80439 16.7759 5.95593 15.6183 5.51481 14.2881L1.73242 17.2035C2.66668 19.0868 4.10787 20.6721 5.8939 21.781C7.67992 22.8899 9.73994 23.4786 11.8422 23.4806C14.6085 23.5558 17.305 22.6057 19.4132 20.813L15.66 17.9207Z" fill="#57A75C" />
+                            </svg>
+                            <svg width="129" height="26" viewBox="0 0 129 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.9795 2.37817C12.2118 1.79977 13.0306 1.79977 13.2629 2.37817L15.6705 8.37381C15.7695 8.62012 16.0006 8.78807 16.2654 8.80603L22.7116 9.24311C23.3335 9.28528 23.5865 10.064 23.1082 10.4636L18.15 14.6062C17.9464 14.7764 17.8581 15.0482 17.9228 15.3056L19.4991 21.5714C19.6512 22.1758 18.9887 22.6571 18.4609 22.3257L12.9889 18.8903C12.7641 18.7492 12.4783 18.7492 12.2535 18.8903L6.78153 22.3257C6.25365 22.6571 5.59122 22.1758 5.74328 21.5714L7.31958 15.3056C7.38433 15.0482 7.29603 14.7764 7.09235 14.6062L2.13417 10.4636C1.65586 10.064 1.90888 9.28528 2.53075 9.24311L8.97695 8.80603C9.24177 8.78807 9.47293 8.62012 9.57185 8.37381L11.9795 2.37817Z" fill="#FFAE35" />
+                                <path d="M37.8682 2.37799C38.1005 1.79959 38.9193 1.79959 39.1515 2.37799L41.5592 8.37363C41.6581 8.61993 41.8893 8.78789 42.1541 8.80584L48.6003 9.24293C49.2222 9.28509 49.4752 10.0638 48.9969 10.4635L44.0387 14.6061C43.835 14.7762 43.7467 15.048 43.8115 15.3054L45.3878 21.5712C45.5398 22.1756 44.8774 22.6569 44.3495 22.3255L38.8775 18.8901C38.6527 18.749 38.367 18.749 38.1422 18.8901L32.6702 22.3255C32.1423 22.6569 31.4799 22.1756 31.632 21.5712L33.2082 15.3054C33.273 15.048 33.1847 14.7762 32.981 14.6061L28.0228 10.4635C27.5445 10.0638 27.7976 9.28509 28.4194 9.24293L34.8656 8.80584C35.1304 8.78789 35.3616 8.61993 35.4605 8.37363L37.8682 2.37799Z" fill="#FFAE35" />
+                                <path d="M63.7588 2.37817C63.9911 1.79977 64.8099 1.79977 65.0422 2.37817L67.4498 8.37381C67.5488 8.62012 67.7799 8.78807 68.0447 8.80603L74.4909 9.24311C75.1128 9.28528 75.3658 10.064 74.8875 10.4636L69.9293 14.6062C69.7257 14.7764 69.6374 15.0482 69.7021 15.3056L71.2784 21.5714C71.4305 22.1758 70.768 22.6571 70.2402 22.3257L64.7682 18.8903C64.5434 18.7492 64.2576 18.7492 64.0328 18.8903L58.5608 22.3257C58.0329 22.6571 57.3705 22.1758 57.5226 21.5714L59.0989 15.3056C59.1636 15.0482 59.0753 14.7764 58.8716 14.6062L53.9135 10.4636C53.4352 10.064 53.6882 9.28528 54.31 9.24311L60.7562 8.80603C61.0211 8.78807 61.2522 8.62012 61.3511 8.37381L63.7588 2.37817Z" fill="#FFAE35" />
+                                <path d="M89.6455 2.37817C89.8778 1.79977 90.6966 1.79977 90.9289 2.37817L93.3366 8.37381C93.4355 8.62012 93.6666 8.78807 93.9315 8.80603L100.378 9.24311C101 9.28528 101.253 10.064 100.774 10.4636L95.8161 14.6062C95.6124 14.7764 95.5241 15.0482 95.5888 15.3056L97.1651 21.5714C97.3172 22.1758 96.6548 22.6571 96.1269 22.3257L90.6549 18.8903C90.4301 18.7492 90.1443 18.7492 89.9195 18.8903L84.4475 22.3257C83.9197 22.6571 83.2572 22.1758 83.4093 21.5714L84.9856 15.3056C85.0503 15.0482 84.962 14.7764 84.7584 14.6062L79.8002 10.4636C79.3219 10.064 79.5749 9.28528 80.1968 9.24311L86.643 8.80603C86.9078 8.78807 87.139 8.62012 87.2379 8.37381L89.6455 2.37817Z" fill="#FFAE35" />
+                                <path d="M115.534 2.37817C115.766 1.79977 116.585 1.79977 116.818 2.37817L119.225 8.37381C119.324 8.62012 119.555 8.78807 119.82 8.80603L126.266 9.24311C126.888 9.28528 127.141 10.064 126.663 10.4636L121.705 14.6062C121.501 14.7764 121.413 15.0482 121.478 15.3056L123.054 21.5714C123.206 22.1758 122.543 22.6571 122.016 22.3257L116.544 18.8903C116.319 18.7492 116.033 18.7492 115.808 18.8903L110.336 22.3257C109.808 22.6571 109.146 22.1758 109.298 21.5714L110.874 15.3056C110.939 15.0482 110.851 14.7764 110.647 14.6062L105.689 10.4636C105.211 10.064 105.464 9.28528 106.085 9.24311L112.532 8.80603C112.796 8.78807 113.028 8.62012 113.127 8.37381L115.534 2.37817Z" fill="#FFAE35" />
+                            </svg>
+                        </div>
+                        <div class="font-extrabold text-main-blue py-4"><?= $username ?></div>
+                        <div class="border border-light-blue w-[45px]"></div>
+                        <div class="font-articulat text-grey pt-5 text-sm leading-loose"><?= $comment ?></div>
                     </div>
-                    <div class="font-extrabold text-main-blue py-4">Alexander Roussekov</div>
-                    <div class="border border-light-blue w-[45px]"></div>
-                    <div class="font-articulat text-grey pt-5 text-sm leading-loose">Fix & Flow provides a terrific service at reasonable price. Their team consists of very capable and experienced professionals with "can do" attitude. The boys are creative and able to design and execute solutions in environment like my two bathrooms and a toilet with non-standard sizes, strange angles and custom made completions. The team is very friendly and customer focused...</div>
-                </div>
-            <?php endfor; ?>
-        </div>
+                <?php
+                    if ($key == $midValue) {
+                        break;
+                    }
+                endforeach; ?>
+            </div>
 
-        <div class="testimonial_slider mt-4" id="homepage_testimonial_slider_2">
-            <?php for ($i = 0; $i < 10; $i++) : ?>
-                <div class="bg-[#EEF1F6] rounded-[10px] p-5" data-aos="zoom-in">
-                    <div class="flex flex-wrap items-center justify-between">
-                        <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.8422 5.52532C13.4092 5.52436 14.926 6.0781 16.1238 7.08845L19.4788 3.89345C18.1909 2.70588 16.6439 1.83485 14.9606 1.34948C13.2773 0.86411 11.5041 0.777758 9.78161 1.09728C8.05912 1.4168 6.43482 2.1334 5.03761 3.1902C3.64039 4.24701 2.50873 5.61493 1.73242 7.18541L5.51481 10.1008C5.95593 8.77064 6.80439 7.61296 7.94 6.79177C9.07561 5.97059 10.4408 5.52751 11.8422 5.52532Z" fill="#D94F3D" />
-                            <path d="M5.17369 12.1946C5.17464 11.4829 5.29 10.776 5.51535 10.101L1.73296 7.18558C0.959271 8.74199 0.556641 10.4565 0.556641 12.1946C0.556641 13.9327 0.959271 15.6471 1.73296 17.2036L5.51535 14.2881C5.29 13.6131 5.17464 12.9062 5.17369 12.1946Z" fill="#F2C042" />
-                            <path d="M22.6677 10.1426H11.8945V14.7596H17.9993C17.6361 16.0651 16.8041 17.1907 15.6626 17.9208L19.4157 20.8141C21.814 18.6616 23.2232 15.1613 22.6677 10.1426Z" fill="#5085ED" />
-                            <path d="M15.66 17.9207C14.5001 18.5846 13.1778 18.9111 11.8422 18.8636C10.4408 18.8614 9.07561 18.4183 7.94 17.5971C6.80439 16.7759 5.95593 15.6183 5.51481 14.2881L1.73242 17.2035C2.66668 19.0868 4.10787 20.6721 5.8939 21.781C7.67992 22.8899 9.73994 23.4786 11.8422 23.4806C14.6085 23.5558 17.305 22.6057 19.4132 20.813L15.66 17.9207Z" fill="#57A75C" />
-                        </svg>
-                        <svg width="129" height="26" viewBox="0 0 129 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.9795 2.37817C12.2118 1.79977 13.0306 1.79977 13.2629 2.37817L15.6705 8.37381C15.7695 8.62012 16.0006 8.78807 16.2654 8.80603L22.7116 9.24311C23.3335 9.28528 23.5865 10.064 23.1082 10.4636L18.15 14.6062C17.9464 14.7764 17.8581 15.0482 17.9228 15.3056L19.4991 21.5714C19.6512 22.1758 18.9887 22.6571 18.4609 22.3257L12.9889 18.8903C12.7641 18.7492 12.4783 18.7492 12.2535 18.8903L6.78153 22.3257C6.25365 22.6571 5.59122 22.1758 5.74328 21.5714L7.31958 15.3056C7.38433 15.0482 7.29603 14.7764 7.09235 14.6062L2.13417 10.4636C1.65586 10.064 1.90888 9.28528 2.53075 9.24311L8.97695 8.80603C9.24177 8.78807 9.47293 8.62012 9.57185 8.37381L11.9795 2.37817Z" fill="#FFAE35" />
-                            <path d="M37.8682 2.37799C38.1005 1.79959 38.9193 1.79959 39.1515 2.37799L41.5592 8.37363C41.6581 8.61993 41.8893 8.78789 42.1541 8.80584L48.6003 9.24293C49.2222 9.28509 49.4752 10.0638 48.9969 10.4635L44.0387 14.6061C43.835 14.7762 43.7467 15.048 43.8115 15.3054L45.3878 21.5712C45.5398 22.1756 44.8774 22.6569 44.3495 22.3255L38.8775 18.8901C38.6527 18.749 38.367 18.749 38.1422 18.8901L32.6702 22.3255C32.1423 22.6569 31.4799 22.1756 31.632 21.5712L33.2082 15.3054C33.273 15.048 33.1847 14.7762 32.981 14.6061L28.0228 10.4635C27.5445 10.0638 27.7976 9.28509 28.4194 9.24293L34.8656 8.80584C35.1304 8.78789 35.3616 8.61993 35.4605 8.37363L37.8682 2.37799Z" fill="#FFAE35" />
-                            <path d="M63.7588 2.37817C63.9911 1.79977 64.8099 1.79977 65.0422 2.37817L67.4498 8.37381C67.5488 8.62012 67.7799 8.78807 68.0447 8.80603L74.4909 9.24311C75.1128 9.28528 75.3658 10.064 74.8875 10.4636L69.9293 14.6062C69.7257 14.7764 69.6374 15.0482 69.7021 15.3056L71.2784 21.5714C71.4305 22.1758 70.768 22.6571 70.2402 22.3257L64.7682 18.8903C64.5434 18.7492 64.2576 18.7492 64.0328 18.8903L58.5608 22.3257C58.0329 22.6571 57.3705 22.1758 57.5226 21.5714L59.0989 15.3056C59.1636 15.0482 59.0753 14.7764 58.8716 14.6062L53.9135 10.4636C53.4352 10.064 53.6882 9.28528 54.31 9.24311L60.7562 8.80603C61.0211 8.78807 61.2522 8.62012 61.3511 8.37381L63.7588 2.37817Z" fill="#FFAE35" />
-                            <path d="M89.6455 2.37817C89.8778 1.79977 90.6966 1.79977 90.9289 2.37817L93.3366 8.37381C93.4355 8.62012 93.6666 8.78807 93.9315 8.80603L100.378 9.24311C101 9.28528 101.253 10.064 100.774 10.4636L95.8161 14.6062C95.6124 14.7764 95.5241 15.0482 95.5888 15.3056L97.1651 21.5714C97.3172 22.1758 96.6548 22.6571 96.1269 22.3257L90.6549 18.8903C90.4301 18.7492 90.1443 18.7492 89.9195 18.8903L84.4475 22.3257C83.9197 22.6571 83.2572 22.1758 83.4093 21.5714L84.9856 15.3056C85.0503 15.0482 84.962 14.7764 84.7584 14.6062L79.8002 10.4636C79.3219 10.064 79.5749 9.28528 80.1968 9.24311L86.643 8.80603C86.9078 8.78807 87.139 8.62012 87.2379 8.37381L89.6455 2.37817Z" fill="#FFAE35" />
-                            <path d="M115.534 2.37817C115.766 1.79977 116.585 1.79977 116.818 2.37817L119.225 8.37381C119.324 8.62012 119.555 8.78807 119.82 8.80603L126.266 9.24311C126.888 9.28528 127.141 10.064 126.663 10.4636L121.705 14.6062C121.501 14.7764 121.413 15.0482 121.478 15.3056L123.054 21.5714C123.206 22.1758 122.543 22.6571 122.016 22.3257L116.544 18.8903C116.319 18.7492 116.033 18.7492 115.808 18.8903L110.336 22.3257C109.808 22.6571 109.146 22.1758 109.298 21.5714L110.874 15.3056C110.939 15.0482 110.851 14.7764 110.647 14.6062L105.689 10.4636C105.211 10.064 105.464 9.28528 106.085 9.24311L112.532 8.80603C112.796 8.78807 113.028 8.62012 113.127 8.37381L115.534 2.37817Z" fill="#FFAE35" />
-                        </svg>
+            <div class="testimonial_slider mt-4" id="homepage_testimonial_slider_2">
+                <?php while (have_rows('testimonials')) : the_row();
+                    $username = get_sub_field('username');
+                    $comment = get_sub_field('comment');
+                ?>
+                    <div class="bg-[#EEF1F6] rounded-[10px] p-5" data-aos="zoom-in">
+                        <div class="flex flex-wrap items-center justify-between">
+                            <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.8422 5.52532C13.4092 5.52436 14.926 6.0781 16.1238 7.08845L19.4788 3.89345C18.1909 2.70588 16.6439 1.83485 14.9606 1.34948C13.2773 0.86411 11.5041 0.777758 9.78161 1.09728C8.05912 1.4168 6.43482 2.1334 5.03761 3.1902C3.64039 4.24701 2.50873 5.61493 1.73242 7.18541L5.51481 10.1008C5.95593 8.77064 6.80439 7.61296 7.94 6.79177C9.07561 5.97059 10.4408 5.52751 11.8422 5.52532Z" fill="#D94F3D" />
+                                <path d="M5.17369 12.1946C5.17464 11.4829 5.29 10.776 5.51535 10.101L1.73296 7.18558C0.959271 8.74199 0.556641 10.4565 0.556641 12.1946C0.556641 13.9327 0.959271 15.6471 1.73296 17.2036L5.51535 14.2881C5.29 13.6131 5.17464 12.9062 5.17369 12.1946Z" fill="#F2C042" />
+                                <path d="M22.6677 10.1426H11.8945V14.7596H17.9993C17.6361 16.0651 16.8041 17.1907 15.6626 17.9208L19.4157 20.8141C21.814 18.6616 23.2232 15.1613 22.6677 10.1426Z" fill="#5085ED" />
+                                <path d="M15.66 17.9207C14.5001 18.5846 13.1778 18.9111 11.8422 18.8636C10.4408 18.8614 9.07561 18.4183 7.94 17.5971C6.80439 16.7759 5.95593 15.6183 5.51481 14.2881L1.73242 17.2035C2.66668 19.0868 4.10787 20.6721 5.8939 21.781C7.67992 22.8899 9.73994 23.4786 11.8422 23.4806C14.6085 23.5558 17.305 22.6057 19.4132 20.813L15.66 17.9207Z" fill="#57A75C" />
+                            </svg>
+                            <svg width="129" height="26" viewBox="0 0 129 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.9795 2.37817C12.2118 1.79977 13.0306 1.79977 13.2629 2.37817L15.6705 8.37381C15.7695 8.62012 16.0006 8.78807 16.2654 8.80603L22.7116 9.24311C23.3335 9.28528 23.5865 10.064 23.1082 10.4636L18.15 14.6062C17.9464 14.7764 17.8581 15.0482 17.9228 15.3056L19.4991 21.5714C19.6512 22.1758 18.9887 22.6571 18.4609 22.3257L12.9889 18.8903C12.7641 18.7492 12.4783 18.7492 12.2535 18.8903L6.78153 22.3257C6.25365 22.6571 5.59122 22.1758 5.74328 21.5714L7.31958 15.3056C7.38433 15.0482 7.29603 14.7764 7.09235 14.6062L2.13417 10.4636C1.65586 10.064 1.90888 9.28528 2.53075 9.24311L8.97695 8.80603C9.24177 8.78807 9.47293 8.62012 9.57185 8.37381L11.9795 2.37817Z" fill="#FFAE35" />
+                                <path d="M37.8682 2.37799C38.1005 1.79959 38.9193 1.79959 39.1515 2.37799L41.5592 8.37363C41.6581 8.61993 41.8893 8.78789 42.1541 8.80584L48.6003 9.24293C49.2222 9.28509 49.4752 10.0638 48.9969 10.4635L44.0387 14.6061C43.835 14.7762 43.7467 15.048 43.8115 15.3054L45.3878 21.5712C45.5398 22.1756 44.8774 22.6569 44.3495 22.3255L38.8775 18.8901C38.6527 18.749 38.367 18.749 38.1422 18.8901L32.6702 22.3255C32.1423 22.6569 31.4799 22.1756 31.632 21.5712L33.2082 15.3054C33.273 15.048 33.1847 14.7762 32.981 14.6061L28.0228 10.4635C27.5445 10.0638 27.7976 9.28509 28.4194 9.24293L34.8656 8.80584C35.1304 8.78789 35.3616 8.61993 35.4605 8.37363L37.8682 2.37799Z" fill="#FFAE35" />
+                                <path d="M63.7588 2.37817C63.9911 1.79977 64.8099 1.79977 65.0422 2.37817L67.4498 8.37381C67.5488 8.62012 67.7799 8.78807 68.0447 8.80603L74.4909 9.24311C75.1128 9.28528 75.3658 10.064 74.8875 10.4636L69.9293 14.6062C69.7257 14.7764 69.6374 15.0482 69.7021 15.3056L71.2784 21.5714C71.4305 22.1758 70.768 22.6571 70.2402 22.3257L64.7682 18.8903C64.5434 18.7492 64.2576 18.7492 64.0328 18.8903L58.5608 22.3257C58.0329 22.6571 57.3705 22.1758 57.5226 21.5714L59.0989 15.3056C59.1636 15.0482 59.0753 14.7764 58.8716 14.6062L53.9135 10.4636C53.4352 10.064 53.6882 9.28528 54.31 9.24311L60.7562 8.80603C61.0211 8.78807 61.2522 8.62012 61.3511 8.37381L63.7588 2.37817Z" fill="#FFAE35" />
+                                <path d="M89.6455 2.37817C89.8778 1.79977 90.6966 1.79977 90.9289 2.37817L93.3366 8.37381C93.4355 8.62012 93.6666 8.78807 93.9315 8.80603L100.378 9.24311C101 9.28528 101.253 10.064 100.774 10.4636L95.8161 14.6062C95.6124 14.7764 95.5241 15.0482 95.5888 15.3056L97.1651 21.5714C97.3172 22.1758 96.6548 22.6571 96.1269 22.3257L90.6549 18.8903C90.4301 18.7492 90.1443 18.7492 89.9195 18.8903L84.4475 22.3257C83.9197 22.6571 83.2572 22.1758 83.4093 21.5714L84.9856 15.3056C85.0503 15.0482 84.962 14.7764 84.7584 14.6062L79.8002 10.4636C79.3219 10.064 79.5749 9.28528 80.1968 9.24311L86.643 8.80603C86.9078 8.78807 87.139 8.62012 87.2379 8.37381L89.6455 2.37817Z" fill="#FFAE35" />
+                                <path d="M115.534 2.37817C115.766 1.79977 116.585 1.79977 116.818 2.37817L119.225 8.37381C119.324 8.62012 119.555 8.78807 119.82 8.80603L126.266 9.24311C126.888 9.28528 127.141 10.064 126.663 10.4636L121.705 14.6062C121.501 14.7764 121.413 15.0482 121.478 15.3056L123.054 21.5714C123.206 22.1758 122.543 22.6571 122.016 22.3257L116.544 18.8903C116.319 18.7492 116.033 18.7492 115.808 18.8903L110.336 22.3257C109.808 22.6571 109.146 22.1758 109.298 21.5714L110.874 15.3056C110.939 15.0482 110.851 14.7764 110.647 14.6062L105.689 10.4636C105.211 10.064 105.464 9.28528 106.085 9.24311L112.532 8.80603C112.796 8.78807 113.028 8.62012 113.127 8.37381L115.534 2.37817Z" fill="#FFAE35" />
+                            </svg>
+                        </div>
+                        <div class="font-extrabold text-main-blue py-4"><?= $username ?></div>
+                        <div class="border border-light-blue w-[45px]"></div>
+                        <div class="font-articulat text-grey pt-5 text-sm leading-loose"><?= $comment ?></div>
                     </div>
-                    <div class="font-extrabold text-main-blue py-4">Alexander Roussekov</div>
-                    <div class="border border-light-blue w-[45px]"></div>
-                    <div class="font-articulat text-grey pt-5 text-sm leading-loose">Fix & Flow provides a terrific service at reasonable price. Their team consists of very capable and experienced professionals with "can do" attitude. The boys are creative and able to design and execute solutions in environment like my two bathrooms and a toilet with non-standard sizes, strange angles and custom made completions. The team is very friendly and customer focused...</div>
-                </div>
-            <?php endfor; ?>
-        </div>
+                <?php endwhile; ?>
+            </div>
+
+        <?php endif; ?>
 
         <?php get_template_part('parts/section', 'leadingbrands') ?>
     </div>
 
-    <div class="bg-light-grey pt-20 pb-40 md:pt-40 md:pb-52 relative">
-        <div class="container">
-            <div class="md:text-center text-4xl md:text-5xl lg:text-heading text-grey font-bold leading-tight">Fix n Flow are <span class="text-main-blue">proud sponsors</span></div>
-            <div class="w-full lg:w-8/12 xl:w-1/2 mx-auto my-10 md:my-12 p-7 border-t border-b border-light-blue text-grey font-articulat text-center leading-loose">
-                <div class="w-full lg:w-10/12 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-            </div>
+    <?php $sponsors = get_field('sponsors');
+    if (isset($sponsors['heading'])) : ?>
+        <div class="bg-light-grey pt-20 pb-40 md:pt-40 md:pb-52 relative">
+            <div class="container">
+                <div class="md:text-center text-4xl md:text-5xl lg:text-heading text-grey font-bold leading-tight highlight-main-blue"><?= $sponsors['heading'] ?></span></div>
+                <div class="w-full lg:w-8/12 xl:w-1/2 mx-auto my-10 md:my-12 p-7 border-t border-b border-light-blue text-grey font-articulat text-center leading-loose">
+                    <div class="w-full lg:w-10/12 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
 
-            <div class="w-full xl:w-10/12 mx-auto">
-                <div class="flex flex-wrap justify-center -mx-2 gap-y-5">
-                    <div class="w-full md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
-                        <div class="bg-white shadow p-2 rounded-[10px] h-full">
-                            <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
-                                <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-1.jpg" class="w-full object-cover object-center h-full" alt="fixnflow">
-                            </div>
-                            <div class="mx-auto -mt-7 w-fit h-[57px] rounded-full bg-main-blue px-10 py-1 flex justify-center items-center relative">
-                                <?= echo_theme_image('/images/logo/wish-foundation.png') ?>
-                            </div>
-                            <div class="flex flex-wrap justify-between items-center mx-auto w-10/12 pt-4 pb-2">
-                                <div class="font-articulat text-dark-blue leading-relaxed text-sm">
-                                    <span class="text-xs font-bold">Proudly supporting</span> <br />Wish Foundation
+                <div class="w-full xl:w-10/12 mx-auto">
+                    <div class="flex flex-wrap justify-center -mx-2 gap-y-5">
+                        <div class="w-full md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
+                            <div class="bg-white shadow p-2 rounded-[10px] h-full">
+                                <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
+                                    <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-1.jpg" class="w-full object-cover object-center h-full" alt="fixnflow">
                                 </div>
-                                <div>
-                                    <?= echo_theme_image('/images/icons/sponsor-1.png') ?>
+                                <div class="mx-auto -mt-7 w-fit h-[57px] rounded-full bg-main-blue px-10 py-1 flex justify-center items-center relative">
+                                    <?= echo_theme_image('/images/logo/wish-foundation.png') ?>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full  md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
-                        <div class="bg-white shadow p-2 rounded-[10px] h-full">
-                            <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
-                                <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-2.jpg" class="w-full object-cover object-center h-full" alt="fixnflow">
-                            </div>
-                            <div class="mx-auto -mt-7 w-fit h-[57px] rounded-full bg-dark-blue px-10 py-1 flex justify-center items-center relative">
-                                <?= echo_theme_image('/images/logo/save-the-children.png') ?>
-                            </div>
-                            <div class="flex flex-wrap justify-between items-center mx-auto w-10/12 pt-4 pb-2">
-                                <div class="font-articulat text-dark-blue leading-relaxed text-sm">
-                                    <span class="text-xs font-bold">Proudly supporting</span> <br />Wish Foundation
-                                </div>
-                                <div class="">
-                                    <?= echo_theme_image('/images/icons/sponsor-1.png') ?>
+                                <div class="flex flex-wrap justify-between items-center mx-auto w-10/12 pt-4 pb-2">
+                                    <div class="font-articulat text-dark-blue leading-relaxed text-sm">
+                                        <span class="text-xs font-bold">Proudly supporting</span> <br />Wish Foundation
+                                    </div>
+                                    <div>
+                                        <?= echo_theme_image('/images/icons/sponsor-1.png') ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="w-full md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
-                        <div class="bg-dark-blue shadow p-2 rounded-[10px] h-full">
-                            <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
-                                <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-3.jpg" class="w-full object-cover object-center h-full" alt="fixnflow">
-                            </div>
-                            <div class="mx-auto -mt-12 w-fit relative">
-                                <?= echo_theme_image('/images/logo/earlwood-wanderers.png') ?>
-                            </div>
-                            <div class="flex flex-wrap justify-between items-center mx-auto w-10/12 pt-2 pb-2">
-                                <div class="font-articulat text-white leading-relaxed text-sm">
-                                    <span class="text-xs font-bold">Proudly supporting</span> <br />Wish Foundation
+                        <div class="w-full  md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
+                            <div class="bg-white shadow p-2 rounded-[10px] h-full">
+                                <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
+                                    <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-2.jpg" class="w-full object-cover object-center h-full" alt="fixnflow">
                                 </div>
-                                <div>
-                                    <?= echo_theme_image('/images/icons/sponsor-2.png') ?>
+                                <div class="mx-auto -mt-7 w-fit h-[57px] rounded-full bg-dark-blue px-10 py-1 flex justify-center items-center relative">
+                                    <?= echo_theme_image('/images/logo/save-the-children.png') ?>
+                                </div>
+                                <div class="flex flex-wrap justify-between items-center mx-auto w-10/12 pt-4 pb-2">
+                                    <div class="font-articulat text-dark-blue leading-relaxed text-sm">
+                                        <span class="text-xs font-bold">Proudly supporting</span> <br />Wish Foundation
+                                    </div>
+                                    <div class="">
+                                        <?= echo_theme_image('/images/icons/sponsor-1.png') ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
+                            <div class="bg-dark-blue shadow p-2 rounded-[10px] h-full">
+                                <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
+                                    <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-3.jpg" class="w-full object-cover object-center h-full" alt="fixnflow">
+                                </div>
+                                <div class="mx-auto -mt-12 w-fit relative">
+                                    <?= echo_theme_image('/images/logo/earlwood-wanderers.png') ?>
+                                </div>
+                                <div class="flex flex-wrap justify-between items-center mx-auto w-10/12 pt-2 pb-2">
+                                    <div class="font-articulat text-white leading-relaxed text-sm">
+                                        <span class="text-xs font-bold">Proudly supporting</span> <br />Wish Foundation
+                                    </div>
+                                    <div>
+                                        <?= echo_theme_image('/images/icons/sponsor-2.png') ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -360,6 +363,6 @@ get_template_part('parts/section', 'nav');
                 </div>
             </div>
         </div>
-    </div>
+    <?php endif; ?>
 </div>
 <?php get_footer(); ?>
