@@ -19,10 +19,13 @@ get_header();
                         <img src="<?= get_template_directory_uri() ?>/images/lib/faq-floating-logo.png" class="globalCtaLogo_2 absolute bottom-0 right-[-10%] w-[120%] max-w-[120%] duration-300" alt="fixnflow">
                         <img src="<?= get_template_directory_uri() ?>/images/lib/floating-laptop.png" class="globalCtaComponent_2 absolute bottom-[-30%] left-[-3%] h-full max-w-[120%] duration-300" alt="fixnflow">
 
+                        <?php $cta_1 = get_field('cta_1'); ?>
                         <div class="relative text-center">
-                            <div class="text-4xl lg:text-[45px] font-bold text-light-blue">Book online now <span class="text-white">for all your plumbing needs</span></div>
-                            <div class="text-white font-articulat py-7">Plus receive 10% off all online bookings!</div>
-                            <a href="./" class="btn-light-blue-hover-white px-14"><span class="relative z-10">Learn More</span></a>
+                            <div class="text-4xl lg:text-[45px] font-bold text-light-blue highlight-white"><?= $cta_1['heading'] ?></div>
+                            <div class="text-white font-articulat py-7"><?= $cta_1['sub_heading'] ?></div>
+                            <?php if ($cta_1['button']) : ?>
+                                <a href="<?= $cta_1['button']['url'] ?>" target="<?= $cta_1['button']['target'] ?>" class="btn-light-blue-hover-white px-14"><span class="relative z-10"><?= $cta_1['button']['title'] ?></span></a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -31,9 +34,12 @@ get_header();
                         <img alt="fixnflow" class="absolute -left-7 bottom-0 duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-1-component.png">
                         <img src="<?= get_template_directory_uri() ?>/images/background/faq-cta-component-2.png" class="absolute bottom-0 right-0 duration-300 group-hover:right-[-10%]" alt="fixnflow">
 
+                        <?php $cta_2 = get_field('cta_2'); ?>
                         <div class="relative text-center">
-                            <div class="text-4xl lg:text-[45px] font-bold text-dark-blue pb-7">Contact us today <br /><span class="text-white">to speak<br /> to an expert</span></div>
-                            <a href="./" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10">Learn More</span></a>
+                            <div class="text-4xl lg:text-[45px] font-bold text-dark-blue highlight-white pb-7"><?= $cta_2['heading'] ?></div>
+                            <?php if ($cta_2['button']) : ?>
+                                <a href="<?= $cta_2['button']['url'] ?>" target="<?= $cta_2['button']['target'] ?>" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10"><?= $cta_2['button']['title'] ?></span></a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
