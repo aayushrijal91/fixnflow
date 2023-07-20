@@ -160,7 +160,7 @@ get_header();
                     </div>
                     <div class="w-fit"><?= echo_theme_image('/images/icons/question-marks.png') ?></div>
                     <div class="w-fit">
-                        <a href="" class="btn-yellow-hover-main-blue px-14"><span class="relative z-10">Button name here</span></a>
+                        <a href="<?= get_site_url() ?>" class="btn-yellow-hover-main-blue px-14"><span class="relative z-10">See all FAQs</span></a>
                     </div>
                 </div>
             </div>

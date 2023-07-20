@@ -14,44 +14,61 @@ get_header();
         <div class="section_1 max-w-[1874px] mx-auto pt-6 pb-11 px-10 rounded-[30px] overflow-hidden relative">
             <?= echo_theme_image('/images/background/bannerWaves.png', 'absolute w-full top-0 left-0') ?>
 
-            <div class="relative">
-                <div class="flex flex-wrap gap-x-10">
-                    <div class="w-fit">
-                        <?= echo_theme_image('/images/icons/most-popular-badge.png') ?>
-                    </div>
-                    <div class="w-fit">
-                        <div class="flex flex-wrap items-center gap-x-3">
-                            <div class="w-fit text-light-blue font-articulat font-semibold px-10">15 June 2023</div>
-                            <div class="w-fit bg-dark-blue rounded-full px-4 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                    <path d="M16.7165 9.00251L8.88825 1.17431C8.73234 1.01835 8.52087 0.930711 8.30035 0.930664H1.64796C1.42741 0.930664 1.21591 1.01827 1.05996 1.17422C0.904016 1.33016 0.816406 1.54167 0.816406 1.76221V8.4146C0.816453 8.63513 0.904094 8.8466 1.06005 9.00251L8.88825 16.8307C9.11991 17.0624 9.39493 17.2462 9.69762 17.3716C10.0003 17.497 10.3247 17.5615 10.6524 17.5615C10.98 17.5615 11.3044 17.497 11.6071 17.3716C11.9098 17.2462 12.1849 17.0624 12.4165 16.8307L16.7165 12.5308C16.9481 12.2991 17.1319 12.0241 17.2573 11.7214C17.3827 11.4187 17.4473 11.0943 17.4473 10.7666C17.4473 10.439 17.3827 10.1146 17.2573 9.81188C17.1319 9.50919 16.9481 9.23416 16.7165 9.00251ZM5.8057 7.58305C5.47677 7.58305 5.15523 7.48552 4.88173 7.30277C4.60824 7.12003 4.39507 6.86029 4.2692 6.5564C4.14332 6.25251 4.11039 5.91811 4.17456 5.5955C4.23873 5.27289 4.39712 4.97656 4.62971 4.74397C4.8623 4.51138 5.15864 4.35299 5.48125 4.28882C5.80385 4.22464 6.13825 4.25758 6.44214 4.38346C6.74603 4.50933 7.00577 4.72249 7.18851 4.99599C7.37126 5.26948 7.4688 5.59103 7.4688 5.91996C7.4688 6.36104 7.29358 6.78405 6.98169 7.09594C6.6698 7.40784 6.24678 7.58305 5.8057 7.58305Z" fill="#0067B9" />
-                                </svg>
-                                Emergency Plumbing
+            <?php $args = array(
+                'posts_per_page' => 1,
+                'post_type' => 'post',
+                'orderby' => 'date',
+                'order' => 'DESC',
+            );
+
+            $the_query = new WP_Query($args);
+
+            if ($the_query->have_posts()) :
+                while ($the_query->have_posts()) :
+                    $the_query->the_post();
+                    $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
+                    $featured_description = get_the_content() ? substr(get_the_content(), 0, 300) . '...' : '...';
+            ?>
+                    <div class="relative">
+                        <div class="flex flex-wrap gap-x-10">
+                            <div class="w-fit">
+                                <?= echo_theme_image('/images/icons/most-popular-badge.png') ?>
                             </div>
-                            <div class="w-fit bg-dark-blue rounded-full px-4 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                    <path d="M16.7165 9.00251L8.88825 1.17431C8.73234 1.01835 8.52087 0.930711 8.30035 0.930664H1.64796C1.42741 0.930664 1.21591 1.01827 1.05996 1.17422C0.904016 1.33016 0.816406 1.54167 0.816406 1.76221V8.4146C0.816453 8.63513 0.904094 8.8466 1.06005 9.00251L8.88825 16.8307C9.11991 17.0624 9.39493 17.2462 9.69762 17.3716C10.0003 17.497 10.3247 17.5615 10.6524 17.5615C10.98 17.5615 11.3044 17.497 11.6071 17.3716C11.9098 17.2462 12.1849 17.0624 12.4165 16.8307L16.7165 12.5308C16.9481 12.2991 17.1319 12.0241 17.2573 11.7214C17.3827 11.4187 17.4473 11.0943 17.4473 10.7666C17.4473 10.439 17.3827 10.1146 17.2573 9.81188C17.1319 9.50919 16.9481 9.23416 16.7165 9.00251ZM5.8057 7.58305C5.47677 7.58305 5.15523 7.48552 4.88173 7.30277C4.60824 7.12003 4.39507 6.86029 4.2692 6.5564C4.14332 6.25251 4.11039 5.91811 4.17456 5.5955C4.23873 5.27289 4.39712 4.97656 4.62971 4.74397C4.8623 4.51138 5.15864 4.35299 5.48125 4.28882C5.80385 4.22464 6.13825 4.25758 6.44214 4.38346C6.74603 4.50933 7.00577 4.72249 7.18851 4.99599C7.37126 5.26948 7.4688 5.59103 7.4688 5.91996C7.4688 6.36104 7.29358 6.78405 6.98169 7.09594C6.6698 7.40784 6.24678 7.58305 5.8057 7.58305Z" fill="#0067B9" />
-                                </svg>
-                                Bathroom renovation
+                            <div class="w-fit">
+                                <div class="flex flex-wrap items-center gap-x-3">
+                                    <div class="w-fit text-light-blue font-articulat font-semibold px-10 leading-none"><?= get_the_date() ?></div>
+
+                                    <?php foreach (get_the_tags() as $tag) : ?>
+                                        <div class="w-fit bg-dark-blue rounded-full px-4 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                <path d="M16.7165 9.00251L8.88825 1.17431C8.73234 1.01835 8.52087 0.930711 8.30035 0.930664H1.64796C1.42741 0.930664 1.21591 1.01827 1.05996 1.17422C0.904016 1.33016 0.816406 1.54167 0.816406 1.76221V8.4146C0.816453 8.63513 0.904094 8.8466 1.06005 9.00251L8.88825 16.8307C9.11991 17.0624 9.39493 17.2462 9.69762 17.3716C10.0003 17.497 10.3247 17.5615 10.6524 17.5615C10.98 17.5615 11.3044 17.497 11.6071 17.3716C11.9098 17.2462 12.1849 17.0624 12.4165 16.8307L16.7165 12.5308C16.9481 12.2991 17.1319 12.0241 17.2573 11.7214C17.3827 11.4187 17.4473 11.0943 17.4473 10.7666C17.4473 10.439 17.3827 10.1146 17.2573 9.81188C17.1319 9.50919 16.9481 9.23416 16.7165 9.00251ZM5.8057 7.58305C5.47677 7.58305 5.15523 7.48552 4.88173 7.30277C4.60824 7.12003 4.39507 6.86029 4.2692 6.5564C4.14332 6.25251 4.11039 5.91811 4.17456 5.5955C4.23873 5.27289 4.39712 4.97656 4.62971 4.74397C4.8623 4.51138 5.15864 4.35299 5.48125 4.28882C5.80385 4.22464 6.13825 4.25758 6.44214 4.38346C6.74603 4.50933 7.00577 4.72249 7.18851 4.99599C7.37126 5.26948 7.4688 5.59103 7.4688 5.91996C7.4688 6.36104 7.29358 6.78405 6.98169 7.09594C6.6698 7.40784 6.24678 7.58305 5.8057 7.58305Z" fill="#0067B9" />
+                                            </svg>
+                                            <?= $tag->name ?>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="flex flex-wrap flex-col items-center text-center gap-y-10">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="61" viewBox="0 0 70 61" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7596 34.5993C15.5254 34.5993 13.313 34.1593 11.2488 33.3043C9.18465 32.4493 7.3091 31.196 5.72924 29.6162C4.14939 28.0363 2.89618 26.1608 2.04117 24.0966C1.18616 22.0324 0.746094 19.8201 0.746094 17.5858C0.746094 15.3516 1.18616 13.1392 2.04117 11.075C2.89618 9.01083 4.14939 7.13527 5.72925 5.55541C7.3091 3.97556 9.18466 2.72235 11.2488 1.86734C12.8619 1.19917 14.5656 0.784406 16.2994 0.635044L16.3064 0.572266H17.7596H69.2494V17.0403H41.594V30.5256L26.6399 17.0403H17.7596V17.5858L17.7596 34.5993Z" fill="#F7F8FA" />
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M51.8302 26.846C54.0645 26.846 56.2768 27.286 58.341 28.141C60.4052 28.9961 62.2807 30.2493 63.8606 31.8291C65.4405 33.409 66.6937 35.2845 67.5487 37.3487C68.4037 39.4129 68.8438 41.6253 68.8437 43.8595C68.8437 46.0938 68.4037 48.3061 67.5487 50.3703C66.6937 52.4345 65.4405 54.31 63.8606 55.8899C62.2807 57.4698 60.4052 58.723 58.341 59.578C56.7279 60.2461 55.0243 60.6609 53.2904 60.8103L53.2835 60.873H51.8302H0.746696V44.4051H27.9958V30.9197L42.9499 44.4051H51.8302V43.8595L51.8302 26.846Z" fill="#5AB2F8" />
-                    </svg>
-                    <div class="w-full lg:w-6/12 text-[45px] text-white font-semibold leading-none">
-                        Latest blog amet, consectetur adipiscing elit consectetur adipiscing elit
+                        <div class="flex flex-wrap flex-col items-center text-center gap-y-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="61" viewBox="0 0 70 61" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7596 34.5993C15.5254 34.5993 13.313 34.1593 11.2488 33.3043C9.18465 32.4493 7.3091 31.196 5.72924 29.6162C4.14939 28.0363 2.89618 26.1608 2.04117 24.0966C1.18616 22.0324 0.746094 19.8201 0.746094 17.5858C0.746094 15.3516 1.18616 13.1392 2.04117 11.075C2.89618 9.01083 4.14939 7.13527 5.72925 5.55541C7.3091 3.97556 9.18466 2.72235 11.2488 1.86734C12.8619 1.19917 14.5656 0.784406 16.2994 0.635044L16.3064 0.572266H17.7596H69.2494V17.0403H41.594V30.5256L26.6399 17.0403H17.7596V17.5858L17.7596 34.5993Z" fill="#F7F8FA" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M51.8302 26.846C54.0645 26.846 56.2768 27.286 58.341 28.141C60.4052 28.9961 62.2807 30.2493 63.8606 31.8291C65.4405 33.409 66.6937 35.2845 67.5487 37.3487C68.4037 39.4129 68.8438 41.6253 68.8437 43.8595C68.8437 46.0938 68.4037 48.3061 67.5487 50.3703C66.6937 52.4345 65.4405 54.31 63.8606 55.8899C62.2807 57.4698 60.4052 58.723 58.341 59.578C56.7279 60.2461 55.0243 60.6609 53.2904 60.8103L53.2835 60.873H51.8302H0.746696V44.4051H27.9958V30.9197L42.9499 44.4051H51.8302V43.8595L51.8302 26.846Z" fill="#5AB2F8" />
+                            </svg>
+                            <div class="w-full lg:w-6/12 text-[45px] text-white font-semibold leading-none">
+                                <?= get_the_title() ?>
+                            </div>
+                            <div class="w-full lg:w-7/12 text-white font-articulat">
+                                <?= $featured_description ?>
+                            </div>
+                            <div class="w-fit"><a href="<?= get_the_permalink() ?>" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10">Learn more</span></a></div>
+                        </div>
                     </div>
-                    <div class="w-full lg:w-7/12 text-white font-articulat">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae aliquet nec ullamcorper sit amet risus nullam eget. Elit eget gravida cum sociis natoque...
-                    </div>
-                    <div class="w-fit"><a href="" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10">Button name here</span></a></div>
-                </div>
-            </div>
+            <?php
+                endwhile;
+            endif;
+            wp_reset_query();
+            ?>
         </div>
     </div>
 
@@ -264,7 +281,7 @@ get_header();
             </div>
 
             <div class="w-[85.5%] py-5 ms-auto">
-            <div class="blogs_slider">
+                <div class="blogs_slider">
                     <?php
                     $category_name = 'Emergency Plumbing';
 
@@ -351,7 +368,7 @@ get_header();
                     </div>
                     <div class="w-fit"><?= echo_theme_image('/images/icons/question-marks.png') ?></div>
                     <div class="w-fit">
-                        <a href="" class="btn-yellow-hover-main-blue px-14"><span class="relative z-10">Button name here</span></a>
+                        <a href="<?= get_field('faq_button')['url'] ?>" target="<?= get_field('faq_button')['target'] ?>" class="btn-yellow-hover-main-blue px-14"><span class="relative z-10">See all FAQs</span></a>
                     </div>
                 </div>
             </div>
