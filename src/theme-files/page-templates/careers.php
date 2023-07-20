@@ -28,7 +28,7 @@ get_template_part('parts/section', 'nav');
                 </div>
             </div>
             <div class="w-5/12 px-2">
-                <div class="rounded-[30px] bg-light-blue h-full" style="background: url(<?= get_template_directory_uri() ?>/images/background/careers-banner-right.jpg) center no-repeat; background-size: cover"></div>
+                <div class="rounded-[30px] bg-light-blue h-full" style="background: url(<?= $banner['image']['url'] ?>) no-repeat center; background-size: cover"></div>
             </div>
         </div>
     </div>
@@ -52,11 +52,14 @@ get_template_part('parts/section', 'nav');
                     </div>
                 </div>
             </div>
+            <?php $introduction = get_field('introduction'); ?>
             <div class="w-full lg:w-1/2 px-3" data-aos="zoom-in">
                 <div class="text-center bg-quaternary rounded-[30px] p-16">
-                    <div class="text-grey text-[45px] leading-none font-bold">Welcome to <br> the careers page for <br /><span class="text-light-blue">Fix N Flow Plumbing</span></div>
-                    <div class="text-grey leading-relaxed py-11 font-articulat">We are a fast-growing plumbing company dedicated to providing exceptional customer service and quality workmanship. Our success is built on the skills, knowledge, and dedication of our employees, and we are always looking for talented individuals to join our team.</div>
-                    <a href="" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10">Button name here</span></a>
+                    <div class="text-grey text-[45px] leading-none font-bold highlight-light-blue"><?= $introduction['heading'] ?></div>
+                    <div class="text-grey leading-relaxed py-11 font-articulat description"><?= $introduction['description'] ?></div>
+                    <?php if ($introduction['button']) : ?>
+                        <a href="<?= $introduction['button']['url'] ?>" target="<?= $introduction['button']['target'] ?>" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10"><?= $introduction['button']['title'] ?></span></a>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="w-full lg:w-1/4 px-3" data-aos="zoom-in">
@@ -64,7 +67,7 @@ get_template_part('parts/section', 'nav');
                 <div class="flex flex-wrap -mx-2 pt-4">
                     <div class="w-1/2 px-2">
                         <div class="bg-light-blue text-primary h-full rounded-xl py-4 px-3.5">
-                            <div class="text-3xl font-articulat-heavy leading-none">124+</div>
+                            <div class="text-3xl font-articulat-heavy leading-none"><?= $introduction['number_of_reviews'] ?>+</div>
                             <div class="text-sm font-articulat leading-none font-semibold">Customer review</div>
                         </div>
                     </div>
@@ -82,13 +85,14 @@ get_template_part('parts/section', 'nav');
     </div>
 
     <div class="bg-dark-blue py-28">
+        <?php $form = get_field('form'); ?>
         <div class="container">
             <div class="flex flex-wrap justify-around">
-                <div class="w-full lg:w-5/12 text-4xl md:text-5xl xl:text-heading leading-none text-white font-bold text-center">
-                    Reach your <span class="text-main-blue">full potential</span> here
+                <div class="w-full lg:w-5/12 text-4xl md:text-5xl xl:text-heading leading-none text-white font-bold text-center highlight-main-blue">
+                    <?= $form['hero_heading'] ? $form['hero_heading'] : '' ?>
                 </div>
-                <div class="w-full lg:w-5/12 text-white font-articulat text-base leading-loose">
-                    At Fix N Flow Plumbing, we offer a dynamic and supportive work environment that encourages personal and professional growth. We provide ongoing training and development opportunities to help our employees reach their full potential and achieve their career goals. 
+                <div class="w-full lg:w-5/12 text-white font-articulat text-base leading-loose description">
+                    <?= $form['description'] ? $form['description'] : '' ?>
                 </div>
             </div>
 
@@ -96,8 +100,8 @@ get_template_part('parts/section', 'nav');
                 <div class="flex flex-wrap">
                     <div class="w-full lg:w-1/2">
                         <?= echo_theme_image('/images/icons/careers-form.png') ?>
-                        <div class="text-white text-[45px] font-semibold py-11 leading-none">Interested in<br /> joining the <span class="text-main-blue">Fix N Flow</span><br /> Plumbing team?</div>
-                        <div class="font-articulat text-white leading-loose">Please submit your resume and a brief cover letter.<br /> We look forward to hearing from you!</div>
+                        <div class="text-white text-[45px] font-semibold py-11 leading-none highlight-main-blue"><?= $form['form_heading'] ? $form['form_heading'] : '' ?></div>
+                        <div class="font-articulat text-white leading-loose"><?= $form['sub_heading'] ? $form['sub_heading'] : '' ?></div>
                     </div>
                     <div class="w-full lg:w-1/2 careersForm">
                         <div class="font-articulat text-white leading-loose">Attach your documents below and we will be in touch</div>
