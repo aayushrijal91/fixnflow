@@ -37,7 +37,7 @@ get_template_part('parts/section', 'nav');
                     </div>
                     <div class="w-1/3 px-1">
                         <div class="border-b-4 border-r-4 border-light-blue rounded-[10px] bg-white py-2 px-3.5 font-articulat text-dark-blue font-bold leading-none">
-                            <div class="text-3xl">124+</div>
+                            <div class="text-3xl"><?= get_field('number_of_reviews', 'options') ?>+</div>
                             <div class="text-xs">Customer reviews</div>
                         </div>
                     </div>

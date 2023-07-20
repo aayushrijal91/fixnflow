@@ -29,7 +29,7 @@
                     <div class="flex-wrap flex -mx-2 items-center pt-6">
                         <div class="w-fit px-2">
                             <div class="border-b-4 border-r-4 border-light-blue rounded-[10px] bg-white py-2 px-3.5 text-dark-blue leading-none">
-                                <div class="text-3xl font-bold">124+</div>
+                                <div class="text-3xl font-bold"><?= get_field('number_of_reviews', 'options') ?>+</div>
                                 <div class="text-xs font-bold">Customer<br />reviews</div>
                             </div>
                         </div>
@@ -47,8 +47,8 @@
                 </div>
                 <div class="w-3/12 relative group">
                     <div class="absolute right-0 bottom-[-100%] group-hover:bottom-0 duration-300 flex flex-col items-center">
-                        <img src="<?= get_template_directory_uri() ?>/images/lib/vipMembershipCard.png" alt="vip membership" class="">
-                        <a href="./" class="btn-yellow-hover-main-blue px-14 "><span class="relative z-10">Learn More</span></a>
+                        <?= echo_theme_image('/images/lib/vipMembershipCard.png') ?>
+                        <a href="<?= get_site_url() ?>/membership" class="btn-yellow-hover-main-blue px-14 "><span class="relative z-10">Learn More</span></a>
                     </div>
                 </div>
             </div>

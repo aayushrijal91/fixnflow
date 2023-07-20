@@ -6,17 +6,11 @@
         <div class="container">
             <div class="flex flex-wrap justify-between items-center">
                 <div class="text-4xl md:text-5xl xl:text-heading font-bold text-white duration-500 leading-none">Why Choose Fix N Flow?</div>
-                <div class="w-fit hidden lg:block"><a href="./" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Button name here</span></a></div>
+                <div class="w-fit hidden lg:block"><a href="<?= get_site_url() ?>/about-us" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">About Us</span></a></div>
             </div>
-            <div class="w-full lg:w-10/12 pt-7">
-                <div class="flex flex-wrap -mx-2 text-white duration-500 font-articulat leading-loose">
-                    <div class="w-full lg:w-1/2 px-2">
-                        Fix N Flow, we understand the importance of having a reliable and trustworthy plumbing service provider. As a family owned and operated business, we take pride in treating our customers like family. We believe in providing our customers with personalised services and building long-lasting relationships with them.
-                    </div>
-                    <div class="w-full lg:w-1/2 px-2">
-                        Our responsiveness is one of the most significant advantages of choosing Fix N Flow. We guarantee a 60-minutes response time to ensure that your plumbing needs are attended to promptly. Call us today and experience the Fix N Flow difference!
-                    </div>
-                </div>
+            <div class="w-full lg:w-10/12 pt-7 text-white duration-500 font-articulat leading-loose columns-2">
+                <p>Fix N Flow, we understand the importance of having a reliable and trustworthy plumbing service provider. As a family owned and operated business, we take pride in treating our customers like family. We believe in providing our customers with personalised services and building long-lasting relationships with them.</p>
+                <p>Our responsiveness is one of the most significant advantages of choosing Fix N Flow. We guarantee a 60-minutes response time to ensure that your plumbing needs are attended to promptly. Call us today and experience the Fix N Flow difference!</p>
             </div>
 
             <div class="flex flex-wrap -mx-2 mt-20 gap-y-4 justify-center">

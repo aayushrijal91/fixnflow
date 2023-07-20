@@ -28,7 +28,7 @@ get_header();
                         <div class="flex-wrap flex -mx-2 items-center pt-6">
                             <div class="w-fit px-2">
                                 <div class="border-b-4 border-r-4 border-light-blue rounded-[10px] bg-white py-2 px-3.5 text-dark-blue leading-none">
-                                    <div class="text-3xl font-bold">124+</div>
+                                    <div class="text-3xl font-bold"><?= get_field('number_of_reviews', 'options') ?>+</div>
                                     <div class="text-xs font-bold">Customer<br />reviews</div>
                                 </div>
                             </div>

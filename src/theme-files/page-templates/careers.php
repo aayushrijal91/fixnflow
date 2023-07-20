@@ -67,7 +67,7 @@ get_template_part('parts/section', 'nav');
                 <div class="flex flex-wrap -mx-2 pt-4">
                     <div class="w-1/2 px-2">
                         <div class="bg-light-blue text-primary h-full rounded-xl py-4 px-3.5">
-                            <div class="text-3xl font-articulat-heavy leading-none"><?= $introduction['number_of_reviews'] ?>+</div>
+                            <div class="text-3xl font-articulat-heavy leading-none"><?= get_field('number_of_reviews', 'options') ?>+</div>
                             <div class="text-sm font-articulat leading-none font-semibold">Customer review</div>
                         </div>
                     </div>

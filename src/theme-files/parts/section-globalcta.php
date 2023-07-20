@@ -7,7 +7,7 @@
             <div class="relative flex flex-col h-full justify-between md:justify-center md:items-start">
                 <div class="text-4xl font-bold text-dark-blue pb-10">Same day service<div class="text-white">guarantee or its free!</div>
                 </div>
-                <a href="./" class="btn-yellow-hover-main-blue px-14 "><span class="relative z-10">Learn More</span></a>
+                <a href="<?= get_site_url() ?>/service" class="btn-yellow-hover-main-blue px-14 "><span class="relative z-10">Learn More</span></a>
             </div>
         </div>
     </div>
@@ -19,7 +19,7 @@
 
             <div class="flex items-center relative">
                 <div class="text-4xl font-bold text-light-blue">10% off <span class="text-white">online bookings</span></div>
-                <a href="./">
+                <a href="<?= get_site_url() ?>/booking-form">
                     <svg width="19" height="33" viewBox="0 0 19 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.04346 30.0151L15.1987 17.8598C16.0131 17.0455 16.0131 15.7251 15.1987 14.9107L3.04346 2.75537" stroke="#F7F8FA" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round" />
                     </svg>
@@ -32,9 +32,9 @@
             <img alt="Fix N Flow" class="globalCtaBg absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-3.png">
             <img src="<?= get_template_directory_uri() ?>/images/background/cta-3-component.png" class="globalCtaComponent_2 absolute top-0 right-0  max-w-[120%] duration-300" alt="Fix N Flow">
 
-            <div class="flex items-center">
+            <div class="flex items-center relative">
                 <div class="text-[35px] leading-none font-bold text-yellow">10% off <span class="text-white">Seniors discount</span></div>
-                <a href="">
+                <a href="<?= get_site_url() ?>/booking-form">
                     <svg width="19" height="33" viewBox="0 0 19 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.04346 30.0151L15.1987 17.8598C16.0131 17.0455 16.0131 15.7251 15.1987 14.9107L3.04346 2.75537" stroke="#F7F8FA" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round" />
                     </svg>
