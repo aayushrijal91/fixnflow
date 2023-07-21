@@ -13,22 +13,22 @@ get_header();
     $section_1_right = get_field('section_1_right');
     ?>
     <div class="container py-24">
-        <div class="flex flex-wrap -mx-3">
+        <div class="flex flex-wrap -mx-2 lg:-mx-3 gap-y-5">
             <?php if ($section_1_left) : ?>
-                <div class="w-full lg:w-1/2 px-3" data-aos="zoom-in">
-                    <div class="text-center bg-contain rounded-[30px] pt-11 pb-28 px-16 h-full" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= get_template_directory_uri() ?>/images/background/membership-guy.jpg) no-repeat center bottom">
-                        <div class="text-white text-[45px] leading-none font-bold"><?= $section_1_left['title'] ?></div>
-                        <div class="text-white leading-relaxed py-6"><?= $section_1_left['description'] ?></div>
+                <div class="w-full md:w-1/2 px-2 lg:px-3" data-aos="zoom-in">
+                    <div class="text-center bg-contain rounded-[20px] md:rounded-[30px] py-10 md:pt-11 md:pb-28 px-5 xl:px-16 h-full" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= get_template_directory_uri() ?>/images/background/membership-guy.jpg) no-repeat center bottom">
+                        <div class="text-white text-3xl lg:text-[45px] leading-none font-bold"><?= $section_1_left['title'] ?></div>
+                        <div class="text-white leading-relaxed pt-6 pb-28 md:py-6 description text-sm md:text-base"><?= $section_1_left['description'] ?></div>
                         <a href="<?= $section_1_left['button']['url'] ?>" target="<?= $section_1_left['button']['target'] ?>" class="btn-yellow-hover-main-blue px-14 mt-10"><span class="relative z-10"><?= $section_1_left['button']['title'] ?></span></a>
                     </div>
                 </div>
             <?php endif; ?>
             <?php if ($section_1_right) : ?>
-                <div class="w-full lg:w-1/2 px-3" data-aos="zoom-in">
-                    <div class="bg-main-blue rounded-[30px] p-12 h-full text-white">
-                        <div class="text-[35px] font-semibold leading-none pb-5"><?= $section_1_right['title'] ?></div>
+                <div class="w-full md:w-1/2 px-2 lg:px-3" data-aos="zoom-in">
+                    <div class="bg-main-blue rounded-[20px] md:rounded-[30px] py-10 px-5 xl:p-12 h-full text-white">
+                        <div class="text-3xl lg:text-[35px] font-semibold leading-none pb-5"><?= $section_1_right['title'] ?></div>
 
-                        <div class="font-articulat leading-relaxed description">
+                        <div class="font-articulat leading-relaxed description text-sm md:text-base">
                             <?= $section_1_right['description'] ?>
                         </div>
                     </div>
@@ -37,11 +37,11 @@ get_header();
         </div>
     </div>
 
-    <div class="py-24 bg-white">
+    <div class="py-20 md:py-24 bg-white">
         <div class="container">
             <div class="text-center text-4xl md:text-5xl xl:text-heading text-main-blue font-bold">Select your region</div>
 
-            <div class="w-full lg:w-10/12 rounded-3xl bg-off-white shadow-inner mx-auto mt-9 mb-14">
+            <div class="w-full lg:w-10/12 rounded-3xl bg-off-white shadow-inner mx-auto mt-9 hidden lg:block">
                 <div class="flex flex-wrap justify-around min-h-[77px] items-center region_nav">
                     <?php
                     $target = 0;
@@ -58,22 +58,39 @@ get_header();
                 </div>
             </div>
 
-            <div class="bg-off-white rounded-[30px] py-9">
-                <div class="w-8/12 mx-auto" id="areas_suburb_slider">
+            <div class="flex justify-center w-full lg:hidden mt-9">
+                <select id="regionChangeSelect" class="text-center font-bold min-h-[55px] bg-light-blue rounded-lg text-white w-10/12 outline-none">
+                    <?php
+                    $target = 0;
+                    if (have_rows('areas')) :
+                        while (have_rows('areas')) : the_row();
+                            $region = get_sub_field('region');
+                    ?>
+                            <option value="<?= $target ?>" class="font-bold"><?= $region ?></option>
+                    <?php
+                            $target++;
+                        endwhile;
+                    endif;
+                    ?>
+                </select>
+            </div>
+
+            <div class="bg-off-white rounded-[30px] py-9 mt-10 md:mt-14 px-4">
+                <div class="md:w-11/12 lg:w-10/12 xl:w-8/12 mx-auto" id="areas_suburb_slider">
                     <?php
                     if (have_rows('areas')) :
                         while (have_rows('areas')) : the_row();
                             $suburbs = explode(",", get_sub_field('suburbs'));
                     ?>
                             <div class="flex flex-wrap w-full justify-center">
-                                <ul class="columns-4">
+                                <ul class="columns-2 md:columns-3 lg:columns-4">
                                     <?php foreach ($suburbs as $suburb) :
                                         $slug = trim($suburb);
                                         $slug = str_replace(' ', '-', $slug);
                                         $slug = strtolower($slug);
                                         $slug = preg_replace('/[^a-z0-9-]/', '', $slug);
                                     ?>
-                                        <li><a href="<?= get_site_url() . '/areas/' . $slug ?>" class="text-xl font-articulat text-main-blue hover:text-dark-blue duration-200 leading-loose"><?= $suburb ?></a></li>
+                                        <li class="py-2"><a href="<?= get_site_url() . '/areas/' . $slug ?>" class="text-base lg:text-xl font-articulat text-main-blue hover:text-dark-blue duration-200 leading-loose"><?= $suburb ?></a></li>
                                     <?php endforeach; ?>
                                 </ul>
                             </div>
@@ -93,7 +110,7 @@ get_header();
 
     <?php get_template_part('parts/section', 'contact') ?>
 
-    <div class="py-40 lg:pb-60">
+    <div class="py-24 md:py-40 lg:pb-60">
         <?php get_template_part('parts/section', 'professionalPlumbing') ?>
     </div>
 </div>

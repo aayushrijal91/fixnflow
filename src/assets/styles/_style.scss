@@ -205,8 +205,13 @@
 
 .blogsPage {
     .section_1 {
-        background: linear-gradient(90deg, #0067B9 0%, rgba(100, 155, 200, 1) 65%, rgba(255, 255, 255, 0.00) 100%), imgUrl('blogs_section_1.png') right center;
+        background: linear-gradient(#0067B9 0%, rgba(100, 155, 200, 1) 65%, rgba(255, 255, 255, 0.00) 100%), imgUrl('blogs_section_1.png') center bottom;
         background-size: contain;
+
+        @media screen and (min-width: 540px) {
+            background: linear-gradient(90deg, #0067B9 0%, rgba(100, 155, 200, 1) 65%, rgba(255, 255, 255, 0.00) 100%), imgUrl('blogs_section_1.png') right center;
+            background-size: contain;
+        }
     }
 
     .blogFilterBtn {
@@ -218,8 +223,10 @@
     }
 
     .blogs_slider {
-        .slick-track {
-            margin-left: -110px;
+        @media screen and (min-width: 1100px) {
+            .slick-track {
+                margin-left: -110px;
+            }
         }
 
         .slick-slide {
@@ -309,10 +316,10 @@
     width: 100%;
 
     .accordion-card {
-        @apply border-b border-grey mb-14 pb-14 leading-7;
+        @apply border-b border-grey mb-8 md:mb-14 pb-8 md:pb-14 leading-7;
 
         .accordion-head {
-            @apply cursor-pointer font-bold transition-all duration-200 text-2xl text-main-blue;
+            @apply cursor-pointer font-bold transition-all duration-200 text-xl md:text-2xl text-main-blue;
 
             .plusminus {
                 @apply flex justify-center items-center h-[52px] w-[52px] text-[#5AB2F8] rounded-full;
@@ -362,7 +369,7 @@
         transition: 0.2s all ease-in-out;
 
         &.active {
-            background:#ffffff;
+            background: #ffffff;
             transition: 0.2s all ease-in-out;
 
             .subHeading {

@@ -2,15 +2,15 @@
 
 <?= get_template_part('parts/section', 'nav') ?>
 
-<div class="p-6">
-    <div class="relative bg-light-blue max-w-[1874px] mx-auto h-[614px] rounded-[30px] overflow-hidden">
+<div class="p-1 xl:p-6">
+    <div class="relative bg-light-blue max-w-[1874px] mx-auto h-[614px] rounded-[20px] md:rounded-[30px] overflow-hidden">
         <video class="absolute w-full h-full object-cover" autoplay loop muted>
             <source src="<?= get_template_directory_uri() ?>/images/background/light-blue-wavy-bg.webm" type="video/webm">
             <source src="<?= get_template_directory_uri() ?>/images/background/light-blue-wavy-bg.mp4" type="video/mp4">
             Your browser does not support HTML video.
         </video>
         <div class="container relative">
-            <div class="pt-48 pb-24 text-white text-center">
+            <div class="pt-44 md:pt-48 pb-20 md:pb-24 text-white text-center">
                 <?php if (isset($banner)) : ?>
                     <h1 class="text-4xl md:text-5xl xl:text-heading font-semibold"><?= $banner['title'] ? $banner['title'] : get_the_title(); ?> </h1>
                     <?php if (isset($banner['subtitle'])) : ?>
@@ -23,9 +23,7 @@
 
             <div class="flex flex-wrap justify-between">
                 <div class="w-fit">
-                    <div class="">
-                        <img src="<?= get_template_directory_uri() ?>/images/icons/google-reviews.png" alt="google">
-                    </div>
+                    <div><?= echo_theme_image('/images/icons/google-reviews.png') ?></div>
                     <div class="flex-wrap flex -mx-2 items-center pt-6">
                         <div class="w-fit px-2">
                             <div class="border-b-4 border-r-4 border-light-blue rounded-[10px] bg-white py-2 px-3.5 text-dark-blue leading-none">
@@ -45,17 +43,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-3/12 relative group">
-                    <div class="absolute right-0 bottom-[-100%] group-hover:bottom-0 duration-300 flex flex-col items-center">
+                <div class="md:w-3/12 relative group grow">
+                    <div class="absolute right-0 md:bottom-[-100%] group-hover:bottom-0 duration-300 flex flex-col items-center px-2 md:px-0">
                         <?= echo_theme_image('/images/lib/vipMembershipCard.png') ?>
-                        <a href="<?= get_site_url() ?>/membership" class="btn-yellow-hover-main-blue px-14 "><span class="relative z-10">Learn More</span></a>
+                        <a href="<?= get_site_url() ?>/membership" class="btn-yellow-hover-main-blue px-4 md:px-14 "><span class="relative z-10">Learn More</span></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="flex flex-wrap justify-center -mt-44" data-aos="zoom-in">
-        <div class="w-full lg:w-5/12 order-2 lg:order-1">
+    <div class="flex flex-wrap justify-center -mt-10 lg:-mt-44" data-aos="zoom-in">
+        <div class="w-full lg:w-7/12 xl:w-5/12 order-2 lg:order-1">
             <div class="bg-white rounded-[30px] px-8 py-6 shadow-xl">
                 <div class="text-dark-blue text-xl md:text-2xl font-extrabold pb-8">Check if we service your area</div>
                 <div class="hidden h-14 bg-light-grey rounded-md px-4 w-full mt-3 outline-none font-semibold gap-y-5"></div>

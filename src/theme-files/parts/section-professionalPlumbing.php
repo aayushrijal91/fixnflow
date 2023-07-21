@@ -1,11 +1,11 @@
 <div class="container">
-    <div class="bg-white rounded-xl relative py-32 overflow-hidden">
-        <div class="flex flex-wrap items-center justify-between">
+    <div class="bg-white rounded-xl relative pt-20 pb-[386px] md:pb-[442px] xl:py-32 overflow-hidden">
+        <div class="flex flex-wrap items-center justify-between gap-y-5">
             <div class="w-full lg:w-6/12 text-center text-grey text-4xl md:text-5xl xl:text-heading font-bold highlight-main-blue">
                 Our wide range of <span>professional<br> plumbing</span> services
             </div>
             <div class="w-full lg:w-5/12 text-center flex">
-                <div class="w-full lg:w-8/12">
+                <div class="w-full lg:w-11/12 xl:w-8/12">
                     <div class="font-articulat text-sm md:text-base leading-loose md:leading-loose text-grey pb-7">Our team of experienced plumbers provides services to both residential and commercial customers. These are just some of the services we offer:</div>
                     <a href="<?= get_site_url() ?>/service" class="btn-yellow-hover-main-blue px-14"><span class="relative z-10">See all services</span></a>
                 </div>

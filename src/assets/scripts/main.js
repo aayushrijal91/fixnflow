@@ -326,6 +326,10 @@ jQuery(function ($) {
                     areasSuburbSlider.slick('slickGoTo', $(this).attr('slick-target'));
                 });
 
+                $('#regionChangeSelect').on('change', function() {
+                    areasSuburbSlider.slick('slickGoTo', $(this).val());
+                });
+
                 $('a.blogFilterBtn').on('click', function () {
                     $('a.blogFilterBtn').removeClass('active');
                     $(this).addClass('active');
@@ -348,6 +352,24 @@ jQuery(function ($) {
                     // prevArrow: $(this).parents('.blogs_list').find('.blog_prev'),
                     // nextArrow: $(this).parents('.blogs_list').find('.blog_next'),
                     // arrows: true,
+                    responsive: [
+                        {
+                            breakpoint: 1100,
+                            settings: {
+                                slidesToShow: 2,
+                                centerMode: false,
+                                centerMode: 0
+                            }
+                        },
+                        {
+                            breakpoint: 540,
+                            settings: {
+                                slidesToShow: 1,
+                                centerMode: false,
+                                centerMode: 0
+                            }
+                        }
+                    ]
                 })
 
                 AOS.refresh();
@@ -378,7 +400,7 @@ jQuery(function ($) {
                     const svg2 = '<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.76416 12.4197H22.7888" stroke="#0067B9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M12.2764 1.90747L12.2764 22.9321" stroke="#0067B9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg>';
 
                     $(this).parents('.servicDescriptionCard').hasClass('active') ? $(this).html(svg1) : $(this).html(svg2);
-                })
+                });
             }, // end misc
         }, // end ui
         //utils: {

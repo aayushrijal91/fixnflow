@@ -8,7 +8,7 @@
                 <div class="text-4xl md:text-5xl xl:text-heading font-bold text-white duration-500 leading-none">Why Choose Fix N Flow?</div>
                 <div class="w-fit hidden lg:block"><a href="<?= get_site_url() ?>/about-us" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">About Us</span></a></div>
             </div>
-            <div class="w-full lg:w-10/12 pt-7 text-white duration-500 font-articulat leading-loose columns-2">
+            <div class="w-full lg:w-10/12 pt-7 text-white duration-500 font-articulat leading-loose md:columns-2 description">
                 <p>Fix N Flow, we understand the importance of having a reliable and trustworthy plumbing service provider. As a family owned and operated business, we take pride in treating our customers like family. We believe in providing our customers with personalised services and building long-lasting relationships with them.</p>
                 <p>Our responsiveness is one of the most significant advantages of choosing Fix N Flow. We guarantee a 60-minutes response time to ensure that your plumbing needs are attended to promptly. Call us today and experience the Fix N Flow difference!</p>
             </div>
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 xl:w-1/4 px-2" data-aos="zoom-in">
-                    <div class="h-[850px] lg:h-[650px] xl:h-full rounded-[10px] relative overflow-hidden whyus-card bg-white">
+                    <div class="h-[550px] lg:h-[650px] xl:h-full rounded-[10px] relative overflow-hidden whyus-card bg-white">
                         <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-5.png" class="absolute top-0 right-0 w-full duration-300" alt="Fix N Flow">
                         <img src="<?= get_template_directory_uri() ?>/images/background/why-us-bg-component-5.png" class="whyus-card-bg-component-5 absolute top-0 right-0 h-full max-w-[120%] duration-300" alt="Fix N Flow">
 
@@ -113,7 +113,7 @@
                 </div>
             </div>
 
-            <div class="lg:hidden pt-14"><a href="./" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Button name here</span></a></div>
+            <div class="lg:hidden pt-14"><a href="<?= get_site_url() ?>/about-us" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Button name here</span></a></div>
         </div>
     </div>
 </div>

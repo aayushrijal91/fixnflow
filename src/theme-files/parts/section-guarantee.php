@@ -131,7 +131,7 @@
                         </div>
                     </div>
                     <div class="w-full lg:hidden">
-                        <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.png" alt="plumb">
+                        <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.gif" alt="plumb">
                     </div>
                 </div>
             </div>
