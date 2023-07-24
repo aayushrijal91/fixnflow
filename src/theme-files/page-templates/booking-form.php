@@ -14,13 +14,13 @@ get_header();
         <?php get_template_part('parts/section', 'globalcta') ?>
     </div>
 
-    <div class="pb-36">
+    <div class="pb-20 md:pb-36">
         <div class="container">
             <div class="w-full lg:w-7/12 mx-auto text-grey text-4xl md:text-5xl xl:text-heading font-bold text-center">
                 Select how you would like to <span class="text-main-blue">get in touch</span>
             </div>
         </div>
-        <div class="container">
+        <div class="container hidden md:block">
             <div class="flex justify-center pt-14">
                 <ul class="formTypeSlider flex relative">
                     <li class="active">
@@ -39,14 +39,22 @@ get_header();
                 </ul>
             </div>
         </div>
-        <div class="bg-main-blue py-20 relative">
-            <img src="<?= get_template_directory_uri() ?>/images/lib/booking_form_van.png" class="absolute bottom-0 left-0" alt="fixnflow">
+        <div class="bg-main-blue py-7 lg:py-20 relative mt-10 md:mt-0">
+            <img src="<?= get_template_directory_uri() ?>/images/lib/booking_form_van.png" class="absolute bottom-0 left-0 hidden xl:block" alt="fixnflow">
             <div class="container">
-                <div class="flex flex-wrap">
-                    <div class="w-full lg:w-1/2">
-                        <img src="<?= get_template_directory_uri() ?>/images/lib/booking-guy.jpg" class="rounded-[30px]" alt="booking">
+                <div class="flex flex-wrap gap-y-10 -mx-3">
+                    <div class="w-full lg:w-1/2 px-3">
+                        <img src="<?= get_template_directory_uri() ?>/images/lib/booking-guy.jpg" class="rounded-[20px] md:rounded-[30px] md:hidden lg:block" alt="booking">
                     </div>
-                    <div class="w-full lg:w-1/2">
+                    <div class="w-full lg:w-1/2 px-3">
+                        <div class="flex justify-center mb-12 md:hidden">
+                            <select id="formSliderChanger" class="px-5 py-3 bg-dark-blue text-white rounded-md outline-none">
+                                <option value="0">Make a booking</option>
+                                <option value="1">Send an enquiry</option>
+                                <option value="2">Request call back</option>
+                                <option value="3">Get free quote</option>
+                            </select>
+                        </div>
                         <div class="bookingFormSlider" id="bookingFormSlider">
                             <div>
                                 <div class="flex flex-wrap gap-x-5 items-center">

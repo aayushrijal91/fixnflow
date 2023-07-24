@@ -10,11 +10,16 @@ get_template_part('parts/section', 'nav');
 ?>
 
 <div class="careersPage bg-off-white">
-    <div class="careersBanner max-w-[1874px] mx-auto p-6">
-        <div class="flex flex-wrap -mx-2">
-            <div class="w-7/12 px-2">
-                <div class="rounded-[30px] bg-cover bg-no-repeat h-full" style="background:url(<?= get_template_directory_uri() ?>/images/background/about-banner-left.png) center, #0067B9">
-                    <div class="w-10/12 ml-auto px-10 py-48">
+    <div class="careersBanner max-w-[1874px] mx-auto p-2 xl:p-6">
+        <div class="flex flex-wrap -mx-2 gap-y-2">
+            <div class="w-full lg:w-7/12 px-2 order-2 md:order-1">
+                <div class="rounded-[20px] md:rounded-[30px] bg-main-blue h-full relative overflow-hidden">
+                    <video class="absolute w-full h-full object-cover" autoplay loop muted>
+                        <source src="<?= get_template_directory_uri() ?>/images/background/dark-blue-wavy-bg.webm" type="video/webm">
+                        <source src="<?= get_template_directory_uri() ?>/images/background/dark-blue-wavy-bg.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                    <div class="xl:w-10/12 ml-auto px-5 md:px-10 py-24 md:py-48 relative text-center xl:text-start">
                         <?php if (isset($banner)) : ?>
                             <div class="text-4xl md:text-5xl xl:text-heading text-white font-bold"><?= $banner['title'] ? $banner['title'] : get_the_title() ?></div>
                             <?php if ($banner['subtitle']) : ?>
@@ -27,15 +32,15 @@ get_template_part('parts/section', 'nav');
                     </div>
                 </div>
             </div>
-            <div class="w-5/12 px-2">
-                <div class="rounded-[30px] bg-light-blue h-full" style="background: url(<?= $banner['image']['url'] ?>) no-repeat center; background-size: cover"></div>
+            <div class="w-full lg:w-5/12 px-2 order-1 md:order-2">
+                <div class="rounded-[20px] md:rounded-[30px] min-h-[272px] bg-light-blue h-full" style="background: url(<?= $banner['image']['url'] ?>) no-repeat center; background-size: cover"></div>
             </div>
         </div>
     </div>
 
     <div class="container">
-        <div class="flex flex-wrap -mx-3 items-center py-24" data-aos="fade-up">
-            <div class="w-full lg:w-1/4 px-3">
+        <div class="flex flex-wrap -mx-3 items-center py-12 lg:py-24 gap-y-10" data-aos="fade-up">
+            <div class="w-full md:w-1/2 lg:w-1/4 px-3 order-3 md:order-1">
                 <div class="flex flex-wrap items-center justify-center -mx-2 pt-6 gap-y-5">
                     <div class="w-2/3 px-2 text-center flex flex-col items-center">
                         <img src="<?= get_template_directory_uri() ?>/images/logo/accredited.png" alt="Accredited">
@@ -53,17 +58,19 @@ get_template_part('parts/section', 'nav');
                 </div>
             </div>
             <?php $introduction = get_field('introduction'); ?>
-            <div class="w-full lg:w-1/2 px-3">
-                <div class="text-center bg-quaternary rounded-[30px] p-16">
-                    <div class="text-grey text-[45px] leading-none font-bold highlight-light-blue"><?= $introduction['heading'] ?></div>
+            <div class="w-full lg:w-1/2 px-3 order-1 md:order-3 lg:order-2">
+                <div class="text-center bg-quaternary rounded-[30px] py-12 px-5 md:p-16 lg:px-5 xl:p-16">
+                    <div class="text-grey text-3xl md:text-[45px] leading-none font-bold highlight-light-blue"><?= $introduction['heading'] ?></div>
                     <div class="text-grey leading-relaxed py-11 font-articulat description"><?= $introduction['description'] ?></div>
                     <?php if ($introduction['button']) : ?>
                         <a href="<?= $introduction['button']['url'] ?>" target="<?= $introduction['button']['target'] ?>" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10"><?= $introduction['button']['title'] ?></span></a>
                     <?php endif; ?>
                 </div>
             </div>
-            <div class="w-full lg:w-1/4 px-3">
-                <img src="<?= get_template_directory_uri() ?>/images/icons/google-color.png" alt="Google Color">
+            <div class="w-full md:w-1/2 lg:w-1/4 px-3 order-2 lg:order-3">
+                <div class="flex justify-center lg:justify-start">
+                    <?= echo_theme_image('/images/icons/google-color.png') ?>
+                </div>
                 <div class="flex flex-wrap -mx-2 pt-4">
                     <div class="w-1/2 px-2">
                         <div class="bg-light-blue text-primary h-full rounded-xl py-4 px-3.5">
@@ -84,23 +91,23 @@ get_template_part('parts/section', 'nav');
         </div>
     </div>
 
-    <div class="bg-dark-blue py-28">
+    <div class="bg-dark-blue py-20 md:py-28">
         <?php $form = get_field('form'); ?>
         <div class="container">
-            <div class="flex flex-wrap justify-around" data-aos="fade-up">
+            <div class="flex flex-wrap justify-around gap-y-5" data-aos="fade-up">
                 <div class="w-full lg:w-5/12 text-4xl md:text-5xl xl:text-heading leading-none text-white font-bold text-center highlight-main-blue">
                     <?= $form['hero_heading'] ? $form['hero_heading'] : '' ?>
                 </div>
-                <div class="w-full lg:w-5/12 text-white font-articulat text-base leading-loose description">
+                <div class="w-full lg:w-5/12 text-white font-articulat text-base leading-loose description text-center lg:text-start">
                     <?= $form['description'] ? $form['description'] : '' ?>
                 </div>
             </div>
 
-            <div class="bg-light-blue rounded-[30px] p-10 mt-20" data-aos="zoom-in">
-                <div class="flex flex-wrap">
+            <div class="bg-light-blue rounded-[30px] px-5 py-10 md:p-10 mt-16 md:mt-20" data-aos="zoom-in">
+                <div class="flex flex-wrap gap-y-10">
                     <div class="w-full lg:w-1/2">
                         <?= echo_theme_image('/images/icons/careers-form.png') ?>
-                        <div class="text-white text-[45px] font-semibold py-11 leading-none highlight-main-blue"><?= $form['form_heading'] ? $form['form_heading'] : '' ?></div>
+                        <div class="text-white text-3xl md:text-[45px] font-semibold py-11 leading-none highlight-main-blue"><?= $form['form_heading'] ? $form['form_heading'] : '' ?></div>
                         <div class="font-articulat text-white leading-loose"><?= $form['sub_heading'] ? $form['sub_heading'] : '' ?></div>
                     </div>
                     <div class="w-full lg:w-1/2 careersForm">

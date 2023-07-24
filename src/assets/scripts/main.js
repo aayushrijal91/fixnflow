@@ -235,7 +235,8 @@ jQuery(function ($) {
                 let bookingFormSlider = $('#bookingFormSlider').slick({
                     slidesToShow: 1,
                     arrows: false,
-                    draggable: false
+                    draggable: false,
+                    adaptiveHeight: true,
                 });
 
                 AOS.refresh();
@@ -257,6 +258,10 @@ jQuery(function ($) {
 
                     bookingFormSlider.slick('slickGoTo', $(this).attr('slideTarget'));
                 });
+
+                $('#formSliderChanger').on('change', function () {
+                    bookingFormSlider.slick('slickGoTo', $(this).val());
+                })
 
                 AOS.refresh();
 
@@ -326,7 +331,7 @@ jQuery(function ($) {
                     areasSuburbSlider.slick('slickGoTo', $(this).attr('slick-target'));
                 });
 
-                $('#regionChangeSelect').on('change', function() {
+                $('#regionChangeSelect').on('change', function () {
                     areasSuburbSlider.slick('slickGoTo', $(this).val());
                 });
 

@@ -11,8 +11,8 @@ get_header();
     <?php get_template_part('parts/section', 'banner'); ?>
 
     <div class="container">
-        <div class="flex flex-wrap -mx-3 items-center py-24">
-            <div class="w-full lg:w-1/4 px-3" data-aos="zoom-in">
+        <div class="flex flex-wrap -mx-3 items-center py-12 lg:py-24 gap-y-10" data-aos="fade-up">
+            <div class="w-full md:w-1/2 lg:w-1/4 px-3 order-3 md:order-1">
                 <div class="flex flex-wrap items-center justify-center -mx-2 pt-6 gap-y-5">
                     <div class="w-2/3 px-2 text-center flex flex-col items-center">
                         <img src="<?= get_template_directory_uri() ?>/images/logo/accredited.png" alt="Accredited">
@@ -31,17 +31,19 @@ get_header();
             </div>
 
             <?php $introduction = get_field('introduction'); ?>
-            <div class="w-full lg:w-1/2 px-3" data-aos="zoom-in">
-                <div class="text-center bg-contain rounded-[30px] pt-11 pb-28 px-16" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= $introduction['background_image'] ? $introduction['background_image']['url'] : ''  ?>) no-repeat center bottom; background-size: contain;">
-                    <div class="text-white text-[45px] leading-none font-bold highlight-light-blue"><?= $introduction['heading'] ?></div>
-                    <div class="text-white leading-relaxed py-6"><?= $introduction['description'] ?></div>
+            <div class="w-full lg:w-1/2 px-3 order-1 md:order-3 lg:order-2">
+                <div class="text-center bg-contain rounded-[20px] md:rounded-[30px] py-10 md:pt-11 md:pb-28 px-5 xl:px-16 h-full" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= $introduction['background_image'] ? $introduction['background_image']['url'] : ''  ?>) no-repeat center bottom; background-size: contain;">
+                    <div class="text-white text-3xl lg:text-[45px] leading-none font-bold highlight-light-blue"><?= $introduction['heading'] ?></div>
+                    <div class="text-white leading-relaxed py-6 text-sm md:text-base"><?= $introduction['description'] ?></div>
                     <?php if ($introduction['button']) : ?>
                         <a href="<?= $introduction['button']['url'] ?>" target="<?= $introduction['button']['target'] ?>" class="btn-yellow-hover-main-blue px-14 mt-10"><span class="relative z-10"><?= $introduction['button']['title'] ?></span></a>
                     <?php endif; ?>
                 </div>
             </div>
-            <div class="w-full lg:w-1/4 px-3" data-aos="zoom-in">
-                <img src="<?= get_template_directory_uri() ?>/images/icons/google-color.png" alt="Google Color">
+            <div class="w-full md:w-1/2 lg:w-1/4 px-3 order-2 lg:order-3">
+                <div class="flex justify-center lg:justify-start">
+                    <?= echo_theme_image('/images/icons/google-color.png') ?>
+                </div>
                 <div class="flex flex-wrap -mx-2 pt-4">
                     <div class="w-1/2 px-2">
                         <div class="bg-light-blue text-primary h-full rounded-xl py-4 px-3.5">
@@ -62,14 +64,14 @@ get_header();
         </div>
     </div>
 
-    <div class="bg-white py-32">
+    <div class="bg-white py-20 md:py-32">
         <div class="container">
             <?php $section_2 = get_field('section_2'); ?>
-            <div class="flex flex-wrap justify-around pb-20">
+            <div class="flex flex-wrap justify-around pb-20 gap-y-5">
                 <div class="w-full lg:w-5/12 text-4xl md:text-5xl xl:text-heading leading-none text-grey font-bold text-center highlight-main-blue">
                     <?= $section_2['heading'] ?>
                 </div>
-                <div class="w-full lg:w-5/12 text-grey font-articulat text-base leading-loose description">
+                <div class="w-full lg:w-5/12 text-grey font-articulat text-base leading-loose description text-center md:text-start">
                     <?= $section_2['description'] ?>
                 </div>
             </div>
@@ -80,13 +82,13 @@ get_header();
 
     <div style="background:linear-gradient(#ffffff 0 50%, #F7F8FA 50% 100%)">
         <div class="container">
-            <div class="bg-dark-blue rounded-[30px] p-9">
-                <div class="flex flex-wrap justify-around items-center">
-                    <div class="w-1/3">
-                        <div class="text-4xl md:text-5xl xl:text-heading leading-none text-white font-bold text-center">Why <span class="text-light-blue">wait</span><br /> any longer?</div>
-                        <div class="text-white font-articulat text-center pt-9">Join our VIP club now and experience the benefits of being a part of our Fix N Flow Plumbing family!</div>
+            <div class="bg-white md:bg-dark-blue md:rounded-[30px] md:p-9">
+                <div class="flex flex-wrap md:justify-between lg:justify-around items-center gap-y-10">
+                    <div class="w-full md:w-5/12 xl:w-1/3">
+                        <div class="text-4xl md:text-5xl xl:text-heading leading-none text-main-blue md:text-white font-bold text-center highlight-light-blue">Why <span>wait</span><br /> any longer?</div>
+                        <div class="text-grey md:text-white font-articulat text-center pt-9">Join our VIP club now and experience the benefits of being a part of our Fix N Flow Plumbing family!</div>
                     </div>
-                    <div class="w-1/2">
+                    <div class="w-full md:w-1/2 bg-dark-blue md:bg-transparent px-4 py-9 md:p-0 rounded-[20px] md:rounded-0">
                         <div class="text-white text-center font-articulat ob-5">Simply fill in your details below and we'll get back to you and about the next steps!</div>
                         <?= do_shortcode('[contact-form-7 id="160" title="Membership form"]') ?>
                     </div>
@@ -96,7 +98,7 @@ get_header();
     </div>
 
     <div class="container mt-9">
-        <div class="w-full lg:w-10/12 mx-auto">
+        <div class="w-full xl:w-10/12 mx-auto">
             <div class="flex flex-wrap -mx-3">
                 <div class="w-full lg:w-1/2 px-3">
                     <div class="h-full bg-gradient-to-b from-[#E7F4FF] to-[#BEE1FF] rounded-[20px] shadow-[0px_0px_20px_0px_rgba(0, 0, 0, 0.05)_inset] relative">
@@ -114,10 +116,10 @@ get_header();
                             </defs>
                         </svg>
                         <div class="relative">
-                            <div class="px-9 pt-9 flex flex-wrap">
+                            <div class="px-5 md:px-9 pt-9 flex flex-wrap">
                                 <div class="flex-1">
-                                    <div class="text-main-blue text-heading font-bold">10% OFF</div>
-                                    <div class="text-[35px] text-grey font-bold leading-none">For all membership holders</div>
+                                    <div class="text-main-blue text-4xl md:text-5xl xl:text-heading font-bold leading-none pt-8 md:pt-0">10% OFF</div>
+                                    <div class="text-2xl lg:text-[35px] text-grey font-bold leading-none pt-6 md:pt-0">For all membership holders</div>
                                 </div>
                                 <div class="w-fit">
                                     <?= echo_theme_image('/images/lib/membership.png') ?>
@@ -128,22 +130,22 @@ get_header();
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 px-3">
-                    <div class="flex flex-col h-full justify-between gap-y-5">
-                        <div class="bg-[#D9D9D9]/50 rounded-[10px] min-h-[174px] p-7 relative text-main-blue text-[35px] font-bold flex items-center leading-none">
-                            <?= echo_theme_image('/images/lib/priority-booking-eg.png', 'absolute right-0 bottom-0') ?>
+                    <div class="flex flex-col h-full justify-between gap-y-5 mt-5 lg:mt-0">
+                        <div class="bg-[#D9D9D9]/50 rounded-[10px] min-h-[115px] md:min-h-[174px] px-5 py-4 md:p-7 relative text-main-blue text-2xl md:text-[35px] font-bold flex items-center leading-none">
+                            <img src="<?= get_template_directory_uri() ?>/images/lib/priority-booking-eg.png" alt="Fix N Flow" class="absolute right-0 bottom-0 h-[110%] md:h-fit">
                             <div>Guaranteed <br /><span class="text-grey">priority booking</span></div>
                         </div>
 
-                        <div class="bg-gradient-to-r from-[#4299DE] via-[#64B7F9] to-[#48CCF5] rounded-[10px] min-h-[174px] p-7 relative text-white text-[35px] font-bold flex items-center leading-none">
-                            <?= echo_theme_image('/images/lib/service-upgrade-eg.png', 'absolute right-0 bottom-0') ?>
+                        <div class="bg-gradient-to-r from-[#4299DE] via-[#64B7F9] to-[#48CCF5] rounded-[10px] min-h-[115px] md:min-h-[174px] px-5 py-4 md:p-7 relative text-white text-2xl md:text-[35px] font-bold flex items-center leading-none">
+                            <img src="<?= get_template_directory_uri() ?>/images/lib/service-upgrade-eg.png" class="absolute right-0 bottom-0 h-[150%] md:h-fit" alt="Fix N Flow">
                             <div>Discounted <br /><span class="text-dark-blue">service<br /> upgrades</span></div>
                         </div>
 
-                        <div class="bg-gradient-to-r from-[#396BB5] to-[#1E4785] rounded-[10px] min-h-[174px] p-7 relative flex items-center">
-                            <?= echo_theme_image('/images/lib/drain-camera-inspection.png', 'absolute right-0 bottom-0') ?>
+                        <div class="bg-gradient-to-r from-[#396BB5] to-[#1E4785] rounded-[10px] min-h-[115px] md:min-h-[174px] p-7 relative flex items-center">
+                            <img src="<?= get_template_directory_uri() ?>/images/lib/drain-camera-inspection.png" class="absolute right-0 bottom-0 h-[90%] md:h-fit" alt="fix n flow">
                             <div>
-                                <div class="leading-none text-white text-[35px] font-bold">FREE <span class="text-light-blue">drain camera<br /> inspection</span></div>
-                                <div class="text-xl text-white pt-4">With any hydro-jetting service</div>
+                                <div class="leading-none text-white text-2xl md:text-[35px] font-bold">FREE <span class="text-light-blue">drain camera<br /> inspection</span></div>
+                                <div class="text-base md:text-xl text-white pt-4">With any hydro-jetting service</div>
                             </div>
                         </div>
                     </div>
