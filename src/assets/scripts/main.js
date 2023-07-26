@@ -397,6 +397,27 @@ jQuery(function ($) {
                     $('#serviceAttributeBoxes').css('transform', `translateX(${$(this).val()})`);
                 });
 
+                $('.serviceAttributeBoxesMobile').slick({
+                    slidesToShow: 3,
+                    centerMode: true,
+                    centerPadding: "60px",
+                    arrows: false,
+                    responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToScroll: 2
+                            }
+                        },
+                        {
+                            breakpoint: 540,
+                            settings: {
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });
+
                 $('.showServiceDescriptionBtn').on('click', function () {
                     $(this).parents('.servicDescriptionCard').toggleClass('active');
                     $(this).parents('.servicDescriptionCard').find('.description').slideToggle();

@@ -17,13 +17,13 @@ get_header();
     $section_4 = get_field('section_4');
     ?>
     <?php if ($section_1 || $section_2 || $section_3 || $section_4) : ?>
-        <div class="container pt-36 pb-44">
+        <div class="container py-24 md:pt-36 lg:pb-44">
             <div class="flex flex-wrap -mx-3 gap-y-7">
                 <?php if ($section_1) : ?>
-                    <div class="w-full lg:w-1/2 px-3" data-aos="zoom-in">
-                        <div class="text-center bg-contain rounded-[30px] p-20 shadow-lg h-full flex flex-col justify-between items-center" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= $section_1['bg_image']['url'] ?>) no-repeat center bottom; background-size: contain;">
+                    <div class="w-full md:w-1/2 px-3 order-1" data-aos="zoom-in">
+                        <div class="text-center bg-contain rounded-[20px] lg:rounded-[30px] py-9 px-5 xl:p-20 shadow-lg h-full flex flex-col justify-between items-center" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= $section_1['bg_image']['url'] ?>) no-repeat center bottom; background-size: contain;">
                             <div>
-                                <div class="text-light-blue text-[45px] leading-none font-bold highlight-white"><?= $section_1['heading'] ?></div>
+                                <div class="text-light-blue text-4xl xl:text-[45px] leading-none font-bold highlight-white"><?= $section_1['heading'] ?></div>
                                 <div class="text-white leading-relaxed py-6 font-articulat"><?= $section_1['description'] ?></div>
                             </div>
                             <a href="<?= $section_1['button']['url'] ?>" target="<?= $section_1['button']['target'] ?>" class="btn-yellow-hover-main-blue px-14 mt-10"><span class="relative z-10"><?= $section_1['button']['title'] ?></span></a>
@@ -31,25 +31,25 @@ get_header();
                     </div>
                 <?php endif; ?>
                 <?php if ($section_2) : ?>
-                    <div class="w-full lg:w-1/2 px-3" data-aos="zoom-in">
-                        <div class="bg-white rounded-[30px] h-full py-11 px-9">
+                    <div class="w-full lg:w-1/2 px-3 order-2 md:order-3 lg:order-2" data-aos="zoom-in">
+                        <div class="bg-white rounded-[20px] lg:rounded-[30px] h-full py-11 px-5 lg:px-9">
                             <div class="text-2xl font-bold text-main-blue"><?= $section_2['heading'] ?></div>
                             <div class="description font-articulat text-grey pt-6"><?= $section_2['description'] ?></div>
                         </div>
                     </div>
                 <?php endif; ?>
                 <?php if ($section_3) : ?>
-                    <div class="w-full lg:w-7/12 px-3" data-aos="zoom-in">
-                        <div class="bg-quaternary rounded-[30px] h-full py-11 px-9">
+                    <div class="w-full lg:w-7/12 px-3 order-3 md:order-4 lg:order-3" data-aos="zoom-in">
+                        <div class="bg-quaternary rounded-[30px] h-full py-11 px-5 md:px-9">
                             <div class="text-2xl font-bold text-main-blue"><?= $section_3['heading'] ?></div>
                             <div class="description font-articulat text-grey pt-6"><?= $section_3['description'] ?></div>
                         </div>
                     </div>
                 <?php endif; ?>
                 <?php if ($section_4) : ?>
-                    <div class="w-full lg:w-5/12 px-3" data-aos="zoom-in">
-                        <div class="text-center bg-contain rounded-[30px] p-20 shadow-lg h-full" style="background: linear-gradient(#ffffff 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= $section_4['bg_image']['url'] ?>) no-repeat center bottom; background-size: contain;">
-                            <div class="text-dark text-[45px] leading-none font-bold highlight-main-blue"><?= $section_4['heading'] ?></div>
+                    <div class="w-full md:w-1/2 lg:w-5/12 px-3 order-4 md:order-2 lg:order-4" data-aos="zoom-in">
+                        <div class="text-center rounded-[20px] lg:rounded-[30px] px-5 py-9 xl:p-20 shadow-lg h-full" style="background: linear-gradient(#ffffff 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= $section_4['bg_image']['url'] ?>) no-repeat center bottom; background-size: contain;">
+                            <div class="text-dark text-4xl xl:text-[45px] leading-none font-bold highlight-main-blue"><?= $section_4['heading'] ?></div>
                             <div class="text-dark leading-relaxed py-6 font-articulat"><?= $section_4['description'] ?></div>
                             <a href="<?= $section_4['button']['url'] ?>" target="<?= $section_4['button']['target'] ?>" class="btn-main-blue-hover-yellow px-14 mt-10"><span class="relative z-10"><?= $section_4['button']['title'] ?></span></a>
                         </div>
@@ -75,10 +75,10 @@ get_header();
     $the_query = new WP_Query($args);
     if ($the_query->have_posts()) :
     ?>
-        <div class="py-40 bg-white">
+        <div class="py-20 lg:py-40 bg-white">
             <div class="container">
                 <div class="text-center text-4xl md:text-5xl xl:text-heading text-grey font-bold leading-none">Explore all <span class="text-main-blue"><?= get_the_title() ?> Services</span></div>
-                <div class="pt-24 flex flex-wrap -mx-2 gap-y-4">
+                <div class="pt-16 lg:pt-24 flex flex-wrap -mx-2 gap-y-4">
                     <?php
                     while ($the_query->have_posts()) : $the_query->the_post();
                         $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
@@ -111,14 +111,14 @@ get_header();
 
     <?php get_template_part('parts/section', 'whyus') ?>
 
-    <div class="pb-24">
+    <div class="pb-16 md:pb-24">
         <?php get_template_part('parts/section', 'leadingbrands') ?>
     </div>
 
-    <div class="container pt-24 pb-60">
+    <div class="container pt-16 md:pt-24 pb-60">
         <?php if (have_rows('faqs')) : ?>
             <div class="w-full lg:w-8/12 mx-auto">
-                <div class="text-center text-grey text-heading font-bold"><span class="text-main-blue">Frequently</span>asked questions</div>
+                <div class="text-center text-grey text-4xl md:text-5xl xl:text-heading font-bold leading-none"><span class="text-main-blue">Frequently</span>asked questions</div>
                 <div class="text-main-blue text-center pt-7 font-semibold">All you <?= get_the_title() ?> questions answered here</div>
 
                 <div class="accordion-container pt-20">

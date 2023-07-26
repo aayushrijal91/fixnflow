@@ -26,7 +26,7 @@ $the_query = new WP_Query($args);
     <div class="py-24">
         <div class="container">
             <div class="text-center text-4xl md:text-5xl xl:text-heading text-grey font-bold leading-none">Explore all <span class="text-main-blue">Services</span></div>
-            <div class="pt-24 flex flex-wrap -mx-2 gap-y-4">
+            <div class="pt-10 md:pt-24 flex flex-wrap -mx-2 gap-y-4">
                 <?php
                 if ($the_query->have_posts()) :
                     while ($the_query->have_posts()) : $the_query->the_post();

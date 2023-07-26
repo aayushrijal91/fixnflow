@@ -394,4 +394,15 @@
             }
         }
     }
+
+    .serviceAttributeBoxesMobile {
+        .slick-track {
+            display: flex;
+            margin-left: -60px;
+        }
+
+        .slick-slide {
+            height: inherit;
+        }
+    }
 }

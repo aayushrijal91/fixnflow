@@ -2,16 +2,16 @@
 
 <?= get_template_part('parts/section', 'nav') ?>
 
-<div class="innerInnerServiceBanner max-w-[1874px] mx-auto p-6">
-    <div class="flex flex-wrap -mx-2">
-        <div class="w-7/12 px-2">
-            <div class="rounded-[30px] bg-main-blue bg-cover bg-no-repeat h-full relative overflow-hidden">
+<div class="innerInnerServiceBanner max-w-[1874px] mx-auto p-1 xl:p-6">
+    <div class="flex flex-wrap -mx-2 gap-y-2">
+        <div class="w-full xl:w-7/12 px-2 order-2 xl:order-1">
+            <div class="rounded-[20px] md:rounded-[30px] bg-main-blue bg-cover bg-no-repeat h-full relative overflow-hidden">
                 <video class="absolute h-full object-cover" autoplay loop muted>
                     <source src="<?= get_template_directory_uri() ?>/images/background/dark-blue-wavy-bg.webm" type="video/webm">
                     <source src="<?= get_template_directory_uri() ?>/images/background/dark-blue-wavy-bg.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
-                <div class="w-10/12 ml-auto px-10 pt-48 pb-14 relative">
+                <div class="xl:w-10/12 ml-auto px-5 md:px-10 py-24 md:py-48 relative text-center xl:text-start">
                     <?php if (isset($banner)) : ?>
                         <h1 class="text-4xl md:text-5xl xl:text-heading text-white font-semibold"><?= $banner['title'] ? $banner['title'] : get_the_title() ?></h1>
                         <?php if ($banner['subtitle']) : ?>
@@ -47,13 +47,13 @@
                 </div>
             </div>
         </div>
-        <div class="w-5/12 px-2">
-            <div class="rounded-[30px] bg-light-blue bg-cover bg-no-repeat h-full" style="background: url(<?= $banner['image']['url'] ?>) no-repeat center; background-size: cover"></div>
+        <div class="w-full xl:w-5/12 px-2 order-1 xl:order-2">
+            <div class="rounded-[20px] md:rounded-[30px] min-h-[272px] md:min-h-[400px] bg-light-blue bg-cover bg-no-repeat h-full" style="background: url(<?= $banner['image']['url'] ?>) no-repeat center; background-size: cover"></div>
         </div>
     </div>
 
     <div class="flex flex-wrap justify-center -mt-44" data-aos="zoom-in">
-        <div class="w-full lg:w-5/12 order-2 lg:order-1">
+        <div class="w-full lg:w-10/12 xl:w-5/12 order-2 lg:order-1">
             <div class="bg-white rounded-[30px] px-8 py-6 shadow-xl">
                 <div class="text-dark-blue text-xl md:text-2xl font-extrabold pb-8">Check if we service your area</div>
                 <div class="hidden h-14 bg-light-grey rounded-md px-4 w-full mt-3 outline-none font-semibold gap-y-5"></div>
