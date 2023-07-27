@@ -122,6 +122,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="hidden xl:flex flex-wrap -mx-2 justify-center relative" id="growingBox">
             <div class="w-1/6 max-w-1/6 p-2 group stepCard">
                 <div class="relative bg-white h-[238px] w-full rounded-2xl p-4 md:px-8 lg:px-4 xl:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">

@@ -113,7 +113,7 @@
                 </div>
             </div>
 
-            <div class="lg:hidden pt-14"><a href="<?= get_site_url() ?>/about-us" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Button name here</span></a></div>
+            <div class="lg:hidden pt-14"><a href="<?= get_site_url() ?>/about-us" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">About Us</span></a></div>
         </div>
     </div>
 </div>

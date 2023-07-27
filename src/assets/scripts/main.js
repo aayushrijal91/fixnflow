@@ -406,17 +406,19 @@ jQuery(function ($) {
                         {
                             breakpoint: 1024,
                             settings: {
-                                slidesToScroll: 2
+                                slidesToShow: 2,
                             }
                         },
                         {
                             breakpoint: 540,
                             settings: {
-                                slidesToScroll: 1
+                                slidesToShow: 1
                             }
                         }
                     ]
                 });
+
+                AOS.refresh();
 
                 $('.showServiceDescriptionBtn').on('click', function () {
                     $(this).parents('.servicDescriptionCard').toggleClass('active');

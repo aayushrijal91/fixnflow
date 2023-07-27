@@ -11,7 +11,7 @@
                     <source src="<?= get_template_directory_uri() ?>/images/background/dark-blue-wavy-bg.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
-                <div class="xl:w-10/12 ml-auto px-5 md:px-10 py-24 md:py-48 relative text-center xl:text-start">
+                <div class="xl:w-10/12 ml-auto px-5 pt-24 md:pt-48 pb-20 md:pb-24 relative text-center xl:text-start">
                     <?php if (isset($banner)) : ?>
                         <h1 class="text-4xl md:text-5xl xl:text-heading text-white font-semibold"><?= $banner['title'] ? $banner['title'] : get_the_title() ?></h1>
                         <?php if ($banner['subtitle']) : ?>

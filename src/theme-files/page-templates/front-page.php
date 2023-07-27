@@ -9,11 +9,12 @@ get_template_part('parts/section', 'nav');
 ?>
 
 <div class="homeBanner h-[680px] md:h-[820px] relative">
-    <video class="absolute w-full" autoplay loop muted>
+    <video class="absolute w-full object-cover hidden md:block" autoplay loop muted>
         <source src="<?= get_template_directory_uri() ?>/images/background/home_banner_animation.webm" type="video/webm">
         <source src="<?= get_template_directory_uri() ?>/images/background/home_banner_animation.mp4" type="video/mp4">
         Your browser does not support HTML video.
     </video>
+    <img src="<?= get_template_directory_uri() ?>/images/background/homebanner-sm.jpg" class="absolute w-full h-full md:hidden">
 
     <div class="container pt-32 md:pt-64 lg:pt-52 xl:pt-64 relative">
         <div class="flex justify-center">

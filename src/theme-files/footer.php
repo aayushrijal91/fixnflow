@@ -67,10 +67,10 @@
                         </div>
                         <div class="flex flex-wrap -mx-2 gap-y-4 pt-10 xl:pt-0">
                             <div class="w-full md:w-fit px-2">
-                                <a href="./" class="btn-tertiary-hover-white w-full px-14"><span class="relative z-10">Button name here</span></a>
+                                <a href="<?= get_site_url() ?>/contact-us" class="btn-tertiary-hover-white w-full px-14"><span class="relative z-10">Contact Us</span></a>
                             </div>
                             <div class="w-full md:w-fit px-2">
-                                <a href="./" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Button name here</span></a>
+                                <a href="<?= get_site_url() ?>/about-us" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">About Us</span></a>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                                 </ul>
                             </div>
                             <div class="w-full md:w-fit px-2">
-                                <a href="./" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Button name here</span></a>
+                                <a href="<?= get_site_url() ?>/membership" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Become a Member</span></a>
                             </div>
                         </div>
                     </div>
@@ -101,57 +101,62 @@
                     <div class="rounded-2xl bg-quaternary/[0.1] py-9 px-5 flex flex-col gap-y-5">
                         <div>
                             <div class="text-light-blue text-xl font-bold text-center">Quick links</div>
-                            <ul class="text-center flex flex-col gap-y-3 pt-4 text-sm">
-                                <li><a href="" class="text-primary-light">Home</a></li>
-                                <li><a href="" class="text-primary-light">About us</a></li>
-                                <li><a href="" class="text-primary-light">Areas we service</a></li>
-                                <li><a href="" class="text-primary-light">Blogs</a></li>
-                                <li><a href="" class="text-primary-light">FAQs</a></li>
-                            </ul>
+                            <?php wp_nav_menu(array(
+                                'menu' => 'Quick Links',
+                                'item_class' => 'nav-item',
+                                'link_class' => 'nav-link leading-loose text-primary-light text-sm text-center',
+                                'container_class' => 'footer_menu pt-4 text-center',
+                            )); ?>
                         </div>
 
                         <div>
                             <div class="text-light-blue text-xl font-bold text-center">Our services</div>
                             <ul class="text-center flex flex-col gap-y-3 pt-4 text-sm">
-                                <li><a href="" class="text-primary-light">Emergency Plumbing</a></li>
-                                <li><a href="" class="text-primary-light">Blocked Drains</a></li>
-                                <li><a href="" class="text-primary-light">Hot Water Services</a></li>
-                                <li><a href="" class="text-primary-light">Taps & Toilets</a></li>
-                                <li><a href="" class="text-primary-light">Rainwater Tanks & Pumps</a></li>
-                                <li><a href="" class="text-primary-light">Gas Plumbing</a></li>
-                                <li><a href="" class="text-primary-light">General Plumbing</a></li>
-                                <li><a href="" class="text-primary-light">Commercial Plumbing</a></li>
-                                <li><a href="" class="text-primary-light">Bathroom Renovations</a></li>
-                                <li><a href="" class="text-primary-light">Water Filters</a></li>
-                                <li><a href="" class="text-primary-light">Backflow Prevention & RPZ Valves</a></li>
-                                <li><a href="" class="text-primary-light">Septic Systems</a></li>
-                                <li><a href="" class="text-primary-light">Roofing & Guttering</a></li>
-                                <li><a href="" class="text-primary-light">Renovation Plumber</a></li>
-                                <li><a href="" class="text-primary-light">Leak Detection</a></li>
-                                <li><a href="" class="text-primary-light">Pool</a></li>
-                                <li><a href="" class="text-primary-light">Property & Strata Managers</a></li>
-                                <li><a href="" class="text-primary-light">Kitchen Renovations</a></li>
+                                <?php
+                                $args = array(
+                                    'post_type'      => 'page',
+                                    'posts_per_page' => -1,
+                                    'order'          => 'ASC',
+                                    'orderby'        => 'publish_date',
+                                    'meta_query' => array(
+                                        array(
+                                            'key' => '_wp_page_template',
+                                            'value' => array('page-templates/inner-service.php', 'page-templates/inner-service-no-child.php'),
+                                        ),
+                                    )
+                                );
+                                $the_query = new WP_Query($args);
+
+                                if ($the_query->have_posts()) :
+                                    while ($the_query->have_posts()) : $the_query->the_post();
+                                        $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
+                                ?>
+                                        <li><a href="<?= get_the_permalink() ?>" class="text-primary-light"><?= get_the_title() ?></a></li>
+                                <?php endwhile;
+                                endif;
+                                wp_reset_query();
+                                ?>
                             </ul>
                         </div>
 
                         <div>
                             <div class="text-light-blue text-xl font-bold text-center">Discover more</div>
-                            <ul class="text-center flex flex-col gap-y-3 pt-4 text-sm">
-                                <li><a href="" class="text-primary-light">Areas we service</a></li>
-                                <li><a href="" class="text-primary-light">Careers</a></li>
-                                <li><a href="" class="text-primary-light">Membership</a></li>
-                                <li><a href="" class="text-primary-light">Home Safety Inspections</a></li>
-                            </ul>
+                            <?php wp_nav_menu(array(
+                                'menu' => 'Discover more',
+                                'item_class' => 'nav-item',
+                                'link_class' => 'nav-link leading-loose text-primary-light text-sm text-center',
+                                'container_class' => 'footer_menu pt-4 text-center',
+                            )); ?>
                         </div>
 
                         <div>
                             <div class="text-light-blue text-xl font-bold text-center">Contact us</div>
-                            <ul class="text-center flex flex-col gap-y-3 pt-4 text-sm">
-                                <li><a href="" class="text-primary-light">Contact us</a></li>
-                                <li><a href="" class="text-primary-light">Booking form</a></li>
-                                <li><a href="" class="text-primary-light">Privacy policy</a></li>
-                                <li><a href="" class="text-primary-light">Conditions</a></li>
-                            </ul>
+                            <?php wp_nav_menu(array(
+                                'menu' => 'Contact us',
+                                'item_class' => 'nav-item',
+                                'link_class' => 'nav-link leading-loose text-primary-light text-sm text-center',
+                                'container_class' => 'footer_menu pt-4 text-center',
+                            )); ?>
                         </div>
                     </div>
                 </div>
