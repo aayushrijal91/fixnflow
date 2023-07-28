@@ -19,7 +19,7 @@ get_template_part('parts/section', 'nav');
                         <source src="<?= get_template_directory_uri() ?>/images/background/light-blue-wavy-bg.mp4" type="video/mp4">
                         Your browser does not support HTML video.
                     </video>
-                    <div class="w-10/12 ml-auto px-10 pt-48 pb-14 relative">
+                    <div class="xl:w-10/12 ml-auto px-5 pt-24 md:pt-48 pb-20 md:pb-24 relative text-center xl:text-start">
                         <?php if (isset($banner)) : ?>
                             <h1 class="text-4xl md:text-5xl xl:text-heading text-white font-bold"><?= $banner['title'] ? $banner['title'] : get_the_title() ?></h1>
                             <?php if ($banner['subtitle']) : ?>
@@ -29,7 +29,7 @@ get_template_part('parts/section', 'nav');
                         <?php
                             endif;
                         endif; ?>
-                        <div class="pt-24 pb-3">
+                        <div class="pt-14 pb-3">
                             <div class="w-1/3 px-1">
                                 <img src="<?= get_template_directory_uri() ?>/images/icons/google-reviews.png" alt="google">
                             </div>
@@ -60,7 +60,7 @@ get_template_part('parts/section', 'nav');
             </div>
         </div>
 
-        <div class="flex flex-wrap justify-center -mt-44" data-aos="zoom-in">
+        <div class="flex flex-wrap justify-center -mt-24 md:-mt-44" data-aos="zoom-in">
             <div class="w-full lg:w-5/12 order-2 lg:order-1">
                 <div class="bg-white rounded-[30px] px-8 py-6 shadow-xl">
                     <div class="text-dark-blue text-xl md:text-2xl font-extrabold pb-8">Check if we service your area</div>
@@ -104,7 +104,7 @@ get_template_part('parts/section', 'nav');
             <div class="text-center text-4xl md:text-5xl xl:text-heading text-main-blue font-bold pb-16 lg:pb-28">Meet our expert plumbers</div>
             <?php $teamMembers = get_field('team_members'); ?>
 
-            <div class="lg:hidden px-2 mt-5 flex flex-wrap -mx-2 gap-y-4">
+            <div class="xl:hidden px-2 mt-5 flex flex-wrap -mx-2 gap-y-4">
                 <?php
                 if (have_rows('team_members')) :
                     $key = 0;
@@ -129,7 +129,7 @@ get_template_part('parts/section', 'nav');
                         </div>
                         <div class="w-full md:w-1/2 px-2">
                             <?php if ($member_1['name']) : ?>
-                                <div class="rounded-[20px] overflow-hidden bg-[#D3E2EF] w-full py-5 px-4">
+                                <div class="rounded-[20px] overflow-hidden bg-[#D3E2EF] w-full py-5 px-4 aboutDescriptionWrapper">
                                     <div class="flex flex-wrap justify-between items-center">
                                         <div class="text-4xl font-bold text-main-blue"><?= $member_1['name'] ?></div>
                                         <img src="<?= get_template_directory_uri() ?>/images/logo/small-logo.png" alt="Fix N Flow">
@@ -138,7 +138,17 @@ get_template_part('parts/section', 'nav');
                                         <?= echo_image($member_1['icon']) ?>
                                         <?= $member_1['position'] ?>
                                     </div>
-                                    <div class="text-dark-blue font-articulat leading-relaxed description"><?= $member_1['about'] ?></div>
+                                    <div class="text-dark-blue font-articulat leading-relaxed description hidden"><?= $member_1['about'] ?></div>
+
+                                    <div class="flex justify-center">
+                                        <button class="showAboutDescription outline-none">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53" fill="none">
+                                                <circle cx="26.5" cy="26.4599" r="26.3691" fill="#5AB2F8" />
+                                                <path d="M15.9877 26.459H37.0123" stroke="#F7F8FA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M26.5007 15.9473L26.5007 36.9719" stroke="#F7F8FA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
                                 </div>
                             <?php endif; ?>
                         </div>
@@ -159,7 +169,7 @@ get_template_part('parts/section', 'nav');
                         </div>
                         <div class="w-full md:w-1/2 px-2">
                             <?php if ($member_2['name']) : ?>
-                                <div class="rounded-[20px] overflow-hidden bg-[#D3E2EF] w-full py-5 px-4">
+                                <div class="rounded-[20px] overflow-hidden bg-[#D3E2EF] w-full py-5 px-4 aboutDescriptionWrapper">
                                     <div class="flex flex-wrap justify-between items-center">
                                         <div class="text-4xl font-bold text-main-blue"><?= $member_2['name'] ?></div>
                                         <img src="<?= get_template_directory_uri() ?>/images/logo/small-logo.png" alt="Fix N Flow">
@@ -168,7 +178,17 @@ get_template_part('parts/section', 'nav');
                                         <?= echo_image($member_2['icon']) ?>
                                         <?= $member_2['position'] ?>
                                     </div>
-                                    <div class="text-dark-blue font-articulat leading-relaxed description"><?= $member_2['about'] ?></div>
+                                    <div class="text-dark-blue font-articulat leading-relaxed description hidden"><?= $member_2['about'] ?></div>
+
+                                    <div class="flex justify-center">
+                                        <button class="showAboutDescription outline-none">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53" fill="none">
+                                                <circle cx="26.5" cy="26.4599" r="26.3691" fill="#5AB2F8" />
+                                                <path d="M15.9877 26.459H37.0123" stroke="#F7F8FA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M26.5007 15.9473L26.5007 36.9719" stroke="#F7F8FA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
                                 </div>
                             <?php endif; ?>
                         </div>
@@ -178,7 +198,7 @@ get_template_part('parts/section', 'nav');
                 endif; ?>
             </div>
 
-            <div class="hidden lg:block">
+            <div class="hidden xl:block">
                 <?php
                 if (have_rows('team_members')) :
                     $key = 0;

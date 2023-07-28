@@ -128,6 +128,14 @@ jQuery(function ($) {
                     infinite: false,
                     initialSlide: 2,
                     draggable: false,
+                    responsive: [
+                        {
+                            breakpoint: 1600,
+                            settings: {
+                                centerPadding: "150px"
+                            }
+                        }
+                    ]
                 });
 
                 $('#gotoTeam0_1').on('click', function () {
@@ -152,6 +160,14 @@ jQuery(function ($) {
                     infinite: false,
                     initialSlide: 2,
                     draggable: false,
+                    responsive: [
+                        {
+                            breakpoint: 1600,
+                            settings: {
+                                centerPadding: "150px"
+                            }
+                        }
+                    ]
                 });
 
                 AOS.refresh();
@@ -177,6 +193,14 @@ jQuery(function ($) {
                     infinite: false,
                     initialSlide: 2,
                     draggable: false,
+                    responsive: [
+                        {
+                            breakpoint: 1600,
+                            settings: {
+                                centerPadding: "150px"
+                            }
+                        }
+                    ]
                 });
 
                 AOS.refresh();
@@ -201,6 +225,14 @@ jQuery(function ($) {
                     infinite: false,
                     initialSlide: 2,
                     draggable: false,
+                    responsive: [
+                        {
+                            breakpoint: 1600,
+                            settings: {
+                                centerPadding: "150px"
+                            }
+                        }
+                    ]
                 });
 
                 AOS.refresh();
@@ -428,6 +460,21 @@ jQuery(function ($) {
                     const svg2 = '<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.76416 12.4197H22.7888" stroke="#0067B9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M12.2764 1.90747L12.2764 22.9321" stroke="#0067B9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg>';
 
                     $(this).parents('.servicDescriptionCard').hasClass('active') ? $(this).html(svg1) : $(this).html(svg2);
+                });
+
+                const showPlus = '<svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53" fill="none"><circle cx="26.5" cy="26.4599" r="26.3691" fill="#5AB2F8" /><path d="M15.9877 26.459H37.0123" stroke="#F7F8FA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M26.5007 15.9473L26.5007 36.9719" stroke="#F7F8FA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg>';
+                const showMinus = '<svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none"><circle cx="26.7714" cy="27.0214" r="26.3691" fill="#F7F8FA"/><path d="M16.2592 27.0205H37.2838" stroke="#5AB2F8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M37.2845 27.0215L16.2599 27.0215" stroke="#5AB2F8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+                $('button.showAboutDescription').on('click', function () {
+                    $(this).parents('.aboutDescriptionWrapper').toggleClass('shown');
+                    $(this).parents('.aboutDescriptionWrapper').find('.description').slideToggle();
+
+                    if ($(this).parents('.aboutDescriptionWrapper').hasClass('shown')) {
+                        $(this).html(showMinus);
+                    }
+                    else {
+                        $(this).html(showPlus);
+                    }
                 });
             }, // end misc
         }, // end ui
