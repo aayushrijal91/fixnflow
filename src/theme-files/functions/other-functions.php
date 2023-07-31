@@ -203,3 +203,37 @@ function echo_theme_image($relative_url, $class = '')
 
     echo '<img src="' . esc_url($url) . '" alt="' . esc_attr($alt_text) . '" class="' . esc_attr($class) . '" />';
 }
+
+add_action('rest_api_init', function () {
+    register_rest_route('api', '/areas', array(
+        'methods' => 'GET',
+        'callback' => 'get_areas_data',
+    ));
+});
+
+function get_areas_data()
+{
+    $args = array(
+        'post_type'      => 'page',
+        'posts_per_page' => -1,
+        'order'          => 'ASC',
+        'orderby'        => 'date', // Fixed this line
+        'meta_query' => array(
+            array(
+                'key' => '_wp_page_template',
+                'value' => 'page-templates/suburb.php',
+            ),
+        )
+    );
+    $the_query = new WP_Query($args);
+    $areaData = array();
+
+    if ($the_query->have_posts()) :
+        while ($the_query->have_posts()) : $the_query->the_post();
+            array_push($areaData, get_the_title());
+        endwhile;
+    endif;
+    wp_reset_postdata();
+
+    return $areaData;
+}

@@ -6,6 +6,34 @@ jQuery(function ($) {
             misc: function () {
                 AOS.init({ duration: 1500, });
 
+                let areasData;
+
+                $.ajax({
+                    url: '/fixnflow/wp-json/api/areas',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        areasData = data;
+                    },
+                    error: function (error) {
+                        console.error('Error fetching data:', error);
+                    }
+                });
+
+                $('#checkServiceAreaForm').on('submit', function (e) {
+                    e.preventDefault();
+
+                    let areaValue = $('input[name="area"]').val().toLowerCase();
+
+                    if (!areasData.some(item => item.toLowerCase() === areaValue)) {
+                        $(this).parents('.checkServiceAreaForm').find('.noService').removeClass('hidden');
+                        $(this).parents('.checkServiceAreaForm').find('.yesService').addClass('hidden');
+                    } else {
+                        $(this).parents('.checkServiceAreaForm').find('.yesService').removeClass('hidden');
+                        $(this).parents('.checkServiceAreaForm').find('.noService').addClass('hidden');
+                    }
+                });
+
                 $('#homepage_service_slider').slick({
                     slidesToShow: 3,
                     arrows: false,
@@ -171,7 +199,6 @@ jQuery(function ($) {
                 });
 
                 AOS.refresh();
-
 
                 $('#gotoTeam1_1').on('click', function () {
                     teamSlider1.slick('slickGoTo', 1);
@@ -477,11 +504,11 @@ jQuery(function ($) {
                     }
                 });
 
-                $('#openGiantMenu').on('click', function() {
+                $('#openGiantMenu').on('click', function () {
                     $('#giantMenu').addClass('open');
                 });
 
-                $('.closeGiantMenu').on('click', function() {
+                $('.closeGiantMenu').on('click', function () {
                     $('#giantMenu').removeClass('open');
                 });
             }, // end misc

@@ -62,11 +62,7 @@ get_template_part('parts/section', 'nav');
 
         <div class="flex flex-wrap justify-center -mt-24 md:-mt-44" data-aos="zoom-in">
             <div class="w-full lg:w-5/12 order-2 lg:order-1">
-                <div class="bg-white rounded-[30px] px-8 py-6 shadow-xl">
-                    <div class="text-dark-blue text-xl md:text-2xl font-extrabold pb-8">Check if we service your area</div>
-                    <div class="hidden h-14 bg-light-grey rounded-md px-4 w-full mt-3 outline-none font-semibold gap-y-5"></div>
-                    <?= do_shortcode('[contact-form-7 id="9" title="Check Service Area"]') ?>
-                </div>
+                <?= get_template_part('parts/section', 'checkServiceArea') ?>
             </div>
         </div>
     </div>
