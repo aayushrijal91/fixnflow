@@ -22,7 +22,7 @@
                     <p>At Fix N Flow, we are committed to providing our customers with top-quality plumbing services. Contact us today for all your plumbing needs.</p>
                 </div>
 
-                <a href="./" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10">Button name here</span></a>
+                <a href="<?= get_site_url() ?>/contact-us" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10">Contact Us</span></a>
             </div>
         </div>
     </div>
