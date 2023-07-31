@@ -7,6 +7,7 @@ jQuery(function ($) {
                 AOS.init({ duration: 1500, });
 
                 let areasData;
+                let areasDataFetchError = false;
 
                 $.ajax({
                     url: '/fixnflow/wp-json/api/areas',
@@ -16,6 +17,7 @@ jQuery(function ($) {
                         areasData = data;
                     },
                     error: function (error) {
+                        areasDataFetchError = true;
                         console.error('Error fetching data:', error);
                     }
                 });
@@ -24,6 +26,14 @@ jQuery(function ($) {
                     e.preventDefault();
 
                     let areaValue = $('input[name="area"]').val().toLowerCase();
+
+                    if(areasDataFetchError) {
+                        $(this).parents('.checkServiceAreaForm').find('.dataFetchError').removeClass('hidden');
+                        $(this).parents('.checkServiceAreaForm').find('.noService').addClass('hidden');
+                        $(this).parents('.checkServiceAreaForm').find('.yesService').addClass('hidden');
+
+                        return;
+                    }
 
                     if (!areasData.some(item => item.toLowerCase() === areaValue)) {
                         $(this).parents('.checkServiceAreaForm').find('.noService').removeClass('hidden');

@@ -2,6 +2,7 @@
     <div class="text-dark-blue text-xl md:text-2xl font-extrabold">Check if we service your area</div>
     <div class="bg-lime-500 mt-4 py-3 px-4 text-white font-semibold yesService hidden">We service your area.</div>
     <div class="bg-rose-600 mt-4 py-3 px-4 text-white font-semibold noService hidden">Sorry! We do not service your area.</div>
+    <div class="bg-rose-600 mt-4 py-3 px-4 text-white font-semibold dataFetchError hidden">Sorry! We are unable to fetch the data.</div>
     <form class="flex flex-wrap -mx-2 gap-y-5 pt-8" id="checkServiceAreaForm">
         <div class="w-full md:w-1/2 px-2">
             <label class="font-articulat font-semibold text-grey">What services do you need?</label>
