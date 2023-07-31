@@ -17,12 +17,16 @@ get_header();
             <div class="flex flex-wrap py-20 md:py-28 gap-y-8 md:gap-y-10">
                 <div class="w-full lg:w-1/3" data-aos="fade-up">
                     <div class="text-4xl md:text-5xl xl:text-heading text-main-blue font-bold"><?= $section_1['heading'] ?></div>
-                    <div class="pt-8 md:pt-10 hidden md:block">
-                        <a href="<?= $section_1['button_1']['url'] ?>" target="<?= $section_1['button_1']['target'] ?>" class="btn-yellow-hover-main-blue px-14"><span class="relative z-10"><?= $section_1['button_1']['title'] ?></span></a>
-                    </div>
-                    <div class="pt-2 md:pt-5 hidden md:block">
-                        <a href="<?= $section_1['button_2']['url'] ?>" target="<?= $section_1['button_1']['target'] ?>" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10"><?= $section_1['button_2']['title'] ?></span></a>
-                    </div>
+                    <?php if ($section_1['button_1']) : ?>
+                        <div class="pt-8 md:pt-10 hidden md:block">
+                            <a href="<?= $section_1['button_1']['url'] ?>" target="<?= $section_1['button_1']['target'] ?>" class="btn-yellow-hover-main-blue px-14"><span class="relative z-10"><?= $section_1['button_1']['title'] ?></span></a>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($section_1['button_2']) : ?>
+                        <div class="pt-2 md:pt-5 hidden md:block">
+                            <a href="<?= $section_1['button_2']['url'] ?>" target="<?= $section_1['button_1']['target'] ?>" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10"><?= $section_1['button_2']['title'] ?></span></a>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="w-full lg:w-2/3" data-aos="fade-up">
                     <div class="bg-white rounded-[20px] md:rounded-[30px] h-full p-5 md:py-10 xl:px-14 font-articulat text-grey leading-relaxed description md:columns-2 text-sm md:text-base">
@@ -30,120 +34,154 @@ get_header();
                     </div>
                 </div>
                 <div class="w-full md:hidden" data-aos="fade-up">
-                    <a href="<?= $section_1['button_1']['url'] ?>" target="<?= $section_1['button_1']['target'] ?>" class="btn-yellow-hover-main-blue px-14 w-full"><span class="relative z-10"><?= $section_1['button_1']['title'] ?></span></a>
-                    <div class="pt-5">
-                        <a href="<?= $section_1['button_2']['url'] ?>" target="<?= $section_1['button_1']['target'] ?>" class="btn-main-blue-hover-yellow px-14 w-full"><span class="relative z-10"><?= $section_1['button_2']['title'] ?></span></a>
-                    </div>
+                    <?php if ($section_1['button_1']) : ?>
+                        <a href="<?= $section_1['button_1']['url'] ?>" target="<?= $section_1['button_1']['target'] ?>" class="btn-yellow-hover-main-blue px-14 w-full"><span class="relative z-10"><?= $section_1['button_1']['title'] ?></span></a>
+                    <?php endif; ?>
+
+                    <?php if ($section_1['button_2']) : ?>
+                        <div class="pt-5">
+                            <a href="<?= $section_1['button_2']['url'] ?>" target="<?= $section_1['button_1']['target'] ?>" class="btn-main-blue-hover-yellow px-14 w-full"><span class="relative z-10"><?= $section_1['button_2']['title'] ?></span></a>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
     <?php endif; ?>
+
+    <?php
+    $extra_content = get_field('extra_content_block');
+    if ($extra_content) :
+        if ($extra_content['show_extra_content_block']) : ?>
+            <div class="bg-dark-blue py-24">
+                <div class="container">
+                    <?php if ($extra_content['heading']) : ?>
+                        <div class="text-4xl md:text-5xl xl:text-heading font-bold text-main-blue highlight-white leading-none text-center"><?= $extra_content['heading'] ?></div>
+                    <?php endif; ?>
+                    <div class="flex flex-wrap -mx-3 gap-y-5 pt-10 text-white">
+                        <?php if ($extra_content['content_1']) : ?>
+                            <div class="w-full lg:w-1/2 flex-1 px-3 h-full">
+                                <div class="bg-main-blue rounded-[20px] p-5 description"><?= $extra_content['content_1'] ?></div>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($extra_content['content_2']) : ?>
+                            <div class="w-full lg:w-1/2 flex-1 px-3 h-full">
+                                <div class="bg-main-blue rounded-[20px] p-5 description"><?= $extra_content['content_2'] ?></div>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+    <?php endif;
+    endif; ?>
 
     <div class="bg-white">
         <?php get_template_part('parts/section', 'professionalPlumbing') ?>
     </div>
 
     <?php $service_attributes = get_field('service_attributes');
-    if (!empty($service_attributes['heading'])) : ?>
+    $service_description = get_field('service_description');
+    if (!empty($service_attributes['heading']) || !empty($service_description['heading'])) : ?>
         <div class="bg-light-blue pt-20 md:pt-28">
-            <div class="container" data-aos="fade-up">
-                <div class="text-white text-4xl md:text-5xl xl:text-heading font-semibold leading-none capitalize"><?= $service_attributes['heading'] ?></div>
-            </div>
-            <div class="container pt-16 pb-36 relative items-center hidden xl:flex">
-                <button value="0" class="absolute z-[1000] -left-4 serviceAttributeBoxesButton bg-main-blue h-[65px] w-[65px] rounded-full flex justify-center items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="27" viewBox="0 0 16 27" fill="none">
-                        <path d="M13.6481 2.34619L2.51595 13.4783L13.6481 24.6104" fill="#0067B9" />
-                        <path d="M13.6481 2.34619L2.51595 13.4783L13.6481 24.6104" stroke="#F7F8FA" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" />
-                    </svg>
-                </button>
-                <div class="flex transition-transform duration-700 ease-in-out transform" id="serviceAttributeBoxes">
-                    <?php if (have_rows('service_attributes')) :
-                        $count = 0;
-                        while (have_rows('service_attributes')) : the_row();
-                            if (have_rows('attributes')) :
-                                while (have_rows('attributes')) : the_row();
-                                    $title = get_sub_field('title');
-                                    $description = get_sub_field('description');
-                                    if ($count == 0) :
-                    ?>
-                                        <div class="bg-primary rounded-[30px] h-inherit w-2/5 mx-2 flex-shrink-0 px-11 py-8" data-aos="zoom-in">
-                                            <div class="text-2xl text-white highlight-light-blue font-semibold leading-none pb-4"><?= $title ?></div>
-                                            <div class="font-articulat text-white leading-relaxed"><?= $description ?></div>
-                                        </div>
-                                    <?php else : ?>
-                                        <div class="bg-white rounded-[30px] h-inherit w-1/5 mx-2 flex-shrink-0 py-8 px-7" data-aos="zoom-in">
-                                            <div class="text-2xl text-main-blue font-bold leading-none pb-4"><?= $title ?></div>
-                                            <div class="font-articulat text-dark-blue leading-relaxed"><?= $description ?></div>
-                                        </div>
-                    <?php
-                                    endif;
-                                    $count++;
-                                endwhile;
-                            endif;
-                        endwhile;
-                    endif;
-                    ?>
+            <?php if (!empty($service_attributes['heading'])) : ?>
+                <div class="container" data-aos="fade-up">
+                    <div class="text-white text-4xl md:text-5xl xl:text-heading font-semibold leading-none capitalize"><?= $service_attributes['heading'] ?></div>
                 </div>
-                <button value="-25%" class="absolute z-[1000] -right-4 serviceAttributeBoxesButton bg-main-blue h-[65px] w-[65px] rounded-full flex justify-center items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
-                        <path d="M1.5162 24.4172L12.6483 13.2851L1.5162 2.15302" fill="#0067B9" />
-                        <path d="M1.5162 24.4172L12.6483 13.2851L1.5162 2.15302" stroke="#F7F8FA" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" />
-                    </svg>
-                </button>
-            </div>
-
-            <div class="py-10 xl:hidden">
-                <div class="px-2">
-                    <?php if (have_rows('service_attributes')) :
-                        $count = 0;
-                        while (have_rows('service_attributes')) : the_row();
-                            if (have_rows('attributes')) :
-                                while (have_rows('attributes')) : the_row();
-                                    $title = get_sub_field('title');
-                                    $description = get_sub_field('description');
-                                    if ($count == 0) :
-                    ?>
-                                        <div class="bg-primary rounded-[30px] h-inherit p-8" data-aos="zoom-in">
-                                            <div class="text-2xl text-white highlight-light-blue font-semibold leading-none pb-4"><?= $title ?></div>
-                                            <div class="font-articulat text-white leading-relaxed"><?= $description ?></div>
-                                        </div>
-                    <?php
-                                    endif;
-                                    $count++;
-                                endwhile;
-                            endif;
-                        endwhile;
-                    endif;
-                    ?>
+                <div class="container pt-16 pb-36 relative items-center hidden xl:flex">
+                    <button value="0" class="absolute z-[1000] -left-4 serviceAttributeBoxesButton bg-main-blue h-[65px] w-[65px] rounded-full flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="27" viewBox="0 0 16 27" fill="none">
+                            <path d="M13.6481 2.34619L2.51595 13.4783L13.6481 24.6104" fill="#0067B9" />
+                            <path d="M13.6481 2.34619L2.51595 13.4783L13.6481 24.6104" stroke="#F7F8FA" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div class="flex transition-transform duration-700 ease-in-out transform" id="serviceAttributeBoxes">
+                        <?php if (have_rows('service_attributes')) :
+                            $count = 0;
+                            while (have_rows('service_attributes')) : the_row();
+                                if (have_rows('attributes')) :
+                                    while (have_rows('attributes')) : the_row();
+                                        $title = get_sub_field('title');
+                                        $description = get_sub_field('description');
+                                        if ($count == 0) :
+                        ?>
+                                            <div class="bg-primary rounded-[30px] h-inherit w-2/5 mx-2 flex-shrink-0 px-11 py-8" data-aos="zoom-in">
+                                                <div class="text-2xl text-white highlight-light-blue font-semibold leading-none pb-4"><?= $title ?></div>
+                                                <div class="font-articulat text-white leading-relaxed"><?= $description ?></div>
+                                            </div>
+                                        <?php else : ?>
+                                            <div class="bg-white rounded-[30px] h-inherit w-1/5 mx-2 flex-shrink-0 py-8 px-7" data-aos="zoom-in">
+                                                <div class="text-2xl text-main-blue font-bold leading-none pb-4"><?= $title ?></div>
+                                                <div class="font-articulat text-dark-blue leading-relaxed"><?= $description ?></div>
+                                            </div>
+                        <?php
+                                        endif;
+                                        $count++;
+                                    endwhile;
+                                endif;
+                            endwhile;
+                        endif;
+                        ?>
+                    </div>
+                    <button value="-25%" class="absolute z-[1000] -right-4 serviceAttributeBoxesButton bg-main-blue h-[65px] w-[65px] rounded-full flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none">
+                            <path d="M1.5162 24.4172L12.6483 13.2851L1.5162 2.15302" fill="#0067B9" />
+                            <path d="M1.5162 24.4172L12.6483 13.2851L1.5162 2.15302" stroke="#F7F8FA" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" />
+                        </svg>
+                    </button>
                 </div>
 
-                <div class="mt-3 serviceAttributeBoxesMobile">
-                    <?php if (have_rows('service_attributes')) :
-                        $count = 0;
-                        while (have_rows('service_attributes')) : the_row();
-                            if (have_rows('attributes')) :
-                                while (have_rows('attributes')) : the_row();
-                                    $title = get_sub_field('title');
-                                    $description = get_sub_field('description');
-                                    if ($count == 0) :
-                    ?>
-                                    <?php else : ?>
-                                        <div class="bg-white rounded-[30px] h-inherit mx-2 flex-shrink-0 py-8 px-7" data-aos="zoom-in">
-                                            <div class="text-2xl text-main-blue font-bold leading-none pb-4"><?= $title ?></div>
-                                            <div class="font-articulat text-dark-blue leading-relaxed"><?= $description ?></div>
-                                        </div>
-                    <?php
-                                    endif;
-                                    $count++;
-                                endwhile;
-                            endif;
-                        endwhile;
-                    endif;
-                    ?>
-                </div>
-            </div>
+                <div class="py-10 xl:hidden">
+                    <div class="px-2">
+                        <?php if (have_rows('service_attributes')) :
+                            $count = 0;
+                            while (have_rows('service_attributes')) : the_row();
+                                if (have_rows('attributes')) :
+                                    while (have_rows('attributes')) : the_row();
+                                        $title = get_sub_field('title');
+                                        $description = get_sub_field('description');
+                                        if ($count == 0) :
+                        ?>
+                                            <div class="bg-primary rounded-[30px] h-inherit p-8" data-aos="zoom-in">
+                                                <div class="text-2xl text-white highlight-light-blue font-semibold leading-none pb-4"><?= $title ?></div>
+                                                <div class="font-articulat text-white leading-relaxed"><?= $description ?></div>
+                                            </div>
+                        <?php
+                                        endif;
+                                        $count++;
+                                    endwhile;
+                                endif;
+                            endwhile;
+                        endif;
+                        ?>
+                    </div>
 
-            <?php $service_description = get_field('service_description');
+                    <div class="mt-3 serviceAttributeBoxesMobile">
+                        <?php if (have_rows('service_attributes')) :
+                            $count = 0;
+                            while (have_rows('service_attributes')) : the_row();
+                                if (have_rows('attributes')) :
+                                    while (have_rows('attributes')) : the_row();
+                                        $title = get_sub_field('title');
+                                        $description = get_sub_field('description');
+                                        if ($count == 0) :
+                        ?>
+                                        <?php else : ?>
+                                            <div class="bg-white rounded-[30px] h-inherit mx-2 flex-shrink-0 py-8 px-7" data-aos="zoom-in">
+                                                <div class="text-2xl text-main-blue font-bold leading-none pb-4"><?= $title ?></div>
+                                                <div class="font-articulat text-dark-blue leading-relaxed"><?= $description ?></div>
+                                            </div>
+                        <?php
+                                        endif;
+                                        $count++;
+                                    endwhile;
+                                endif;
+                            endwhile;
+                        endif;
+                        ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+
+            <?php
             if ($service_description['heading'] != null) : ?>
                 <div class="container pb-28 relative">
                     <div class="flex flex-wrap justify-between">

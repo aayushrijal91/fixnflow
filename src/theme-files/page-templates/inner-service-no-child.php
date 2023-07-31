@@ -59,6 +59,32 @@ get_header();
         </div>
     <?php endif; ?>
 
+    <?php
+    $extra_content = get_field('extra_content_block');
+    if ($extra_content) :
+        if ($extra_content['show_extra_content_block']) : ?>
+            <div class="bg-dark-blue py-24">
+                <div class="container">
+                    <?php if ($extra_content['heading']) : ?>
+                        <div class="text-4xl md:text-5xl xl:text-heading font-bold text-main-blue highlight-white leading-none text-center"><?= $extra_content['heading'] ?></div>
+                    <?php endif; ?>
+                    <div class="flex flex-wrap -mx-3 gap-y-5 pt-10 text-white">
+                        <?php if ($extra_content['content_1']) : ?>
+                            <div class="w-full lg:w-1/2 flex-1 px-3 h-full">
+                                <div class="bg-main-blue rounded-[20px] p-5 description"><?= $extra_content['content_1'] ?></div>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($extra_content['content_2']) : ?>
+                            <div class="w-full lg:w-1/2 flex-1 px-3 h-full">
+                                <div class="bg-main-blue rounded-[20px] p-5 description"><?= $extra_content['content_2'] ?></div>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+    <?php endif;
+    endif; ?>
+
     <div class="bg-white">
         <?php get_template_part('parts/section', 'professionalPlumbing') ?>
     </div>

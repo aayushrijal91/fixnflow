@@ -59,6 +59,32 @@ get_header();
         </div>
     <?php endif; ?>
 
+    <?php
+    $extra_content = get_field('extra_content_block');
+    if ($extra_content) :
+        if ($extra_content['show_extra_content_block']) : ?>
+            <div class="bg-dark-blue py-24">
+                <div class="container">
+                    <?php if ($extra_content['heading']) : ?>
+                        <div class="text-4xl md:text-5xl xl:text-heading font-bold text-main-blue highlight-white leading-none text-center"><?= $extra_content['heading'] ?></div>
+                    <?php endif; ?>
+                    <div class="flex flex-wrap -mx-3 gap-y-5 pt-10 text-white">
+                        <?php if ($extra_content['content_1']) : ?>
+                            <div class="w-full lg:w-1/2 flex-1 px-3 h-full">
+                                <div class="bg-main-blue rounded-[20px] p-5 description"><?= $extra_content['content_1'] ?></div>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($extra_content['content_2']) : ?>
+                            <div class="w-full lg:w-1/2 flex-1 px-3 h-full">
+                                <div class="bg-main-blue rounded-[20px] p-5 description"><?= $extra_content['content_2'] ?></div>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+    <?php endif;
+    endif; ?>
+
     <?php $args = array(
         'post_type'      => 'page',
         'posts_per_page' => -1,
@@ -81,11 +107,17 @@ get_header();
                 <div class="pt-16 lg:pt-24 flex flex-wrap -mx-2 gap-y-4">
                     <?php
                     while ($the_query->have_posts()) : $the_query->the_post();
-                        $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
+                        $featured_img_url = null;
+
+                        if (get_the_post_thumbnail_url($post->ID, 'full')) {
+                            $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
+                        } else if (isset(get_field('banner', $post->ID)['image'])) {
+                            $featured_img_url = get_field('banner', $post->ID)['image']['url'] ? get_field('banner', $post->ID)['image']['url'] : null;
+                        }
                     ?>
                         <div class="w-full md:w-1/2 lg:w-1/3 px-2">
                             <div class="bg-off-white hover:bg-quaternary duration-300 rounded-2xl p-6 flex flex-col justify-between items-center h-full" data-aos="zoom-in">
-                                <div class="h-[147px] w-full bg-grey rounded-[10px] p-3 flex items-end bg-no-repeat bg-cover" style="background-image: url('<?= $featured_img_url ?>'); background-size: cover;"></div>
+                                <div class="h-[147px] w-full bg-grey rounded-[10px] p-3 flex items-end bg-no-repeat bg-cover" style="background-image: url('<?= $featured_img_url ?>'); background-size: cover; background-position: center"></div>
                                 <div class="text-2xl font-bold text-main-blue pt-8 text-center"><?= get_the_title() ?></div>
                                 <div class="font-articulat leading-loose text-grey text-center pt-6 pb-8"><?= get_the_content() ?></div>
                                 <a href="<?= get_the_permalink() ?>" class="border border-light-blue rounded-md h-[48px] px-14 flex items-center justify-center text-center text-main-blue font-articulat font-semibold gap-x-4">

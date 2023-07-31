@@ -476,6 +476,14 @@ jQuery(function ($) {
                         $(this).html(showPlus);
                     }
                 });
+
+                $('#openGiantMenu').on('click', function() {
+                    $('#giantMenu').addClass('open');
+                });
+
+                $('.closeGiantMenu').on('click', function() {
+                    $('#giantMenu').removeClass('open');
+                });
             }, // end misc
         }, // end ui
         //utils: {

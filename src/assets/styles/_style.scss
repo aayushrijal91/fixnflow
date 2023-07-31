@@ -406,3 +406,9 @@
         }
     }
 }
+
+#giantMenu {
+    &.open {
+        transform: translateX(0);
+    }
+}

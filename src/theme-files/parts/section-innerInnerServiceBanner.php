@@ -4,18 +4,18 @@
 
 <div class="innerInnerServiceBanner max-w-[1874px] mx-auto p-1 xl:p-6">
     <div class="flex flex-wrap -mx-2 gap-y-2">
-        <div class="w-full xl:w-7/12 px-2 order-2 xl:order-1">
+        <div class="w-full xl:w-7/12 px-2 order-2 xl:order-1 flex-1">
             <div class="rounded-[20px] md:rounded-[30px] bg-main-blue bg-cover bg-no-repeat h-full relative overflow-hidden">
-                <video class="absolute h-full object-cover" autoplay loop muted>
+                <video class="absolute h-full w-full object-cover" autoplay loop muted>
                     <source src="<?= get_template_directory_uri() ?>/images/background/dark-blue-wavy-bg.webm" type="video/webm">
                     <source src="<?= get_template_directory_uri() ?>/images/background/dark-blue-wavy-bg.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
                 <div class="xl:w-10/12 ml-auto px-5 pt-24 md:pt-48 pb-20 md:pb-24 relative text-center xl:text-start">
                     <?php if (isset($banner)) : ?>
-                        <h1 class="text-4xl md:text-5xl xl:text-heading text-white font-semibold"><?= $banner['title'] ? $banner['title'] : get_the_title() ?></h1>
+                        <h1 class="text-4xl md:text-5xl xl:text-heading text-white font-semibold <?= !($banner['image']) ? 'text-center' : '' ?>"><?= $banner['title'] ? $banner['title'] : get_the_title() ?></h1>
                         <?php if ($banner['subtitle']) : ?>
-                            <div class="pt-6 text-lg font-articulat text-white">
+                            <div class="pt-6 text-lg font-articulat text-white <?= !($banner['image']) ? 'text-center' : '' ?>">
                                 <?= $banner['subtitle'] ?>
                             </div>
                     <?php
@@ -47,9 +47,11 @@
                 </div>
             </div>
         </div>
+        <?php if(isset($banner['image'])) : ?>
         <div class="w-full xl:w-5/12 px-2 order-1 xl:order-2">
             <div class="rounded-[20px] md:rounded-[30px] min-h-[272px] md:min-h-[400px] bg-light-blue bg-cover bg-no-repeat h-full" style="background: url(<?= $banner['image']['url'] ?>) no-repeat center; background-size: cover"></div>
         </div>
+        <?php endif; ?>
     </div>
 
     <div class="flex flex-wrap justify-center -mt-44" data-aos="zoom-in">
