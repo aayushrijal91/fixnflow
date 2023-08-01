@@ -7,7 +7,7 @@
             <div class="w-full lg:w-5/12 text-center flex">
                 <div class="w-full lg:w-11/12 xl:w-8/12">
                     <div class="font-articulat text-sm md:text-base leading-loose md:leading-loose text-grey pb-7">Our team of experienced plumbers provides services to both residential and commercial customers. These are just some of the services we offer:</div>
-                    <a href="<?= get_site_url() ?>/service" class="btn-yellow-hover-main-blue px-14"><span class="relative z-10">See all services</span></a>
+                    <a href="<?= get_site_url() ?>/contact-us" class="btn-yellow-hover-main-blue px-14"><span class="relative z-10">Enquire Now</span></a>
                 </div>
             </div>
         </div>

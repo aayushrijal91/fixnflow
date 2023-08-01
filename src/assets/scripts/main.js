@@ -10,7 +10,7 @@ jQuery(function ($) {
                 let areasDataFetchError = false;
 
                 $.ajax({
-                    url: '/fixnflow/wp-json/api/areas',
+                    url: '/wp-json/api/areas',
                     type: 'GET',
                     dataType: 'json',
                     success: function (data) {
@@ -25,24 +25,44 @@ jQuery(function ($) {
                 $('#checkServiceAreaForm').on('submit', function (e) {
                     e.preventDefault();
 
-                    let areaValue = $('input[name="area"]').val().toLowerCase();
+                    let areaValue = $('input[name="area"]').val();
+                    const checkServiceAreaForm = $(this).parents('.checkServiceAreaForm');
+                    const noService = checkServiceAreaForm.find('.noService');
+                    const yesService = checkServiceAreaForm.find('.yesService');
 
-                    if(areasDataFetchError) {
+                    if (areasDataFetchError) {
                         $(this).parents('.checkServiceAreaForm').find('.dataFetchError').removeClass('hidden');
-                        $(this).parents('.checkServiceAreaForm').find('.noService').addClass('hidden');
-                        $(this).parents('.checkServiceAreaForm').find('.yesService').addClass('hidden');
+                        noService.addClass('hidden');
+                        yesService.addClass('hidden');
 
                         return;
                     }
 
-                    if (!areasData.some(item => item.toLowerCase() === areaValue)) {
-                        $(this).parents('.checkServiceAreaForm').find('.noService').removeClass('hidden');
-                        $(this).parents('.checkServiceAreaForm').find('.yesService').addClass('hidden');
+                    if (checkSimilarArea(areaValue)) {
+                        yesService.removeClass('hidden');
+                        noService.addClass('hidden');
                     } else {
-                        $(this).parents('.checkServiceAreaForm').find('.yesService').removeClass('hidden');
-                        $(this).parents('.checkServiceAreaForm').find('.noService').addClass('hidden');
+                        noService.removeClass('hidden');
+                        yesService.addClass('hidden');
                     }
                 });
+
+                function checkSimilarArea(areaValue) {
+                    const preparedAreaValue = areaValue.toLowerCase().replace(/\s/g, "");
+
+                    const similarMatches = [];
+
+                    areasData.forEach(item => {
+                        const preparedItem = item.toLowerCase().replace(/\s/g, "");
+                        const similarityRatio = stringSimilarity.compareTwoStrings(preparedAreaValue, preparedItem);
+
+                        if (similarityRatio >= 0.6) {
+                            similarMatches.push(item);
+                        }
+                    });
+
+                    return (similarMatches.length >= 1);
+                }
 
                 $('#homepage_service_slider').slick({
                     slidesToShow: 3,

@@ -42,6 +42,6 @@
             <p class="pb-5">We’re here for all your plumbing needs. Our team of expert plumbers is available 24/7 to help you with any plumbing emergencies.</p>
             <p>At Fix N Flow, we are committed to providing our customers with top-quality plumbing services. Contact us today for all your plumbing needs.</p>
         </div>
-        <a href="<?= get_site_url() ?>/contact-us" class="btn-main-blue-hover-yellow px-14 w-full md:w-fit"><span class="relative z-10">Contact Us</span></a>
+        <a href="<?= get_site_url() ?>/contact-us" class="btn-main-blue-hover-yellow px-14 w-full md:w-fit"><span class="relative z-10">Enquire Now</span></a>
     </div>
 </div>

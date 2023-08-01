@@ -59,13 +59,13 @@ get_header();
                     <?php endif; ?>
                     <div class="flex flex-wrap -mx-3 gap-y-5 pt-10 text-white">
                         <?php if ($extra_content['content_1']) : ?>
-                            <div class="w-full lg:w-1/2 flex-1 px-3 h-full">
-                                <div class="bg-main-blue rounded-[20px] p-5 description"><?= $extra_content['content_1'] ?></div>
+                            <div class="w-full lg:w-1/2 flex-1 px-3">
+                                <div class="bg-main-blue rounded-[20px] p-5 h-full description"><?= $extra_content['content_1'] ?></div>
                             </div>
                         <?php endif; ?>
                         <?php if ($extra_content['content_2']) : ?>
-                            <div class="w-full lg:w-1/2 flex-1 px-3 h-full">
-                                <div class="bg-main-blue rounded-[20px] p-5 description"><?= $extra_content['content_2'] ?></div>
+                            <div class="w-full lg:w-1/2 flex-1 px-3">
+                                <div class="bg-main-blue rounded-[20px] p-5 description h-full"><?= $extra_content['content_2'] ?></div>
                             </div>
                         <?php endif; ?>
                     </div>

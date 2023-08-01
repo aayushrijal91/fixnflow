@@ -67,7 +67,7 @@
                         </div>
                         <div class="flex flex-wrap -mx-2 gap-y-4 pt-10 xl:pt-0">
                             <div class="w-full md:w-fit px-2">
-                                <a href="<?= get_site_url() ?>/contact-us" class="btn-tertiary-hover-white w-full px-14"><span class="relative z-10">Contact Us</span></a>
+                                <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn-tertiary-hover-white w-full px-14"><span class="relative z-10">Call Today</span></a>
                             </div>
                             <div class="w-full md:w-fit px-2">
                                 <a href="<?= get_site_url() ?>/about-us" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">About Us</span></a>

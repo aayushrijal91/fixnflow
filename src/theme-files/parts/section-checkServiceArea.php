@@ -23,7 +23,7 @@
         </div>
         <div class="w-full md:w-1/2 px-2">
             <label class="font-articulat font-semibold text-grey">Your area</label>
-            <input type="text" name="area" class="h-14 bg-light-grey rounded-md px-4 w-full mt-3 outline-none font-semibold" placeholder="Enter postcode or suburb">
+            <input type="text" name="area" class="h-14 bg-light-grey rounded-md px-4 w-full mt-3 outline-none font-semibold" placeholder="Enter suburb">
         </div>
         <div class="w-full px-2">
             <button type="submit" class="btn-main-blue-hover-yellow w-full"><span class='relative z-10'>Submit</span></button>

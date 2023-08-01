@@ -27,6 +27,7 @@ let sources = {
         // './node_modules/lazyload/lazyload.min.js',
         './node_modules/aos/dist/aos.js',
         './node_modules/slick-carousel/slick/slick.min.js',
+        './node_modules/string-similarity/umd/string-similarity.min.js',
     ]),
 }
 

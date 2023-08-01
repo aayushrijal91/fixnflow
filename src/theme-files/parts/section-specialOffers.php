@@ -19,7 +19,7 @@
                     </ul>
                 </div>
                 <div class="w-full md:w-fit px-2">
-                    <a href="<?= get_site_url() ?>/membership" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Become a Member</span></a>
+                    <a href="<?= get_site_url() ?>/membership" class="btn-yellow-hover-main-blue w-full px-14"><span class="relative z-10">Sign Up Now</span></a>
                 </div>
             </div>
         </div>

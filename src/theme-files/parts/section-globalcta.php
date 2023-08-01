@@ -7,7 +7,7 @@
             <div class="relative flex flex-col h-full justify-between md:justify-center md:items-start">
                 <div class="text-4xl font-bold text-dark-blue pb-10">Same day service<div class="text-white">guarantee or its free!</div>
                 </div>
-                <a href="<?= get_site_url() ?>/service" class="btn-yellow-hover-main-blue px-14 "><span class="relative z-10">Learn More</span></a>
+                <a href="<?= get_site_url() ?>/contact-us" class="btn-yellow-hover-main-blue px-14 "><span class="relative z-10">Enquire Now</span></a>
             </div>
         </div>
     </div>

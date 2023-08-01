@@ -2,6 +2,10 @@
     p {
         padding-bottom: 24px !important;
     }
+
+    ul {
+        @apply list-disc pl-5;
+    }
 }
 
 .navigation_bar {

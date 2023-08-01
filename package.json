@@ -26,6 +26,7 @@
     "gulp-terser": "^2.1.0",
     "postcss": "^8.4.24",
     "sass": "^1.63.6",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "string-similarity": "^4.0.4"
   }
 }

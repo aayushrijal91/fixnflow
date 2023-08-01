@@ -8,7 +8,7 @@ get_header();
 get_template_part('parts/section', 'nav');
 ?>
 
-<div class="homeBanner h-[680px] md:h-[820px] relative">
+<div class="homeBanner h-[680px] md:h-auto relative">
     <video class="absolute w-full object-cover hidden md:block" autoplay loop muted>
         <source src="<?= get_template_directory_uri() ?>/images/background/home_banner_animation.webm" type="video/webm">
         <source src="<?= get_template_directory_uri() ?>/images/background/home_banner_animation.mp4" type="video/mp4">
@@ -71,7 +71,7 @@ get_template_part('parts/section', 'nav');
     </div>
 </div>
 
-<div class="homePage pt-48 md:pt-0">
+<div class="homePage pt-96 md:pt-0">
     <div class="container pt-44 pb-20 md:pb-44">
         <?php get_template_part('parts/section', 'globalcta') ?>
     </div>
@@ -297,7 +297,7 @@ get_template_part('parts/section', 'nav');
             <div class="container">
                 <div class="md:text-center text-4xl md:text-5xl lg:text-heading text-grey font-bold leading-tight highlight-main-blue"><?= $sponsors['heading'] ?></span></div>
                 <div class="w-full lg:w-8/12 xl:w-1/2 mx-auto my-10 md:my-12 p-7 border-t border-b border-light-blue text-grey font-articulat text-center leading-loose">
-                    <div class="w-full lg:w-10/12 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                    <div class="w-full lg:w-10/12 mx-auto"><?= $sponsors['description'] ?></div>
                 </div>
 
                 <div class="w-full xl:w-10/12 mx-auto">
