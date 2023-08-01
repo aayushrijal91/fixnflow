@@ -14,7 +14,7 @@ get_template_part('parts/section', 'nav');
         <source src="<?= get_template_directory_uri() ?>/images/background/home_banner_animation.mp4" type="video/mp4">
         Your browser does not support HTML video.
     </video>
-    <img src="<?= get_template_directory_uri() ?>/images/background/homebanner-sm.jpg" class="absolute w-full h-full md:hidden">
+    <img src="<?= get_template_directory_uri() ?>/images/background/homebanner-sm.jpg" class="absolute w-full h-full md:hidden" alt="<?php bloginfo( 'name' ); ?>">
 
     <div class="container pt-32 md:pt-64 lg:pt-52 xl:pt-64 relative">
         <div class="flex justify-center">
@@ -30,7 +30,7 @@ get_template_part('parts/section', 'nav');
             <div class="w-full lg:w-4/12 order-1 lg:order-2">
                 <div class="flex flex-wrap -mx-1 items-center pb-3">
                     <div class="w-1/3 px-1">
-                        <img src="<?= get_template_directory_uri() ?>/images/icons/google-reviews.png" alt="google">
+                        <img src="<?= get_template_directory_uri() ?>/images/icons/google-reviews.png" alt="<?php bloginfo( 'name' ); ?>">
                     </div>
                     <div class="w-1/3 px-1">
                         <div class="border-b-4 border-r-4 border-light-blue rounded-[10px] bg-white py-2 px-3.5 font-articulat text-dark-blue font-bold leading-none">
@@ -52,17 +52,17 @@ get_template_part('parts/section', 'nav');
                 <div class="flex flex-wrap -mx-1">
                     <div class="w-1/3 px-1">
                         <div class="border border-light-blue rounded-full bg-light-blue bg-opacity-60 h-[41px] flex items-center justify-center p-2">
-                            <img src="<?= get_template_directory_uri() ?>/images/icons/hipages-review.png" alt="hipages">
+                            <img src="<?= get_template_directory_uri() ?>/images/icons/hipages-review.png" alt="<?php bloginfo( 'name' ); ?>">
                         </div>
                     </div>
                     <div class="w-1/3 px-1">
                         <div class="border border-light-blue rounded-full bg-light-blue bg-opacity-60 h-[41px] flex items-center justify-center p-2">
-                            <img src="<?= get_template_directory_uri() ?>/images/icons/facebook-review.png" alt="facebook">
+                            <img src="<?= get_template_directory_uri() ?>/images/icons/facebook-review.png" alt="<?php bloginfo( 'name' ); ?>">
                         </div>
                     </div>
                     <div class="w-1/3 px-1">
                         <div class="border border-light-blue rounded-full bg-light-blue bg-opacity-60 h-[41px] flex items-center justify-center p-2">
-                            <img src="<?= get_template_directory_uri() ?>/images/icons/truelocal-review.png" alt="truelocal">
+                            <img src="<?= get_template_directory_uri() ?>/images/icons/truelocal-review.png" alt="<?php bloginfo( 'name' ); ?>">
                         </div>
                     </div>
                 </div>
@@ -171,7 +171,7 @@ get_template_part('parts/section', 'nav');
                             <div class="bg-quaternary rounded-2xl p-4 flex flex-col justify-between" data-aos="zoom-in">
                                 <div class="pb-16">
                                     <div class="h-[147px] w-full bg-grey rounded-[10px] p-3 flex items-end bg-no-repeat bg-cover" style="background-image: url('<?= $featured_img_url ?>'); background-size: cover;">
-                                        <img src="<?= get_template_directory_uri() ?>/images/icons/service-icon.png" alt="fixnflow">
+                                        <img src="<?= get_template_directory_uri() ?>/images/icons/service-icon.png" alt="<?php bloginfo( 'name' ); ?>">
                                     </div>
                                     <div class="text-2xl font-bold text-main-blue pt-3"><?= get_the_title() ?></div>
                                 </div>
@@ -202,8 +202,8 @@ get_template_part('parts/section', 'nav');
     <?php get_template_part('parts/section', 'contact') ?>
 
     <div class="testimonials py-16 md:py-36 lg:py-40 relative group">
-        <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-left-floater.png" class="absolute left-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="fixnflow">
-        <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-right-floater.png" class="absolute right-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="fixnflow">
+        <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-left-floater.png" class="absolute left-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="<?php bloginfo( 'name' ); ?>">
+        <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-right-floater.png" class="absolute right-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="<?php bloginfo( 'name' ); ?>">
         <div class="container pb-11 md:pb-20">
             <div class="flex flex-wrap justify-between gap-y-10">
                 <div class="text-4xl md:text-heading text-grey font-bold flex leading-none">
@@ -305,7 +305,7 @@ get_template_part('parts/section', 'nav');
                         <div class="w-full md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
                             <div class="bg-white shadow p-2 rounded-[10px] h-full">
                                 <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
-                                    <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-1.jpg" class="w-full object-cover object-center h-full" alt="fixnflow">
+                                    <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-1.jpg" class="w-full object-cover object-center h-full" alt="<?php bloginfo( 'name' ); ?>">
                                 </div>
                                 <div class="mx-auto -mt-7 w-fit h-[57px] rounded-full bg-main-blue px-10 py-1 flex justify-center items-center relative">
                                     <?= echo_theme_image('/images/logo/wish-foundation.png') ?>
@@ -323,7 +323,7 @@ get_template_part('parts/section', 'nav');
                         <div class="w-full  md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
                             <div class="bg-white shadow p-2 rounded-[10px] h-full">
                                 <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
-                                    <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-2.jpg" class="w-full object-cover object-center h-full" alt="fixnflow">
+                                    <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-2.jpg" class="w-full object-cover object-center h-full" alt="<?php bloginfo( 'name' ); ?>">
                                 </div>
                                 <div class="mx-auto -mt-7 w-fit h-[57px] rounded-full bg-dark-blue px-10 py-1 flex justify-center items-center relative">
                                     <?= echo_theme_image('/images/logo/save-the-children.png') ?>
@@ -341,7 +341,7 @@ get_template_part('parts/section', 'nav');
                         <div class="w-full md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
                             <div class="bg-dark-blue shadow p-2 rounded-[10px] h-full">
                                 <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
-                                    <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-3.jpg" class="w-full object-cover object-center h-full" alt="fixnflow">
+                                    <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-3.jpg" class="w-full object-cover object-center h-full" alt="<?php bloginfo( 'name' ); ?>">
                                 </div>
                                 <div class="mx-auto -mt-12 w-fit relative">
                                     <?= echo_theme_image('/images/logo/earlwood-wanderers.png') ?>

@@ -15,9 +15,9 @@ get_header();
             <div class="flex flex-wrap -mx-3 gap-y-5">
                 <div class="w-full xl:w-1/2 px-3">
                     <div class="partGlobalCta md:h-[402px] rounded-xl md:rounded-[30px] bg-gradient-to-b from-[#316A9E] to-[#153B74] flex px-5 md:px-20 pt-60 pb-10 md:py-11 relative overflow-hidden">
-                        <img alt="fixnflow" class="globalCtaBg absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-2.png">
-                        <img src="<?= get_template_directory_uri() ?>/images/lib/faq-floating-logo.png" class="globalCtaLogo_2 absolute bottom-0 right-[-10%] w-[120%] max-w-[120%] duration-300" alt="fixnflow">
-                        <img src="<?= get_template_directory_uri() ?>/images/lib/floating-laptop.png" class="globalCtaComponent_2 absolute top-[-20%] md:top-32 md:left-[-3%] md:h-full duration-300" alt="fixnflow">
+                        <img alt="<?php bloginfo( 'name' ); ?>" class="globalCtaBg absolute left-0 top-0 h-[120%] w-[120%] max-w-[120%] duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-2.png">
+                        <img src="<?= get_template_directory_uri() ?>/images/lib/faq-floating-logo.png" class="globalCtaLogo_2 absolute bottom-0 right-[-10%] w-[120%] max-w-[120%] duration-300" alt="<?php bloginfo( 'name' ); ?>">
+                        <img src="<?= get_template_directory_uri() ?>/images/lib/floating-laptop.png" class="globalCtaComponent_2 absolute top-[-20%] md:top-32 md:left-[-3%] md:h-full duration-300" alt="<?php bloginfo( 'name' ); ?>">
 
                         <?php $cta_1 = get_field('cta_1'); ?>
                         <div class="relative text-center">
@@ -31,8 +31,8 @@ get_header();
                 </div>
                 <div class="w-full xl:w-1/2 px-3">
                     <div class="partGlobalCta md:h-[402px] rounded-xl md:rounded-[30px] px-10 md:px-20 py-11 bg-no-repeat bg-cover relative overflow-hidden" style="background:url(<?= get_template_directory_uri() ?>/images/background/faq_cta_2.jpg) no-repeat; background-size: cover">
-                        <img alt="fixnflow" class="absolute -left-7 bottom-0 duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-1-component.png">
-                        <img src="<?= get_template_directory_uri() ?>/images/background/faq-cta-component-2.png" class="hidden md:block absolute bottom-0 right-0 duration-300" alt="fixnflow">
+                        <img alt="<?php bloginfo( 'name' ); ?>" class="absolute -left-7 bottom-0 duration-300" src="<?= get_template_directory_uri() ?>/images/background/cta-1-component.png">
+                        <img src="<?= get_template_directory_uri() ?>/images/background/faq-cta-component-2.png" class="hidden md:block absolute bottom-0 right-0 duration-300" alt="<?php bloginfo( 'name' ); ?>">
 
                         <?php $cta_2 = get_field('cta_2'); ?>
                         <div class="relative text-center">

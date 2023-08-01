@@ -5,8 +5,8 @@
                 <div class="flex flex-wrap justify-between items-center">
                     <div class="w-fit">
                         <a href="<?= get_site_url() ?>" class="logo_img">
-                            <img src="<?= get_template_directory_uri() ?>/images/logo/logo.png" alt="Fix N Flow" class="white_logo">
-                            <img src="<?= get_template_directory_uri() ?>/images/logo/color_logo.png" alt="Fix N Flow" class="color_logo">
+                            <img src="<?= get_template_directory_uri() ?>/images/logo/logo.png" alt="<?php bloginfo( 'name' ); ?>" class="white_logo">
+                            <img src="<?= get_template_directory_uri() ?>/images/logo/color_logo.png" alt="<?php bloginfo( 'name' ); ?>" class="color_logo">
                         </a>
                     </div>
                     <div class="w-fit hidden xl:block">
@@ -132,7 +132,7 @@
                 <div class="flex flex-wrap -mx-2">
                     <div class="w-1/2 lg:w-5/12 xl:w-1/3 px-2">
                         <div class="bg-white rounded-[20px] p-4 h-full flex flex-wrap md:flex-nowrap items-center justify-between">
-                            <div class="w-full md:w-fit"><img src="<?= get_template_directory_uri() ?>/images/icons/messaging.png" alt="Fix n flow"></div>
+                            <div class="w-full md:w-fit"><img src="<?= get_template_directory_uri() ?>/images/icons/messaging.png" alt="<?php bloginfo( 'name' ); ?>"></div>
                             <div class="text-xl md:text-2xl text-dark-blue font-bold w-10/12 md:w-fit md:px-4">Contact us today</div>
                             <div class="w-2/12 md:w-fit">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="33" viewBox="0 0 19 33" fill="none">
@@ -143,7 +143,7 @@
                     </div>
                     <div class="w-1/2 lg:w-5/12 xl:w-1/3 px-2">
                         <div class="bg-light-blue rounded-[20px] p-4 h-full flex flex-wrap md:flex-nowrap items-center justify-between">
-                            <div class="w-full md:w-fit"><img src="<?= get_template_directory_uri() ?>/images/icons/calendar.png" alt="Fix n flow"></div>
+                            <div class="w-full md:w-fit"><img src="<?= get_template_directory_uri() ?>/images/icons/calendar.png" alt="<?php bloginfo( 'name' ); ?>"></div>
                             <div class="text-xl md:text-2xl text-dark-blue font-bold w-10/12 md:w-fit md:px-4">Make a booking</div>
                             <div class="w-2/12 md:w-fit">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="33" viewBox="0 0 19 33" fill="none">

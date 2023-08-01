@@ -12,7 +12,7 @@ get_header();
 
     <div class="p-1 md:py-6 lg:p-6">
         <div class="section_1 max-w-[1874px] mx-auto pt-6 pb-11 px-5 lg:px-10 rounded-[20px] md:rounded-[30px] overflow-hidden relative">
-            <img src="<?= get_template_directory_uri() ?>/images/background/bannerWaves.png" alt="fix n flow" class="absolute w-full top-0 left-0" >
+            <img src="<?= get_template_directory_uri() ?>/images/background/bannerWaves.png" alt="<?php bloginfo( 'name' ); ?>" class="absolute w-full top-0 left-0" >
 
             <?php $args = array(
                 'posts_per_page' => 1,
@@ -356,7 +356,7 @@ get_header();
                 <source src="<?= get_template_directory_uri() ?>/images/background/dark-blue-wavy-bg.mp4" type="video/mp4">
                 Your browser does not support HTML video.
             </video>
-            <img src="<?= get_template_directory_uri() ?>/images/icons/question-marks.png" class="absolute -right-20 top-0 xl:hidden" alt="fix n flow">
+            <img src="<?= get_template_directory_uri() ?>/images/icons/question-marks.png" class="absolute -right-20 top-0 xl:hidden" alt="<?php bloginfo( 'name' ); ?>">
             <div class="container relative">
                 <div class="flex flex-wrap justify-center md:justify-between items-center gap-x-5 py-16 xl:py-0">
                     <div class="w-fit flex flex-col items-center md:items-start text-center md:text-start">

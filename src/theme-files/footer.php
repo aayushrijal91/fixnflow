@@ -79,7 +79,7 @@
                     <div class="rounded-[29px] bg-main-blue p-6 md:py-9 md:px-11 h-full bg-no-repeat bg-cover" style="background-image: url(<?= get_template_directory_uri() ?>/images/background/footer_cta_2.jpg)">
                         <div class="bg-tertiary rounded-[10px] pt-4 md:py-4 px-7 text-2xl md:text-[35px] font-bold text-white leading-none relative text-center md:text-start lg:min-h-[300px] xl:min-h-fit">
                             Fix n Flow <br /> <span class="text-dark-blue">Membership</span>
-                            <img src="<?= get_template_directory_uri() ?>/images/lib/vip-membership.png" alt="Vip membership" class="md:absolute right-0 bottom-0">
+                            <img src="<?= get_template_directory_uri() ?>/images/lib/vip-membership.png" alt="<?php bloginfo( 'name' ); ?>" class="md:absolute right-0 bottom-0">
                         </div>
                         <div class="flex flex-wrap justify-between -mx-2 items-center pt-4 gap-y-5">
                             <div class="w-full md:w-fit px-2">
@@ -245,7 +245,7 @@
                     <div class="md:hidden">
                         <div class="border-b border-main-blue my-12"></div>
                         <div class="flex justify-center">
-                            <a href="https://aiims.com.au/this-is-us/" target="_blank"><img src="<?= get_template_directory_uri() ?>/images/logo/aiims.png" alt="Aiims"></a>
+                            <a href="https://aiims.com.au/this-is-us/" target="_blank"><img src="<?= get_template_directory_uri() ?>/images/logo/aiims.png" alt="<?php bloginfo( 'name' ); ?>"></a>
                         </div>
                     </div>
                 </div>
@@ -261,7 +261,7 @@
                     Copyright <?= date('Y') ?> <span class="px-10 opacity-50">/</span> Fix n Flow Plumbing <span class="px-10 opacity-50 hidden md:inline">/</span> <span class="hidden md:inline">All Rights Reserved</span>
                 </div>
                 <div class="w-fit hidden md:block">
-                    <a href="https://aiims.com.au/this-is-us/" target="_blank"><img src="<?= get_template_directory_uri() ?>/images/logo/aiims.png" alt="Aiims"></a>
+                    <a href="https://aiims.com.au/this-is-us/" target="_blank"><img src="<?= get_template_directory_uri() ?>/images/logo/aiims.png" alt="<?php bloginfo( 'name' ); ?>"></a>
                 </div>
             </div>
         </div>

@@ -17,21 +17,21 @@ get_header();
             <?php if ($section_1_left) : ?>
                 <div class="w-full md:w-1/2 px-2 lg:px-3" data-aos="zoom-in">
                     <div class="text-center bg-contain rounded-[20px] md:rounded-[30px] py-10 md:pt-11 md:pb-28 px-5 xl:px-16 h-full" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= get_template_directory_uri() ?>/images/background/membership-guy.jpg) no-repeat center bottom">
-                        <div class="text-white text-3xl lg:text-[45px] leading-none font-bold"><?= $section_1_left['title'] ?></div>
-                        <div class="text-white leading-relaxed pt-6 pb-28 md:py-6 description text-sm md:text-base"><?= $section_1_left['description'] ?></div>
+                        <h3 class="text-white text-3xl lg:text-[45px] leading-none font-bold"><?= $section_1_left['title'] ?></h3>
+                        <p class="text-white leading-relaxed pt-6 pb-28 md:py-6 description text-sm md:text-base"><?= $section_1_left['description'] ?></p>
                         <a href="<?= $section_1_left['button']['url'] ?>" target="<?= $section_1_left['button']['target'] ?>" class="btn-yellow-hover-main-blue px-14 mt-10"><span class="relative z-10"><?= $section_1_left['button']['title'] ?></span></a>
                     </div>
                 </div>
             <?php endif; ?>
             <?php if ($section_1_right) : ?>
                 <div class="w-full md:w-1/2 px-2 lg:px-3" data-aos="zoom-in">
-                    <div class="bg-main-blue rounded-[20px] md:rounded-[30px] py-10 px-5 xl:p-12 h-full text-white">
-                        <div class="text-3xl lg:text-[35px] font-semibold leading-none pb-5"><?= $section_1_right['title'] ?></div>
+                    <article class="bg-main-blue rounded-[20px] md:rounded-[30px] py-10 px-5 xl:p-12 h-full text-white">
+                        <h3 class="text-3xl lg:text-[35px] font-semibold leading-none pb-5"><?= $section_1_right['title'] ?></h3>
 
-                        <div class="font-articulat leading-relaxed description text-sm md:text-base">
+                        <article class="font-articulat leading-relaxed description text-sm md:text-base">
                             <?= $section_1_right['description'] ?>
-                        </div>
-                    </div>
+                        </article>
+                    </article>
                 </div>
             <?php endif; ?>
         </div>
@@ -39,7 +39,7 @@ get_header();
 
     <div class="py-20 md:py-24 bg-white">
         <div class="container">
-            <div class="text-center text-4xl md:text-5xl xl:text-heading text-main-blue font-bold">Select your region</div>
+            <h2 class="text-center text-4xl md:text-5xl xl:text-heading text-main-blue font-bold">Select your region</h2>
 
             <div class="w-full lg:w-10/12 rounded-3xl bg-off-white shadow-inner mx-auto mt-9 hidden lg:block">
                 <div class="flex flex-wrap justify-around min-h-[77px] items-center region_nav">

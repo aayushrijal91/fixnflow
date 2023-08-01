@@ -1,7 +1,7 @@
 <div class="bg-dark-blue py-20 md:py-32" style="background: url(<?= get_template_directory_uri() ?>/images/background/homepage_guarantee_vector.png) no-repeat left top, #1B427D; background-size: contain;">
     <div class="container">
-        <div class="text-4xl md:text-5xl xl:text-heading md:text-center text-white font-semibold highlight-light-blue leading-none" data-aos="fade-up">What you're <span>guaranteed</span> to get from us</div>
-        <div class="w-full lg:w-7/12 mx-auto py-12 text-white md:text-center font-articulat" data-aos="fade-up">We have a simple and efficient process to ensure that our customers get the best possible plumbing services in a timely manner. Our process includes</div>
+        <h2 class="text-4xl md:text-5xl xl:text-heading md:text-center text-white font-semibold highlight-light-blue leading-none" data-aos="fade-up">What you're <span>guaranteed</span> to get from us</h2>
+        <p class="w-full lg:w-7/12 mx-auto py-12 text-white md:text-center font-articulat" data-aos="fade-up">We have a simple and efficient process to ensure that our customers get the best possible plumbing services in a timely manner. Our process includes</p>
 
         <div class="serviceAttributeBoxesMobile xl:hidden">
             <div class="px-2 stepCard">
@@ -14,11 +14,11 @@
                             </svg>
                         </div>
                         <div class="flex justify-center">
-                            <div class="text-heading leading-none font-bold text-light-blue">
+                            <h3 class="text-heading leading-none font-bold text-light-blue">
                                 01
-                            </div>
+                            </h3>
                         </div>
-                        <div class="text-grey font-articulat text-center text-base">Call us and speak to an expert</div>
+                        <p class="text-grey font-articulat text-center text-base">Call us and speak to an expert</p>
                     </div>
                 </div>
             </div>
@@ -33,11 +33,11 @@
                             </svg>
                         </div>
                         <div class="flex justify-center">
-                            <div class="text-heading leading-none font-bold text-light-blue">
+                            <h3 class="text-heading leading-none font-bold text-light-blue">
                                 02
-                            </div>
+                            </h3>
                         </div>
-                        <div class="text-grey font-articulat text-center text-base">Onsite review</div>
+                        <p class="text-grey font-articulat text-center text-base">Onsite review</p>
                     </div>
                 </div>
             </div>
@@ -56,11 +56,11 @@
                             </svg>
                         </div>
                         <div class="flex justify-center">
-                            <div class="text-heading leading-none font-bold text-light-blue">
+                            <h3 class="text-heading leading-none font-bold text-light-blue">
                                 03
-                            </div>
+                            </h3>
                         </div>
-                        <div class="text-grey font-articulat text-center text-base">Deliver a free quote</div>
+                        <p class="text-grey font-articulat text-center text-base">Deliver a free quote</p>
                     </div>
                 </div>
             </div>
@@ -75,11 +75,11 @@
                             </svg>
                         </div>
                         <div class="flex justify-center">
-                            <div class="text-heading leading-none font-bold text-light-blue">
+                            <h3 class="text-heading leading-none font-bold text-light-blue">
                                 04
-                            </div>
+                            </h3>
                         </div>
-                        <div class="text-grey font-articulat text-center text-base">Complete work with updates, we maintain consant dialogue</div>
+                        <p class="text-grey font-articulat text-center text-base">Complete work with updates, we maintain consant dialogue</p>
                     </div>
                 </div>
             </div>
@@ -95,11 +95,11 @@
                             </svg>
                         </div>
                         <div class="flex justify-center">
-                            <div class="text-heading leading-none font-bold text-light-blue">
+                            <h3 class="text-heading leading-none font-bold text-light-blue">
                                 05
-                            </div>
+                            </h3>
                         </div>
-                        <div class="text-grey font-articulat text-center text-base">Clean up</div>
+                        <p class="text-grey font-articulat text-center text-base">Clean up</p>
                     </div>
                 </div>
             </div>
@@ -113,20 +113,20 @@
                             </svg>
                         </div>
                         <div class="flex justify-center">
-                            <div class="text-heading leading-none font-bold text-light-blue">
+                            <h3 class="text-heading leading-none font-bold text-light-blue">
                                 06
-                            </div>
+                            </h3>
                         </div>
-                        <div class="text-grey font-articulat text-center text-base">Review and follow up</div>
+                        <p class="text-grey font-articulat text-center text-base">Review and follow up</p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="hidden xl:flex flex-wrap -mx-2 justify-center relative" id="growingBox">
             <div class="w-1/6 max-w-1/6 p-2 group stepCard">
                 <div class="relative bg-white h-[238px] w-full rounded-2xl p-4 md:px-8 lg:px-4 xl:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
-                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="cta" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
+                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="<?php bloginfo('name'); ?>" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                     <div class="flex flex-col items-center gap-y-4 relative h-full">
                         <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
                             <svg width="49" height="46" viewBox="0 0 49 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,17 +135,17 @@
                             </svg>
                         </div>
                         <div class="flex justify-center">
-                            <div class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150">
+                            <h3 class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150">
                                 01
-                            </div>
+                            </h3>
                         </div>
-                        <div class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Call us and speak to an expert</div>
+                        <p class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Call us and speak to an expertp>
                     </div>
                 </div>
             </div>
             <div class="w-1/12 max-w-1/6 p-2 grow-0 duration-200 group overflow-hidden stepCard">
                 <div class="relative bg-white h-[238px] w-full rounded-2xl p-4 md:px-8 lg:px-4 xl:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
-                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="fixnflow" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
+                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="<?php bloginfo('name'); ?>" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                     <div class="flex flex-col items-center gap-y-4 relative h-full">
                         <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
                             <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -155,17 +155,17 @@
                             </svg>
                         </div>
                         <div class="flex justify-center">
-                            <div class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150">
+                            <h3 class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150">
                                 02
-                            </div>
+                            </h3>
                         </div>
-                        <div class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Onsite review</div>
+                        <p class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Onsite review</p>
                     </div>
                 </div>
             </div>
             <div class="w-0 max-w-1/6 grow-0 duration-200 group overflow-hidden stepCard">
                 <div class="relative bg-white h-[238px] w-full rounded-2xl p-4 md:px-8 lg:px-4 xl:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
-                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="fixnflow" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
+                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="<?php bloginfo('name'); ?>" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                     <div class="flex flex-col items-center gap-y-4 relative h-full">
                         <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
                             <svg width="44" height="39" viewBox="0 0 44 39" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -179,17 +179,17 @@
                             </svg>
                         </div>
                         <div class="flex justify-center">
-                            <div class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150">
+                            <h3 class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150">
                                 03
-                            </div>
+                            </h3>
                         </div>
-                        <div class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Deliver a free quote</div>
+                        <p class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Deliver a free quote</p>
                     </div>
                 </div>
             </div>
             <div class="w-0 max-w-1/6 grow-0 duration-200 group overflow-hidden stepCard">
                 <div class="relative bg-white h-[238px] w-full rounded-2xl p-4 md:px-8 lg:px-4 xl:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
-                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="fixnflow" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
+                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="<?php bloginfo('name'); ?>" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                     <div class="flex flex-col items-center gap-y-4 relative h-full">
                         <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
                             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -199,17 +199,17 @@
                             </svg>
                         </div>
                         <div class="flex justify-center">
-                            <div class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150">
+                            <h3 class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150">
                                 04
-                            </div>
+                            </h3>
                         </div>
-                        <div class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Complete work with updates, we maintain consant dialogue</div>
+                        <p class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Complete work with updates, we maintain consant dialogue</p>
                     </div>
                 </div>
             </div>
             <div class="w-0 max-w-1/6 grow-0 duration-200 group overflow-hidden stepCard">
                 <div class="relative bg-white h-[238px] w-full rounded-2xl p-4 md:px-8 lg:px-4 xl:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
-                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="fixnflow" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
+                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="<?php bloginfo('name'); ?>" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                     <div class="flex flex-col items-center gap-y-4 relative h-full">
                         <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
                             <svg width="42" height="40" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -220,17 +220,17 @@
                             </svg>
                         </div>
                         <div class="flex justify-center">
-                            <div class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150">
+                            <h3 class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150">
                                 05
-                            </div>
+                            </h3>
                         </div>
-                        <div class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Clean up</div>
+                        <p class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Clean up</p>
                     </div>
                 </div>
             </div>
             <div class="w-0 max-w-1/6 grow-0 duration-200 group overflow-hidden stepCard">
                 <div class="relative bg-white h-[238px] w-full rounded-2xl p-4 md:px-8 lg:px-4 xl:px-8 transition-all duration-300 group-hover:-translate-x-2 hover:-translate-y-2 group-hover:shadow-[10px_10px_#0067B9] overflow-hidden">
-                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="fixnflow" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
+                    <img src="<?= get_template_directory_uri() ?>/images/background/cta-4.jpg" alt="<?php bloginfo('name'); ?>" class="absolute top-0 right-0 h-[120%] w-[120%] max-w-[120%] rounded-2xl group-hover:-top-7 group-hover:-right-7 duration-300 opacity-0 group-hover:opacity-100">
                     <div class="flex flex-col items-center gap-y-4 relative h-full">
                         <div class="text-main-blue group-hover:text-dark-blue transition-all duration-150">
                             <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -239,11 +239,11 @@
                             </svg>
                         </div>
                         <div class="flex justify-center">
-                            <div class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150">
+                            <h3 class="text-4xl md:text-heading leading-none font-bold text-light-blue group-hover:text-dark-blue transition-all duration-150">
                                 06
-                            </div>
+                            </h3>
                         </div>
-                        <div class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Review and follow up</div>
+                        <p class="text-grey group-hover:text-white duration-300 font-articulat text-center text-sm md:text-base">Review and follow up</p>
                     </div>
                 </div>
             </div>

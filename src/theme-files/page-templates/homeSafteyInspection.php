@@ -175,7 +175,7 @@ get_header();
                             <div class="rounded-[30px] overflow-hidden"><?= echo_image($service_description['image'], '', 'w-full') ?></div>
                         </div>
                     </div>
-                    <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.gif" alt="plumb" class="absolute right-20 -bottom-14">
+                    <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.gif" alt="<?php bloginfo( 'name' ); ?>" class="absolute right-20 -bottom-14">
                 </div>
             <?php endif; ?>
 
@@ -221,7 +221,7 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.gif" alt="plumb" class="absolute left-20 -bottom-14">
+                    <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.gif" alt="<?php bloginfo( 'name' ); ?>" class="absolute left-20 -bottom-14">
                 </div>
             <?php endif; ?>
         </div>

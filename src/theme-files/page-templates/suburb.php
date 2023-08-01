@@ -22,8 +22,8 @@ get_header();
 
                 <div class="flex flex-wrap justify-between">
                     <div class="w-fit">
-                        <div class="">
-                            <img src="<?= get_template_directory_uri() ?>/images/icons/google-reviews.png" alt="google">
+                        <div>
+                            <img src="<?= get_template_directory_uri() ?>/images/icons/google-reviews.png" alt="<?php bloginfo( 'name' ); ?>">
                         </div>
                         <div class="flex-wrap flex -mx-2 items-center pt-6">
                             <div class="w-fit px-2">
@@ -46,7 +46,7 @@ get_header();
                     </div>
                     <div class="w-3/12 relative group">
                         <div class="absolute right-0 bottom-[-100%] group-hover:bottom-0 duration-300 flex flex-col items-center">
-                            <img src="<?= get_template_directory_uri() ?>/images/lib/vipMembershipCard.png" alt="vip membership" class="">
+                            <img src="<?= get_template_directory_uri() ?>/images/lib/vipMembershipCard.png" alt="<?php bloginfo( 'name' ); ?>">
                             <a href="./" class="btn-yellow-hover-main-blue px-14 "><span class="relative z-10">Learn More</span></a>
                         </div>
                     </div>

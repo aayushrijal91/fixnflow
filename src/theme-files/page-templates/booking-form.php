@@ -40,11 +40,11 @@ get_header();
             </div>
         </div>
         <div class="bg-main-blue py-7 lg:py-20 relative mt-10 md:mt-0">
-            <img src="<?= get_template_directory_uri() ?>/images/lib/booking_form_van.png" class="absolute bottom-0 left-0 hidden xl:block" alt="fixnflow">
+            <img src="<?= get_template_directory_uri() ?>/images/lib/booking_form_van.png" class="absolute bottom-0 left-0 hidden xl:block" alt="<?php bloginfo( 'name' ); ?>">
             <div class="container">
                 <div class="flex flex-wrap gap-y-10 -mx-3">
                     <div class="w-full lg:w-1/2 px-3">
-                        <img src="<?= get_template_directory_uri() ?>/images/lib/booking-guy.jpg" class="rounded-[20px] md:rounded-[30px] md:hidden lg:block" alt="booking">
+                        <img src="<?= get_template_directory_uri() ?>/images/lib/booking-guy.jpg" class="rounded-[20px] md:rounded-[30px] md:hidden lg:block" alt="<?php bloginfo( 'name' ); ?>">
                     </div>
                     <div class="w-full lg:w-1/2 px-3">
                         <div class="flex justify-center mb-12 md:hidden">

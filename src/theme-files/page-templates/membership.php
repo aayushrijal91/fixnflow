@@ -15,7 +15,7 @@ get_header();
             <div class="w-full md:w-1/2 lg:w-1/4 px-3 order-3 md:order-1">
                 <div class="flex flex-wrap items-center justify-center -mx-2 pt-6 gap-y-5">
                     <div class="w-2/3 px-2 text-center flex flex-col items-center">
-                        <img src="<?= get_template_directory_uri() ?>/images/logo/accredited.png" alt="Accredited">
+                        <img src="<?= get_template_directory_uri() ?>/images/logo/accredited.png" alt="<?php bloginfo( 'name' ); ?>">
                         <div class="my-5 border-b h-[3px] w-[184px] bg-quaternary"></div>
                         <div class="font-articulat text-light-blue text-base">We are qualified plumbers</div>
                     </div>
@@ -132,17 +132,17 @@ get_header();
                 <div class="w-full lg:w-1/2 px-3">
                     <div class="flex flex-col h-full justify-between gap-y-5 mt-5 lg:mt-0">
                         <div class="bg-[#D9D9D9]/50 rounded-[10px] min-h-[115px] md:min-h-[174px] px-5 py-4 md:p-7 relative text-main-blue text-2xl md:text-[35px] font-bold flex items-center leading-none">
-                            <img src="<?= get_template_directory_uri() ?>/images/lib/priority-booking-eg.png" alt="Fix N Flow" class="absolute right-0 bottom-0 h-[110%] md:h-fit">
+                            <img src="<?= get_template_directory_uri() ?>/images/lib/priority-booking-eg.png" alt="<?php bloginfo( 'name' ); ?>" class="absolute right-0 bottom-0 h-[110%] md:h-fit">
                             <div>Guaranteed <br /><span class="text-grey">priority booking</span></div>
                         </div>
 
                         <div class="bg-gradient-to-r from-[#4299DE] via-[#64B7F9] to-[#48CCF5] rounded-[10px] min-h-[115px] md:min-h-[174px] px-5 py-4 md:p-7 relative text-white text-2xl md:text-[35px] font-bold flex items-center leading-none">
-                            <img src="<?= get_template_directory_uri() ?>/images/lib/service-upgrade-eg.png" class="absolute right-0 bottom-0 h-[150%] md:h-fit" alt="Fix N Flow">
+                            <img src="<?= get_template_directory_uri() ?>/images/lib/service-upgrade-eg.png" class="absolute right-0 bottom-0 h-[150%] md:h-fit" alt="<?php bloginfo( 'name' ); ?>">
                             <div>Discounted <br /><span class="text-dark-blue">service<br /> upgrades</span></div>
                         </div>
 
                         <div class="bg-gradient-to-r from-[#396BB5] to-[#1E4785] rounded-[10px] min-h-[115px] md:min-h-[174px] p-7 relative flex items-center">
-                            <img src="<?= get_template_directory_uri() ?>/images/lib/drain-camera-inspection.png" class="absolute right-0 bottom-0 h-[90%] md:h-fit" alt="fix n flow">
+                            <img src="<?= get_template_directory_uri() ?>/images/lib/drain-camera-inspection.png" class="absolute right-0 bottom-0 h-[90%] md:h-fit" alt="<?php bloginfo( 'name' ); ?>">
                             <div>
                                 <div class="leading-none text-white text-2xl md:text-[35px] font-bold">FREE <span class="text-light-blue">drain camera<br /> inspection</span></div>
                                 <div class="text-base md:text-xl text-white pt-4">With any hydro-jetting service</div>
