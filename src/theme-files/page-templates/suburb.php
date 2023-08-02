@@ -44,10 +44,10 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <div class="w-3/12 relative group">
+                    <div class="w-5/12 lg:w-4/12 xl:w-3/12 relative group">
                         <div class="absolute right-0 bottom-[-100%] group-hover:bottom-0 duration-300 flex flex-col items-center">
                             <img src="<?= get_template_directory_uri() ?>/images/lib/vipMembershipCard.png" alt="<?php bloginfo('name'); ?>">
-                            <a href="./" class="btn-yellow-hover-main-blue px-14 "><span class="relative z-10">Learn More</span></a>
+                            <a href="<?= get_site_url() ?>" class="btn-yellow-hover-main-blue px-5 lg:px-14"><span class="relative z-10">Learn More</span></a>
                         </div>
                     </div>
                 </div>
@@ -55,17 +55,17 @@ get_header();
         </div>
     </div>
 
-    <div class="container ">
-        <div class="flex flex-wrap -mx-2 lg:-mx-3 gap-y-5">
-            <div class="w-full md:w-1/2 px-2 lg:px-3" data-aos="zoom-in">
-                <div class="text-center bg-contain rounded-[30px] pt-11 pb-28 px-16 h-full" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= get_template_directory_uri() ?>/images/background/membership-guy.jpg) no-repeat center bottom">
+    <div class="container pt-20 lg:pt-24">
+        <div class="flex flex-wrap -mx-2 lg:-mx-3 gap-y-5 justify-center">
+            <div class="w-full md:w-2/3 lg:w-1/2 px-2 lg:px-3" data-aos="zoom-in">
+                <div class="text-center bg-contain rounded-[30px] pt-11 pb-28 px-5 xl:px-16 h-full" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= get_template_directory_uri() ?>/images/background/membership-guy.jpg) no-repeat center bottom">
                     <h3 class="text-white text-3xl lg:text-[45px] leading-none font-bold highlight-light-blue">Plumbers in your local area with <span>24/7 services</span></h3>
                     <p class="text-white leading-relaxed pt-6 pb-28 md:py-6 description text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
                     <a href="<?= get_site_url() ?>" target="<?= $section_1_left['button']['target'] ?>" class="btn-yellow-hover-main-blue px-14 mt-10"><span class="relative z-10">Learn more</span></a>
                 </div>
             </div>
-            <div class="w-full md:w-1/2 px-2 lg:px-3" data-aos="zoom-in">
-                <div class="bg-main-blue rounded-[30px] p-12 h-full text-white">
+            <div class="w-full lg:w-1/2 px-2 lg:px-3" data-aos="zoom-in">
+                <div class="bg-main-blue rounded-[30px] py-12 px-5 xl:p-12 h-full text-white">
                     <h3 class="text-3xl lg:text-[35px] font-semibold leading-none pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
 
                     <article class="font-articulat leading-relaxed description text-sm md:text-base">
@@ -104,11 +104,11 @@ get_header();
 
     <div class="bg-main-blue pt-24 text-white">
         <div class="container">
-            <div class="flex flex-wrap justify-between gap-y-10">
-                <div class="w-full lg:w-1/2">
+            <div class="flex flex-wrap justify-between gap-y-10 -mx-2">
+                <div class="w-full lg:w-1/2 px-2">
                     <?= echo_theme_image('/images/lib/suburb-guy.jpg', 'rounded-[30px] -mt-32') ?>
                 </div>
-                <div class="w-full lg:w-1/2">
+                <div class="w-full lg:w-1/2 px-2">
                     <h3 class="text-2xl md:text-[35px] font-bold leading-none">Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec.</h3>
                     <article class="description font-articulat leading-loose pt-5 md:pt-11 text-sm md:text-base">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
@@ -117,13 +117,13 @@ get_header();
                 </div>
             </div>
         </div>
-        <svg class="w-full h-fit md:h-[172px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 172" fill="none">
+        <svg class="w-full h-fit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 172" fill="none">
             <path d="M265.336 26.3531C-7.06037 24.7827 -280.805 75.8399 -509.975 80.5498L-503.055 170.026L3699.03 171.032L3691.75 26.9707C3691.75 26.9707 3399.03 -15.6038 3109.23 8.24748C2944.18 21.8319 2661.97 81.3091 2469.37 81.263C1976.75 81.145 1933.1 8.1683 1705.4 7.91135C1477.71 7.6544 1412.41 49.8885 1203.78 64.1149C995.149 78.3413 892.738 70.5666 769.845 64.126C658.324 58.2814 537.733 27.9235 265.336 26.3531Z" fill="#5AB2F8" />
         </svg>
     </div>
-    <div class="bg-light-blue -mt-1 relative">
-        <div class="container pt-10 md:pt-0 md:pb-20">
-            <div class="w-full lg:w-1/2 text-white">
+    <div class="bg-light-blue -mt-1 relative flex flex-col align-end">
+        <div class="container pt-10 lg:pt-0 xl:pb-20">
+            <div class="w-full xl:w-1/2 text-white">
                 <h3 class="text-2xl md:text-[35px] font-bold leading-none">Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec.</h3>
                 <article class="description font-articulat leading-loose pt-5 md:pt-11 text-sm md:text-base">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
@@ -131,23 +131,23 @@ get_header();
                 </article>
             </div>
         </div>
-        <?= echo_theme_image('/images/lib/fixnflow-van.png', 'md:absolute right-0 bottom-[-1rem]') ?>
+        <?= echo_theme_image('/images/lib/fixnflow-van.png', 'xl:absolute -right-40 bottom-[-1rem]') ?>
     </div>
 
-    <div class="container pt-24 md:pt-40 pb-16">
+    <div class="container pt-24 lg:pt-40 pb-16">
         <?php get_template_part('parts/section', 'specialOffers') ?>
         <?php get_template_part('parts/section', 'globalcta') ?>
     </div>
 
     <div class="container">
         <div class="flex flex-wrap py-16 md:py-24 gap-y-10">
-            <div class="w-full md:w-1/3">
+            <div class="w-full xl:w-1/3">
                 <h3 class="text-4xl md:text-5xl xl:text-heading text-main-blue font-bold">Lorem ipsum dolor sit amet, consectetur</h3>
                 <div class="pt-5 md:pt-10">
                     <a href="<?= get_site_url() ?>" class="btn-yellow-hover-main-blue px-14"><span class="relative z-10">Learn more</span></a>
                 </div>
             </div>
-            <div class="w-full md:w-2/3">
+            <div class="w-full xl:w-2/3">
                 <article class="bg-main-blue rounded-[20px] md:rounded-[30px] h-full py-10 px-5 md:px-14 font-articulat text-white leading-relaxed description md:columns-2">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
