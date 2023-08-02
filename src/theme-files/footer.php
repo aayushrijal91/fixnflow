@@ -57,11 +57,11 @@
                     <div class="rounded-[29px] bg-main-blue p-6 md:p-9 h-full flex flex-col justify-between">
                         <div class="flex flex-wrap justify-between -mx-2 gap-y-7">
                             <div class="w-fit px-2">
-                                <div class="text-light-blue font-articulat font-bold">Call us today</div>
+                                <p class="text-light-blue font-articulat font-bold">Call us today</p>
                                 <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-2xl md:text-4xl font-bold text-white"><?= get_field('phone_number', 'options') ?></a>
                             </div>
                             <div class="w-fit px-2">
-                                <div class="text-light-blue font-articulat font-bold">Email us today</div>
+                                <p class="text-light-blue font-articulat font-bold">Email us today</p>
                                 <a href="mailto:<?= get_field('admin_email', 'options') ?>" class="text-2xl md:text-4xl font-bold text-white"><?= get_field('admin_email', 'options') ?></a>
                             </div>
                         </div>
@@ -77,10 +77,10 @@
                 </div>
                 <div class="w-full lg:w-1/2 px-3" data-aos="zoom-in">
                     <div class="rounded-[29px] bg-main-blue p-6 md:py-9 md:px-11 h-full bg-no-repeat bg-cover" style="background-image: url(<?= get_template_directory_uri() ?>/images/background/footer_cta_2.jpg)">
-                        <div class="bg-tertiary rounded-[10px] pt-4 md:py-4 px-7 text-2xl md:text-[35px] font-bold text-white leading-none relative text-center md:text-start lg:min-h-[300px] xl:min-h-fit">
+                        <h4 class="bg-tertiary rounded-[10px] pt-4 md:py-4 px-7 text-2xl md:text-[35px] font-bold text-white leading-none relative text-center md:text-start lg:min-h-[300px] xl:min-h-fit">
                             Fix n Flow <br /> <span class="text-dark-blue">Membership</span>
                             <img src="<?= get_template_directory_uri() ?>/images/lib/vip-membership.png" alt="<?php bloginfo( 'name' ); ?>" class="md:absolute right-0 bottom-0">
-                        </div>
+</h4>
                         <div class="flex flex-wrap justify-between -mx-2 items-center pt-4 gap-y-5">
                             <div class="w-full md:w-fit px-2">
                                 <ul class="list-disc pl-5 font-articulat text-white leading-relaxed text-sm md:text-base">
@@ -100,7 +100,7 @@
                 <div class="container">
                     <div class="rounded-2xl bg-quaternary/[0.1] py-9 px-5 flex flex-col gap-y-5">
                         <div>
-                            <div class="text-light-blue text-xl font-bold text-center">Quick links</div>
+                            <h4 class="text-light-blue text-xl font-bold text-center">Quick links</h4>
                             <?php wp_nav_menu(array(
                                 'menu' => 'Quick Links',
                                 'item_class' => 'nav-item',
@@ -110,7 +110,7 @@
                         </div>
 
                         <div>
-                            <div class="text-light-blue text-xl font-bold text-center">Our services</div>
+                            <h4 class="text-light-blue text-xl font-bold text-center">Our services</h4>
                             <ul class="text-center flex flex-col gap-y-3 pt-4 text-sm">
                                 <?php
                                 $args = array(
@@ -140,7 +140,7 @@
                         </div>
 
                         <div>
-                            <div class="text-light-blue text-xl font-bold text-center">Discover more</div>
+                            <h4 class="text-light-blue text-xl font-bold text-center">Discover more</h4>
                             <?php wp_nav_menu(array(
                                 'menu' => 'Discover more',
                                 'item_class' => 'nav-item',
@@ -150,7 +150,7 @@
                         </div>
 
                         <div>
-                            <div class="text-light-blue text-xl font-bold text-center">Contact us</div>
+                            <h4 class="text-light-blue text-xl font-bold text-center">Contact us</h4>
                             <?php wp_nav_menu(array(
                                 'menu' => 'Contact us',
                                 'item_class' => 'nav-item',
@@ -164,7 +164,7 @@
 
             <div class="flex flex-wrap lg:pt-24 -mx-2">
                 <div class="w-full lg:w-1/2 px-2 hidden lg:block">
-                    <div class="text-light-blue text-2xl font-bold">Our services</div>
+                    <h4 class="text-light-blue text-2xl font-bold">Our services</h4>
                     <ul class="pt-9 leading-loose columns-2">
                         <?php
                         $args = array(
@@ -195,7 +195,7 @@
                 <div class="w-full lg:w-1/2 px-2">
                     <div class="flex flex-wrap justify-between">
                         <div class="w-fit hidden lg:block">
-                            <div class="text-light-blue text-2xl font-bold">Quick links</div>
+                            <h4 class="text-light-blue text-2xl font-bold">Quick links</h4>
                             <?php wp_nav_menu(array(
                                 'menu' => 'Quick Links',
                                 'item_class' => 'nav-item',
@@ -204,7 +204,7 @@
                             )); ?>
                         </div>
                         <div class="w-fit hidden lg:block">
-                            <div class="text-light-blue text-2xl font-bold">Discover more</div>
+                            <h4 class="text-light-blue text-2xl font-bold">Discover more</h4>
                             <?php wp_nav_menu(array(
                                 'menu' => 'Discover more',
                                 'item_class' => 'nav-item',
@@ -213,7 +213,7 @@
                             )); ?>
                         </div>
                         <div class="w-fit hidden lg:block">
-                            <div class="text-light-blue text-2xl font-bold">Contact us</div>
+                            <h4 class="text-light-blue text-2xl font-bold">Contact us</h4>
                             <?php wp_nav_menu(array(
                                 'menu' => 'Contact us',
                                 'item_class' => 'nav-item',
@@ -225,20 +225,20 @@
 
                     <div class="border-b border-main-blue my-12"></div>
 
-                    <div class="font-bold text-white text-base text-center lg:text-start"><span class="text-light-blue text-sm">License no.</span> 356346C</div>
+                    <p class="font-bold text-white text-base text-center lg:text-start"><span class="text-light-blue text-sm">License no.</span> 356346C</p>
 
                     <div class="flex flex-wrap items-center -mx-2 pt-6">
                         <div class="w-1/3 px-2 flex flex-col md:flex-row lg:flex-col xl:flex-row items-center gap-x-5 gap-y-5 justify-center">
                             <?= echo_theme_image('/images/logo/master-plumber-association.png') ?>
-                            <div class="font-articulat text-white text-center md:text-start lg:text-center xl:text-start text-sm md:text-base">Master Plumber<br />Association<br /> NSW</div>
+                            <p class="font-articulat text-white text-center md:text-start lg:text-center xl:text-start text-sm md:text-base">Master Plumber<br />Association<br /> NSW</p>
                         </div>
                         <div class="w-1/3 px-2 flex flex-col md:flex-row lg:flex-col xl:flex-row items-center gap-x-5 gap-y-5 justify-center">
                             <?= echo_theme_image('/images/logo/ebix.png') ?>
-                            <div class="font-articulat text-white text-center md:text-start lg:text-center xl:text-start text-sm md:text-base">EBiX Trades<br />Monitor</div>
+                            <p class="font-articulat text-white text-center md:text-start lg:text-center xl:text-start text-sm md:text-base">EBiX Trades<br />Monitor</p>
                         </div>
                         <div class="w-1/3 px-2 flex flex-col md:flex-row lg:flex-col xl:flex-row items-center gap-x-5 gap-y-5 justify-center">
                             <?= echo_theme_image('/images/logo/accredited.png') ?>
-                            <div class="font-articulat text-white text-center md:text-start text-sm md:text-base">Accredited<br />Plumber</div>
+                            <p class="font-articulat text-white text-center md:text-start text-sm md:text-base">Accredited<br />Plumber</p>
                         </div>
                     </div>
 
@@ -256,10 +256,10 @@
     <div class="bg-main-blue">
         <div class="container">
             <div class="flex flex-wrap justify-center md:justify-between items-center py-6">
-                <div class="w-fit text-sm font-semibold text-white text-center">
-                    <div class="md:hidden">All Rights Reserved</div>
+                <article class="w-fit text-sm font-semibold text-white text-center">
+                    <p class="md:hidden">All Rights Reserved</p>
                     Copyright <?= date('Y') ?> <span class="px-10 opacity-50">/</span> Fix n Flow Plumbing <span class="px-10 opacity-50 hidden md:inline">/</span> <span class="hidden md:inline">All Rights Reserved</span>
-                </div>
+                </article>
                 <div class="w-fit hidden md:block">
                     <a href="https://aiims.com.au/this-is-us/" target="_blank"><img src="<?= get_template_directory_uri() ?>/images/logo/aiims.png" alt="<?php bloginfo( 'name' ); ?>"></a>
                 </div>

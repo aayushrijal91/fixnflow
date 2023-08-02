@@ -15,17 +15,17 @@ get_header();
             <div class="w-full md:w-1/2 lg:w-1/4 px-3 order-3 md:order-1">
                 <div class="flex flex-wrap items-center justify-center -mx-2 pt-6 gap-y-5">
                     <div class="w-2/3 px-2 text-center flex flex-col items-center">
-                        <img src="<?= get_template_directory_uri() ?>/images/logo/accredited.png" alt="<?php bloginfo( 'name' ); ?>">
+                        <img src="<?= get_template_directory_uri() ?>/images/logo/accredited.png" alt="<?php bloginfo('name'); ?>">
                         <div class="my-5 border-b h-[3px] w-[184px] bg-quaternary"></div>
-                        <div class="font-articulat text-light-blue text-base">We are qualified plumbers</div>
+                        <p class="font-articulat text-light-blue text-base">We are qualified plumbers</p>
                     </div>
                     <div class="w-1/2 px-2 text-center flex flex-col items-center">
                         <?= echo_theme_image('/images/logo/ebix.png') ?>
-                        <div class="font-articulat text-primary text-sm font-semibold pt-6">EBiX Trades<br />Monitor</div>
+                        <p class="font-articulat text-primary text-sm font-semibold pt-6">EBiX Trades<br />Monitor</p>
                     </div>
                     <div class="w-1/2 px-2 text-center flex flex-col items-center">
                         <?= echo_theme_image('/images/logo/master-plumber-association.png') ?>
-                        <div class="font-articulat text-primary text-sm font-semibold pt-6">Master Plumber<br />Association<br /> NSW</div>
+                        <p class="font-articulat text-primary text-sm font-semibold pt-6">Master Plumber<br />Association<br /> NSW</p>
                     </div>
                 </div>
             </div>
@@ -33,8 +33,8 @@ get_header();
             <?php $introduction = get_field('introduction'); ?>
             <div class="w-full lg:w-1/2 px-3 order-1 md:order-3 lg:order-2">
                 <div class="text-center bg-contain rounded-[20px] md:rounded-[30px] py-10 md:pt-11 md:pb-28 px-5 xl:px-16 h-full" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= $introduction['background_image'] ? $introduction['background_image']['url'] : ''  ?>) no-repeat center bottom; background-size: contain;">
-                    <div class="text-white text-3xl lg:text-[45px] leading-none font-bold highlight-light-blue"><?= $introduction['heading'] ?></div>
-                    <div class="text-white leading-relaxed py-6 text-sm md:text-base"><?= $introduction['description'] ?></div>
+                    <h2 class="text-white text-3xl lg:text-[45px] leading-none font-bold highlight-light-blue"><?= $introduction['heading'] ?></h2>
+                    <article class="text-white leading-relaxed py-6 text-sm md:text-base"><?= $introduction['description'] ?></article>
                     <?php if ($introduction['button']) : ?>
                         <a href="<?= $introduction['button']['url'] ?>" target="<?= $introduction['button']['target'] ?>" class="btn-yellow-hover-main-blue px-14 mt-10"><span class="relative z-10"><?= $introduction['button']['title'] ?></span></a>
                     <?php endif; ?>
@@ -46,17 +46,17 @@ get_header();
                 </div>
                 <div class="flex flex-wrap -mx-2 pt-4">
                     <div class="w-1/2 px-2">
-                        <div class="bg-light-blue text-primary h-full rounded-xl py-4 px-3.5">
-                            <div class="text-3xl font-articulat-heavy leading-none"><?= get_field('number_of_reviews', 'options') ?>+</div>
-                            <div class="text-sm font-articulat leading-none font-semibold">Customer review</div>
-                        </div>
+                        <article class="bg-light-blue text-primary h-full rounded-xl py-4 px-3.5">
+                            <p class="text-3xl font-articulat-heavy leading-none"><?= get_field('number_of_reviews', 'options') ?>+</p>
+                            <p class="text-sm font-articulat leading-none font-semibold">Customer review</p>
+                        </article>
                     </div>
                     <div class="w-1/2 px-2">
                         <div class="bg-white border-2 border-light-blue text-light-blue rounded-xl px-3.5 py-4">
-                            <div class="text-3xl font-articulat-heavy leading-none flex gap-x-2">5.0 <svg class="mt-1" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                            <p class="text-3xl font-articulat-heavy leading-none flex gap-x-2">5.0 <svg class="mt-1" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
                                     <path d="M5.70741 1.2561C5.87545 0.837657 6.46781 0.837656 6.63585 1.2561L7.8836 4.36327C7.95516 4.54146 8.1224 4.66297 8.31398 4.67596L11.6546 4.90247C12.1045 4.93298 12.2876 5.49635 11.9416 5.78547L9.37203 7.93232C9.22468 8.05544 9.1608 8.25204 9.20765 8.43826L10.0245 11.6854C10.1346 12.1227 9.65532 12.4709 9.27342 12.2311L6.43762 10.4508C6.27499 10.3487 6.06827 10.3487 5.90564 10.4508L3.06984 12.2311C2.68794 12.4709 2.20871 12.1227 2.31872 11.6854L3.13562 8.43826C3.18246 8.25204 3.11858 8.05544 2.97123 7.93232L0.401711 5.78547C0.0556734 5.49635 0.238724 4.93298 0.688614 4.90247L4.02928 4.67596C4.22086 4.66297 4.3881 4.54146 4.45966 4.36327L5.70741 1.2561Z" fill="#5AB2F8" />
-                                </svg></div>
-                            <div class="text-sm font-articulat leading-none font-semibold">Average rating</div>
+                                </svg></p>
+                            <p class="text-sm font-articulat leading-none font-semibold">Average rating</p>
                         </div>
                     </div>
                 </div>
@@ -68,12 +68,12 @@ get_header();
         <div class="container">
             <?php $section_2 = get_field('section_2'); ?>
             <div class="flex flex-wrap justify-around pb-20 gap-y-5">
-                <div class="w-full lg:w-5/12 text-4xl md:text-5xl xl:text-heading leading-none text-grey font-bold text-center highlight-main-blue">
+                <h2 class="w-full lg:w-5/12 text-4xl md:text-5xl xl:text-heading leading-none text-grey font-bold text-center highlight-main-blue">
                     <?= $section_2['heading'] ?>
-                </div>
-                <div class="w-full lg:w-5/12 text-grey font-articulat text-base leading-loose description text-center md:text-start">
+                </h2>
+                <article class="w-full lg:w-5/12 text-grey font-articulat text-base leading-loose description text-center md:text-start">
                     <?= $section_2['description'] ?>
-                </div>
+                </article>
             </div>
 
             <?php get_template_part('parts/section', 'globalcta') ?>
@@ -84,14 +84,14 @@ get_header();
         <div class="container">
             <div class="bg-white md:bg-dark-blue md:rounded-[30px] md:p-9">
                 <div class="flex flex-wrap md:justify-between lg:justify-around items-center gap-y-10">
-                    <div class="w-full md:w-5/12 xl:w-1/3">
-                        <div class="text-4xl md:text-5xl xl:text-heading leading-none text-main-blue md:text-white font-bold text-center highlight-light-blue">Why <span>wait</span><br /> any longer?</div>
-                        <div class="text-grey md:text-white font-articulat text-center pt-9">Join our VIP club now and experience the benefits of being a part of our Fix N Flow Plumbing family!</div>
-                    </div>
-                    <div class="w-full md:w-1/2 bg-dark-blue md:bg-transparent px-4 py-9 md:p-0 rounded-[20px] md:rounded-0">
-                        <div class="text-white text-center font-articulat ob-5">Simply fill in your details below and we'll get back to you and about the next steps!</div>
+                    <article class="w-full md:w-5/12 xl:w-1/3">
+                        <h2 class="text-4xl md:text-5xl xl:text-heading leading-none text-main-blue md:text-white font-bold text-center highlight-light-blue">Why <span>wait</span><br /> any longer?</h2>
+                        <p class="text-grey md:text-white font-articulat text-center pt-9">Join our VIP club now and experience the benefits of being a part of our Fix N Flow Plumbing family!</p>
+                    </article>
+                    <article class="w-full md:w-1/2 bg-dark-blue md:bg-transparent px-4 py-9 md:p-0 rounded-[20px] md:rounded-0">
+                        <p class="text-white text-center font-articulat ob-5">Simply fill in your details below and we'll get back to you and about the next steps!</p>
                         <?= do_shortcode('[contact-form-7 id="160" title="Membership form"]') ?>
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>
@@ -118,8 +118,8 @@ get_header();
                         <div class="relative">
                             <div class="px-5 md:px-9 pt-9 flex flex-wrap">
                                 <div class="flex-1">
-                                    <div class="text-main-blue text-4xl md:text-5xl xl:text-heading font-bold leading-none pt-8 md:pt-0">10% OFF</div>
-                                    <div class="text-2xl lg:text-[35px] text-grey font-bold leading-none pt-6 md:pt-0">For all membership holders</div>
+                                    <h2 class="text-main-blue text-4xl md:text-5xl xl:text-heading font-bold leading-none pt-8 md:pt-0">10% OFF</h2>
+                                    <h4 class="text-2xl lg:text-[35px] text-grey font-bold leading-none pt-6 md:pt-0">For all membership holders</h4>
                                 </div>
                                 <div class="w-fit">
                                     <?= echo_theme_image('/images/lib/membership.png') ?>
@@ -131,22 +131,22 @@ get_header();
                 </div>
                 <div class="w-full lg:w-1/2 px-3">
                     <div class="flex flex-col h-full justify-between gap-y-5 mt-5 lg:mt-0">
-                        <div class="bg-[#D9D9D9]/50 rounded-[10px] min-h-[115px] md:min-h-[174px] px-5 py-4 md:p-7 relative text-main-blue text-2xl md:text-[35px] font-bold flex items-center leading-none">
-                            <img src="<?= get_template_directory_uri() ?>/images/lib/priority-booking-eg.png" alt="<?php bloginfo( 'name' ); ?>" class="absolute right-0 bottom-0 h-[110%] md:h-fit">
-                            <div>Guaranteed <br /><span class="text-grey">priority booking</span></div>
-                        </div>
+                        <article class="bg-[#D9D9D9]/50 rounded-[10px] min-h-[115px] md:min-h-[174px] px-5 py-4 md:p-7 relative text-main-blue text-2xl md:text-[35px] font-bold flex items-center leading-none">
+                            <img src="<?= get_template_directory_uri() ?>/images/lib/priority-booking-eg.png" alt="<?php bloginfo('name'); ?>" class="absolute right-0 bottom-0 h-[110%] md:h-fit">
+                            <h3>Guaranteed <br /><span class="text-grey">priority booking</span></h3>
+                        </article>
 
-                        <div class="bg-gradient-to-r from-[#4299DE] via-[#64B7F9] to-[#48CCF5] rounded-[10px] min-h-[115px] md:min-h-[174px] px-5 py-4 md:p-7 relative text-white text-2xl md:text-[35px] font-bold flex items-center leading-none">
-                            <img src="<?= get_template_directory_uri() ?>/images/lib/service-upgrade-eg.png" class="absolute right-0 bottom-0 h-[150%] md:h-fit" alt="<?php bloginfo( 'name' ); ?>">
-                            <div>Discounted <br /><span class="text-dark-blue">service<br /> upgrades</span></div>
-                        </div>
+                        <article class="bg-gradient-to-r from-[d#4299DE] via-[#64B7F9] to-[#48CCF5] rounded-[10px] min-h-[115px] md:min-h-[174px] px-5 py-4 md:p-7 relative text-white text-2xl md:text-[35px] font-bold flex items-center leading-none">
+                            <img src="<?= get_template_directory_uri() ?>/images/lib/service-upgrade-eg.png" class="absolute right-0 bottom-0 h-[150%] md:h-fit" alt="<?php bloginfo('name'); ?>">
+                            <h3>Discounted <br /><span class="text-dark-blue">service<br /> upgrades</span></h3>
+                        </article>
 
                         <div class="bg-gradient-to-r from-[#396BB5] to-[#1E4785] rounded-[10px] min-h-[115px] md:min-h-[174px] p-7 relative flex items-center">
-                            <img src="<?= get_template_directory_uri() ?>/images/lib/drain-camera-inspection.png" class="absolute right-0 bottom-0 h-[90%] md:h-fit" alt="<?php bloginfo( 'name' ); ?>">
-                            <div>
-                                <div class="leading-none text-white text-2xl md:text-[35px] font-bold">FREE <span class="text-light-blue">drain camera<br /> inspection</span></div>
-                                <div class="text-base md:text-xl text-white pt-4">With any hydro-jetting service</div>
-                            </div>
+                            <img src="<?= get_template_directory_uri() ?>/images/lib/drain-camera-inspection.png" class="absolute right-0 bottom-0 h-[90%] md:h-fit" alt="<?php bloginfo('name'); ?>">
+                            <article>
+                                <h3 class="leading-none text-white text-2xl md:text-[35px] font-bold">FREE <span class="text-light-blue">drain camera<br /> inspection</span></h3>
+                                <p class="text-base md:text-xl text-white pt-4">With any hydro-jetting service</p>
+                            </article>
                         </div>
                     </div>
                 </div>

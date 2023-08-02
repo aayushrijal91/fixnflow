@@ -25,7 +25,7 @@ $the_query = new WP_Query($args);
 
     <div class="py-24">
         <div class="container">
-            <div class="text-center text-4xl md:text-5xl xl:text-heading text-grey font-bold leading-none">Explore all <span class="text-main-blue">Services</span></div>
+            <h2 class="text-center text-4xl md:text-5xl xl:text-heading text-grey font-bold leading-none highlight-main-blue">Explore all <span>Services</span></h2>
             <div class="pt-10 md:pt-24 flex flex-wrap -mx-2 gap-y-4">
                 <?php
                 if ($the_query->have_posts()) :
@@ -35,8 +35,8 @@ $the_query = new WP_Query($args);
                         <div class="w-full md:w-1/2 lg:w-1/3 px-2">
                             <div class="bg-off-white hover:bg-quaternary duration-300 rounded-2xl p-6 flex flex-col justify-between items-center h-full" data-aos="zoom-in">
                                 <div class="h-[147px] w-full bg-grey rounded-[10px] p-3 flex items-end bg-no-repeat bg-cover" style="background-image: url('<?= $featured_img_url ?>'); background-size: cover;"></div>
-                                <div class="text-2xl font-bold text-main-blue pt-8 text-center"><?= get_the_title() ?></div>
-                                <div class="font-articulat leading-loose text-grey text-center pt-6 pb-8"><?= get_the_content() ?></div>
+                                <h3 class="text-2xl font-bold text-main-blue pt-8 text-center"><?= get_the_title() ?></h3>
+                                <article class="font-articulat leading-loose text-grey text-center pt-6 pb-8"><?= get_the_content() ?></article>
                                 <a href="<?= get_the_permalink() ?>" class="border border-light-blue rounded-md h-[48px] px-14 flex items-center justify-center text-center text-main-blue font-articulat font-semibold gap-x-4">
                                     Explore now
                                     <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">

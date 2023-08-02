@@ -22,10 +22,10 @@ get_header();
                 <?php if ($section_1) : ?>
                     <div class="w-full md:w-1/2 px-3 order-1" data-aos="zoom-in">
                         <div class="text-center bg-contain rounded-[20px] lg:rounded-[30px] py-9 px-5 xl:p-20 shadow-lg h-full flex flex-col justify-between items-center" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= $section_1['bg_image']['url'] ?>) no-repeat center bottom; background-size: contain;">
-                            <div>
-                                <div class="text-light-blue text-4xl xl:text-[45px] leading-none font-bold highlight-white"><?= $section_1['heading'] ?></div>
-                                <div class="text-white leading-relaxed py-6 font-articulat"><?= $section_1['description'] ?></div>
-                            </div>
+                            <article>
+                                <h2 class="text-light-blue text-4xl xl:text-[45px] leading-none font-bold highlight-white"><?= $section_1['heading'] ?></h2>
+                                <p class="text-white leading-relaxed py-6 font-articulat"><?= $section_1['description'] ?></p>
+                            </article>
                             <a href="<?= $section_1['button']['url'] ?>" target="<?= $section_1['button']['target'] ?>" class="btn-yellow-hover-main-blue px-14 mt-10"><span class="relative z-10"><?= $section_1['button']['title'] ?></span></a>
                         </div>
                     </div>
@@ -33,24 +33,24 @@ get_header();
                 <?php if ($section_2) : ?>
                     <div class="w-full lg:w-1/2 px-3 order-2 md:order-3 lg:order-2" data-aos="zoom-in">
                         <div class="bg-white rounded-[20px] lg:rounded-[30px] h-full py-11 px-5 lg:px-9">
-                            <div class="text-2xl font-bold text-main-blue"><?= $section_2['heading'] ?></div>
-                            <div class="description font-articulat text-grey pt-6"><?= $section_2['description'] ?></div>
+                            <h2 class="text-2xl font-bold text-main-blue"><?= $section_2['heading'] ?></h2>
+                            <article class="description font-articulat text-grey pt-6"><?= $section_2['description'] ?></article>
                         </div>
                     </div>
                 <?php endif; ?>
                 <?php if ($section_3) : ?>
                     <div class="w-full lg:w-7/12 px-3 order-3 md:order-4 lg:order-3" data-aos="zoom-in">
                         <div class="bg-quaternary rounded-[30px] h-full py-11 px-5 md:px-9">
-                            <div class="text-2xl font-bold text-main-blue"><?= $section_3['heading'] ?></div>
-                            <div class="description font-articulat text-grey pt-6"><?= $section_3['description'] ?></div>
+                            <h3 class="text-2xl font-bold text-main-blue"><?= $section_3['heading'] ?></h3>
+                            <article class="description font-articulat text-grey pt-6"><?= $section_3['description'] ?></article>
                         </div>
                     </div>
                 <?php endif; ?>
                 <?php if ($section_4) : ?>
                     <div class="w-full md:w-1/2 lg:w-5/12 px-3 order-4 md:order-2 lg:order-4" data-aos="zoom-in">
                         <div class="text-center rounded-[20px] lg:rounded-[30px] px-5 py-9 xl:p-20 shadow-lg h-full" style="background: linear-gradient(#ffffff 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= $section_4['bg_image']['url'] ?>) no-repeat center bottom; background-size: contain;">
-                            <div class="text-dark text-4xl xl:text-[45px] leading-none font-bold highlight-main-blue"><?= $section_4['heading'] ?></div>
-                            <div class="text-dark leading-relaxed py-6 font-articulat"><?= $section_4['description'] ?></div>
+                            <h2 class="text-dark text-4xl xl:text-[45px] leading-none font-bold highlight-main-blue"><?= $section_4['heading'] ?></h2>
+                            <p class="text-dark leading-relaxed py-6 font-articulat"><?= $section_4['description'] ?></p>
                             <a href="<?= $section_4['button']['url'] ?>" target="<?= $section_4['button']['target'] ?>" class="btn-main-blue-hover-yellow px-14 mt-10"><span class="relative z-10"><?= $section_4['button']['title'] ?></span></a>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ get_header();
     if (!empty($service_attributes['heading'])) : ?>
         <div class="bg-light-blue pt-20 md:pt-28">
             <div class="container" data-aos="fade-up">
-                <div class="text-white text-4xl md:text-5xl xl:text-heading font-semibold leading-none capitalize"><?= $service_attributes['heading'] ?></div>
+                <h2 class="text-white text-4xl md:text-5xl xl:text-heading font-semibold leading-none capitalize"><?= $service_attributes['heading'] ?></h2>
             </div>
             <div class="container pt-16 pb-36 relative items-center hidden xl:flex">
                 <button value="0" class="absolute z-[1000] -left-4 serviceAttributeBoxesButton bg-main-blue h-[65px] w-[65px] rounded-full flex justify-center items-center">
@@ -86,15 +86,15 @@ get_header();
                                     $description = get_sub_field('description');
                                     if ($count == 0) :
                     ?>
-                                        <div class="bg-primary rounded-[30px] h-inherit w-2/5 mx-2 flex-shrink-0 px-11 py-8" data-aos="zoom-in">
-                                            <div class="text-2xl text-white highlight-light-blue font-semibold leading-none pb-4"><?= $title ?></div>
-                                            <div class="font-articulat text-white leading-relaxed"><?= $description ?></div>
-                                        </div>
+                                        <article class="bg-primary rounded-[30px] h-inherit w-2/5 mx-2 flex-shrink-0 px-11 py-8" data-aos="zoom-in">
+                                            <h4 class="text-2xl text-white highlight-light-blue font-semibold leading-none pb-4"><?= $title ?></h3>
+                                                <p class="font-articulat text-white leading-relaxed"><?= $description ?></p>
+                                        </article>
                                     <?php else : ?>
-                                        <div class="bg-white rounded-[30px] h-inherit w-1/5 mx-2 flex-shrink-0 py-8 px-7" data-aos="zoom-in">
-                                            <div class="text-2xl text-main-blue font-bold leading-none pb-4"><?= $title ?></div>
-                                            <div class="font-articulat text-dark-blue leading-relaxed"><?= $description ?></div>
-                                        </div>
+                                        <article class="bg-white rounded-[30px] h-inherit w-1/5 mx-2 flex-shrink-0 py-8 px-7" data-aos="zoom-in">
+                                            <h4 class="text-2xl text-main-blue font-bold leading-none pb-4"><?= $title ?></h4>
+                                            <p class="font-articulat text-dark-blue leading-relaxed"><?= $description ?></p>
+                                        </article>
                     <?php
                                     endif;
                                     $count++;
@@ -123,10 +123,10 @@ get_header();
                                     $description = get_sub_field('description');
                                     if ($count == 0) :
                     ?>
-                                        <div class="bg-primary rounded-[30px] h-inherit p-8" data-aos="zoom-in">
-                                            <div class="text-2xl text-white highlight-light-blue font-semibold leading-none pb-4"><?= $title ?></div>
-                                            <div class="font-articulat text-white leading-relaxed"><?= $description ?></div>
-                                        </div>
+                                        <article class="bg-primary rounded-[30px] h-inherit p-8" data-aos="zoom-in">
+                                            <p class="text-2xl text-white highlight-light-blue font-semibold leading-none pb-4"><?= $title ?></p>
+                                            <p class="font-articulat text-white leading-relaxed"><?= $description ?></p>
+                                        </article>
                     <?php
                                     endif;
                                     $count++;
@@ -148,10 +148,10 @@ get_header();
                                     if ($count == 0) :
                     ?>
                                     <?php else : ?>
-                                        <div class="bg-white rounded-[30px] h-inherit mx-2 flex-shrink-0 py-8 px-7" data-aos="zoom-in">
-                                            <div class="text-2xl text-main-blue font-bold leading-none pb-4"><?= $title ?></div>
-                                            <div class="font-articulat text-dark-blue leading-relaxed"><?= $description ?></div>
-                                        </div>
+                                        <article class="bg-white rounded-[30px] h-inherit mx-2 flex-shrink-0 py-8 px-7" data-aos="zoom-in">
+                                            <h4 class="text-2xl text-main-blue font-bold leading-none pb-4"><?= $title ?></h4>
+                                            <p class="font-articulat text-dark-blue leading-relaxed"><?= $description ?></p>
+                                        </article>
                     <?php
                                     endif;
                                     $count++;
@@ -168,14 +168,14 @@ get_header();
                 <div class="container pb-28 relative">
                     <div class="flex flex-wrap justify-between">
                         <div class="w-full lg:w-5/12" data-aos="zoom-in">
-                            <div class="highlight-white text-dark-blue text-4xl md:text-5xl xl:text-heading font-semibold leading-none"><?= $service_description['heading'] ?></span></div>
-                            <div class="font-articulat text-white leading-relaxed pt-8 description"><?= $service_description['description'] ?></div>
+                            <h2 class="highlight-white text-dark-blue text-4xl md:text-5xl xl:text-heading font-semibold leading-none"><?= $service_description['heading'] ?></span></h2>
+                            <article class="font-articulat text-white leading-relaxed pt-8 description"><?= $service_description['description'] ?></article>
                         </div>
                         <div class="w-full lg:w-1/2" data-aos="zoom-in">
                             <div class="rounded-[30px] overflow-hidden"><?= echo_image($service_description['image'], '', 'w-full') ?></div>
                         </div>
                     </div>
-                    <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.gif" alt="<?php bloginfo( 'name' ); ?>" class="absolute right-20 -bottom-14">
+                    <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.gif" alt="<?php bloginfo('name'); ?>" class="absolute right-20 -bottom-14">
                 </div>
             <?php endif; ?>
 
@@ -186,8 +186,7 @@ get_header();
                 <div class="container pb-28 relative">
                     <div class="flex flex-wrap justify-between">
                         <div class="w-full lg:w-5/12" data-aos="zoom-in">
-                            <div class="highlight-white text-dark-blue text-4xl md:text-5xl xl:text-heading font-semibold leading-none"><?= $service_description_listing['heading'] ?></span></div>
-
+                            <h2 class="highlight-white text-dark-blue text-4xl md:text-5xl xl:text-heading font-semibold leading-none"><?= $service_description_listing['heading'] ?></h2>
                         </div>
                         <div class="w-full lg:w-1/2" data-aos="zoom-in">
                             <div class="columns-2">
@@ -200,9 +199,9 @@ get_header();
                                                 $description = get_sub_field('description');
                                 ?>
                                                 <div class="border border-white rounded-[20px] p-8 servicDescriptionCard mb-4 break-inside-avoid">
-                                                    <div class="text-dark-blue font-articulat subHeading"><?= $subHeading ?></div>
-                                                    <div class="text-2xl text-white font-semibold leading-none pt-3 pb-6 title"><?= $title ?></div>
-                                                    <div class="text-dark-blue font-articulat pb-6 description hidden"><?= $description ?></div>
+                                                    <p class="text-dark-blue font-articulat subHeading"><?= $subHeading ?></p>
+                                                    <h3 class="text-2xl text-white font-semibold leading-none pt-3 pb-6 title"><?= $title ?></h3>
+                                                    <article class="text-dark-blue font-articulat pb-6 description hidden"><?= $description ?></article>
                                                     <div class="flex justify-center">
                                                         <button class="showServiceDescriptionBtn h-[52px] w-[52px] rounded-full bg-[#C0E3FF] flex items-center justify-center">
                                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -221,7 +220,7 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.gif" alt="<?php bloginfo( 'name' ); ?>" class="absolute left-20 -bottom-14">
+                    <img src="<?= get_template_directory_uri() ?>/images/lib/guaranteed-plumbing.gif" alt="<?php bloginfo('name'); ?>" class="absolute left-20 -bottom-14">
                 </div>
             <?php endif; ?>
         </div>
@@ -247,8 +246,8 @@ get_header();
     <div class="container pt-24 pb-60">
         <?php if (have_rows('faqs')) : ?>
             <div class="w-full lg:w-8/12 mx-auto" data-aos="fade-up">
-                <div class="text-center text-grey text-4xl md:text-5xl xl:text-heading font-bold highlight-main-blue leading-none"><span>Frequently</span> asked questions</div>
-                <div class="text-main-blue text-center pt-7 font-semibold">All you <?= get_the_title() ?> questions answered here</div>
+                <h2 class="text-center text-grey text-4xl md:text-5xl xl:text-heading font-bold highlight-main-blue leading-none"><span>Frequently</span> asked questions</h2>
+                <p class="text-main-blue text-center pt-7 font-semibold">All you <?= get_the_title() ?> questions answered here</p>
 
                 <div class="accordion-container pt-10 md:pt-20">
                     <?php
@@ -260,11 +259,11 @@ get_header();
                         <div class="accordion-card">
                             <div class="accordion-head<?= ($index == 1) ? " active" : ""; ?>">
                                 <div class="flex w-full justify-between">
-                                    <div class="h-inherit">
+                                    <p class="h-inherit">
                                         <?= $question ?>
-                                    </div>
+                                    </p>
                                     <div class="h-inherit">
-                                        <div class="plusminus">
+                                        <p class="plusminus">
                                             <?php if ($index == 1) { ?>
                                                 <svg width="25" height="4" viewBox="0 0 25 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M1.56055 1.81152H22.5852" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
@@ -275,13 +274,13 @@ get_header();
                                                     <path d="M1.56006 12.5112H22.5847" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
                                             <?php } ?>
-                                        </div>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-body" style="<?= ($index == 1) ? 'display: block;' : ''; ?>">
+                            <p class="accordion-body" style="<?= ($index == 1) ? 'display: block;' : ''; ?>">
                                 <?= $answer ?>
-                            </div>
+                                            </p>
                         </div>
                     <?php
                         $index++;

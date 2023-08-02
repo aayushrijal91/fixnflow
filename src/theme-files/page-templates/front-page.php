@@ -14,12 +14,12 @@ get_template_part('parts/section', 'nav');
         <source src="<?= get_template_directory_uri() ?>/images/background/home_banner_animation.mp4" type="video/mp4">
         Your browser does not support HTML video.
     </video>
-    <img src="<?= get_template_directory_uri() ?>/images/background/homebanner-sm.jpg" class="absolute w-full h-full md:hidden" alt="<?php bloginfo( 'name' ); ?>">
+    <img src="<?= get_template_directory_uri() ?>/images/background/homebanner-sm.jpg" class="absolute w-full h-full md:hidden" alt="<?php bloginfo('name'); ?>">
 
     <div class="container pt-32 md:pt-64 lg:pt-52 xl:pt-64 relative">
         <div class="flex justify-center">
             <div class="w-8/12 md:w-10/12 lg:w-2/3 text-white text-center">
-                <div class="font-articulat text-[22px] lg:text-3xl">Your trusted plumbing partner in Sydney</div>
+                <h2 class="font-articulat text-[22px] lg:text-3xl">Your trusted plumbing partner in Sydney</h2>
                 <h1 class="text-4xl md:text-5xl lg:text-heading font-bold leading-none pt-3.5">Flow with the Pros, Choose<br /> <span class="text-light-blue">Fix N Flow</span></h1>
             </div>
         </div>
@@ -30,39 +30,39 @@ get_template_part('parts/section', 'nav');
             <div class="w-full lg:w-4/12 order-1 lg:order-2">
                 <div class="flex flex-wrap -mx-1 items-center pb-3">
                     <div class="w-1/3 px-1">
-                        <img src="<?= get_template_directory_uri() ?>/images/icons/google-reviews.png" alt="<?php bloginfo( 'name' ); ?>">
+                        <img src="<?= get_template_directory_uri() ?>/images/icons/google-reviews.png" alt="<?php bloginfo('name'); ?>">
                     </div>
                     <div class="w-1/3 px-1">
-                        <div class="border-b-4 border-r-4 border-light-blue rounded-[10px] bg-white py-2 px-3.5 font-articulat text-dark-blue font-bold leading-none">
-                            <div class="text-3xl"><?= get_field('number_of_reviews', 'options') ?>+</div>
-                            <div class="text-xs">Customer reviews</div>
-                        </div>
+                        <article class="border-b-4 border-r-4 border-light-blue rounded-[10px] bg-white py-2 px-3.5 font-articulat text-dark-blue font-bold leading-none">
+                            <p class="text-3xl"><?= get_field('number_of_reviews', 'options') ?>+</p>
+                            <p class="text-xs">Customer reviews</p>
+                        </article>
                     </div>
                     <div class="w-1/3 px-1">
-                        <div class="border-b-4 border-r-4 border-yellow rounded-[10px] bg-main-blue py-2 px-3.5 font-articulat text-white font-bold leading-none">
-                            <div class="text-3xl flex items-center gap-x-2">5.0
+                        <article class="border-b-4 border-r-4 border-yellow rounded-[10px] bg-main-blue py-2 px-3.5 font-articulat text-white font-bold leading-none">
+                            <p class="text-3xl flex items-center gap-x-2">5.0
                                 <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.88515 0.857663C6.05318 0.439219 6.64555 0.439219 6.81358 0.857663L8.06134 3.96483C8.13289 4.14302 8.30013 4.26453 8.49171 4.27752L11.8324 4.50403C12.2823 4.53454 12.4653 5.09791 12.1193 5.38703L9.54977 7.53388C9.40241 7.657 9.33853 7.8536 9.38538 8.03982L10.2023 11.287C10.3123 11.7243 9.83305 12.0725 9.45115 11.8327L6.61535 10.0524C6.45272 9.95026 6.24601 9.95026 6.08338 10.0524L3.24758 11.8327C2.86568 12.0725 2.38644 11.7243 2.49646 11.287L3.31335 8.03982C3.3602 7.8536 3.29632 7.657 3.14896 7.53388L0.579446 5.38703C0.233408 5.09791 0.416459 4.53454 0.866348 4.50403L4.20702 4.27752C4.3986 4.26453 4.56584 4.14302 4.63739 3.96483L5.88515 0.857663Z" fill="#FFAE35" />
                                 </svg>
-                            </div>
-                            <div class="text-xs">Average rating</div>
-                        </div>
+                            </p>
+                            <p class="text-xs">Average rating</p>
+                        </article>
                     </div>
                 </div>
                 <div class="flex flex-wrap -mx-1">
                     <div class="w-1/3 px-1">
                         <div class="border border-light-blue rounded-full bg-light-blue bg-opacity-60 h-[41px] flex items-center justify-center p-2">
-                            <img src="<?= get_template_directory_uri() ?>/images/icons/hipages-review.png" alt="<?php bloginfo( 'name' ); ?>">
+                            <img src="<?= get_template_directory_uri() ?>/images/icons/hipages-review.png" alt="<?php bloginfo('name'); ?>">
                         </div>
                     </div>
                     <div class="w-1/3 px-1">
                         <div class="border border-light-blue rounded-full bg-light-blue bg-opacity-60 h-[41px] flex items-center justify-center p-2">
-                            <img src="<?= get_template_directory_uri() ?>/images/icons/facebook-review.png" alt="<?php bloginfo( 'name' ); ?>">
+                            <img src="<?= get_template_directory_uri() ?>/images/icons/facebook-review.png" alt="<?php bloginfo('name'); ?>">
                         </div>
                     </div>
                     <div class="w-1/3 px-1">
                         <div class="border border-light-blue rounded-full bg-light-blue bg-opacity-60 h-[41px] flex items-center justify-center p-2">
-                            <img src="<?= get_template_directory_uri() ?>/images/icons/truelocal-review.png" alt="<?php bloginfo( 'name' ); ?>">
+                            <img src="<?= get_template_directory_uri() ?>/images/icons/truelocal-review.png" alt="<?php bloginfo('name'); ?>">
                         </div>
                     </div>
                 </div>
@@ -81,10 +81,10 @@ get_template_part('parts/section', 'nav');
         <div class="container hidden lg:block">
             <div class="flex justify-center group relative">
                 <div class="w-full lg:w-5/12 absolute top-0 left-0 opacity-0 group-hover:opacity-100 translate-y-96 group-hover:translate-y-0 duration-1000">
-                    <div class="text-5xl xl:text-heading leading-none font-bold text-main-blue highlight-light-blue"><?= $section_1['heading'] ?></div>
-                    <div class="text-grey font-articulat py-16 leading-loose description">
+                    <h2 class="text-5xl xl:text-heading leading-none font-bold text-main-blue highlight-light-blue"><?= $section_1['heading'] ?></h2>
+                    <article class="text-grey font-articulat py-16 leading-loose description">
                         <?= $section_1['description'] ?>
-                    </div>
+                    </article>
                     <div class="flex flex-wrap -mx-2">
                         <div class="w-full md:w-1/2 px-2">
                             <a href="<?= $section_1['button_1']['url'] ?>" target="<?= $section_1['button_1']['target'] ?>" class="btn-yellow-hover-main-blue w-full"><span class="relative z-10"><?= $section_1['button_1']['title'] ?></span></a>
@@ -95,7 +95,7 @@ get_template_part('parts/section', 'nav');
                     </div>
                 </div>
                 <div class="lg:group-hover:translate-x-[20rem] xl:group-hover:translate-x-[30rem] duration-1000 w-full lg:w-9/12 rounded-[30px] h-[641px] bg-no-repeat bg-cover bg-center p-6 shadow-[14px_14px_#5AB2F8]" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/video-thumbnail.jpg')">
-                    <a href="./" class="h-[69px] w-[69px] rounded-full bg-[#F7F8FA] flex items-center justify-center">
+                    <a href="<?= get_site_url() ?>" class="h-[69px] w-[69px] rounded-full bg-off-white flex items-center justify-center">
                         <svg width="20" height="26" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.0439453" y="0.741211" width="4.85152" height="24.4202" rx="2.42576" fill="#0067B9" />
                             <rect x="14.917" y="0.741211" width="4.85152" height="24.4202" rx="2.42576" fill="#0067B9" />
@@ -110,7 +110,7 @@ get_template_part('parts/section', 'nav');
                 <div class="flex flex-wrap justify-center gap-y-20">
                     <div class="w-full">
                         <div class="w-full rounded-xl h-[188px] md:h-[300px] bg-no-repeat bg-cover flex items-end bg-center p-6 shadow-[5px_5px_#5AB2F8]" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/video-thumbnail.jpg')">
-                            <a href="./" class="h-[36px] w-[36px] rounded-full bg-[#F7F8FA] flex items-center justify-center">
+                            <a href="./" class="h-[36px] w-[36px] rounded-full bg-off-white flex items-center justify-center">
                                 <svg width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle opacity="0.5" cx="17.8022" cy="17.2864" r="17.2227" fill="#F7F8FA" />
                                     <rect x="12.8638" y="11.1709" width="2.4299" height="12.2309" rx="0.789109" fill="#0067B9" />
@@ -120,10 +120,10 @@ get_template_part('parts/section', 'nav');
                         </div>
                     </div>
                     <div class="w-full">
-                        <div class="text-4xl md:text-5xl leading-none font-bold text-main-blue highlight-light-blue"><?= $section_1['heading'] ?></div>
-                        <div class="text-grey font-articulat py-8 md:py-14 leading-loose description">
+                        <h2 class="text-4xl md:text-5xl leading-none font-bold text-main-blue highlight-light-blue"><?= $section_1['heading'] ?></h2>
+                        <article class="text-grey font-articulat py-8 md:py-14 leading-loose description">
                             <?= $section_1['description'] ?>
-                        </div>
+                        </article>
                         <div class="flex flex-wrap gap-y-4 -mx-2">
                             <div class="w-full md:w-1/2 px-2">
                                 <a href="<?= $section_1['button_1']['url'] ?>" target="<?= $section_1['button_1']['target'] ?>" class="btn-yellow-hover-main-blue w-full"><span class="relative z-10"><?= $section_1['button_1']['title'] ?></span></a>
@@ -158,8 +158,8 @@ get_template_part('parts/section', 'nav');
 
     <div class="py-28 bg-no-repeat bg-contain" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/homepage_services.png')">
         <div class="container md:pt-20 lg:pb-20">
-            <div class="mx-auto w-11/12 lg:w-2/3 text-grey text-4xl md:text-5xl lg:text-heading leading-none font-bold text-center"><?= $services['heading'] ?></div>
-            <div class="mx-auto w-11/12 lg:w-2/3 text-grey font-articulat text-center pt-9 md:pt-14"><?= $services['description'] ?></div>
+            <h2 class="mx-auto w-11/12 lg:w-2/3 text-grey text-4xl md:text-5xl lg:text-heading leading-none font-bold text-center"><?= $services['heading'] ?></h2>
+            <p class="mx-auto w-11/12 lg:w-2/3 text-grey font-articulat text-center pt-9 md:pt-14"><?= $services['description'] ?></p>
             <div class="bg-light rounded-[35px] py-16 md:mt-16 shadow-[inset_0px_0px_36px_0px_rgba(0, 0, 0, 0.05)]">
                 <div id="homepage_service_slider" class="homepage_service_slider pb-12">
                     <?php
@@ -171,9 +171,9 @@ get_template_part('parts/section', 'nav');
                             <div class="bg-quaternary rounded-2xl p-4 flex flex-col justify-between" data-aos="zoom-in">
                                 <div class="pb-16">
                                     <div class="h-[147px] w-full bg-grey rounded-[10px] p-3 flex items-end bg-no-repeat bg-cover" style="background-image: url('<?= $featured_img_url ?>'); background-size: cover;">
-                                        <img src="<?= get_template_directory_uri() ?>/images/icons/service-icon.png" alt="<?php bloginfo( 'name' ); ?>">
+                                        <img src="<?= get_template_directory_uri() ?>/images/icons/service-icon.png" alt="<?php bloginfo('name'); ?>">
                                     </div>
-                                    <div class="text-2xl font-bold text-main-blue pt-3"><?= get_the_title() ?></div>
+                                    <h4 class="text-2xl font-bold text-main-blue pt-3"><?= get_the_title() ?></h4>
                                 </div>
                                 <a href="<?= get_the_permalink() ?>" class="border border-light-blue rounded-md h-[48px] flex items-center justify-center text-center text-main-blue font-articulat font-semibold gap-x-4">
                                     Explore now
@@ -202,12 +202,12 @@ get_template_part('parts/section', 'nav');
     <?php get_template_part('parts/section', 'contact') ?>
 
     <div class="testimonials py-16 md:py-36 lg:py-40 relative group">
-        <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-left-floater.png" class="absolute left-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="<?php bloginfo( 'name' ); ?>">
-        <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-right-floater.png" class="absolute right-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="<?php bloginfo( 'name' ); ?>">
+        <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-left-floater.png" class="absolute left-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="<?php bloginfo('name'); ?>">
+        <img src="<?= get_template_directory_uri() ?>/images/background/testimonial-right-floater.png" class="absolute right-0 bottom-0 group-hover:bottom-[-20%] duration-500" alt="<?php bloginfo('name'); ?>">
         <div class="container pb-11 md:pb-20">
             <div class="flex flex-wrap justify-between gap-y-10">
                 <div class="text-4xl md:text-heading text-grey font-bold flex leading-none">
-                    <div>Our <span class="text-main-blue">happy</span><br class="md:hidden" /> customers</div>
+                    <h2>Our <span class="text-main-blue">happy</span><br class="md:hidden" /> customers</h2>
 
                     <div class="hidden md:inline">
                         <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -247,9 +247,9 @@ get_template_part('parts/section', 'nav');
                                 <path d="M115.534 2.37817C115.766 1.79977 116.585 1.79977 116.818 2.37817L119.225 8.37381C119.324 8.62012 119.555 8.78807 119.82 8.80603L126.266 9.24311C126.888 9.28528 127.141 10.064 126.663 10.4636L121.705 14.6062C121.501 14.7764 121.413 15.0482 121.478 15.3056L123.054 21.5714C123.206 22.1758 122.543 22.6571 122.016 22.3257L116.544 18.8903C116.319 18.7492 116.033 18.7492 115.808 18.8903L110.336 22.3257C109.808 22.6571 109.146 22.1758 109.298 21.5714L110.874 15.3056C110.939 15.0482 110.851 14.7764 110.647 14.6062L105.689 10.4636C105.211 10.064 105.464 9.28528 106.085 9.24311L112.532 8.80603C112.796 8.78807 113.028 8.62012 113.127 8.37381L115.534 2.37817Z" fill="#FFAE35" />
                             </svg>
                         </div>
-                        <div class="font-extrabold text-main-blue py-4"><?= $username ?></div>
+                        <p class="font-extrabold text-main-blue py-4"><?= $username ?></p>
                         <div class="border border-light-blue w-[45px]"></div>
-                        <div class="font-articulat text-grey pt-5 text-sm leading-loose"><?= $comment ?></div>
+                        <p class="font-articulat text-grey pt-5 text-sm leading-loose"><?= $comment ?></p>
                     </div>
                 <?php
                     if ($key == $midValue) {
@@ -279,9 +279,9 @@ get_template_part('parts/section', 'nav');
                                 <path d="M115.534 2.37817C115.766 1.79977 116.585 1.79977 116.818 2.37817L119.225 8.37381C119.324 8.62012 119.555 8.78807 119.82 8.80603L126.266 9.24311C126.888 9.28528 127.141 10.064 126.663 10.4636L121.705 14.6062C121.501 14.7764 121.413 15.0482 121.478 15.3056L123.054 21.5714C123.206 22.1758 122.543 22.6571 122.016 22.3257L116.544 18.8903C116.319 18.7492 116.033 18.7492 115.808 18.8903L110.336 22.3257C109.808 22.6571 109.146 22.1758 109.298 21.5714L110.874 15.3056C110.939 15.0482 110.851 14.7764 110.647 14.6062L105.689 10.4636C105.211 10.064 105.464 9.28528 106.085 9.24311L112.532 8.80603C112.796 8.78807 113.028 8.62012 113.127 8.37381L115.534 2.37817Z" fill="#FFAE35" />
                             </svg>
                         </div>
-                        <div class="font-extrabold text-main-blue py-4"><?= $username ?></div>
+                        <p class="font-extrabold text-main-blue py-4"><?= $username ?></p>
                         <div class="border border-light-blue w-[45px]"></div>
-                        <div class="font-articulat text-grey pt-5 text-sm leading-loose"><?= $comment ?></div>
+                        <p class="font-articulat text-grey pt-5 text-sm leading-loose"><?= $comment ?></p>
                     </div>
                 <?php endwhile; ?>
             </div>
@@ -295,9 +295,9 @@ get_template_part('parts/section', 'nav');
     if (isset($sponsors['heading'])) : ?>
         <div class="bg-light-grey pt-20 pb-40 md:pt-40 md:pb-52 relative">
             <div class="container">
-                <div class="md:text-center text-4xl md:text-5xl lg:text-heading text-grey font-bold leading-tight highlight-main-blue"><?= $sponsors['heading'] ?></span></div>
+                <h2 class="md:text-center text-4xl md:text-5xl lg:text-heading text-grey font-bold leading-tight highlight-main-blue"><?= $sponsors['heading'] ?></h2>
                 <div class="w-full lg:w-8/12 xl:w-1/2 mx-auto my-10 md:my-12 p-7 border-t border-b border-light-blue text-grey font-articulat text-center leading-loose">
-                    <div class="w-full lg:w-10/12 mx-auto"><?= $sponsors['description'] ?></div>
+                    <p class="w-full lg:w-10/12 mx-auto"><?= $sponsors['description'] ?></p>
                 </div>
 
                 <div class="w-full xl:w-10/12 mx-auto">
@@ -305,15 +305,15 @@ get_template_part('parts/section', 'nav');
                         <div class="w-full md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
                             <div class="bg-white shadow p-2 rounded-[10px] h-full">
                                 <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
-                                    <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-1.jpg" class="w-full object-cover object-center h-full" alt="<?php bloginfo( 'name' ); ?>">
+                                    <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-1.jpg" class="w-full object-cover object-center h-full" alt="<?php bloginfo('name'); ?>">
                                 </div>
                                 <div class="mx-auto -mt-7 w-fit h-[57px] rounded-full bg-main-blue px-10 py-1 flex justify-center items-center relative">
                                     <?= echo_theme_image('/images/logo/wish-foundation.png') ?>
                                 </div>
                                 <div class="flex flex-wrap justify-between items-center mx-auto w-10/12 pt-4 pb-2">
-                                    <div class="font-articulat text-dark-blue leading-relaxed text-sm">
+                                    <p class="font-articulat text-dark-blue leading-relaxed text-sm">
                                         <span class="text-xs font-bold">Proudly supporting</span> <br />Wish Foundation
-                                    </div>
+                                    </p>
                                     <div>
                                         <?= echo_theme_image('/images/icons/sponsor-1.png') ?>
                                     </div>
@@ -323,16 +323,16 @@ get_template_part('parts/section', 'nav');
                         <div class="w-full  md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
                             <div class="bg-white shadow p-2 rounded-[10px] h-full">
                                 <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
-                                    <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-2.jpg" class="w-full object-cover object-center h-full" alt="<?php bloginfo( 'name' ); ?>">
+                                    <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-2.jpg" class="w-full object-cover object-center h-full" alt="<?php bloginfo('name'); ?>">
                                 </div>
                                 <div class="mx-auto -mt-7 w-fit h-[57px] rounded-full bg-dark-blue px-10 py-1 flex justify-center items-center relative">
                                     <?= echo_theme_image('/images/logo/save-the-children.png') ?>
                                 </div>
                                 <div class="flex flex-wrap justify-between items-center mx-auto w-10/12 pt-4 pb-2">
-                                    <div class="font-articulat text-dark-blue leading-relaxed text-sm">
+                                    <p class="font-articulat text-dark-blue leading-relaxed text-sm">
                                         <span class="text-xs font-bold">Proudly supporting</span> <br />Wish Foundation
-                                    </div>
-                                    <div class="">
+                                    </p>
+                                    <div>
                                         <?= echo_theme_image('/images/icons/sponsor-1.png') ?>
                                     </div>
                                 </div>
@@ -341,15 +341,15 @@ get_template_part('parts/section', 'nav');
                         <div class="w-full md:w-1/2 lg:w-1/3 px-2" data-aos="zoom-in">
                             <div class="bg-dark-blue shadow p-2 rounded-[10px] h-full">
                                 <div class="h-[166px] w-full rounded-[10px] overflow-hidden">
-                                    <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-3.jpg" class="w-full object-cover object-center h-full" alt="<?php bloginfo( 'name' ); ?>">
+                                    <img src="<?= get_template_directory_uri() ?>/images/lib/sponsors-3.jpg" class="w-full object-cover object-center h-full" alt="<?php bloginfo('name'); ?>">
                                 </div>
                                 <div class="mx-auto -mt-12 w-fit relative">
                                     <?= echo_theme_image('/images/logo/earlwood-wanderers.png') ?>
                                 </div>
                                 <div class="flex flex-wrap justify-between items-center mx-auto w-10/12 pt-2 pb-2">
-                                    <div class="font-articulat text-white leading-relaxed text-sm">
+                                    <p class="font-articulat text-white leading-relaxed text-sm">
                                         <span class="text-xs font-bold">Proudly supporting</span> <br />Wish Foundation
-                                    </div>
+                                    </p>
                                     <div>
                                         <?= echo_theme_image('/images/icons/sponsor-2.png') ?>
                                     </div>

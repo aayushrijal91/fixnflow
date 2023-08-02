@@ -22,10 +22,10 @@ get_header();
                 <?php if ($section_1) : ?>
                     <div class="w-full md:w-1/2 px-3 order-1" data-aos="zoom-in">
                         <div class="text-center bg-contain rounded-[20px] lg:rounded-[30px] py-9 px-5 xl:p-20 shadow-lg h-full flex flex-col justify-between items-center" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= $section_1['bg_image']['url'] ?>) no-repeat center bottom; background-size: contain;">
-                            <div>
-                                <div class="text-light-blue text-4xl xl:text-[45px] leading-none font-bold highlight-white"><?= $section_1['heading'] ?></div>
-                                <div class="text-white leading-relaxed py-6 font-articulat"><?= $section_1['description'] ?></div>
-                            </div>
+                            <article>
+                                <h2 class="text-light-blue text-4xl xl:text-[45px] leading-none font-bold highlight-white"><?= $section_1['heading'] ?></h2>
+                                <p class="text-white leading-relaxed py-6 font-articulat"><?= $section_1['description'] ?></p>
+                            </article>
                             <a href="<?= $section_1['button']['url'] ?>" target="<?= $section_1['button']['target'] ?>" class="btn-yellow-hover-main-blue px-14 mt-10"><span class="relative z-10"><?= $section_1['button']['title'] ?></span></a>
                         </div>
                     </div>
@@ -33,26 +33,26 @@ get_header();
                 <?php if ($section_2) : ?>
                     <div class="w-full lg:w-1/2 px-3 order-2 md:order-3 lg:order-2" data-aos="zoom-in">
                         <div class="bg-white rounded-[20px] lg:rounded-[30px] h-full py-11 px-5 lg:px-9">
-                            <div class="text-2xl font-bold text-main-blue"><?= $section_2['heading'] ?></div>
-                            <div class="description font-articulat text-grey pt-6"><?= $section_2['description'] ?></div>
+                            <h4 class="text-2xl font-bold text-main-blue"><?= $section_2['heading'] ?></h4>
+                            <article class="description font-articulat text-grey pt-6"><?= $section_2['description'] ?></article>
                         </div>
                     </div>
                 <?php endif; ?>
                 <?php if ($section_3) : ?>
                     <div class="w-full lg:w-7/12 px-3 order-3 md:order-4 lg:order-3" data-aos="zoom-in">
                         <div class="bg-quaternary rounded-[30px] h-full py-11 px-5 md:px-9">
-                            <div class="text-2xl font-bold text-main-blue"><?= $section_3['heading'] ?></div>
-                            <div class="description font-articulat text-grey pt-6"><?= $section_3['description'] ?></div>
+                            <h4 class="text-2xl font-bold text-main-blue"><?= $section_3['heading'] ?></h4>
+                            <article class="description font-articulat text-grey pt-6"><?= $section_3['description'] ?></article>
                         </div>
                     </div>
                 <?php endif; ?>
                 <?php if ($section_4) : ?>
                     <div class="w-full md:w-1/2 lg:w-5/12 px-3 order-4 md:order-2 lg:order-4" data-aos="zoom-in">
-                        <div class="text-center rounded-[20px] lg:rounded-[30px] px-5 py-9 xl:p-20 shadow-lg h-full" style="background: linear-gradient(#ffffff 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= $section_4['bg_image']['url'] ?>) no-repeat center bottom; background-size: contain;">
-                            <div class="text-dark text-4xl xl:text-[45px] leading-none font-bold highlight-main-blue"><?= $section_4['heading'] ?></div>
-                            <div class="text-dark leading-relaxed py-6 font-articulat"><?= $section_4['description'] ?></div>
+                        <article class="text-center rounded-[20px] lg:rounded-[30px] px-5 py-9 xl:p-20 shadow-lg h-full" style="background: linear-gradient(#ffffff 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= $section_4['bg_image']['url'] ?>) no-repeat center bottom; background-size: contain;">
+                            <h2 class="text-dark text-4xl xl:text-[45px] leading-none font-bold highlight-main-blue"><?= $section_4['heading'] ?></h2>
+                            <p class="text-dark leading-relaxed py-6 font-articulat"><?= $section_4['description'] ?></p>
                             <a href="<?= $section_4['button']['url'] ?>" target="<?= $section_4['button']['target'] ?>" class="btn-main-blue-hover-yellow px-14 mt-10"><span class="relative z-10"><?= $section_4['button']['title'] ?></span></a>
-                        </div>
+                        </article>
                     </div>
                 <?php endif; ?>
             </div>
@@ -66,17 +66,17 @@ get_header();
             <div class="bg-dark-blue py-24">
                 <div class="container">
                     <?php if ($extra_content['heading']) : ?>
-                        <div class="text-4xl md:text-5xl xl:text-heading font-bold text-main-blue highlight-white leading-none text-center"><?= $extra_content['heading'] ?></div>
+                        <h2 class="text-4xl md:text-5xl xl:text-heading font-bold text-main-blue highlight-white leading-none text-center"><?= $extra_content['heading'] ?></h2>
                     <?php endif; ?>
                     <div class="flex flex-wrap -mx-3 gap-y-5 pt-10 text-white">
                         <?php if ($extra_content['content_1']) : ?>
                             <div class="w-full lg:w-1/2 flex-1 px-3 h-full">
-                                <div class="bg-main-blue rounded-[20px] p-5 description"><?= $extra_content['content_1'] ?></div>
+                                <article class="bg-main-blue rounded-[20px] p-5 description"><?= $extra_content['content_1'] ?></article>
                             </div>
                         <?php endif; ?>
                         <?php if ($extra_content['content_2']) : ?>
                             <div class="w-full lg:w-1/2 flex-1 px-3 h-full">
-                                <div class="bg-main-blue rounded-[20px] p-5 description"><?= $extra_content['content_2'] ?></div>
+                                <article class="bg-main-blue rounded-[20px] p-5 description"><?= $extra_content['content_2'] ?></article>
                             </div>
                         <?php endif; ?>
                     </div>
@@ -103,7 +103,7 @@ get_header();
     ?>
         <div class="py-20 lg:py-40 bg-white">
             <div class="container">
-                <div class="text-center text-4xl md:text-5xl xl:text-heading text-grey font-bold leading-none">Explore all <span class="text-main-blue"><?= get_the_title() ?> Services</span></div>
+                <h2 class="text-center text-4xl md:text-5xl xl:text-heading text-grey font-bold leading-none highlight-main-blue">Explore all <span><?= get_the_title() ?> Services</span></h2>
                 <div class="pt-16 lg:pt-24 flex flex-wrap -mx-2 gap-y-4">
                     <?php
                     while ($the_query->have_posts()) : $the_query->the_post();
@@ -116,17 +116,17 @@ get_header();
                         }
                     ?>
                         <div class="w-full md:w-1/2 lg:w-1/3 px-2">
-                            <div class="bg-off-white hover:bg-quaternary duration-300 rounded-2xl p-6 flex flex-col justify-between items-center h-full" data-aos="zoom-in">
+                            <article class="bg-off-white hover:bg-quaternary duration-300 rounded-2xl p-6 flex flex-col justify-between items-center h-full" data-aos="zoom-in">
                                 <div class="h-[147px] w-full bg-grey rounded-[10px] p-3 flex items-end bg-no-repeat bg-cover" style="background-image: url('<?= $featured_img_url ?>'); background-size: cover; background-position: center"></div>
-                                <div class="text-2xl font-bold text-main-blue pt-8 text-center"><?= get_the_title() ?></div>
-                                <div class="font-articulat leading-loose text-grey text-center pt-6 pb-8"><?= get_the_content() ?></div>
+                                <h4 class="text-2xl font-bold text-main-blue pt-8 text-center"><?= get_the_title() ?></h4>
+                                <p class="font-articulat leading-loose text-grey text-center pt-6 pb-8"><?= get_the_content() ?></p>
                                 <a href="<?= get_the_permalink() ?>" class="border border-light-blue rounded-md h-[48px] px-14 flex items-center justify-center text-center text-main-blue font-articulat font-semibold gap-x-4">
                                     Explore now
                                     <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1.86279 16.0078L8.28068 9.58992C8.67121 9.1994 8.67121 8.56623 8.28069 8.17571L1.86279 1.75781" stroke="#5AB2F8" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" />
                                     </svg>
                                 </a>
-                            </div>
+                            </article>
                         </div>
                     <?php endwhile; ?>
                 </div>
@@ -147,11 +147,11 @@ get_header();
         <?php get_template_part('parts/section', 'leadingbrands') ?>
     </div>
 
-    <div class="container pt-16 md:pt-24 pb-60">
+    <div class="container pt-24 pb-44 md:pb-60">
         <?php if (have_rows('faqs')) : ?>
             <div class="w-full lg:w-8/12 mx-auto">
-                <div class="text-center text-grey text-4xl md:text-5xl xl:text-heading font-bold leading-none"><span class="text-main-blue">Frequently</span>asked questions</div>
-                <div class="text-main-blue text-center pt-7 font-semibold">All you <?= get_the_title() ?> questions answered here</div>
+                <h2 class="text-center text-grey text-heading font-bold"><span class="text-main-blue">Frequently</span>asked questions</h2>
+                <p class="text-main-blue text-center pt-7 font-semibold">All you <?= get_the_title() ?> questions answered here</p>
 
                 <div class="accordion-container pt-20">
                     <?php
@@ -163,11 +163,11 @@ get_header();
                         <div class="accordion-card">
                             <div class="accordion-head<?= ($index == 1) ? " active" : ""; ?>">
                                 <div class="flex w-full justify-between">
-                                    <div class="h-inherit">
+                                    <p class="h-inherit">
                                         <?= $question ?>
-                                    </div>
+                                    </p>
                                     <div class="h-inherit">
-                                        <div class="plusminus">
+                                        <p class="plusminus">
                                             <?php if ($index == 1) { ?>
                                                 <svg width="25" height="4" viewBox="0 0 25 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M1.56055 1.81152H22.5852" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
@@ -178,13 +178,13 @@ get_header();
                                                     <path d="M1.56006 12.5112H22.5847" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
                                             <?php } ?>
-                                        </div>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-body" style="<?= ($index == 1) ? 'display: block;' : ''; ?>">
+                            <p class="accordion-body" style="<?= ($index == 1) ? 'display: block;' : ''; ?>">
                                 <?= $answer ?>
-                            </div>
+                            </p>
                         </div>
                     <?php
                         $index++;

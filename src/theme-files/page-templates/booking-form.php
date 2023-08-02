@@ -16,9 +16,9 @@ get_header();
 
     <div class="pb-20 md:pb-36">
         <div class="container">
-            <div class="w-full lg:w-7/12 mx-auto text-grey text-4xl md:text-5xl xl:text-heading font-bold text-center">
-                Select how you would like to <span class="text-main-blue">get in touch</span>
-            </div>
+            <h2 class="w-full lg:w-7/12 mx-auto text-grey text-4xl md:text-5xl xl:text-heading font-bold text-center highlight-main-blue">
+                Select how you would like to <span>get in touch</span>
+            </h2>
         </div>
         <div class="container hidden md:block">
             <div class="flex justify-center pt-14">
@@ -40,11 +40,11 @@ get_header();
             </div>
         </div>
         <div class="bg-main-blue py-7 lg:py-20 relative mt-10 md:mt-0">
-            <img src="<?= get_template_directory_uri() ?>/images/lib/booking_form_van.png" class="absolute bottom-0 left-0 hidden xl:block" alt="<?php bloginfo( 'name' ); ?>">
+            <img src="<?= get_template_directory_uri() ?>/images/lib/booking_form_van.png" class="absolute bottom-0 left-0 hidden xl:block" alt="<?php bloginfo('name'); ?>">
             <div class="container">
                 <div class="flex flex-wrap gap-y-10 -mx-3">
                     <div class="w-full lg:w-1/2 px-3">
-                        <img src="<?= get_template_directory_uri() ?>/images/lib/booking-guy.jpg" class="rounded-[20px] md:rounded-[30px] md:hidden lg:block" alt="<?php bloginfo( 'name' ); ?>">
+                        <img src="<?= get_template_directory_uri() ?>/images/lib/booking-guy.jpg" class="rounded-[20px] md:rounded-[30px] md:hidden lg:block" alt="<?php bloginfo('name'); ?>">
                     </div>
                     <div class="w-full lg:w-1/2 px-3">
                         <div class="flex justify-center mb-12 md:hidden">
@@ -59,42 +59,42 @@ get_header();
                             <div>
                                 <div class="flex flex-wrap gap-x-5 items-center">
                                     <div class="w-fit"><?= echo_theme_image('/images/icons/make-a-booking.png') ?></div>
-                                    <div class="w-fit flex-1 text-4xl md:text-5xl xl:text-heading font-semibold text-light-blue">
-                                        Make a <span class="text-white">booking</span>
-                                    </div>
+                                    <h2 class="w-fit flex-1 text-4xl md:text-5xl xl:text-heading font-semibold text-light-blue highlight-white">
+                                        Make a <span>booking</span>
+                                    </h2>
                                 </div>
-                                <div class="py-6 text-white font-articulat">One of our expert plumbers will get back to you as soon as possible.</div>
+                                <p class="py-6 text-white font-articulat">One of our expert plumbers will get back to you as soon as possible.</p>
                                 <div class="hidden md:w-1/4 h-14 md:w-2/3 bg-transparent border-b border-white w-full mt-3 mt-5 outline-none font-semibold text-white gap-y-5 bg-light-blue rounded-md shadow-[0px_0px_10px_0px_rgba(0,0,0,0.4)_inset] px-2"></div>
                                 <?= do_shortcode('[contact-form-7 id="156" title="Booking Form"]') ?>
                             </div>
                             <div>
                                 <div class="flex flex-wrap gap-x-5 items-center">
                                     <div class="w-fit"><?= echo_theme_image('/images/icons/make-a-booking.png') ?></div>
-                                    <div class="w-fit flex-1 text-4xl md:text-5xl xl:text-heading font-semibold text-light-blue">
-                                        Send an <span class="text-white">enquiry</span>
-                                    </div>
+                                    <h2 class="w-fit flex-1 text-4xl md:text-5xl xl:text-heading font-semibold text-light-blue highlight-white">
+                                        Send an <span>enquiry</span>
+                                    </h2>
                                 </div>
-                                <div class="py-6 text-white font-articulat">One of our expert plumbers will get back to you as soon as possible.</div>
+                                <p class="py-6 text-white font-articulat">One of our expert plumbers will get back to you as soon as possible.</p>
                                 <?= do_shortcode('[contact-form-7 id="154" title="Booking - Send enquiry"]') ?>
                             </div>
                             <div>
                                 <div class="flex flex-wrap gap-x-5 items-center">
                                     <div class="w-fit"><?= echo_theme_image('/images/icons/make-a-booking.png') ?></div>
-                                    <div class="w-fit flex-1 text-4xl md:text-5xl xl:text-[63px] font-semibold text-light-blue">
-                                        Request a <span class="text-white">call back</span>
-                                    </div>
+                                    <h2 class="w-fit flex-1 text-4xl md:text-5xl xl:text-[63px] font-semibold text-light-blue highlight-white">
+                                        Request a <span>call back</span>
+                                    </h2>
                                 </div>
-                                <div class="py-6 text-white font-articulat">One of our expert plumbers will get back to you as soon as possible.</div>
+                                <p class="py-6 text-white font-articulat">One of our expert plumbers will get back to you as soon as possible.</p>
                                 <?= do_shortcode('[contact-form-7 id="157" title="Booking - Request Callback"]') ?>
                             </div>
                             <div>
                                 <div class="flex flex-wrap gap-x-5 items-center">
                                     <div class="w-fit"><?= echo_theme_image('/images/icons/make-a-booking.png') ?></div>
-                                    <div class="w-fit flex-1 text-4xl md:text-5xl xl:text-heading font-semibold text-light-blue">
-                                        Get a <span class="text-white">free quote</span>
-                                    </div>
+                                    <h2 class="w-fit flex-1 text-4xl md:text-5xl xl:text-heading font-semibold text-light-blue highlight-white">
+                                        Get a <span>free quote</span>
+                                    </h2>
                                 </div>
-                                <div class="py-6 text-white font-articulat">One of our expert plumbers will get back to you as soon as possible.</div>
+                                <p class="py-6 text-white font-articulat">One of our expert plumbers will get back to you as soon as possible.</p>
                                 <?= do_shortcode('[contact-form-7 id="158" title="Booking - Get a free quote"]') ?>
                             </div>
                         </div>

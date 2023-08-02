@@ -12,7 +12,7 @@ get_header();
 
     <div class="p-1 md:py-6 lg:p-6">
         <div class="section_1 max-w-[1874px] mx-auto pt-6 pb-11 px-5 lg:px-10 rounded-[20px] md:rounded-[30px] overflow-hidden relative">
-            <img src="<?= get_template_directory_uri() ?>/images/background/bannerWaves.png" alt="<?php bloginfo( 'name' ); ?>" class="absolute w-full top-0 left-0" >
+            <img src="<?= get_template_directory_uri() ?>/images/background/bannerWaves.png" alt="<?php bloginfo('name'); ?>" class="absolute w-full top-0 left-0">
 
             <?php $args = array(
                 'posts_per_page' => 1,
@@ -36,15 +36,15 @@ get_header();
                             </div>
                             <div class="w-fit flex-1">
                                 <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
-                                    <div class="w-fit text-light-blue font-articulat font-semibold px-5 lg:px-10 leading-none"><?= get_the_date() ?></div>
+                                    <p class="w-fit text-light-blue font-articulat font-semibold px-5 lg:px-10 leading-none"><?= get_the_date() ?></p>
 
                                     <?php foreach (get_the_tags() as $tag) : ?>
-                                        <div class="w-fit bg-dark-blue rounded-full px-4 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
+                                        <p class="w-fit bg-dark-blue rounded-full px-4 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                                 <path d="M16.7165 9.00251L8.88825 1.17431C8.73234 1.01835 8.52087 0.930711 8.30035 0.930664H1.64796C1.42741 0.930664 1.21591 1.01827 1.05996 1.17422C0.904016 1.33016 0.816406 1.54167 0.816406 1.76221V8.4146C0.816453 8.63513 0.904094 8.8466 1.06005 9.00251L8.88825 16.8307C9.11991 17.0624 9.39493 17.2462 9.69762 17.3716C10.0003 17.497 10.3247 17.5615 10.6524 17.5615C10.98 17.5615 11.3044 17.497 11.6071 17.3716C11.9098 17.2462 12.1849 17.0624 12.4165 16.8307L16.7165 12.5308C16.9481 12.2991 17.1319 12.0241 17.2573 11.7214C17.3827 11.4187 17.4473 11.0943 17.4473 10.7666C17.4473 10.439 17.3827 10.1146 17.2573 9.81188C17.1319 9.50919 16.9481 9.23416 16.7165 9.00251ZM5.8057 7.58305C5.47677 7.58305 5.15523 7.48552 4.88173 7.30277C4.60824 7.12003 4.39507 6.86029 4.2692 6.5564C4.14332 6.25251 4.11039 5.91811 4.17456 5.5955C4.23873 5.27289 4.39712 4.97656 4.62971 4.74397C4.8623 4.51138 5.15864 4.35299 5.48125 4.28882C5.80385 4.22464 6.13825 4.25758 6.44214 4.38346C6.74603 4.50933 7.00577 4.72249 7.18851 4.99599C7.37126 5.26948 7.4688 5.59103 7.4688 5.91996C7.4688 6.36104 7.29358 6.78405 6.98169 7.09594C6.6698 7.40784 6.24678 7.58305 5.8057 7.58305Z" fill="#0067B9" />
                                             </svg>
                                             <?= $tag->name ?>
-                                        </div>
+                                        </p>
                                     <?php endforeach; ?>
                                 </div>
                             </div>
@@ -55,12 +55,12 @@ get_header();
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7596 34.5993C15.5254 34.5993 13.313 34.1593 11.2488 33.3043C9.18465 32.4493 7.3091 31.196 5.72924 29.6162C4.14939 28.0363 2.89618 26.1608 2.04117 24.0966C1.18616 22.0324 0.746094 19.8201 0.746094 17.5858C0.746094 15.3516 1.18616 13.1392 2.04117 11.075C2.89618 9.01083 4.14939 7.13527 5.72925 5.55541C7.3091 3.97556 9.18466 2.72235 11.2488 1.86734C12.8619 1.19917 14.5656 0.784406 16.2994 0.635044L16.3064 0.572266H17.7596H69.2494V17.0403H41.594V30.5256L26.6399 17.0403H17.7596V17.5858L17.7596 34.5993Z" fill="#F7F8FA" />
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M51.8302 26.846C54.0645 26.846 56.2768 27.286 58.341 28.141C60.4052 28.9961 62.2807 30.2493 63.8606 31.8291C65.4405 33.409 66.6937 35.2845 67.5487 37.3487C68.4037 39.4129 68.8438 41.6253 68.8437 43.8595C68.8437 46.0938 68.4037 48.3061 67.5487 50.3703C66.6937 52.4345 65.4405 54.31 63.8606 55.8899C62.2807 57.4698 60.4052 58.723 58.341 59.578C56.7279 60.2461 55.0243 60.6609 53.2904 60.8103L53.2835 60.873H51.8302H0.746696V44.4051H27.9958V30.9197L42.9499 44.4051H51.8302V43.8595L51.8302 26.846Z" fill="#5AB2F8" />
                             </svg>
-                            <div class="w-full lg:w-6/12 text-[45px] text-white font-semibold leading-none">
+                            <p class="w-full lg:w-6/12 text-[45px] text-white font-semibold leading-none">
                                 <?= get_the_title() ?>
-                            </div>
-                            <div class="w-full lg:w-7/12 text-white font-articulat">
+                            </p>
+                            <article class="w-full lg:w-7/12 text-white font-articulat">
                                 <?= $featured_description ?>
-                            </div>
+                            </article>
                             <div class="w-fit pt-16 md:pt-0"><a href="<?= get_the_permalink() ?>" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10">Learn more</span></a></div>
                         </div>
                     </div>
@@ -100,7 +100,7 @@ get_header();
         <div id="most_popular_blogs" class="blogs_list pt-16">
             <div class="container">
                 <div class="flex flex-wrap justify-between items-center md:pb-8">
-                    <div class="w-fit font-articulat text-dark-blue font-bold text-2xl">Most popular</div>
+                    <p class="w-fit font-articulat text-dark-blue font-bold text-2xl">Most popular</p>
                     <div class="w-fit flex flex-wrap gap-x-5 md:gap-x-12">
                         <a href="javascript:void(0)" class="blog_prev" id="blog_prev">
                             <svg xmlns="http://www.w3.org/2000/svg" width="34" height="36" viewBox="0 0 34 36" fill="none">
@@ -145,20 +145,20 @@ get_header();
                                         <div class="flex flex-wrap w-full -mx-2 gap-y-4">
                                             <?php foreach (get_the_tags() as $tag) : ?>
                                                 <div class="w-fit px-2">
-                                                    <div class="bg-dark-blue rounded-full px-3 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
+                                                    <p class="bg-dark-blue rounded-full px-3 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                                             <path d="M16.7165 9.00251L8.88825 1.17431C8.73234 1.01835 8.52087 0.930711 8.30035 0.930664H1.64796C1.42741 0.930664 1.21591 1.01827 1.05996 1.17422C0.904016 1.33016 0.816406 1.54167 0.816406 1.76221V8.4146C0.816453 8.63513 0.904094 8.8466 1.06005 9.00251L8.88825 16.8307C9.11991 17.0624 9.39493 17.2462 9.69762 17.3716C10.0003 17.497 10.3247 17.5615 10.6524 17.5615C10.98 17.5615 11.3044 17.497 11.6071 17.3716C11.9098 17.2462 12.1849 17.0624 12.4165 16.8307L16.7165 12.5308C16.9481 12.2991 17.1319 12.0241 17.2573 11.7214C17.3827 11.4187 17.4473 11.0943 17.4473 10.7666C17.4473 10.439 17.3827 10.1146 17.2573 9.81188C17.1319 9.50919 16.9481 9.23416 16.7165 9.00251ZM5.8057 7.58305C5.47677 7.58305 5.15523 7.48552 4.88173 7.30277C4.60824 7.12003 4.39507 6.86029 4.2692 6.5564C4.14332 6.25251 4.11039 5.91811 4.17456 5.5955C4.23873 5.27289 4.39712 4.97656 4.62971 4.74397C4.8623 4.51138 5.15864 4.35299 5.48125 4.28882C5.80385 4.22464 6.13825 4.25758 6.44214 4.38346C6.74603 4.50933 7.00577 4.72249 7.18851 4.99599C7.37126 5.26948 7.4688 5.59103 7.4688 5.91996C7.4688 6.36104 7.29358 6.78405 6.98169 7.09594C6.6698 7.40784 6.24678 7.58305 5.8057 7.58305Z" fill="#0067B9" />
                                                         </svg>
                                                         <?= $tag->name ?>
-                                                    </div>
+                                                    </p>
                                                 </div>
                                             <?php endforeach; ?>
                                         </div>
                                     </div>
-                                    <div class="text-main-blue text-2xl font-bold leading-none py-6"><?= get_the_title(); ?></div>
-                                    <div class="font-articulat text-grey"><?= $featured_description ?></div>
+                                    <h4 class="text-main-blue text-2xl font-bold leading-none py-6"><?= get_the_title(); ?></h4>
+                                    <p class="font-articulat text-grey"><?= $featured_description ?></p>
                                     <div class="border-b-2 border-quaternary my-6"></div>
-                                    <div class="flex font-articulat text-sm text-main-blue items-center gap-x-4">
+                                    <p class="flex font-articulat text-sm text-main-blue items-center gap-x-4">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
                                             <path d="M6.19141 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                             <path d="M22.5527 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -166,7 +166,7 @@ get_header();
                                             <path d="M23.7236 6.42871H5.02051C3.08374 6.42871 1.51367 7.99877 1.51367 9.93555V23.9629C1.51367 25.8997 3.08374 27.4697 5.02051 27.4697H23.7236C25.6604 27.4697 27.2305 25.8997 27.2305 23.9629V9.93555C27.2305 7.99877 25.6604 6.42871 23.7236 6.42871Z" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                         Published on <?= get_the_date() ?>
-                                    </div>
+                                    </p>
                                     <div class="flex flex-wrap justify-center pt-6">
                                         <div class="w-full md:w-10/12">
                                             <a href="<?= get_the_permalink() ?>" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10">Learn more</span></a>
@@ -186,7 +186,7 @@ get_header();
         <div id="latest_news_blogs" class="blogs_list pt-16">
             <div class="container">
                 <div class="flex flex-wrap justify-between items-center md:pb-8">
-                    <div class="w-fit font-articulat text-dark-blue font-bold text-2xl">Latest news</div>
+                    <h3 class="w-fit font-articulat text-dark-blue font-bold text-2xl">Latest news</h3>
                     <div class="w-fit flex flex-wrap gap-x-5 md:gap-x-12">
                         <a href="javascript:void(0)" class="blog_prev">
                             <svg xmlns="http://www.w3.org/2000/svg" width="34" height="36" viewBox="0 0 34 36" fill="none">
@@ -224,20 +224,20 @@ get_header();
                                     <div class="flex flex-wrap w-full -mx-2 gap-y-4">
                                         <?php foreach (get_the_tags() as $tag) : ?>
                                             <div class="w-fit px-2">
-                                                <div class="bg-dark-blue rounded-full px-3 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
+                                                <p class="bg-dark-blue rounded-full px-3 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                                         <path d="M16.7165 9.00251L8.88825 1.17431C8.73234 1.01835 8.52087 0.930711 8.30035 0.930664H1.64796C1.42741 0.930664 1.21591 1.01827 1.05996 1.17422C0.904016 1.33016 0.816406 1.54167 0.816406 1.76221V8.4146C0.816453 8.63513 0.904094 8.8466 1.06005 9.00251L8.88825 16.8307C9.11991 17.0624 9.39493 17.2462 9.69762 17.3716C10.0003 17.497 10.3247 17.5615 10.6524 17.5615C10.98 17.5615 11.3044 17.497 11.6071 17.3716C11.9098 17.2462 12.1849 17.0624 12.4165 16.8307L16.7165 12.5308C16.9481 12.2991 17.1319 12.0241 17.2573 11.7214C17.3827 11.4187 17.4473 11.0943 17.4473 10.7666C17.4473 10.439 17.3827 10.1146 17.2573 9.81188C17.1319 9.50919 16.9481 9.23416 16.7165 9.00251ZM5.8057 7.58305C5.47677 7.58305 5.15523 7.48552 4.88173 7.30277C4.60824 7.12003 4.39507 6.86029 4.2692 6.5564C4.14332 6.25251 4.11039 5.91811 4.17456 5.5955C4.23873 5.27289 4.39712 4.97656 4.62971 4.74397C4.8623 4.51138 5.15864 4.35299 5.48125 4.28882C5.80385 4.22464 6.13825 4.25758 6.44214 4.38346C6.74603 4.50933 7.00577 4.72249 7.18851 4.99599C7.37126 5.26948 7.4688 5.59103 7.4688 5.91996C7.4688 6.36104 7.29358 6.78405 6.98169 7.09594C6.6698 7.40784 6.24678 7.58305 5.8057 7.58305Z" fill="#0067B9" />
                                                     </svg>
                                                     <?= $tag->name ?>
-                                                </div>
+                                                </p>
                                             </div>
                                         <?php endforeach; ?>
                                     </div>
                                 </div>
-                                <div class="text-main-blue text-2xl font-bold leading-none py-6"><?= get_the_title(); ?></div>
-                                <div class="font-articulat text-grey"><?= $featured_description ?></div>
+                                <h4 class="text-main-blue text-2xl font-bold leading-none py-6"><?= get_the_title(); ?></h4>
+                                <p class="font-articulat text-grey"><?= $featured_description ?></p>
                                 <div class="border-b-2 border-quaternary my-6"></div>
-                                <div class="flex font-articulat text-sm text-main-blue items-center gap-x-4">
+                                <p class="flex font-articulat text-sm text-main-blue items-center gap-x-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
                                         <path d="M6.19141 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                         <path d="M22.5527 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -245,7 +245,7 @@ get_header();
                                         <path d="M23.7236 6.42871H5.02051C3.08374 6.42871 1.51367 7.99877 1.51367 9.93555V23.9629C1.51367 25.8997 3.08374 27.4697 5.02051 27.4697H23.7236C25.6604 27.4697 27.2305 25.8997 27.2305 23.9629V9.93555C27.2305 7.99877 25.6604 6.42871 23.7236 6.42871Z" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                     Published on <?= get_the_date() ?>
-                                </div>
+                                </p>
                                 <div class="flex flex-wrap justify-center pt-6">
                                     <div class="w-full md:w-10/12">
                                         <a href="<?= get_the_permalink() ?>" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10">Learn more</span></a>
@@ -264,7 +264,7 @@ get_header();
         <div id="emergency_plumbing_blogs" class="blogs_list pt-16">
             <div class="container">
                 <div class="flex flex-wrap justify-between items-center md:pb-8">
-                    <div class="w-fit font-articulat text-dark-blue font-bold text-2xl">Emergency Plumbing</div>
+                    <h3 class="w-fit font-articulat text-dark-blue font-bold text-2xl">Emergency Plumbing</h3>
                     <div class="w-fit flex flex-wrap gap-x-5 md:gap-x-12">
                         <a href="javascript:void(0)" class="blog_prev">
                             <svg xmlns="http://www.w3.org/2000/svg" width="34" height="36" viewBox="0 0 34 36" fill="none">
@@ -305,24 +305,24 @@ get_header();
                                 $featured_description = get_the_content() ? substr(get_the_content(), 0, 140) . '...' : '...';
                     ?>
                                 <div class="">
-                                <div class="bg-light-blue rounded-[20px] md:rounded-[30px] h-[367px] md:h-[483px] p-3 md:p-7 flex items-end" style="background: url(<?= $featured_img_url ?>) no-repeat center #5AB2F8; background-size: cover;">
+                                    <div class="bg-light-blue rounded-[20px] md:rounded-[30px] h-[367px] md:h-[483px] p-3 md:p-7 flex items-end" style="background: url(<?= $featured_img_url ?>) no-repeat center #5AB2F8; background-size: cover;">
                                         <div class="flex flex-wrap w-full -mx-2 gap-y-4">
                                             <?php foreach (get_the_tags() as $tag) : ?>
                                                 <div class="w-fit px-2">
-                                                    <div class="bg-dark-blue rounded-full px-3 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
+                                                    <p class="bg-dark-blue rounded-full px-3 py-2.5 text-light-blue flex gap-x-2 text-sm font-articulat">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                                             <path d="M16.7165 9.00251L8.88825 1.17431C8.73234 1.01835 8.52087 0.930711 8.30035 0.930664H1.64796C1.42741 0.930664 1.21591 1.01827 1.05996 1.17422C0.904016 1.33016 0.816406 1.54167 0.816406 1.76221V8.4146C0.816453 8.63513 0.904094 8.8466 1.06005 9.00251L8.88825 16.8307C9.11991 17.0624 9.39493 17.2462 9.69762 17.3716C10.0003 17.497 10.3247 17.5615 10.6524 17.5615C10.98 17.5615 11.3044 17.497 11.6071 17.3716C11.9098 17.2462 12.1849 17.0624 12.4165 16.8307L16.7165 12.5308C16.9481 12.2991 17.1319 12.0241 17.2573 11.7214C17.3827 11.4187 17.4473 11.0943 17.4473 10.7666C17.4473 10.439 17.3827 10.1146 17.2573 9.81188C17.1319 9.50919 16.9481 9.23416 16.7165 9.00251ZM5.8057 7.58305C5.47677 7.58305 5.15523 7.48552 4.88173 7.30277C4.60824 7.12003 4.39507 6.86029 4.2692 6.5564C4.14332 6.25251 4.11039 5.91811 4.17456 5.5955C4.23873 5.27289 4.39712 4.97656 4.62971 4.74397C4.8623 4.51138 5.15864 4.35299 5.48125 4.28882C5.80385 4.22464 6.13825 4.25758 6.44214 4.38346C6.74603 4.50933 7.00577 4.72249 7.18851 4.99599C7.37126 5.26948 7.4688 5.59103 7.4688 5.91996C7.4688 6.36104 7.29358 6.78405 6.98169 7.09594C6.6698 7.40784 6.24678 7.58305 5.8057 7.58305Z" fill="#0067B9" />
                                                         </svg>
                                                         <?= $tag->name ?>
-                                                    </div>
+                                                    </p>
                                                 </div>
                                             <?php endforeach; ?>
                                         </div>
                                     </div>
-                                    <div class="text-main-blue text-2xl font-bold leading-none py-6"><?= get_the_title(); ?></div>
-                                    <div class="font-articulat text-grey"><?= $featured_description ?></div>
+                                    <h4 class="text-main-blue text-2xl font-bold leading-none py-6"><?= get_the_title(); ?></h4>
+                                    <p class="font-articulat text-grey"><?= $featured_description ?></p>
                                     <div class="border-b-2 border-quaternary my-6"></div>
-                                    <div class="flex font-articulat text-sm text-main-blue items-center gap-x-4">
+                                    <p class="flex font-articulat text-sm text-main-blue items-center gap-x-4">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
                                             <path d="M6.19141 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                             <path d="M22.5527 1.75293V6.42871" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -330,7 +330,7 @@ get_header();
                                             <path d="M23.7236 6.42871H5.02051C3.08374 6.42871 1.51367 7.99877 1.51367 9.93555V23.9629C1.51367 25.8997 3.08374 27.4697 5.02051 27.4697H23.7236C25.6604 27.4697 27.2305 25.8997 27.2305 23.9629V9.93555C27.2305 7.99877 25.6604 6.42871 23.7236 6.42871Z" stroke="#FFAE35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                         Published on <?= get_the_date() ?>
-                                    </div>
+                                    </p>
                                     <div class="flex flex-wrap justify-center pt-6">
                                         <div class="w-full md:w-10/12">
                                             <a href="<?= get_the_permalink() ?>" class="btn-main-blue-hover-yellow w-full"><span class="relative z-10">Learn more</span></a>
@@ -356,17 +356,17 @@ get_header();
                 <source src="<?= get_template_directory_uri() ?>/images/background/dark-blue-wavy-bg.mp4" type="video/mp4">
                 Your browser does not support HTML video.
             </video>
-            <img src="<?= get_template_directory_uri() ?>/images/icons/question-marks.png" class="absolute -right-20 top-0 xl:hidden" alt="<?php bloginfo( 'name' ); ?>">
+            <img src="<?= get_template_directory_uri() ?>/images/icons/question-marks.png" class="absolute -right-20 top-0 xl:hidden" alt="<?php bloginfo('name'); ?>">
             <div class="container relative">
                 <div class="flex flex-wrap justify-center md:justify-between items-center gap-x-5 py-16 xl:py-0">
-                    <div class="w-fit flex flex-col items-center md:items-start text-center md:text-start">
+                    <article class="w-fit flex flex-col items-center md:items-start text-center md:text-start">
                         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="61" viewBox="0 0 70 61" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7596 34.5993C15.5254 34.5993 13.313 34.1593 11.2488 33.3043C9.18465 32.4493 7.3091 31.196 5.72924 29.6162C4.14939 28.0363 2.89618 26.1608 2.04117 24.0966C1.18616 22.0324 0.746094 19.8201 0.746094 17.5858C0.746094 15.3516 1.18616 13.1392 2.04117 11.075C2.89618 9.01083 4.14939 7.13527 5.72925 5.55541C7.3091 3.97556 9.18466 2.72235 11.2488 1.86734C12.8619 1.19917 14.5656 0.784406 16.2994 0.635044L16.3064 0.572266H17.7596H69.2494V17.0403H41.594V30.5256L26.6399 17.0403H17.7596V17.5858L17.7596 34.5993Z" fill="#F7F8FA" />
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M51.8302 26.846C54.0645 26.846 56.2768 27.286 58.341 28.141C60.4052 28.9961 62.2807 30.2493 63.8606 31.8291C65.4405 33.409 66.6937 35.2845 67.5487 37.3487C68.4037 39.4129 68.8438 41.6253 68.8437 43.8595C68.8437 46.0938 68.4037 48.3061 67.5487 50.3703C66.6937 52.4345 65.4405 54.31 63.8606 55.8899C62.2807 57.4698 60.4052 58.723 58.341 59.578C56.7279 60.2461 55.0243 60.6609 53.2904 60.8103L53.2835 60.873H51.8302H0.746696V44.4051H27.9958V30.9197L42.9499 44.4051H51.8302V43.8595L51.8302 26.846Z" fill="#5AB2F8" />
                         </svg>
-                        <div class="text-white text-4xl md:text-5xl xl:text-heading font-bold leading-none pt-12 lg:pt-20 pb-10">Read all our FAQ's</div>
-                        <div class="text-white font-articulat">The plumbing pros answer your frequently asked questions!</div>
-                    </div>
+                        <h2 class="text-white text-4xl md:text-5xl xl:text-heading font-bold leading-none pt-12 lg:pt-20 pb-10">Read all our FAQ's</h2>
+                        <p class="text-white font-articulat">The plumbing pros answer your frequently asked questions!</p>
+                    </article>
                     <div class="w-fit hidden xl:block"><?= echo_theme_image('/images/icons/question-marks.png') ?></div>
                     <div class="w-fit pt-16 md:pt-0">
                         <a href="<?= get_field('faq_button')['url'] ?>" target="<?= get_field('faq_button')['target'] ?>" class="btn-yellow-hover-main-blue px-14"><span class="relative z-10">See all FAQs</span></a>
@@ -378,8 +378,8 @@ get_header();
 
     <div class="container pt-24 pb-60">
         <div class="w-full lg:w-8/12 mx-auto">
-            <div class="text-center text-main-blue text-4xl md:text-5xl xl:text-heading font-bold leading-none">Most common questions</div>
-            <div class="text-main-blue text-center pt-7 font-semibold">Can’t find your answer here? Have a read through all our FAQ’s!</div>
+            <h2 class="text-center text-main-blue text-4xl md:text-5xl xl:text-heading font-bold leading-none">Most common questions</h2>
+            <p class="text-main-blue text-center pt-7 font-semibold">Can’t find your answer here? Have a read through all our FAQ’s!</p>
 
             <div class="accordion-container pt-14 md:pt-20">
                 <?php if (have_rows('faqs')) :
@@ -391,9 +391,9 @@ get_header();
                         <div class="accordion-card">
                             <div class="accordion-head<?= ($index == 1) ? " active" : ""; ?>">
                                 <div class="flex w-full justify-between">
-                                    <div class="h-inherit">
+                                    <p class="h-inherit">
                                         <?= $question ?>
-                                    </div>
+                                    </p>
                                     <div class="h-inherit">
                                         <div class="plusminus">
                                             <?php if ($index == 1) { ?>
@@ -410,9 +410,9 @@ get_header();
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-body" style="<?= ($index == 1) ? 'display: block;' : ''; ?>">
+                            <p class="accordion-body" style="<?= ($index == 1) ? 'display: block;' : ''; ?>">
                                 <?= $answer ?>
-                            </div>
+                            </p>
                         </div>
                 <?php
                         $index++;
