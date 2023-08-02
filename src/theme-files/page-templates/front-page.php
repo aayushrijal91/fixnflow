@@ -94,8 +94,9 @@ get_template_part('parts/section', 'nav');
                         </div>
                     </div>
                 </div>
-                <div class="lg:group-hover:translate-x-[20rem] xl:group-hover:translate-x-[30rem] duration-1000 w-full lg:w-9/12 rounded-[30px] h-[641px] bg-no-repeat bg-cover bg-center p-6 shadow-[14px_14px_#5AB2F8]" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/video-thumbnail.jpg')">
-                    <a href="<?= get_site_url() ?>" class="h-[69px] w-[69px] rounded-full bg-off-white flex items-center justify-center">
+                <div class="lg:group-hover:translate-x-[20rem] xl:group-hover:translate-x-[30rem] duration-1000 w-full lg:w-9/12 rounded-[30px] h-[641px] bg-no-repeat bg-cover bg-center p-6 shadow-[14px_14px_#5AB2F8] overflow-hidden relative">
+                    <img class="absolute top-0 left-0 object-cover h-full" src="<?= get_template_directory_uri() ?>/images/background/video-thumbnail.jpg" alt="<?php bloginfo('name'); ?>">
+                    <a href="<?= get_site_url() ?>" class="h-[69px] w-[69px] rounded-full bg-off-white flex items-center justify-center relative">
                         <svg width="20" height="26" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.0439453" y="0.741211" width="4.85152" height="24.4202" rx="2.42576" fill="#0067B9" />
                             <rect x="14.917" y="0.741211" width="4.85152" height="24.4202" rx="2.42576" fill="#0067B9" />
@@ -170,8 +171,9 @@ get_template_part('parts/section', 'nav');
                     ?>
                             <div class="bg-quaternary rounded-2xl p-4 flex flex-col justify-between" data-aos="zoom-in">
                                 <div class="pb-16">
-                                    <div class="h-[147px] w-full bg-grey rounded-[10px] p-3 flex items-end bg-no-repeat bg-cover" style="background-image: url('<?= $featured_img_url ?>'); background-size: cover;">
-                                        <img src="<?= get_template_directory_uri() ?>/images/icons/service-icon.png" alt="<?php bloginfo('name'); ?>">
+                                    <div class="h-[147px] w-full bg-grey rounded-[10px] relative overflow-hidden">
+                                        <img class="object-cover h-full w-full" src="<?= $featured_img_url ?>" alt="<?php bloginfo('name'); ?>">
+                                        <img class="absolute left-3 bottom-3" src="<?= get_template_directory_uri() ?>/images/icons/service-icon.png" alt="<?php bloginfo('name'); ?>">
                                     </div>
                                     <h4 class="text-2xl font-bold text-main-blue pt-3"><?= get_the_title() ?></h4>
                                 </div>

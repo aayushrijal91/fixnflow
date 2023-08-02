@@ -34,7 +34,9 @@ $the_query = new WP_Query($args);
                 ?>
                         <div class="w-full md:w-1/2 lg:w-1/3 px-2">
                             <div class="bg-off-white hover:bg-quaternary duration-300 rounded-2xl p-6 flex flex-col justify-between items-center h-full" data-aos="zoom-in">
-                                <div class="h-[147px] w-full bg-grey rounded-[10px] p-3 flex items-end bg-no-repeat bg-cover" style="background-image: url('<?= $featured_img_url ?>'); background-size: cover;"></div>
+                                <div class="h-[147px] w-full bg-grey rounded-[10px] overflow-hidden">
+                                    <img class="object-cover h-full w-full" src="<?= $featured_img_url ?>" alt="<?php bloginfo('name'); ?>">
+                                </div>
                                 <h3 class="text-2xl font-bold text-main-blue pt-8 text-center"><?= get_the_title() ?></h3>
                                 <article class="font-articulat leading-loose text-grey text-center pt-6 pb-8"><?= get_the_content() ?></article>
                                 <a href="<?= get_the_permalink() ?>" class="border border-light-blue rounded-md h-[48px] px-14 flex items-center justify-center text-center text-main-blue font-articulat font-semibold gap-x-4">

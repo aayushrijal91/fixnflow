@@ -49,7 +49,9 @@
         </div>
         <?php if (isset($banner['image'])) : ?>
             <div class="w-full xl:w-5/12 px-2 order-1 xl:order-2">
-                <div class="rounded-[20px] md:rounded-[30px] min-h-[272px] md:min-h-[400px] bg-light-blue bg-cover bg-no-repeat h-full" style="background: url(<?= $banner['image']['url'] ?>) no-repeat center; background-size: cover"></div>
+                <div class="rounded-[20px] md:rounded-[30px] min-h-[272px] md:min-h-[400px] bg-light-blue bg-cover bg-no-repeat h-full overflow-hidden">
+                    <img src="<?= $banner['image']['url'] ?>" alt="<?= $banner['image']['alt'] ?>" class="h-full w-full object-cover">
+                </div>
             </div>
         <?php endif; ?>
     </div>
