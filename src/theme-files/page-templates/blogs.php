@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<div class="blogsPage bg-off-white">
+<main class="blogsPage bg-off-white">
     <?php get_template_part('parts/section', 'banner'); ?>
 
     <div class="p-1 md:py-6 lg:p-6">
@@ -427,6 +427,6 @@ get_header();
             </div>
         </div>
     </div>
-</div>
+</main>
 
 <?php get_footer() ?>

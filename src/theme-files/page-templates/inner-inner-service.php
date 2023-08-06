@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<div class="innerInnerServicePage bg-off-white">
+<main class="innerInnerServicePage bg-off-white">
     <?php get_template_part('parts/section', 'innerInnerServiceBanner'); ?>
 
     <?php $section_1 = get_field('section_1');
@@ -315,6 +315,6 @@ get_header();
         <?php endif;
         wp_reset_query(); ?>
     </div>
-</div>
+</main>
 
 <?php get_footer() ?>

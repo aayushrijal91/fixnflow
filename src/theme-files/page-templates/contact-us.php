@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<div class="contactUsPage bg-off-white">
+<main class="contactUsPage bg-off-white">
     <?php get_template_part('parts/section', 'banner'); ?>
 
     <div class="py-24">
@@ -26,6 +26,6 @@ get_header();
     <div class="pb-40 lg:pb-60">
         <?php get_template_part('parts/section', 'leadingbrands') ?>
     </div>
-</div>
+</main>
 
 <?php get_footer() ?>

@@ -20,7 +20,7 @@ $args = array(
 );
 $the_query = new WP_Query($args);
 ?>
-<div class="servicesPage">
+<main class="servicesPage">
     <?php get_template_part('parts/section', 'serviceBanner'); ?>
 
     <div class="py-24">
@@ -64,7 +64,7 @@ $the_query = new WP_Query($args);
     <div class="pb-40 lg:pb-60">
         <?php get_template_part('parts/section', 'leadingbrands') ?>
     </div>
-</div>
+</main>
 
 
 <?php get_footer() ?>

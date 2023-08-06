@@ -9,7 +9,7 @@ $banner = get_field('banner');
 get_template_part('parts/section', 'nav');
 ?>
 
-<div class="policyPage bg-off-white">
+<main class="policyPage bg-off-white">
     <div class="p-1 lg:p-6">
         <div class="generalBanner max-w-[1874px] mx-auto md:h-[444px] rounded-[20px] md:rounded-[30px] overflow-hidden">
             <div class="pt-48 pb-24 text-white text-center px-5">
@@ -32,6 +32,6 @@ get_template_part('parts/section', 'nav');
             </article>
         </div>
     </div>
-</div>
+</main>
 
 <?php get_footer() ?>

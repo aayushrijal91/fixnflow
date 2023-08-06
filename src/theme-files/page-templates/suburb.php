@@ -60,17 +60,17 @@ get_header();
             <div class="w-full md:w-2/3 lg:w-1/2 px-2 lg:px-3" data-aos="zoom-in">
                 <div class="text-center bg-contain rounded-[30px] pt-11 pb-28 px-5 xl:px-16 h-full" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= get_template_directory_uri() ?>/images/background/membership-guy.jpg) no-repeat center bottom">
                     <h3 class="text-white text-3xl lg:text-[45px] leading-none font-bold highlight-light-blue">Plumbers in your local area with <span>24/7 services</span></h3>
-                    <p class="text-white leading-relaxed pt-6 pb-28 md:py-6 description text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                    <p class="text-white leading-relaxed pt-6 pb-28 md:py-6 description text-sm md:text-base">Fix n Flow have been delivering unparalleled plumbing services to <?= get_the_title() ?> residents for over a decade. All our <?= get_the_title() ?> plumbers are highly experienced, licensed, and qualified to help residents and commercial businesses fix all plumbing-related issues.</p>
                     <a href="<?= get_site_url() ?>" target="<?= $section_1_left['button']['target'] ?>" class="btn-yellow-hover-main-blue px-14 mt-10"><span class="relative z-10">Learn more</span></a>
                 </div>
             </div>
             <div class="w-full lg:w-1/2 px-2 lg:px-3" data-aos="zoom-in">
                 <div class="bg-main-blue rounded-[30px] py-12 px-5 xl:p-12 h-full text-white">
-                    <h3 class="text-3xl lg:text-[35px] font-semibold leading-none pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                    <h3 class="text-3xl lg:text-[35px] font-semibold leading-none pb-5">24/7 Emergency Plumber <?= get_the_title() ?></h3>
 
                     <article class="font-articulat leading-relaxed description text-sm md:text-base">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Our vehicles are always fully stocked with the latest equipment and materials to get the <?= get_the_title() ?> plumbing job done. Our <?= get_the_title() ?> plumbers are licensed and ready to help no matter your plumbing issues. With a 60-minute response time, our plumbers can be at your door to fix your plumbing issue in no time – and even better, we have a $0 call out fee policy! We provide 24/7 emergency plumbing services to <?= get_the_title() ?>! If you require a 24-hour <?= get_the_title() ?> plumber, Fix n Flow is on standby to help repair your plumbing issues.</p>
+                        <p>Fix n Flow <?= get_the_title() ?> plumbing services are trusted and recommended by residents and businesses across <?= get_the_title() ?>. Our steadfast reputation is built on honesty, integrity, high-quality finishes and a commitment to our clients and their needs.</p>
                     </article>
                 </div>
             </div>
@@ -78,7 +78,7 @@ get_header();
 
         <div class="flex flex-wrap py-20 md:py-28 gap-y-8 md:gap-y-10">
             <div class="w-full lg:w-1/3" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl xl:text-heading text-main-blue font-bold">Lorem ipsum dolor sit amet, consectetur</h2>
+                <h2 class="text-4xl md:text-5xl xl:text-heading text-main-blue font-bold">Fix n Flow is Family Owned and Operated</h2>
                 <div class="pt-8 md:pt-10 hidden md:block">
                     <a href="<?= get_site_url() ?>/service" class="btn-yellow-hover-main-blue px-14"><span class="relative z-10">Services</span></a>
                 </div>
@@ -89,8 +89,8 @@ get_header();
 
             <div class="w-full lg:w-2/3" data-aos="fade-up">
                 <article class="bg-white hover:bg-quaternary rounded-[20px] md:rounded-[30px] h-full p-5 md:py-10 xl:px-14 font-articulat text-grey leading-relaxed description md:columns-2 text-sm md:text-base">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Fix n Flow Plumbing is family owned and operated with over 20 years of experience combined. Our <?= get_the_title() ?> plumbers build our business on trust and delivering the highest level of plumbing services in <?= get_the_title() ?>. We are extremely proud of the services we have been providing residents and businesses across <?= get_the_title() ?> and our customers’ reviews speak for themselves.</p>
+                    <p>We provide an extensive range of plumbing services to <?= get_the_title() ?> residents and businesses, no matter the job size. unblock drains, Contact our <?= get_the_title() ?> plumbers today!</p>
                 </article>
             </div>
             <div class="w-full md:hidden" data-aos="fade-up">

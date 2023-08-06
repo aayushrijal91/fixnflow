@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<div class="areasPage bg-off-white">
+<main class="areasPage bg-off-white">
     <?php get_template_part('parts/section', 'banner');
     $section_1_left = get_field('section_1_left');
     $section_1_right = get_field('section_1_right');
@@ -113,6 +113,6 @@ get_header();
     <div class="py-24 md:py-40 lg:pb-60">
         <?php get_template_part('parts/section', 'professionalPlumbing') ?>
     </div>
-</div>
+</main>
 
 <?php get_footer() ?>

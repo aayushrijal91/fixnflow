@@ -75,19 +75,19 @@
             <div class="lg:hidden pt-12">
                 <div class="container">
                     <div class="rounded-2xl bg-quaternary/[0.1] py-9 px-5 flex flex-col gap-y-5">
-                        <div>
-                            <h4 class="text-light-blue text-xl font-bold text-center">Quick links</h4>
+                        <div class="mobile_footer_box">
+                            <h4 class="text-light-blue text-xl font-bold text-center footer_target">Quick links</h4>
                             <?php wp_nav_menu(array(
                                 'menu' => 'Quick Links',
                                 'item_class' => 'nav-item',
                                 'link_class' => 'nav-link leading-loose text-primary-light text-sm text-center',
-                                'container_class' => 'footer_menu pt-4 text-center',
+                                'container_class' => 'footer_menu pt-4 text-center hidden',
                             )); ?>
                         </div>
 
-                        <div>
-                            <h4 class="text-light-blue text-xl font-bold text-center">Our services</h4>
-                            <ul class="text-center flex flex-col gap-y-3 pt-4 text-sm">
+                        <div class="mobile_footer_box">
+                            <h4 class="text-light-blue text-xl font-bold text-center footer_target">Our services</h4>
+                            <ul class="footer_menu text-center flex flex-col gap-y-3 pt-4 text-sm hidden">
                                 <?php
                                 $args = array(
                                     'post_type'      => 'page',
@@ -107,7 +107,7 @@
                                     while ($the_query->have_posts()) : $the_query->the_post();
                                         $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
                                 ?>
-                                        <li><a href="<?= get_the_permalink() ?>" class="text-primary-light"><?= get_the_title() ?></a></li>
+                                        <li class="py-1"><a href="<?= get_the_permalink() ?>" class="text-primary-light"><?= get_the_title() ?></a></li>
                                 <?php endwhile;
                                 endif;
                                 wp_reset_query();
@@ -115,23 +115,23 @@
                             </ul>
                         </div>
 
-                        <div>
-                            <h4 class="text-light-blue text-xl font-bold text-center">Discover more</h4>
+                        <div class="mobile_footer_box">
+                            <h4 class="text-light-blue text-xl font-bold text-center footer_target">Discover more</h4>
                             <?php wp_nav_menu(array(
                                 'menu' => 'Discover more',
                                 'item_class' => 'nav-item',
                                 'link_class' => 'nav-link leading-loose text-primary-light text-sm text-center',
-                                'container_class' => 'footer_menu pt-4 text-center',
+                                'container_class' => 'footer_menu pt-4 text-center hidden',
                             )); ?>
                         </div>
 
-                        <div>
-                            <h4 class="text-light-blue text-xl font-bold text-center">Contact us</h4>
+                        <div class="mobile_footer_box">
+                            <h4 class="text-light-blue text-xl font-bold text-center footer_target">Contact us</h4>
                             <?php wp_nav_menu(array(
                                 'menu' => 'Contact us',
                                 'item_class' => 'nav-item',
                                 'link_class' => 'nav-link leading-loose text-primary-light text-sm text-center',
-                                'container_class' => 'footer_menu pt-4 text-center',
+                                'container_class' => 'footer_menu pt-4 text-center hidden',
                             )); ?>
                         </div>
                     </div>

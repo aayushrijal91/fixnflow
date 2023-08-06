@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<div class="innerInnerServicePage bg-off-white">
+<main class="innerInnerServicePage bg-off-white">
     <?php get_template_part('parts/section', 'innerInnerServiceBanner'); ?>
 
     <?php
@@ -280,7 +280,7 @@ get_header();
                             </div>
                             <p class="accordion-body" style="<?= ($index == 1) ? 'display: block;' : ''; ?>">
                                 <?= $answer ?>
-                                            </p>
+                            </p>
                         </div>
                     <?php
                         $index++;
@@ -297,6 +297,6 @@ get_header();
         <?php endif;
         wp_reset_query(); ?>
     </div>
-</div>
+</main>
 
 <?php get_footer() ?>

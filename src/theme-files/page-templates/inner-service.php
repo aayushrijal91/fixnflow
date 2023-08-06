@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<div class="innerServicePage bg-off-white">
+<main class="innerServicePage bg-off-white">
     <?php get_template_part('parts/section', 'serviceBanner'); ?>
 
     <?php
@@ -203,6 +203,6 @@ get_header();
         <?php endif;
         wp_reset_query(); ?>
     </div>
-</div>
+</main>
 
 <?php get_footer() ?>

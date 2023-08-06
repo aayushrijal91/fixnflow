@@ -71,7 +71,7 @@ get_template_part('parts/section', 'nav');
     </div>
 </div>
 
-<div class="homePage pt-96 md:pt-0">
+<main class="homePage pt-96 md:pt-0">
     <div class="container pt-44 pb-20 md:pb-44">
         <?php get_template_part('parts/section', 'globalcta') ?>
     </div>
@@ -363,5 +363,5 @@ get_template_part('parts/section', 'nav');
             </div>
         </div>
     <?php endif; ?>
-</div>
+</main>
 <?php get_footer(); ?>

@@ -541,6 +541,10 @@ jQuery(function ($) {
                 $('.closeGiantMenu').on('click', function () {
                     $('#giantMenu').removeClass('open');
                 });
+
+                $('.footer_target').on('click', function() {
+                    $(this).parents('.mobile_footer_box').find('.footer_menu').slideToggle();
+                })
             }, // end misc
         }, // end ui
         //utils: {

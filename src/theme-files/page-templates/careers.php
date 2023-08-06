@@ -9,7 +9,7 @@ $banner = get_field('banner');
 get_template_part('parts/section', 'nav');
 ?>
 
-<div class="careersPage bg-off-white">
+<main class="careersPage bg-off-white">
     <div class="careersBanner max-w-[1874px] mx-auto p-2 xl:p-6">
         <div class="flex flex-wrap -mx-2 gap-y-2">
             <div class="w-full lg:w-7/12 px-2 order-2 md:order-1">
@@ -124,6 +124,6 @@ get_template_part('parts/section', 'nav');
     <div class="pb-40 lg:pb-60">
         <?php get_template_part('parts/section', 'leadingbrands') ?>
     </div>
-</div>
+</main>
 
 <?php get_footer() ?>
