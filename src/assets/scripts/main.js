@@ -438,32 +438,36 @@ jQuery(function ($) {
                     }
                 });
 
-                $('.blogs_slider').slick({
-                    slidesToShow: 3,
-                    centerMode: true,
-                    slidesToScroll: 1,
-                    centerPadding: '100px',
-                    // prevArrow: $(this).parents('.blogs_list').find('.blog_prev'),
-                    // nextArrow: $(this).parents('.blogs_list').find('.blog_next'),
-                    // arrows: true,
-                    responsive: [
-                        {
-                            breakpoint: 1100,
-                            settings: {
-                                slidesToShow: 2,
-                                centerMode: false,
-                                centerMode: 0
+                $('.blogs_slider').each(function(){
+                    let slider = $(this);
+
+                    slider.slick({
+                        slidesToShow: 3,
+                        centerMode: true,
+                        slidesToScroll: 1,
+                        centerPadding: '100px',
+                        prevArrow: $(this).parents('.blogs_list').find('.blog_prev'),
+                        nextArrow: $(this).parents('.blogs_list').find('.blog_next'),
+                        arrows: true,
+                        responsive: [
+                            {
+                                breakpoint: 1100,
+                                settings: {
+                                    slidesToShow: 2,
+                                    centerMode: false,
+                                    centerMode: 0
+                                }
+                            },
+                            {
+                                breakpoint: 540,
+                                settings: {
+                                    slidesToShow: 1,
+                                    centerMode: false,
+                                    centerMode: 0
+                                }
                             }
-                        },
-                        {
-                            breakpoint: 540,
-                            settings: {
-                                slidesToShow: 1,
-                                centerMode: false,
-                                centerMode: 0
-                            }
-                        }
-                    ]
+                        ]
+                    })
                 })
 
                 AOS.refresh();
