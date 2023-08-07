@@ -5,6 +5,8 @@
  *
  */
 get_header();
+
+$suburb = get_the_title();
 ?>
 
 <div class="suburbPage bg-off-white">
@@ -58,7 +60,7 @@ get_header();
     <div class="container pt-20 lg:pt-24">
         <div class="flex flex-wrap -mx-2 lg:-mx-3 gap-y-5 justify-center">
             <div class="w-full md:w-2/3 lg:w-1/2 px-2 lg:px-3" data-aos="zoom-in">
-                <div class="text-center bg-contain rounded-[30px] pt-11 pb-28 px-5 xl:px-16 h-full" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= get_template_directory_uri() ?>/images/background/membership-guy.jpg) no-repeat center bottom">
+                <div class="text-center bg-contain rounded-[30px] pt-11 pb-20 px-5 xl:px-16 h-full" style="background: linear-gradient(#171818 0 40%, rgba(0,0,0,0) 80% 100%), url(<?= get_template_directory_uri() ?>/images/background/membership-guy.jpg) no-repeat center bottom">
                     <h3 class="text-white text-3xl lg:text-[45px] leading-none font-bold highlight-light-blue">Plumbers in your local area with <span>24/7 services</span></h3>
                     <p class="text-white leading-relaxed pt-6 pb-28 md:py-6 description text-sm md:text-base">Fix n Flow have been delivering unparalleled plumbing services to <?= get_the_title() ?> residents for over a decade. All our <?= get_the_title() ?> plumbers are highly experienced, licensed, and qualified to help residents and commercial businesses fix all plumbing-related issues.</p>
                     <a href="<?= get_site_url() ?>" target="<?= $section_1_left['button']['target'] ?>" class="btn-yellow-hover-main-blue px-14 mt-10"><span class="relative z-10">Learn more</span></a>
@@ -66,94 +68,53 @@ get_header();
             </div>
             <div class="w-full lg:w-1/2 px-2 lg:px-3" data-aos="zoom-in">
                 <div class="bg-main-blue rounded-[30px] py-12 px-5 xl:p-12 h-full text-white">
-                    <h3 class="text-3xl lg:text-[35px] font-semibold leading-none pb-5">24/7 Emergency Plumber <?= get_the_title() ?></h3>
+                    <h3 class="text-3xl lg:text-[35px] font-semibold leading-none pb-5">Expert plumbers with over 10 years of experience</h3>
 
-                    <article class="font-articulat leading-relaxed description text-sm md:text-base">
-                        <p>Our vehicles are always fully stocked with the latest equipment and materials to get the <?= get_the_title() ?> plumbing job done. Our <?= get_the_title() ?> plumbers are licensed and ready to help no matter your plumbing issues. With a 60-minute response time, our plumbers can be at your door to fix your plumbing issue in no time – and even better, we have a $0 call out fee policy! We provide 24/7 emergency plumbing services to <?= get_the_title() ?>! If you require a 24-hour <?= get_the_title() ?> plumber, Fix n Flow is on standby to help repair your plumbing issues.</p>
-                        <p>Fix n Flow <?= get_the_title() ?> plumbing services are trusted and recommended by residents and businesses across <?= get_the_title() ?>. Our steadfast reputation is built on honesty, integrity, high-quality finishes and a commitment to our clients and their needs.</p>
+                    <article class="font-articulat leading-loose description text-sm md:text-base">
+                        At Fix N Flow, we take pride in being one of Sydney's leading plumbing companies, providing high-quality plumbing services to residents and businesses alike. With over 10 years of experience, a large fleet of vehicles, and a team of highly trained plumbers, we have built a reputation for delivering exceptional plumbing solutions with a focus on quality and customer satisfaction. Our commitment to excellence has earned us more than 150 5-star reviews from our valued clients, making us the go-to choice for plumbing services in Sydney.
                     </article>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="flex flex-wrap py-20 md:py-28 gap-y-8 md:gap-y-10">
-            <div class="w-full lg:w-1/3" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl xl:text-heading text-main-blue font-bold">Fix n Flow is Family Owned and Operated</h2>
-                <div class="pt-8 md:pt-10 hidden md:block">
-                    <a href="<?= get_site_url() ?>/service" class="btn-yellow-hover-main-blue px-14"><span class="relative z-10">Services</span></a>
-                </div>
-                <div class="pt-2 md:pt-5 hidden md:block">
-                    <a href="<?= get_site_url() ?>/contact-us" class="btn-main-blue-hover-yellow px-14"><span class="relative z-10">Contact Us</span></a>
-                </div>
-            </div>
 
-            <div class="w-full lg:w-2/3" data-aos="fade-up">
-                <article class="bg-white hover:bg-quaternary rounded-[20px] md:rounded-[30px] h-full p-5 md:py-10 xl:px-14 font-articulat text-grey leading-relaxed description md:columns-2 text-sm md:text-base">
-                    <p>Fix n Flow Plumbing is family owned and operated with over 20 years of experience combined. Our <?= get_the_title() ?> plumbers build our business on trust and delivering the highest level of plumbing services in <?= get_the_title() ?>. We are extremely proud of the services we have been providing residents and businesses across <?= get_the_title() ?> and our customers’ reviews speak for themselves.</p>
-                    <p>We provide an extensive range of plumbing services to <?= get_the_title() ?> residents and businesses, no matter the job size. unblock drains, Contact our <?= get_the_title() ?> plumbers today!</p>
-                </article>
-            </div>
-            <div class="w-full md:hidden" data-aos="fade-up">
-                <a href="<?= get_site_url() ?>/service" class="btn-yellow-hover-main-blue px-4 w-full"><span class="relative z-10">Services</span></a>
-                <div class="pt-5">
-                    <a href="<?= get_site_url() ?>/contact-us" class="btn-main-blue-hover-yellow px-4 w-full"><span class="relative z-10">Contact Us</span></a>
+    <?php if (have_rows('suburb_services', 'options')) : ?>
+        <div class="bg-white py-28">
+            <div class="container">
+                <h2 class="text-center text-4xl md:text-5xl xl:text-heading text-grey font-bold leading-none highlight-main-blue"><span>Plumber Services</span> in <?= get_the_title() ?></h2>
+                <div class="pt-10 md:pt-24 flex flex-wrap -mx-2 gap-y-4">
+                    <?php
+                    while (have_rows('suburb_services', 'options')) : the_row();
+                    $image = get_sub_field('image');
+                    $title = get_sub_field('title');
+                    $description = str_replace('{suburb}', $suburb, get_sub_field('description'));
+                    $link = get_sub_field('link');
+                    ?>
+                        <div class="w-full md:w-1/2 lg:w-1/3 px-2">
+                            <div class="bg-off-white hover:bg-quaternary duration-300 rounded-2xl p-6 flex flex-col justify-between items-center h-full" data-aos="zoom-in">
+                                <div class="h-[147px] w-full bg-grey rounded-[10px] overflow-hidden">
+                                    <img class="object-cover h-full w-full" src="<?= $image['url'] ?>" alt="<?php bloginfo('name'); ?>">
+                                </div>
+                                <h3 class="text-2xl font-bold text-main-blue pt-8 text-center"><?= $title ?> in <?= $suburb ?></h3>
+                                <article class="font-articulat leading-loose text-grey text-center pt-6 pb-8"><?= $description ?></article>
+                                <a href="<?= $link ?>" class="border border-light-blue rounded-md h-[48px] px-14 flex items-center justify-center text-center text-main-blue font-articulat font-semibold gap-x-4">
+                                    Explore now
+                                    <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.86279 16.0078L8.28068 9.58992C8.67121 9.1994 8.67121 8.56623 8.28069 8.17571L1.86279 1.75781" stroke="#5AB2F8" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="bg-main-blue pt-24 text-white">
-        <div class="container">
-            <div class="flex flex-wrap justify-between gap-y-10 -mx-2">
-                <div class="w-full lg:w-1/2 px-2">
-                    <?= echo_theme_image('/images/lib/suburb-guy.jpg', 'rounded-[30px] -mt-32') ?>
-                </div>
-                <div class="w-full lg:w-1/2 px-2">
-                    <h3 class="text-2xl md:text-[35px] font-bold leading-none">Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec.</h3>
-                    <article class="description font-articulat leading-loose pt-5 md:pt-11 text-sm md:text-base">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-                        <p>Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Pharetra diam sit amet nisl suscipit. Lacus luctus accumsan tortor posuere ac. Porttitor eget dolor morbi non arcu risus quis. Dui accumsan sit amet nulla facilisi. Orci ac auctor augue mauris augue neque gravida in. Nisi porta lorem mollis aliquam ut porttitor. Sed libero enim sed faucibus turpis. Quisque id diam vel quam elementum.</p>
-                    </article>
-                </div>
-            </div>
-        </div>
-        <svg class="w-full h-fit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 172" fill="none">
-            <path d="M265.336 26.3531C-7.06037 24.7827 -280.805 75.8399 -509.975 80.5498L-503.055 170.026L3699.03 171.032L3691.75 26.9707C3691.75 26.9707 3399.03 -15.6038 3109.23 8.24748C2944.18 21.8319 2661.97 81.3091 2469.37 81.263C1976.75 81.145 1933.1 8.1683 1705.4 7.91135C1477.71 7.6544 1412.41 49.8885 1203.78 64.1149C995.149 78.3413 892.738 70.5666 769.845 64.126C658.324 58.2814 537.733 27.9235 265.336 26.3531Z" fill="#5AB2F8" />
-        </svg>
-    </div>
-    <div class="bg-light-blue -mt-1 relative flex flex-col align-end">
-        <div class="container pt-10 lg:pt-0 xl:pb-20">
-            <div class="w-full xl:w-1/2 text-white">
-                <h3 class="text-2xl md:text-[35px] font-bold leading-none">Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec.</h3>
-                <article class="description font-articulat leading-loose pt-5 md:pt-11 text-sm md:text-base">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-                    <p>Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Pharetra diam sit amet nisl suscipit. Lacus luctus accumsan tortor posuere ac. Porttitor eget dolor morbi non arcu risus quis. Dui accumsan sit amet nulla facilisi. Orci ac auctor augue mauris augue neque gravida in. Nisi porta lorem mollis aliquam ut porttitor. Sed libero enim sed faucibus turpis. Quisque id diam vel quam elementum.</p>
-                </article>
-            </div>
-        </div>
-        <?= echo_theme_image('/images/lib/fixnflow-van.png', 'xl:absolute -right-40 bottom-[-1rem]') ?>
-    </div>
+    <?php endif; ?>
 
     <div class="container pt-24 lg:pt-40 pb-16">
         <?php get_template_part('parts/section', 'specialOffers') ?>
         <?php get_template_part('parts/section', 'globalcta') ?>
-    </div>
-
-    <div class="container">
-        <div class="flex flex-wrap py-16 md:py-24 gap-y-10">
-            <div class="w-full xl:w-1/3">
-                <h3 class="text-4xl md:text-5xl xl:text-heading text-main-blue font-bold">Lorem ipsum dolor sit amet, consectetur</h3>
-                <div class="pt-5 md:pt-10">
-                    <a href="<?= get_site_url() ?>" class="btn-yellow-hover-main-blue px-14"><span class="relative z-10">Learn more</span></a>
-                </div>
-            </div>
-            <div class="w-full xl:w-2/3">
-                <article class="bg-main-blue rounded-[20px] md:rounded-[30px] h-full py-10 px-5 md:px-14 font-articulat text-white leading-relaxed description md:columns-2">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </article>
-            </div>
-        </div>
     </div>
 
     <div class="pb-52">
