@@ -90,7 +90,7 @@ get_header();
                                         $slug = strtolower($slug);
                                         $slug = preg_replace('/[^a-z0-9-]/', '', $slug);
                                     ?>
-                                        <li class="py-2"><a href="<?= get_site_url() . '/areas/' . $slug ?>" class="text-base lg:text-xl font-articulat text-main-blue hover:text-dark-blue duration-200 leading-loose"><?= $suburb ?></a></li>
+                                        <li class="py-2"><a href="<?= get_site_url() . '/plumber-' . $slug ?>" class="text-base lg:text-xl font-articulat text-main-blue hover:text-dark-blue duration-200 leading-loose"><?= $suburb ?></a></li>
                                     <?php endforeach; ?>
                                 </ul>
                             </div>

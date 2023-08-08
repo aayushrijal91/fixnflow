@@ -345,9 +345,13 @@
 
         .accordion-body {
             display: none;
-            font-weight: 500;
+            font-weight: 500 !important;
             line-height: 2;
             padding-top: 20px;
+
+            &>* {
+                font-weight: 500;
+            }
 
             a {
                 color: #fff !important;

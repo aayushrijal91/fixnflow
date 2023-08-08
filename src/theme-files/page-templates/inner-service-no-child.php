@@ -139,9 +139,9 @@ get_header();
                                     </div>
                                 </div>
                             </div>
-                            <p class="accordion-body" style="<?= ($index == 1) ? 'display: block;' : ''; ?>">
+                            <article class="accordion-body" style="<?= ($index == 1) ? 'display: block;' : ''; ?>">
                                 <?= $answer ?>
-                            </p>
+                            </article>
                         </div>
                     <?php
                         $index++;

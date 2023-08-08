@@ -261,9 +261,9 @@ get_header();
 
     <?php get_template_part('parts/section', 'contact') ?>
 
-    <div class="container pt-24 pb-60">
+    <div class="container pt-24 pb-44 md:pb-60">
         <?php if (have_rows('faqs')) : ?>
-            <div class="w-full lg:w-8/12 mx-auto" data-aos="fade-up">
+            <div class="w-full lg:w-8/12 mx-auto">
                 <h2 class="text-center text-grey text-4xl md:text-5xl xl:text-heading font-bold highlight-main-blue leading-none"><span>Frequently</span> asked questions</h2>
                 <p class="text-main-blue text-center pt-7 font-semibold">All you <?= get_the_title() ?> questions answered here</p>
 
@@ -296,9 +296,9 @@ get_header();
                                     </div>
                                 </div>
                             </div>
-                            <p class="accordion-body" style="<?= ($index == 1) ? 'display: block;' : ''; ?>">
+                            <article class="accordion-body" style="<?= ($index == 1) ? 'display: block;' : ''; ?>">
                                 <?= $answer ?>
-                            </p>
+                            </article>
                         </div>
                     <?php
                         $index++;
