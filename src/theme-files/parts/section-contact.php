@@ -1,5 +1,5 @@
 <div class="partContact bg-light-blue xl:bg-[#D3E2EF] relative overflow-hidden group">
-    <img src="<?= get_template_directory_uri() ?>/images/background/homepageContact-component.png" alt="<?php bloginfo('name'); ?>" class="absolute top-0 left-0 group-hover:-top-[50%] duration-1000 hidden lg:block">
+    <img src="<?= get_template_directory_uri() ?>/images/background/homepageContact-component.png" alt="<?php bloginfo('name'); ?>" class="absolute top-0 left-[-5%] group-hover:-top-[50%] duration-1000 hidden lg:block">
 
     <div class="container relative py-16 md:pb-20">
         <div class="flex flex-wrap justify-between gap-y-10">
@@ -12,12 +12,12 @@
             </div>
             <div class="w-full lg:w-5/12 hidden lg:block">
                 <?= echo_theme_image('/images/icons/nearby.png') ?>
-                <h2 class="text-4xl md:text-5xl xl:text-heading text-grey lg:text-white xl:text-grey font-bold leading-none py-10">We're always <br /><span class="text-main-blue">nearby!</span></h2>
+                <h2 class="text-4xl md:text-5xl xl:text-heading text-grey lg:text-white xl:text-grey font-bold leading-none py-7">We're always <br /><span class="text-main-blue">nearby!</span></h2>
                 <p class="font-bold font-articulat text-main-blue pb-10">Call us today</p>
 
                 <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-4xl md:text-5xl xl:text-heading text-main-blue font-bold"><?= get_field('phone_number', 'options') ?></a>
 
-                <article class="text-sm md:text-base font-articulat text-grey leading-loose pt-5 pb-9 w-full xl:w-11/12 lg:text-white xl:text-grey">
+                <article class="text-sm md:text-base font-articulat text-grey leading-loose pt-5 pb-6 w-full xl:w-10/12 lg:text-white xl:text-grey">
                     <p class="pb-5">We’re here for all your plumbing needs. Our team of expert plumbers is available 24/7 to help you with any plumbing emergencies.</p>
                     <p>At Fix N Flow, we are committed to providing our customers with top-quality plumbing services. Contact us today for all your plumbing needs.</p>
                 </article>
@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-    <img src="<?= get_template_directory_uri() ?>/images/lib/contact_guy.png" class="absolute right-0 bottom-0 hidden xl:block" alt="<?php bloginfo('name'); ?>">
+    <img src="<?= get_template_directory_uri() ?>/images/lib/contact_guy.png" class="absolute right-[-4%] bottom-0 hidden xl:block" alt="<?php bloginfo('name'); ?>">
 </div>
 
 <div class="lg:hidden bg-quaternary">
@@ -38,7 +38,7 @@
 
         <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-4xl md:text-5xl lg:text-heading text-main-blue font-bold"><?= get_field('phone_number', 'options') ?></a>
 
-        <article class="text-sm md:text-base font-articulat text-grey leading-loose pt-5 pb-9 w-full xl:w-11/12">
+        <article class="text-sm md:text-base font-articulat text-grey leading-loose pt-5 pb-8 w-full xl:w-11/12">
             <p class="pb-5">We’re here for all your plumbing needs. Our team of expert plumbers is available 24/7 to help you with any plumbing emergencies.</p>
             <p>At Fix N Flow, we are committed to providing our customers with top-quality plumbing services. Contact us today for all your plumbing needs.</p>
         </article>

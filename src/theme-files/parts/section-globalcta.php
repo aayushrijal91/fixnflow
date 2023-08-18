@@ -17,7 +17,7 @@
             <img src="<?= get_template_directory_uri() ?>/images/background/cta-2-component.png" class="globalCtaComponent_2 absolute bottom-0 right-0 h-full max-w-[120%] duration-300" alt="<?php bloginfo('name'); ?>">
 
             <div class="flex items-center relative">
-                <h3 class="text-4xl font-bold text-light-blue">10% off <span class="text-white">online bookings</span></h3>
+                <h3 class="text-4xl font-bold text-light-blue">10% off <span class="text-gray-300">online bookings</span></h3>
                 <a href="<?= get_site_url() ?>/booking-form">
                     <svg width="19" height="33" viewBox="0 0 19 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.04346 30.0151L15.1987 17.8598C16.0131 17.0455 16.0131 15.7251 15.1987 14.9107L3.04346 2.75537" stroke="#F7F8FA" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round" />

@@ -53,7 +53,7 @@
             </div>
         </div>
     </div>
-    <div class="flex flex-wrap justify-center -mt-10 lg:-mt-44" data-aos="zoom-in">
+    <div class="flex flex-wrap justify-center -mt-10" data-aos="zoom-in">
         <div class="w-full lg:w-7/12 xl:w-5/12 order-2 lg:order-1">
             <?= get_template_part('parts/section', 'checkServiceArea') ?>
         </div>

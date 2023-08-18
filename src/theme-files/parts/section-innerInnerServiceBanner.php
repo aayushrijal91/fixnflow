@@ -49,13 +49,17 @@
         </div>
         <?php if (isset($banner['image'])) : ?>
             <div class="w-full xl:w-5/12 px-2 order-1 xl:order-2">
-                <div class="rounded-[20px] md:rounded-[30px] min-h-[272px] md:min-h-[400px] bg-light-blue bg-cover bg-no-repeat h-full overflow-hidden" style="background:url(<?= $banner['image']['url'] ?>) no-repeat center; background-size:cover;">
+                <div class="relative group flex justify-center rounded-[20px] md:rounded-[30px] min-h-[272px] md:min-h-[400px] bg-light-blue bg-cover bg-no-repeat h-full overflow-hidden" style="background:url(<?= $banner['image']['url'] ?>) no-repeat center; background-size:cover;">
+                    <article class="absolute md:bottom-[-20%] group-hover:bottom-4 duration-300 hidden md:flex flex-col items-center px-2 md:px-0">
+                        <?= echo_theme_image('/images/lib/vipMembershipCard.png') ?>
+                        <a href="<?= get_site_url() ?>/membership" class="btn-yellow-hover-main-blue px-4 md:px-14 "><span class="relative z-10">Learn More</span></a>
+                    </article>
                 </div>
             </div>
         <?php endif; ?>
     </div>
 
-    <div class="flex flex-wrap justify-center -mt-44" data-aos="zoom-in">
+    <div class="flex flex-wrap justify-center -mt-10" data-aos="zoom-in">
         <div class="w-full lg:w-10/12 xl:w-5/12 order-2 lg:order-1">
             <?= get_template_part('parts/section', 'checkServiceArea') ?>
         </div>
