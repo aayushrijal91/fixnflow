@@ -1,5 +1,5 @@
 <div class="partContact bg-light-blue xl:bg-[#D3E2EF] relative overflow-hidden group">
-    <img src="<?= get_template_directory_uri() ?>/images/background/homepageContact-component.png" alt="<?php bloginfo('name'); ?>" class="absolute top-0 left-[-5%] group-hover:-top-[50%] duration-1000 hidden lg:block">
+    <img src="<?= get_template_directory_uri() ?>/images/background/homepageContact-component.png" alt="<?php bloginfo('name'); ?>" class="absolute top-0 left-0 group-hover:-top-[50%] duration-1000 hidden lg:block">
 
     <div class="container relative py-16 md:pb-20">
         <div class="flex flex-wrap justify-between gap-y-10">
@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-    <img src="<?= get_template_directory_uri() ?>/images/lib/contact_guy.png" class="absolute right-[-4%] bottom-0 hidden xl:block" alt="<?php bloginfo('name'); ?>">
+    <img src="<?= get_template_directory_uri() ?>/images/lib/contact_guy.png" class="absolute right-0 bottom-0 hidden xl:block" alt="<?php bloginfo('name'); ?>">
 </div>
 
 <div class="lg:hidden bg-quaternary">

@@ -135,38 +135,49 @@
                             )); ?>
                         </div>
                     </div>
+
+                    <section class="mt-10">
+                        <p class="text-white pb-4 font-semibold text-sm"><span class="text-light-blue font-bold">Address:</span> <?= get_field('address', 'options') ?></p>
+                        <iframe class="h-[300px] w-full rounded-[10px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.946820414338!2d151.05623567570848!3d-33.86526137322792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bb44b35130c3%3A0xfbb234e1dd2b04d3!2sD6%2F161%20Arthur%20St%2C%20Homebush%20West%20NSW%202140!5e0!3m2!1sen!2sau!4v1692583574777!5m2!1sen!2sau" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </section>
                 </div>
             </div>
 
             <div class="flex flex-wrap lg:pt-24 -mx-2">
                 <div class="w-full lg:w-1/2 px-2 hidden lg:block">
-                    <h4 class="text-light-blue text-2xl font-bold">Our services</h4>
-                    <ul class="pt-9 leading-loose columns-2">
-                        <?php
-                        $args = array(
-                            'post_type'      => 'page',
-                            'posts_per_page' => -1,
-                            'order'          => 'ASC',
-                            'orderby'        => 'publish_date',
-                            'meta_query' => array(
-                                array(
-                                    'key' => '_wp_page_template',
-                                    'value' => array('page-templates/inner-service.php', 'page-templates/inner-service-no-child.php'),
-                                ),
-                            )
-                        );
-                        $the_query = new WP_Query($args);
+                    <section>
+                        <h4 class="text-light-blue text-2xl font-bold">Our services</h4>
+                        <ul class="pt-9 leading-loose columns-2">
+                            <?php
+                            $args = array(
+                                'post_type'      => 'page',
+                                'posts_per_page' => -1,
+                                'order'          => 'ASC',
+                                'orderby'        => 'publish_date',
+                                'meta_query' => array(
+                                    array(
+                                        'key' => '_wp_page_template',
+                                        'value' => array('page-templates/inner-service.php', 'page-templates/inner-service-no-child.php'),
+                                    ),
+                                )
+                            );
+                            $the_query = new WP_Query($args);
 
-                        if ($the_query->have_posts()) :
-                            while ($the_query->have_posts()) : $the_query->the_post();
-                                $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
-                        ?>
-                                <li><a href="<?= get_the_permalink() ?>" class="text-primary-light"><?= get_the_title() ?></a></li>
-                        <?php endwhile;
-                        endif;
-                        wp_reset_query();
-                        ?>
-                    </ul>
+                            if ($the_query->have_posts()) :
+                                while ($the_query->have_posts()) : $the_query->the_post();
+                                    $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
+                            ?>
+                                    <li><a href="<?= get_the_permalink() ?>" class="text-primary-light"><?= get_the_title() ?></a></li>
+                            <?php endwhile;
+                            endif;
+                            wp_reset_query();
+                            ?>
+                        </ul>
+                    </section>
+                    <section class="mt-10 px-5">
+                        <p class="text-white pb-4 font-semibold"><span class="text-light-blue font-bold">Address:</span> <?= get_field('address', 'options') ?></p>
+                        <iframe class="h-[300px] w-full rounded-[10px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.946820414338!2d151.05623567570848!3d-33.86526137322792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bb44b35130c3%3A0xfbb234e1dd2b04d3!2sD6%2F161%20Arthur%20St%2C%20Homebush%20West%20NSW%202140!5e0!3m2!1sen!2sau!4v1692583574777!5m2!1sen!2sau" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </section>
                 </div>
                 <div class="w-full lg:w-1/2 px-2">
                     <div class="flex flex-wrap justify-between">
