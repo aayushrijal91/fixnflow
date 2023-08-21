@@ -128,5 +128,4 @@ $suburb = get_the_title();
     </div>
 </div>
 
-
 <?php get_footer() ?>

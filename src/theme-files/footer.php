@@ -257,6 +257,14 @@
 
 <?php wp_footer(); ?>
 
+<script>
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+// if ( '116' == event.detail.contactFormId ) {
+  location = '/thank-you';
+    // }
+}, false );
+</script>
+
 </body>
 
 </html>
