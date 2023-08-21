@@ -16,7 +16,7 @@ get_header();
     $section_3 = get_field('section_3');
     $section_4 = get_field('section_4');
     ?>
-    <?php if ($section_1 || $section_2 || $section_3 || $section_4) : ?>
+    <?php if (!empty($section_1['heading']) || !empty($section_2['heading']) || !empty($section_3['heading']) || !empty($section_3['heading'])) : ?>
         <div class="container py-24 md:pt-36 lg:pb-44">
             <div class="flex flex-wrap -mx-3 gap-y-7">
                 <?php if ($section_1) : ?>
