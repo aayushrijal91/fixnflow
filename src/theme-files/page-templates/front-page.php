@@ -8,7 +8,7 @@ get_header();
 get_template_part('parts/section', 'nav');
 ?>
 
-<div class="homeBanner h-[680px] md:h-auto xl:h-[860px] relative">
+<div class="homeBanner h-[780px] md:h-auto xl:h-[860px] relative">
     <video class="absolute w-full h-full object-cover hidden md:block" autoplay loop muted>
         <source src="<?= get_template_directory_uri() ?>/images/background/home_banner_animation.webm" type="video/webm">
         <source src="<?= get_template_directory_uri() ?>/images/background/home_banner_animation.mp4" type="video/mp4">
@@ -21,6 +21,7 @@ get_template_part('parts/section', 'nav');
             <div class="w-8/12 md:w-10/12 lg:w-2/3 text-white text-center">
                 <h2 class="font-articulat text-[22px] lg:text-3xl">Your trusted plumbing partner in Sydney</h2>
                 <h1 class="text-4xl md:text-5xl lg:text-heading font-bold leading-none pt-3.5">Flow with the Pros, Choose<br /> <span class="text-light-blue">Fix N Flow</span></h1>
+                <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn-yellow-hover-main-blue px-14 mt-4 lg:hidden"><span class="relative z-10"><?= get_field('phone_number', 'options') ?></span></a>
             </div>
         </div>
         <div class="flex flex-wrap justify-between items-center pt-32 lg:pt-44 gap-y-16">

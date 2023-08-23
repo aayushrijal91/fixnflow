@@ -8,6 +8,8 @@ jQuery(function ($) {
 
                 let areasData;
                 let areasDataFetchError = false;
+                let postCodeData;
+                let postCodeDataFetchError = false;
 
                 $.ajax({
                     url: '/wp-json/api/areas',
@@ -18,6 +20,20 @@ jQuery(function ($) {
                     },
                     error: function (error) {
                         areasDataFetchError = true;
+                        console.error('Error fetching data:', error);
+                    }
+                });
+
+                $.ajax({
+                    url: '/wp-json/wp/v2/pages/113',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        postCodeData = data.acf.postcode.split(',').map(Number).filter(num => !isNaN(num));
+                        console.log(postCodeData);
+                    },
+                    error: function (error) {
+                        postCodeDataFetchError = true;
                         console.error('Error fetching data:', error);
                     }
                 });
@@ -37,13 +53,22 @@ jQuery(function ($) {
 
                         return;
                     }
-
-                    if (checkSimilarArea(areaValue)) {
-                        yesService.removeClass('hidden');
-                        noService.addClass('hidden');
+                    if(isNaN(parseInt(areaValue))) {
+                        if (checkSimilarArea(areaValue)) {
+                            yesService.removeClass('hidden');
+                            noService.addClass('hidden');
+                        } else {
+                            noService.removeClass('hidden');
+                            yesService.addClass('hidden');
+                        }
                     } else {
-                        noService.removeClass('hidden');
-                        yesService.addClass('hidden');
+                        if (checkPostCodeAvailability(parseInt(areaValue))) {
+                            yesService.removeClass('hidden');
+                            noService.addClass('hidden');
+                        } else {
+                            noService.removeClass('hidden');
+                            yesService.addClass('hidden');
+                        }
                     }
                 });
 
@@ -62,6 +87,10 @@ jQuery(function ($) {
                     });
 
                     return (similarMatches.length >= 1);
+                }
+
+                function checkPostCodeAvailability(postCode) {
+                    return postCodeData.includes(postCode);
                 }
 
                 $('#homepage_service_slider').slick({

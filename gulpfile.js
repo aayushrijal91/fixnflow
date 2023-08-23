@@ -78,6 +78,18 @@ function data_files() {
         .pipe(gulp.dest(destinations.data_files))
 }
 
+function slick_assets() {
+    return gulp.src('./node_modules/slick-carousel/slick/ajax-loader.gif')
+        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('../wp-content/themes/aiims/styles/'));
+}
+
+function slick_fonts() {
+    return gulp.src('./node_modules/slick-carousel/slick/fonts/**/*')
+        .pipe(gulp.dest('../wp-content/themes/aiims/styles/fonts/'));
+}
+
 function vendor_scripts() {
     return gulp.src(sources.vendor_scripts)
         .pipe(sourcemaps.init())
@@ -123,6 +135,8 @@ exports.watch = gulp.series(
         data_files,
         custom_scripts,
         vendor_scripts,
+        slick_assets,
+        slick_fonts,
         styles
     ),
     watch
