@@ -72,8 +72,8 @@ get_template_part('parts/section', 'nav');
     </div>
 </div>
 
-<main class="homePage pt-96 md:pt-0">
-    <div class="container pt-44 pb-20 md:pb-44">
+<main class="homePage pt-80 md:pt-0">
+    <div class="container py-20 md:py-44">
         <?php get_template_part('parts/section', 'globalcta') ?>
     </div>
 
