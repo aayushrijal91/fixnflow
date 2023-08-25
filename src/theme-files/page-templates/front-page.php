@@ -97,7 +97,7 @@ get_template_part('parts/section', 'nav');
                 </div>
                 <div class="lg:group-hover:translate-x-[20rem] xl:group-hover:translate-x-[30rem] duration-1000 w-full lg:w-9/12 rounded-[30px] h-[641px] bg-no-repeat bg-cover bg-center p-6 shadow-[14px_14px_#5AB2F8] overflow-hidden relative">
                     <img class="absolute top-0 left-0 object-cover h-full" src="<?= get_template_directory_uri() ?>/images/background/video-thumbnail.jpg" alt="<?php bloginfo('name'); ?>">
-                    <a href="<?= get_site_url() ?>" class="h-[69px] w-[69px] rounded-full bg-off-white flex items-center justify-center relative">
+                    <a href="<?= $section_1['youtube_link'] ?>" class="h-[69px] w-[69px] rounded-full bg-off-white flex items-center justify-center relative">
                         <svg width="20" height="26" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.0439453" y="0.741211" width="4.85152" height="24.4202" rx="2.42576" fill="#0067B9" />
                             <rect x="14.917" y="0.741211" width="4.85152" height="24.4202" rx="2.42576" fill="#0067B9" />
@@ -112,7 +112,7 @@ get_template_part('parts/section', 'nav');
                 <div class="flex flex-wrap justify-center gap-y-20">
                     <div class="w-full">
                         <div class="w-full rounded-xl h-[188px] md:h-[300px] bg-no-repeat bg-cover flex items-end bg-center p-6 shadow-[5px_5px_#5AB2F8]" style="background-image: url('<?= get_template_directory_uri() ?>/images/background/video-thumbnail.jpg')">
-                            <a href="./" class="h-[36px] w-[36px] rounded-full bg-off-white flex items-center justify-center">
+                            <a href="<?= $section_1['youtube_link'] ?>" class="h-[36px] w-[36px] rounded-full bg-off-white flex items-center justify-center">
                                 <svg width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle opacity="0.5" cx="17.8022" cy="17.2864" r="17.2227" fill="#F7F8FA" />
                                     <rect x="12.8638" y="11.1709" width="2.4299" height="12.2309" rx="0.789109" fill="#0067B9" />

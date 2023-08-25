@@ -60,7 +60,7 @@
 
                                 <div class="flex h-full md:items-end p-7 relative">
                                     <div class="w-full">
-                                        <h3 class="text-dark-blue text-2xl md:text-4xl font-bold pb-7 highlight-light-blue">Detailed breakdown <br /><span>of all costs</span></h3>
+                                        <h3 class="text-dark-blue text-2xl md:text-4xl font-bold pb-7 highlight-light-blue">Fixed price services,<br /><span>no hidden fees</span></h3>
                                         <div class="flex flex-wrap justify-between items-end">
                                             <p class="w-9/12 md:w-7/12 font-articulat text-dark-blue text-sm md:text-base leading-loose">
                                                 Our team of expert plumbers will ensure you can make informed decisions.

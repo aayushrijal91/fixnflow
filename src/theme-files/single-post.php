@@ -30,11 +30,21 @@ get_header();
                     </div>
                 </div>
                 <div class="border-b-2 border-quaternary my-5"></div>
-                <div class="description font-articulat text-grey leading-loose">
+                <article class="description font-articulat text-grey leading-loose">
                     <?= get_field('section_1')['description'] ?>
-                </div>
+                </article>
             </div>
         </div>
+
+        <?php if (get_the_content()) : ?>
+            <div class="flex justify-center">
+                <div class="w-full lg:w-10/12">
+                    <article class="description font-articulat text-grey leading-loose">
+                        <?= the_content(); ?>
+                    </article>
+                </div>
+            </div>
+        <?php endif; ?>
 
         <?php if (get_field('section_1')['hero_image']) : ?>
             <div class="py-12"><?= echo_image(get_field('section_1')['hero_image'], null, 'w-full rounded-[30px]') ?></div>
@@ -43,26 +53,25 @@ get_header();
         <div class="flex justify-center">
             <div class="w-full lg:w-10/12">
                 <?php if (get_field('section_2')['heading']) : ?>
-                    <div class="text-[35px] text-main-blue font-bold py-10"><?= get_field('section_2')['heading'] ?></div>
+                    <h2 class="text-2xl md:text-[35px] text-main-blue font-bold py-10"><?= get_field('section_2')['heading'] ?></h2>
                 <?php endif; ?>
                 <?php if (get_field('section_2')['description']) : ?>
-                    <div class="description font-articulat text-grey leading-loose">
+                    <article class="description font-articulat text-grey leading-loose">
                         <?= get_field('section_2')['description'] ?>
-                    </div>
+                    </article>
                 <?php endif; ?>
-
             </div>
         </div>
 
         <div class="flex justify-center">
             <div class="w-full lg:w-10/12">
                 <?php if (get_field('section_3')['heading']) : ?>
-                    <div class="text-[35px] text-main-blue font-bold py-10"><?= get_field('section_3')['heading'] ?></div>
+                    <h2 class="text-2xl md:text-[35px] text-main-blue font-bold py-10"><?= get_field('section_3')['heading'] ?></h2>
                 <?php endif; ?>
                 <?php if (get_field('section_3')['description']) : ?>
-                    <div class="description font-articulat text-grey leading-loose">
+                    <article class="description font-articulat text-grey leading-loose">
                         <?= get_field('section_3')['description'] ?>
-                    </div>
+                    </article>
                 <?php endif; ?>
             </div>
         </div>
@@ -77,12 +86,12 @@ get_header();
         <div class="flex justify-center">
             <div class="w-full lg:w-10/12">
                 <?php if (get_field('section_4')['heading']) : ?>
-                    <div class="text-[35px] text-main-blue font-bold py-10"><?= get_field('section_4')['heading'] ?></div>
+                    <h2 class="text-2xl md:text-[35px] text-main-blue font-bold py-10"><?= get_field('section_4')['heading'] ?></h2>
                 <?php endif; ?>
                 <?php if (get_field('section_4')['description']) : ?>
-                    <div class="description font-articulat text-grey leading-loose">
+                    <article class="description font-articulat text-grey leading-loose">
                         <?= get_field('section_4')['description'] ?>
-                    </div>
+                    </article>
                 <?php endif; ?>
             </div>
         </div>

@@ -1,6 +1,6 @@
     <div class="fixed w-full z-50 navigation_bar">
         <div class="container">
-            <div class="flex flex-wrap justify-between items-center py-3 md:py-8 lg:py-12 text-white">
+            <div class="flex flex-wrap justify-between items-center pt-3 md:pt-8 lg:pt-12 text-white">
                 <div class="w-1/2 md:w-fit xl:w-1/2 link_section">
                     <div class="flex flex-wrap justify-between items-center">
                         <div class="w-fit">
@@ -57,10 +57,10 @@
                                 </div>
                                 <div class="w-fit">
                                     <a href="javascript:void(0)" id="openGiantMenu" class="font-articulat font-semibold text-base flex items-center justify-center gap-x-3 bg-dark-blue rounded-md h-[41px] px-3.5">
-                                        <svg width="35" height="32" viewBox="0 0 35 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="0.326172" y="0.865723" width="25.8588" height="2.67134" rx="1.33567" fill="#FFAE35" />
-                                            <rect x="9.01172" y="10.6553" width="17.1741" height="2.67134" rx="1.33567" fill="#FFAE35" />
-                                            <rect x="0.326172" y="20.4448" width="25.8588" height="2.67134" rx="1.33567" fill="#FFAE35" />
+                                        <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.296875" y="0.865723" width="25.8588" height="2.67134" rx="1.33567" fill="#FFAE35" />
+                                            <rect x="8.98438" y="10.6553" width="17.1741" height="2.67134" rx="1.33567" fill="#FFAE35" />
+                                            <rect x="0.296875" y="20.4448" width="25.8588" height="2.67134" rx="1.33567" fill="#FFAE35" />
                                         </svg>
                                     </a>
                                 </div>

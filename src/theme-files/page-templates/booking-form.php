@@ -10,11 +10,7 @@ get_header();
 <main class="bookingFormPage bg-off-white">
     <?php get_template_part('parts/section', 'banner'); ?>
 
-    <div class="container py-32">
-        <?php get_template_part('parts/section', 'globalcta') ?>
-    </div>
-
-    <div class="pb-20 md:pb-36">
+    <div class="py-20 md:py-36">
         <div class="container">
             <h2 class="w-full lg:w-7/12 mx-auto text-grey text-4xl md:text-5xl xl:text-heading font-bold text-center highlight-main-blue">
                 Select how you would like to <span>get in touch</span>
@@ -102,6 +98,10 @@ get_header();
                 </div>
             </div>
         </div>
+    </div>
+    
+    <div class="container pb-20 md:pb-32">
+        <?php get_template_part('parts/section', 'globalcta') ?>
     </div>
 
     <?php get_template_part('parts/section', 'professionalPlumbing') ?>

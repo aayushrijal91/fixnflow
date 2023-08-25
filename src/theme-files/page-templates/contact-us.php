@@ -10,11 +10,11 @@ get_header();
 <main class="contactUsPage bg-off-white">
     <?php get_template_part('parts/section', 'banner'); ?>
 
+    <?php get_template_part('parts/section', 'contact') ?>
+    
     <div class="py-24">
         <?php get_template_part('parts/section', 'contactCta') ?>
     </div>
-
-    <?php get_template_part('parts/section', 'contact') ?>
 
     <div class="container pt-44 pb-20 md:pb-44">
         <?php get_template_part('parts/section', 'specialOffers') ?>
