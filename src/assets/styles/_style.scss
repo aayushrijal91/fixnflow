@@ -187,6 +187,15 @@
             }
         }
     }
+
+    .wpcf7-form {
+        input, textarea {
+            &::placeholder {
+                color: #ffffff;
+                opacity: 1;
+            }
+        }
+    }
 }
 
 .careersPage {

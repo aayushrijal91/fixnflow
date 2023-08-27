@@ -18,7 +18,7 @@ $suburb = get_the_title();
                 <div class="pt-48 pb-12 text-white text-center">
                     <h1 class="text-4xl md:text-5xl xl:text-heading font-bold">Plumber <?= get_the_title() ?></h1>
                     <p class="text-base md:text-lg pt-10">
-                        Your trusted local family owned plumbing company in Sydney
+                    Your trusted local family owned plumbing company in Sydney, Central Coast, Hunter, Illawarra and Blue Mountains
                     </p>
                 </div>
 
