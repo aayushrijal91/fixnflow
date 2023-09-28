@@ -26,7 +26,9 @@ get_template_part('parts/section', 'nav');
         </div>
         <div class="flex flex-wrap justify-between items-center pt-32 lg:pt-44 gap-y-16">
             <div class="w-full lg:w-7/12 order-2 lg:order-1" data-aos="zoom-in">
-                <?= get_template_part('parts/section', 'checkServiceArea') ?>
+                <div class="bg-white rounded-[30px] px-8 py-6 shadow-xl checkServiceAreaForm">
+                    <?= do_shortcode('[contact-form-7 id="b54b514" title="Quick Quote"]') ?>
+                </div>
             </div>
             <div class="w-full lg:w-4/12 order-1 lg:order-2">
                 <div class="flex flex-wrap -mx-1 items-center pb-3">
@@ -75,6 +77,14 @@ get_template_part('parts/section', 'nav');
 <main class="homePage pt-80 md:pt-0">
     <div class="container py-20 md:py-44">
         <?php get_template_part('parts/section', 'globalcta') ?>
+    </div>
+
+    <div class="container pb-20 md:pb-44">
+        <div class="flex justify-center">
+            <div class="md:w-8/12">
+                <?= get_template_part('parts/section', 'checkServiceArea') ?>
+            </div>
+        </div>
     </div>
 
     <?php $section_1 = get_field('section_1');

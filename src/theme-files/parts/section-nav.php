@@ -1,12 +1,12 @@
-    <div class="fixed w-full z-50 navigation_bar">
+<div class="fixed w-full z-50 navigation_bar">
         <div class="container">
             <div class="flex flex-wrap justify-between items-center pt-3 md:pt-8 lg:pt-12 text-white">
-                <div class="w-1/2 md:w-fit xl:w-1/2 link_section">
+                <div class="w-fit xl:w-1/2 link_section">
                     <div class="flex flex-wrap justify-between items-center">
                         <div class="w-fit">
                             <a href="<?= get_site_url() ?>" class="logo_img">
-                                <img src="<?= get_template_directory_uri() ?>/images/logo/logo.png" alt="<?php bloginfo('name'); ?>" class="white_logo">
-                                <img src="<?= get_template_directory_uri() ?>/images/logo/color_logo.png" alt="<?php bloginfo('name'); ?>" class="color_logo">
+                                <img src="<?= get_template_directory_uri() ?>/images/logo/logo.svg" alt="<?php bloginfo('name'); ?>" style="height:65px" class="white_logo">
+                                <img src="<?= get_template_directory_uri() ?>/images/logo/color_logo.svg" alt="<?php bloginfo('name'); ?>" style="height:65px" class="color_logo">
                             </a>
                         </div>
                         <div class="w-fit hidden xl:block">
@@ -50,17 +50,19 @@
                             <div class="flex items-center gap-x-3">
                                 <div class="w-fit md:hidden">
                                     <a href="tel:<?= get_field('phone_number', 'options') ?>">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f4a938" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="41" height="41" rx="20.5" fill="#FFAE35"/>
+                                            <path d="M20.0504 22.9506L18.2003 24.8007C17.8103 25.1907 17.1903 25.1907 16.7903 24.8107C16.6803 24.7007 16.5703 24.6007 16.4602 24.4907C15.4302 23.4506 14.5002 22.3606 13.6701 21.2205C12.8501 20.0805 12.1901 18.9404 11.71 17.8104C11.24 16.6703 11 15.5803 11 14.5402C11 13.8602 11.12 13.2101 11.36 12.6101C11.6 12.0001 11.98 11.4401 12.5101 10.94C13.1501 10.31 13.8501 10 14.5902 10C14.8702 10 15.1502 10.06 15.4002 10.18C15.6602 10.3 15.8902 10.48 16.0702 10.74L18.3903 14.0102C18.5703 14.2602 18.7003 14.4902 18.7904 14.7102C18.8804 14.9202 18.9304 15.1302 18.9304 15.3202C18.9304 15.5603 18.8604 15.8003 18.7203 16.0303C18.5903 16.2603 18.4003 16.5003 18.1603 16.7403L17.4003 17.5303C17.2903 17.6403 17.2403 17.7703 17.2403 17.9304C17.2403 18.0104 17.2503 18.0804 17.2703 18.1604C17.3003 18.2404 17.3303 18.3004 17.3503 18.3604C17.5303 18.6904 17.8403 19.1204 18.2803 19.6404C18.7303 20.1605 19.2104 20.6905 19.7304 21.2205C19.8304 21.3205 19.9404 21.4205 20.0404 21.5205C20.4404 21.9105 20.4504 22.5506 20.0504 22.9506Z" fill="white"/>
+                                            <path d="M30.9706 26.3297C30.9706 26.6098 30.9206 26.8998 30.8206 27.1798C30.7906 27.2598 30.7606 27.3398 30.7206 27.4198C30.5506 27.7798 30.3306 28.1198 30.0406 28.4398C29.5506 28.9799 29.0106 29.3699 28.4005 29.6199C28.3905 29.6199 28.3805 29.6299 28.3705 29.6299C27.7805 29.8699 27.1405 29.9999 26.4504 29.9999C25.4304 29.9999 24.3403 29.7599 23.1903 29.2699C22.0402 28.7799 20.8902 28.1198 19.7501 27.2898C19.3601 26.9998 18.9701 26.7098 18.6001 26.3997L21.8702 23.1296C22.1502 23.3396 22.4003 23.4996 22.6103 23.6096C22.6603 23.6296 22.7203 23.6596 22.7903 23.6896C22.8703 23.7196 22.9503 23.7296 23.0403 23.7296C23.2103 23.7296 23.3403 23.6696 23.4503 23.5596L24.2103 22.8096C24.4604 22.5596 24.7004 22.3696 24.9304 22.2496C25.1604 22.1096 25.3904 22.0396 25.6404 22.0396C25.8304 22.0396 26.0304 22.0796 26.2504 22.1696C26.4704 22.2596 26.7005 22.3896 26.9505 22.5596L30.2606 24.9097C30.5206 25.0897 30.7006 25.2997 30.8106 25.5497C30.9106 25.7997 30.9706 26.0497 30.9706 26.3297Z" fill="white"/>
                                         </svg>
                                     </a>
                                 </div>
                                 <div class="w-fit">
                                     <a href="javascript:void(0)" id="openGiantMenu" class="font-articulat font-semibold text-base flex items-center justify-center gap-x-3 bg-dark-blue rounded-md h-[41px] px-3.5">
                                         <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="0.296875" y="0.865723" width="25.8588" height="2.67134" rx="1.33567" fill="#FFAE35" />
-                                            <rect x="8.98438" y="10.6553" width="17.1741" height="2.67134" rx="1.33567" fill="#FFAE35" />
-                                            <rect x="0.296875" y="20.4448" width="25.8588" height="2.67134" rx="1.33567" fill="#FFAE35" />
+                                            <rect x="0.296875" y="0.865723" width="25.8588" height="2.67134" rx="1.33567" fill="#FFAE35"/>
+                                            <rect x="8.98438" y="10.6553" width="17.1741" height="2.67134" rx="1.33567" fill="#FFAE35"/>
+                                            <rect x="0.296875" y="20.4448" width="25.8588" height="2.67134" rx="1.33567" fill="#FFAE35"/>
                                         </svg>
                                     </a>
                                 </div>
